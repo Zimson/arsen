@@ -1,0 +1,20 @@
+@charset 'utf-8';
+
+//utils
+@import 'global/utils/functions';
+@import 'global/utils/utils';
+@import 'global/utils/breakpoints';
+@import 'global/utils/animations';
+
+//settings
+@import 'settings';
+
+//mixins
+@import 'global/utils/mixins';
+
+//libs
+@import 'libs';
+
+// @import 'global/typography';
+@import 'global/fonts';
+@import 'global/common';
