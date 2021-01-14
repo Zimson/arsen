@@ -172,3 +172,9 @@
   min-width: 300px;
   max-width: 900px;
 }
+
+@mixin list-clear {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
