@@ -1,24 +1,12 @@
-
+<?xml version="1.0" encoding="UTF-8"?>
 <svg width="7px" height="10px" viewBox="0 0 7 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>Clipped</title>
+    <title>Shape</title>
     <desc>Created with Sketch.</desc>
-    <defs>
-        <path d="M4.071,5.036 L1.243,2.207 C0.853,1.817 0.853,1.183 1.243,0.793 C1.633,0.403 2.266,0.403 2.657,0.793 L6.899,5.036 L2.657,9.278 C2.267,9.668 1.633,9.668 1.243,9.278 C0.853,8.888 0.853,8.254 1.243,7.864 L4.07,5.036 L4.071,5.036 Z" id="path-1"></path>
-    </defs>
+    <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="arrow-right">
-            <g id="Clipped">
-                <mask id="mask-2" fill="white">
-                    <use xlink:href="#path-1"></use>
-                </mask>
-                <g id="prefix__a"></g>
-                <g id="Group" mask="url(#mask-2)" fill="#268EFF" fill-rule="nonzero">
-                    <g transform="translate(-6.000000, -14.000000)" id="Shape">
-                        <polygon points="0 0 48 0 48 38 0 38"></polygon>
-                    </g>
-                </g>
-            </g>
+        <g id="arrow-right" transform="translate(-6.000000, -14.000000)" fill="#268EFF" fill-rule="nonzero">
+            <path d="M10.0710678,19.035533 L7.24264069,16.2071058 C6.8521164,15.8165815 6.8521164,15.1834166 7.24264069,14.7928923 C7.63316498,14.402368 8.26632996,14.402368 8.65685425,14.7928923 L12.8994949,19.035533 L8.65685425,23.2781736 C8.26632996,23.6686979 7.63316498,23.6686979 7.24264069,23.2781736 C6.8521164,22.8876494 6.8521164,22.2544844 7.24264069,21.8639601 L10.0710678,19.035533 Z" id="Shape"></path>
         </g>
     </g>
 </svg>

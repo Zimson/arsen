@@ -1,0 +1,42 @@
+.check-list {
+  @include list-clear();
+
+  @include media-breakpoint-up(md) {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, auto);
+    grid-column-gap: 50px;
+  }
+
+  @include media-breakpoint-up(lg) {
+    grid-template-columns: repeat(3, auto);
+    grid-column-gap: 42px;
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    font-family: $font-family;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 2.1;
+    color: var(--gray-color);
+
+    @include media-breakpoint-up(md) {
+      font-size: 17px;
+      line-height: 1.85;
+    }
+
+    &:nth-child(2n):not(&:last-child) {
+      margin-bottom: 20px;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+      }
+    }
+  }
+
+  &__item svg {
+    margin-right: 25px;
+  }
+}
