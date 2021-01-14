@@ -3,61 +3,71 @@ title: Main page
 layout: default
 ---
 
-<section class="page-section">
+<section class="page-section page-section--bg-purple">
   <div class="page-section__container">
     <h2 class="page-section__title">Разработчикам</h2>
     <p class="page-section__text">Готовые CMS плагины, виджет оплаты для интернет-магазинов и лендингов.</p>
     <a href="#" class="page-section__btn">Подключить</a>
-    <div class="page__content">
+    <div class="page-section__block page-section__block--widget page-section__block--ng-bg">
+      <div class="page-section__widget">
+        {{{ img name="widget-600" }}}
+      </div>
       {{{ info-block title="Виджет оплаты"  text='Встраивается в любое место на сайте. Адаптирован под любые устройства.
       Цвет виджета <a href="#" class="link">настраивается</a> под цвет вашего сайта.' }}}
-      {{{ info-block title="Безопасность"  text="Безопасная обработка данных карт по стандарту PCI DSS 3.2 level 1."}}}
-      {{{ info-block title="" text=""}}}
+      {{{ info-block title="Безопасность"  text="Безопасная обработка данных карт по стандарту PCI DSS 3.2 level 1."  icon='{"name": "security", "color": "pink"}'}}}
     </div>
   </div>
 </section>
-<section class="page-section">
+<section class="page-section page-section--bg-green">
   <div class="page-section__container">
-    {{{ info-block title="Все способы оплаты в одном виджете"  text="Банковские карты: Visa, MasterCard, Maestro, Мир.
-    Оплата с баланса мобильного телефона. Электронные кошельки." count="1" }}}
-    {{{ info-block title="Настройка дополнительных полей" text="Комментарии клиента, email для чека, ФИО, адрес и др.
-    Настройка плейсхолдеров и масок для полей." count="2"}}}
-    {{{ info-block title="Удобный ввод" text="Проверка вводимых данных <br />Подсказки при неверном вводе
-    <br />  Браузерное автозаполнение <br />  Перевод курсора на следующее поле <br />  Определение платёжной системы
-    <br />  Определение операторов сотовой связи" count="3"}}}
+    <div class="page-section__block page-section__block--ng-bg">
+      {{{ info-block title="Все способы оплаты в одном виджете"  text="Банковские карты: Visa, MasterCard, Maestro, Мир.
+      Оплата с баланса мобильного телефона. Электронные кошельки." count="1" }}}
+      {{{ info-block title="Настройка дополнительных полей" text="Комментарии клиента, email для чека, ФИО, адрес и др.
+      Настройка плейсхолдеров и масок для полей." count="2"}}}
+      {{{ info-block title="Удобный ввод" text="Проверка вводимых данных <br />Подсказки при неверном вводе
+      <br />  Браузерное автозаполнение <br />  Перевод курсора на следующее поле <br />  Определение платёжной системы
+      <br />  Определение операторов сотовой связи" count="3"}}}
+    </div>
   </div>
 </section>
-<section class="page-section">
+<section class="page-section page-section--bg-blue">
   <div class="page-section__container">
     {{{ icon name="test" width="116" height="116" }}}
     <h2 class="page-section__title">Тестирование оплаты и кассы</h2>
     <p class="page-section__text">Все параметры для тестирования виджета доступны после регистрации в личном кабинете.</p>
     <div class="page-section__block">
       {{{ info-block title="Устанавливайте виджет сразу"  text="Вы можете установить виджет на свой сайт, настроить его,
-      совершать тестовые платежи и проверять статус платежей в личном кабинете." }}}
+      совершать тестовые платежи и проверять статус платежей в личном кабинете." icon='{"name": "check", "color": "green"}' }}}
       {{{ info-block title="Тестируйте фискальные чеки" text="В тестовом режиме онлайн чеки формируются на базе тестовой кассы.
-      Тестовые чеки в ФНС не отправляются."}}}
+      Тестовые чеки в ФНС не отправляются." icon='{"name": "check", "color": "green"}' }}}
       {{{ info-block title="Деньги с карты не списываются" text="Для тестирования оплаты используйте любую действующую карту.
-      В тестовом режиме деньги с карты не списываются."}}}
-      <a href="#" class="page-section__link">Подробнее</a>
+      В тестовом режиме деньги с карты не списываются." icon='{"name": "check", "color": "green"}' }}}
+      <a href="#" class="page-section__link">
+        <span>Подробнее</span>
+        {{{ arrow-right }}}
+      </a>
     </div>
   </div>
 </section>
-<section class="page-section">
+<section class="page-section page-section--bg-blue">
   <div class="page-section__container">
     {{{ icon name="settings" width="126" height="92" }}}
     <h2 class="page-section__title">Интеграция виджета</h2>
     <p class="page-section__text">Посмотрите <a href="#" class="link">сценарии интеграции</a> для интернет-магазинов и лендингов.</p>
     <div class="page-section__block">
       {{{ info-block title="Встроенный виджет" text="Встроенный виджет будет открываться в любом месте на вашем сайте.
-      Просто вставьте код виджета на страницу сайта, туда где происходит оплата."}}}
+      Просто вставьте код виджета на страницу сайта, туда где происходит оплата." icon='{"name": "check", "color": "green"}' }}}
       {{{ info-block title="Виджет на отдельной странице" text="Виджет будет открываться на отдельной странице,
-      для этого просто вставьте ссылку на виджет в том месте сайта, где у вас происходит переход к оплате. "}}}
-      <a href="#" class="page-section__link">Подробнее</a>
+      для этого просто вставьте ссылку на виджет в том месте сайта, где у вас происходит переход к оплате." icon='{"name": "check", "color": "green"}' }}}
+      <a href="#" class="page-section__link">
+        <span>Подробнее</span>
+        {{{ arrow-right }}}
+      </a>
     </div>
   </div>
 </section>
-<section class="page-section">
+<section class="page-section page-section--bg-blue">
   <div class="page-section__container">
     {{{ icon name="cms" width="116" height="116" }}}
     <h2 class="page-section__title">Готовые CMS плагины</h2>
@@ -70,7 +80,7 @@ layout: default
     </div>
   </div>
 </section>
-<section class="page-section">
+<section class="page-section page-section--bg-blue">
   <div class="page-section__container">
     {{{ icon name="http" width="116" height="116" }}}
     <h2 class="page-section__title">HTTP-уведомления</h2>
@@ -78,14 +88,17 @@ layout: default
       Передавайте данные из корзины для чека.</p>
     <div class="page-section__block">
       {{{ info-block title="Все настройки в личном кабинете" text="Секретный ключ для проверки HTTP-уведомлений вы получаете
-      при регистрации в личном кабинете."}}}
-      {{{ info-block title="Для всех событий доступны HTTP-уведомления" text="Проверка заказа, успешная оплата, возврат платежа, изменение подписки."}}}
-      {{{ info-block title="В CMS модулях обработка уведомлений уже настроена" text="Чек по умолчанию формируется из товарных позиций корзины."}}}
-      <a href="#" class="page-section__link">Подробнее</a>
+      при регистрации в личном кабинете." icon='{"name": "check", "color": "green"}'}}}
+      {{{ info-block title="Для всех событий доступны HTTP-уведомления" text="Проверка заказа, успешная оплата, возврат платежа, изменение подписки." icon='{"name": "check", "color": "green"}'}}}
+      {{{ info-block title="В CMS модулях обработка уведомлений уже настроена" text="Чек по умолчанию формируется из товарных позиций корзины." icon='{"name": "check", "color": "green"}'}}}
+      <a href="#" class="page-section__link">
+        <span>Подробнее</span>
+        {{{ arrow-right }}}
+      </a>
     </div>
   </div>
 </section>
-<section class="page-section">
+<section class="page-section page-section--bg-blue">
   <div class="page-section__container">
     {{{ icon name="email" width="116" height="116" }}}
     <h2 class="page-section__title">Email-уведомления</h2>
@@ -93,13 +106,16 @@ layout: default
       или на сайтах без интернет-магазина.</p>
     <div class="page-section__block">
       {{{ info-block title="Можно получать информацию об оплате по email" text="Вы будете получать информацию о платеже и дополнительные данные,
-      которые клиент укажет в платёжной форме."}}}
-      {{{ info-block title="Вы сможете сразу узнавать кто, сколько и за что вам заплатил." text="Никаких доработок и настроек на сайте не требуется."}}}
-      <a href="#" class="page-section__link">Подробнее</a>
+      которые клиент укажет в платёжной форме." icon='{"name": "check", "color": "green"}'}}}
+      {{{ info-block title="Вы сможете сразу узнавать кто, сколько и за что вам заплатил." text="Никаких доработок и настроек на сайте не требуется." icon='{"name": "check", "color": "green"}'}}}
+      <a href="#" class="page-section__link">
+        <span>Подробнее</span>
+        {{{ arrow-right }}}
+      </a>
     </div>
   </div>
 </section>
-<section class="page-section">
+<section class="page-section page-section--bg-blue">
   <div class="page-section__container">
     {{{ icon name="kassa" width="122" height="120" }}}
     <h2 class="page-section__title">Настройки кассы</h2>
@@ -107,17 +123,17 @@ layout: default
       Все чеки сохраняются в личном кабинете.</p>
     <div class="page-section__block">
       {{{ info-block title="Для готовых CMS плагинов касса уже настроена" text="Чек будет приходить клиентам на email со всеми товарными позициями.
-      Если вам не нужны товарные позиции в чеке, можно сделать чек с общей суммой."}}}
+      Если вам не нужны товарные позиции в чеке, можно сделать чек с общей суммой." icon='{"name": "check", "color": "green"}'}}}
       {{{ info-block title="Для лендингов касса уже настроена" text="Самая простая интеграция. Подходит для любого сайта без интернет-магазина.
       Клиентам приходит чек с общей суммой заказа, без товарных позиций.
-      На ваш email отправляются данные об оплате заказа и информация о клиенте. "}}}
+      На ваш email отправляются данные об оплате заказа и информация о клиенте. " icon='{"name": "check", "color": "green"}'}}}
       {{{ info-block title="Для интернет-магазинов вы решаете как настроить кассу" text="Вы можете настроить передачу товарных позиций в чек,
-      просто добавьте структуру ofd в функцию check. Если вам не нужны товарные позиции в чеке, мы настроим для вас чек с общей суммой."}}}
+      просто добавьте структуру ofd в функцию check. Если вам не нужны товарные позиции в чеке, мы настроим для вас чек с общей суммой." icon='{"name": "check", "color": "green"}'}}}
     </div>
   </div>
 </section>
 
-<section class="page-section">
+<section class="page-section page-section--bg-purple">
   <div class="page-section__container">
     {{{ icon name="api" width="116" height="116" }}}
     <h2 class="page-section__title">ArsenalPay API</h2>
@@ -138,7 +154,7 @@ layout: default
     </div>
   </div>
 </section>
-<section class="page-section">
+<section class="page-section page-section--bg-pink">
   <div class="page-section__container">
     {{{ icon name="kassa" width="122" height="120" }}}
     <h2 class="page-section__title">Начать прием платежей с кассой</h2>

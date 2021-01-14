@@ -168,5 +168,7 @@
   margin-left: auto;
   padding-right: $container-padding-x;
   padding-left: $container-padding-x;
-  max-width: 1170px;
+  //max-width: 1170px;
+  min-width: 300px;
+  max-width: 900px;
 }

@@ -1,0 +1,57 @@
+.info-block {
+  --icon-space: 18px;
+
+  display: flex;
+  flex-direction: column;
+  font-family: $font-family;
+
+  &[data-count]::before {
+    content: attr(data-count);
+    margin-bottom: var(--icon-space);
+    width: 37px;
+    height: 37px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: $font-family;
+    font-size: 20px;
+    color: var(--purple-dark-color);
+    border: 2px solid var(--purple-dark-color);
+    border-radius: 50%;
+    box-sizing: border-box;
+  }
+
+  @include media-breakpoint-up(sm) {
+    align-items: center;
+    text-align: center;
+  }
+
+  &__title {
+    margin: 0 0 7px;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 500;
+    color: var(--gray-color);
+
+    svg + & {
+      margin-top: 18px;
+    }
+
+    @include media-breakpoint-up(md) {
+      font-size: 20px;
+      line-height: 1.7;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    font-size: 15px;
+    font-weight: 300;
+    line-height: 1.5;
+    color: var(--gray-color);
+
+    @include media-breakpoint-up(md) {
+      font-size: 17px;
+    }
+  }
+}
