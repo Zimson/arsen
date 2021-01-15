@@ -160,6 +160,7 @@
 
     &--in-box {
       margin-bottom: 35px;
+      grid-column: 1 / -1;
       font-size: 18px;
       line-height: 1.55;
 
@@ -193,6 +194,16 @@
       font-size: 20px;
       line-height: 1.58;
       text-align: center;
+    }
+
+    &--in-box {
+      margin: 0;
+      font-size: 15px;
+      grid-column: 1 / -1;
+
+      @include media-breakpoint-up(md) {
+        font-size: 17px;
+      }
     }
   }
 
