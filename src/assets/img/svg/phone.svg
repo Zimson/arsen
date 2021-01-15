@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="20px" height="26px" viewBox="0 0 20 26" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
+    <title>Shape</title>
+    <desc>Created with Sketch.</desc>
+    <defs></defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="img-payment-tab" transform="translate(-183.000000, -37.000000)" fill="#AF53FF" fill-rule="nonzero">
+            <g id="Group" transform="translate(54.000000, 37.000000)">
+                <path d="M145,0 C147.21,0 149,1.787 149,4.006 L149,21.994 C149,24.207 147.208,26 145,26 L133,26 C130.79,26 129,24.213 129,21.994 L129,4.006 C129,1.793 130.792,0 133,0 L145,0 Z M139,21.5 C138.172,21.5 137.5,22.172 137.5,23 C137.5,23.828 138.172,24.5 139,24.5 C139.828,24.5 140.5,23.828 140.5,23 C140.5,22.172 139.828,21.5 139,21.5 Z M145.006,2 L132.994,2 C131.894,2 131,2.893 131,3.995 L131,20 L147,20 L147,3.995 C147,2.893 146.107,2 145.006,2 Z" id="Shape"></path>
+            </g>
+        </g>
+    </g>
+</svg>

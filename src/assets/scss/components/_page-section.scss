@@ -267,6 +267,19 @@
     }
   }
 
+  &__block--features {
+    grid-template-columns: repeat(2, 1fr);
+    align-items: center;
+    //justify-: space-between;
+    grid-column-gap: 50px;
+    grid-row-gap: 80px;
+
+    //& > *:nth-child(even) {
+    //  border: 1px solid red;
+    //  justify-self: end;
+    //}
+  }
+
   &__widget {
     margin-bottom: 30px;
     padding: 22px 18px 18px;
@@ -294,6 +307,53 @@
 
     @include media-breakpoint-up(md) {
       width: 312px;
+    }
+  }
+
+  &__tab {
+    padding: 15px 55px;
+    width: 100%;
+    max-width: 385px;
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid #d9d9d9;
+    border-radius: 70px;
+    box-shadow: -2px 26px 40px 1px rgba(0, 0, 0, 0.08), 0 1px 7px 0 rgba(0, 0, 0, 0.09);
+    box-sizing: border-box;
+  }
+
+  &__fields {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 375px;
+
+    div {
+      padding-left: 15px;
+      width: 100%;
+      max-width: 195px;
+      height: 38px;
+      border-radius: 60px;
+      background-color: rgba(#000000, 0.06);
+      box-sizing: border-box;
+      background-repeat: no-repeat;
+      background-position: 15px 53%;
+
+      &:first-child {
+        background-image: url("email-w-label.svg");
+      }
+
+      &:nth-of-type(2) {
+        margin: 8px 0;
+        align-self: flex-end;
+        background-image: url("comment.svg");
+      }
+
+      &:last-child {
+        background-image: url("name.svg");
+      }
     }
   }
 

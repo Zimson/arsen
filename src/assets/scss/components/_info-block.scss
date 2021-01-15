@@ -26,6 +26,14 @@
     text-align: center;
   }
 
+  &--align-left-lg {
+    @include media-breakpoint-up(lg) {
+      align-items: start;
+      text-align: left;
+      justify-self: start;
+    }
+  }
+
   &__title {
     margin: 0 0 7px;
     font-size: 18px;
