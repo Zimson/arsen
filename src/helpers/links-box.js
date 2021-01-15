@@ -17,31 +17,42 @@ module.exports = function(options) {
 
   cssClass+= allMods;
 
+  function renderToggleArrow() {
+    return `<svg class="links-box__toggle-arrow" width="8" height="13">
+               <use xlink:href="${root}assets/img/symbol/sprite.svg#toggle-arrow">
+            </svg>`
+  }
+
   function renderLogo(logo) {
-    return `<svg class="${cssClass}" ${logo.width ? `width="${logo.width}"` : ``} ${logo.height ? `height="${logo.height}"` : ``}>
+    return `<svg ${logo.width ? `width="${logo.width}"` : ``} ${logo.height ? `height="${logo.height}"` : ``}>
                <use xlink:href="${root}assets/img/symbol/sprite.svg#${logo.name}">
             </svg>`
   }
 
   if (links) {
     return `<label class="${cssClass}">
-            <input type="radio" name="${name}" />
-            <div class="links-box__toggle">
+            <input type="radio" class="links-box__input" name="${name}" hidden />
+            <div class="links-box__body">
                 ${logo ? renderLogo(logo) : ``}
+                ${renderToggleArrow()}
             </div>    
             <ul class="links-box__list">
-                ${links.map((link) => `<li>
-                    <a href="${link.href}" class="link">${link.text}</a>
-                    <svg class="icon" width="17" height="13">
-                       <use xlink:href="${root}assets/img/symbol/sprite.svg#forward-arrow">
-                    </svg>
-                </li>`)}
+                ${links.map((link) => `<li class="links-box__item">
+                    <a href="${link.href}" class="links-box__link">
+                      <span>${link.text}</span>
+                      <svg class="icon" width="17" height="13">
+                         <use xlink:href="${root}assets/img/symbol/sprite.svg#forward-arrow">
+                      </svg>
+                    </a>
+                  
+                </li>`).join(``)}
             </ul>
         </label>`
   } else {
     return `<a href="${href}" class="${cssClass}">
             <div class="links-box__body">
                 ${logo ? renderLogo(logo) : ``}
+                ${renderToggleArrow()}
             </div>    
         </a>`
   }
