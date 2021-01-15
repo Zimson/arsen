@@ -268,16 +268,27 @@
   }
 
   &__block--features {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    //justify-: space-between;
-    grid-column-gap: 50px;
-    grid-row-gap: 80px;
 
-    //& > *:nth-child(even) {
-    //  border: 1px solid red;
-    //  justify-self: end;
-    //}
+
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(2, 1fr);
+      align-items: center;
+      grid-column-gap: 50px;
+      grid-row-gap: 85px;
+    }
+
+    & > *:nth-child(even) {
+      margin-top: 45px;
+      margin-bottom: 85px;
+
+      @include media-breakpoint-up(lg) {
+        margin: 0;
+      }
+    }
+
+    & > *:last-child {
+      margin-bottom: 0;
+    }
   }
 
   &__widget {
@@ -311,7 +322,7 @@
   }
 
   &__tab {
-    padding: 15px 55px;
+    padding: 15px 50px;
     width: 100%;
     max-width: 385px;
     height: 100px;
@@ -322,24 +333,37 @@
     border-radius: 70px;
     box-shadow: -2px 26px 40px 1px rgba(0, 0, 0, 0.08), 0 1px 7px 0 rgba(0, 0, 0, 0.09);
     box-sizing: border-box;
+
+    @include media-breakpoint-up(sm) {
+      padding-right: 55px;
+      padding-left: 55px;
+    }
   }
 
   &__fields {
     display: flex;
     flex-direction: column;
     width: 100%;
-    max-width: 375px;
+    max-width: 320px;
+
+    @include media-breakpoint-up(sm) {
+      max-width: 375px;
+    }
 
     div {
       padding-left: 15px;
       width: 100%;
-      max-width: 195px;
+      max-width: 175px;
       height: 38px;
       border-radius: 60px;
       background-color: rgba(#000000, 0.06);
       box-sizing: border-box;
       background-repeat: no-repeat;
       background-position: 15px 53%;
+
+      @include media-breakpoint-up(sm) {
+        max-width: 195px;
+      }
 
       &:first-child {
         background-image: url("email-w-label.svg");
@@ -358,13 +382,30 @@
   }
 
   &__card {
-    padding: 43px 30px;
+    padding: 0 20px;
     width: 100%;
+    max-width: 320px;
     height: 210px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     border: solid 1px #d9d9d9;
     border-radius: 50px;
     box-shadow: -2px 26px 36px 1px rgba(0, 0, 0, 0.08), 0 1px 7px 0 rgba(0, 0, 0, 0.09);
     box-sizing: border-box;
+
+    @include media-breakpoint-up(sm) {
+      padding: 0 30px;
+      max-width: 385px;
+    }
+  }
+
+  &__card img {
+    width: 273px;
+
+    @include media-breakpoint-up(sm) {
+      width: 325px;
+    }
   }
 
   &__link {

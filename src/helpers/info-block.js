@@ -3,6 +3,7 @@ module.exports = function(options) {
   const text = options.hash.text;
   const width = options.hash.width;
   const height = options.hash.height;
+  const link = options.hash.link ? JSON.parse(options.hash.link) : null;
   const icon = options.hash.icon ? JSON.parse(options.hash.icon) : null;
   const count = options.hash.count;
   const mods = options.hash.mods;
@@ -40,10 +41,20 @@ module.exports = function(options) {
     return svg;
   }
 
+  function renderLink(link) {
+    return `<a href="${link.href}" class="info-block__link info-block__link--${link.color}">
+        <span>${link.text}</span>
+        <svg class="icon icon--${link.color}" width="6" height="9">
+           <use xlink:href="${root}assets/img/symbol/sprite.svg#arrow-right">
+        </svg>
+    </a>`
+  }
+
   const block = `<article class="${cssClass}" ${count ? `data-count="${count}"` : ``}>
                     ${icon ? renderIcon(icon) : ``}
                     <h1 class="info-block__title">${title}</h1>
                     <p class="info-block__text">${text}</p>
+                   ${link ? renderLink(link) : ``}
                  </article>`;
 
   return block;
