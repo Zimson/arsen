@@ -222,19 +222,6 @@
   }
 
   &__block--cms {
-    display: grid;
 
-    @include media-breakpoint-up(md) {
-      grid-template-columns: repeat(2, 1fr);
-      grid-column-gap: 25px;
-    }
-
-    & > div:first-of-type {
-      margin-bottom: var(--links-box-mg-bottom);
-
-      @include media-breakpoint-up(md) {
-        margin-bottom: 0;
-      }
-    }
   }
 }

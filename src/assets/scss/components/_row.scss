@@ -1,0 +1,17 @@
+.row {
+  width: 100%;
+  display: grid;
+
+  @include media-breakpoint-up(md) {
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 25px;
+  }
+
+  &--cms > div:first-of-type {
+    margin-bottom: var(--links-box-mg-bottom);
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+  }
+}
