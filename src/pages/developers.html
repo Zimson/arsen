@@ -37,7 +37,7 @@ layout: default
       </div>
       {{{ info-block title="Удобный ввод" text="Проверка вводимых данных <br />Подсказки при неверном вводе
       <br />  Браузерное автозаполнение <br />  Перевод курсора на следующее поле <br />  Определение платёжной системы
-      <br />  Определение операторов сотовой связи" count="3" mods="align-left-lg" link='{"text": "Посмотреть виджет", "href": "#", "color": "purple"}'}}}
+      <br />  Определение операторов сотовой связи" count="3" mods="align-left-lg" link='{"text": "Посмотреть виджет", "dataModal": "widgetModal", "color": "purple"}'}}}
       <div class="page-section__card">
         {{{ img name="payment-card" }}}
       </div>
@@ -188,15 +188,15 @@ layout: default
   </div>
 </section>
 
-<article class="modal">
+<article id="widgetModal" class="modal" data-close>
   <div class="modal__body">
-    <button type="button" class="modal__close">
+    <button type="button" class="modal__close" data-close>
       {{{ icon name="cross" width="12" height="12" }}}
     </button>
     <h1 class="modal__title">Виджет оплаты</h1>
     <div class="modal__scroll">
       <p class="modal__text">Вы можете встроить виджет оплаты в любое место на сайте и реализовать любую логику появления виджета. Например, отображать виджет на странице корзины, или показывать его во всплывающем окне вашего сайта. </p>
-      <iframe class="iframe iframe--widget" src="https://arsenalpay.ru/widget.html?widget=6022&destination=ArsenalPay-test&amount=1000" frameborder="0"  height="398"></iframe>
+      <iframe class="iframe iframe--widget" data-src="https://arsenalpay.ru/widget.html?widget=6022&destination=ArsenalPay-test&amount=1000" frameborder="0"  height="398"></iframe>
     </div>
   </div>
 </article>
