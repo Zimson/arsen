@@ -1,0 +1,15 @@
+.link {
+  font-family: $font-family;
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.5;
+  color: var(--blue-dark-color);
+  text-decoration: none;
+
+  &--in-text {
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+  }
+}
