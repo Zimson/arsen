@@ -8,13 +8,13 @@ module.exports = function(options) {
   const count = options.hash.count;
   const mods = options.hash.mods;
   const root = options.data.root.root;
-  let cssClass = 'info-block';
+  let cssClass = 'info-box';
   let allMods = '';
 
   if (mods !== 'undefined' && mods ) {
     const modsList = mods.split(',');
       for (let i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' info-block--' + modsList[i].trim();
+        allMods = allMods + ' info-box--' + modsList[i].trim();
       }
   }
 
@@ -44,7 +44,7 @@ module.exports = function(options) {
   }
 
   function renderLink(link) {
-    return `<a ${link.href ? `href="${link.href}"` : ``} class="info-block__link info-block__link--${link.color}" ${link.dataModal ? `data-modal="${link.dataModal}"` : ``}>
+    return `<a ${link.href ? `href="${link.href}"` : ``} class="info-box__link info-box__link--${link.color}" ${link.dataModal ? `data-modal="${link.dataModal}"` : ``}>
         <span>${link.text}</span>
         <svg class="icon icon--${link.color}" width="6" height="9">
            <use xlink:href="${root}assets/img/symbol/sprite.svg#arrow-right">
@@ -54,8 +54,8 @@ module.exports = function(options) {
 
   const block = `<article class="${cssClass}" ${count ? `data-count="${count}"` : ``}>
                     ${icon ? renderIcon(icon) : ``}
-                    <h1 class="info-block__title">${title}</h1>
-                    <p class="info-block__text">${text}</p>
+                    <h1 class="info-box__title">${title}</h1>
+                    <p class="info-box__text">${text}</p>
                    ${link ? renderLink(link) : ``}
                  </article>`;
 

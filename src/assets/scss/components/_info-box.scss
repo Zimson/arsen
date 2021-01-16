@@ -1,4 +1,4 @@
-.info-block {
+.info-box {
   --icon-space: 18px;
 
   margin-bottom: 40px;
@@ -89,9 +89,5 @@
   &__link span {
     margin-right: 10px;
     display: inline-block;
-  }
-
-  &__icon {
-
   }
 }
