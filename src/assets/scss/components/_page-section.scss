@@ -176,6 +176,14 @@
     svg + &--in-box {
       margin-top: 12px;
     }
+
+    a {
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      font-weight: inherit;
+      text-decoration: none;
+    }
   }
 
   &__text {
