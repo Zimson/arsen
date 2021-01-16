@@ -44,6 +44,7 @@
     margin: 0 0 7px;
     font-size: 18px;
     line-height: 1.5;
+    letter-spacing: -0.62px;
     font-weight: 500;
     color: var(--gray-color);
 
@@ -54,6 +55,7 @@
     @include media-breakpoint-up(md) {
       font-size: 20px;
       line-height: 1.7;
+      letter-spacing: -0.69px;
     }
   }
 
@@ -62,10 +64,12 @@
     font-size: 15px;
     font-weight: 300;
     line-height: 1.6;
+    letter-spacing: -0.2px;
     color: var(--gray-color);
 
     @include media-breakpoint-up(md) {
       font-size: 17px;
+      letter-spacing: -0.59px;
     }
   }
 
@@ -85,5 +89,9 @@
   &__link span {
     margin-right: 10px;
     display: inline-block;
+  }
+
+  &__icon {
+
   }
 }

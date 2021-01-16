@@ -20,11 +20,13 @@
     font-size: 15px;
     font-weight: 300;
     line-height: 2.1;
+    letter-spacing: -0.2px;
     color: var(--gray-color);
 
     @include media-breakpoint-up(md) {
       font-size: 17px;
       line-height: 1.85;
+      letter-spacing: -0.59px;
     }
 
     &:nth-child(2n):not(&:last-child) {
