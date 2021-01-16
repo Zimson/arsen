@@ -5,7 +5,7 @@
     <desc>Created with Sketch.</desc>
     <defs></defs>
     <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="arrow-right" transform="translate(-6.000000, -14.000000)" fill="#268EFF" fill-rule="nonzero">
+        <g id="arrow-right" transform="translate(-6.000000, -14.000000)" fill="var(--icon-color, #000000)" fill-rule="nonzero">
             <path d="M10.0710678,19.035533 L7.24264069,16.2071058 C6.8521164,15.8165815 6.8521164,15.1834166 7.24264069,14.7928923 C7.63316498,14.402368 8.26632996,14.402368 8.65685425,14.7928923 L12.8994949,19.035533 L8.65685425,23.2781736 C8.26632996,23.6686979 7.63316498,23.6686979 7.24264069,23.2781736 C6.8521164,22.8876494 6.8521164,22.2544844 7.24264069,21.8639601 L10.0710678,19.035533 Z" id="Shape"></path>
         </g>
     </g>

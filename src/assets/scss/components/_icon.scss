@@ -1,5 +1,25 @@
 .icon {
-  display: block;
+  display: inline-block;
 
-  --icon-color: red;
+  //--icon-color: red;
+
+  &--pink {
+    --icon-color: var(--pink-dark-color);
+  }
+
+  &--purple {
+    --icon-color: var(--purple-dark-color);
+  }
+
+  &--green {
+    --icon-color: var(--green-dark-color);
+  }
+
+  &--blue {
+    --icon-color: var(--blue-dark-color);
+  }
+
+  &--cyan {
+    --icon-color: var(--blue-color);
+  }
 }
