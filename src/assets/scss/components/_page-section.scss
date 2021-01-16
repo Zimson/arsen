@@ -236,10 +236,13 @@
   }
 
   &__block {
-    margin-top: 15px;
     display: grid;
     width: 100%;
     box-sizing: border-box;
+
+    .page-section__text + & {
+      margin-top: 15px;
+    }
 
     &:not(&--no-bg) {
       padding: 50px 20px 55px;
