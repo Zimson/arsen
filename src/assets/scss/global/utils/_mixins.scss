@@ -170,22 +170,23 @@
   padding-left: $container-padding-x;
   //max-width: 1170px;
   min-width: 300px;
-  max-width: 900px;
-
+  //max-width: 320px;
+  max-width: 940px;
+  
   @include media-breakpoint-only(sm) {
-
+    //max-width: 520px;
   }
 
   @include media-breakpoint-only(md) {
 
   }
 
-  @include media-breakpoint-only(xl) {
+  @include media-breakpoint-only(lg) {
 
   }
 
-  @include media-breakpoint-only(xxl) {
-
+  @include media-breakpoint-only(xl) {
+    //max-width: 940px;
   }
 }
 
