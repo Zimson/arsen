@@ -211,6 +211,7 @@
     border: 1px solid var(--blue-dark-color);
     border-radius: 40px;
     box-sizing: border-box;
+    transition: all .3s;
 
     @include media-breakpoint-up(md) {
       max-width: 304px;
@@ -218,6 +219,11 @@
 
     &:focus {
       outline: none;
+    }
+
+    @include hover {
+      background-color: var(--blue-dark-color);
+      color: var(--white-color);
     }
   }
 

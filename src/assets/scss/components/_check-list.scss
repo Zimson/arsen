@@ -1,6 +1,8 @@
 .check-list {
   @include list-clear();
 
+  margin-top: 25px;
+
   @include media-breakpoint-up(md) {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

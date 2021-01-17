@@ -57,17 +57,11 @@
   &__link {
     margin-top: 40px;
     display: inline-block;
-    font-family: $font-family;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 2.15;
-    color: var(--blue-dark-color);
     text-transform: uppercase;
-    text-decoration: none;
-  }
 
-  &__link span {
-    margin-right: 5px;
-    display: inline-block;
+    svg {
+      margin-left: 5px;
+      display: inline-block;
+    }
   }
 }

@@ -75,19 +75,12 @@
 
   &__link {
     margin-top: 15px;
-    font-family: $font-family;
-    font-size: 14px;
-    font-weight: 500;
-    line-height: 2.15;
-    color: var(--purple-dark-color);
     text-transform: uppercase;
-    text-decoration: none;
     cursor: pointer;
-    //letter-spacing: -0.16px;
   }
 
-  &__link span {
-    margin-right: 10px;
+  &__link svg {
+    margin-left: 5px;
     display: inline-block;
   }
 }
