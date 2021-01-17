@@ -1,9 +1,14 @@
 .widget-details {
 
-  @include media-breakpoint-up(lg) {
+  @include media-breakpoint-up(sm) {
     display: grid;
+    justify-items: center;
+  }
+
+  @include media-breakpoint-up(lg) {
     grid-template-columns: repeat(2, 1fr);
     align-items: center;
+    justify-items: end;
     grid-column-gap: 50px;
     grid-row-gap: 85px;
   }
