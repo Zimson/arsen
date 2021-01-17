@@ -31,7 +31,7 @@ module.exports = function(options) {
 
   if (links) {
     return `<label class="${cssClass}">
-            <input type="radio" class="links-box__input" name="${name}" hidden />
+            <input type="checkbox" class="links-box__input" name="${name}" hidden />
             <div class="links-box__body">
                 ${logo ? renderLogo(logo) : ``}
                 ${renderToggleArrow()}

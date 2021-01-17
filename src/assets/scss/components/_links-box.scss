@@ -8,6 +8,10 @@
     margin-bottom: var(--links-box-mg-bottom);
   }
 
+  @include hover {
+    border-color: rgba(#000000, 0.3);
+  }
+
   &__body {
     position: relative;
     padding: 4px 35px 4px 28px;
