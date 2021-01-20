@@ -1,51 +1,32 @@
 .widget-details {
+  display: flex;
+  flex-direction: column;
 
   @include media-breakpoint-up(sm) {
-    display: grid;
-    justify-items: center;
+    align-items: center;
   }
 
   @include media-breakpoint-up(lg) {
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    //justify-items: end;
-    grid-column-gap: 50px;
-    grid-row-gap: 85px;
+    display: grid;
+    grid-template-columns: 410px 1fr;
+    align-items: unset;
+    grid-column-gap: 12px;
+    grid-row-gap: 80px;
   }
 
-  & > *:nth-child(2) {
-    margin-top: 42px;
-    margin-bottom: 82px;
-
-    @include media-breakpoint-up(md) {
-      margin-bottom: 112px;
-    }
+  &__item {
+    position: relative;
 
     @include media-breakpoint-up(lg) {
+      right: -30px;
       margin: 0;
+      justify-self: center;
     }
   }
 
-  & > *:nth-child(4) {
+  &__item--tab {
     margin-top: 42px;
     margin-bottom: 82px;
-
-    @include media-breakpoint-up(md) {
-      margin-bottom: 92px;
-    }
-
-    @include media-breakpoint-up(lg) {
-      margin: 0;
-    }
-  }
-
-  & > *:last-child {
-    margin-top: 46px;
-    margin-bottom: 0;
-  }
-
-
-  &__tab {
     width: 320px;
     height: 100px;
     display: flex;
@@ -60,6 +41,14 @@
       width: 386px
     }
 
+    @include media-breakpoint-up(md) {
+      margin-bottom: 112px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin: 60px 0 0 0;
+    }
+
     img {
       width: 222px;
       height: 26px;
@@ -70,7 +59,9 @@
     }
   }
 
-  &__fields {
+  &__item--fields {
+    margin-top: 42px;
+    margin-bottom: 82px;
     display: flex;
     flex-direction: column;
     width: 100%;
@@ -79,9 +70,19 @@
     @include media-breakpoint-up(sm) {
       max-width: 375px;
     }
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 92px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin: 34px 0 0 0;
+    }
   }
 
-  &__card {
+  &__item--card {
+    margin-top: 46px;
+    margin-bottom: 0;
     width: 100%;
     max-width: 320px;
     height: 210px;
@@ -96,14 +97,18 @@
     @include media-breakpoint-up(sm) {
       max-width: 386px;
     }
-  }
 
-  &__card img {
-    width: 272px;
-    height: 107px;
+    @include media-breakpoint-up(lg) {
+      margin: 54px 0 0 0;
+    }
 
-    @include media-breakpoint-up(sm) {
-      width: 324px;
+    img {
+      width: 272px;
+      height: 107px;
+
+      @include media-breakpoint-up(sm) {
+        width: 324px;
+      }
     }
   }
 }
