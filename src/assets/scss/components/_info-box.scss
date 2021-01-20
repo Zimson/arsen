@@ -49,7 +49,7 @@
     color: var(--gray-color);
 
     svg + & {
-      margin-top: 18px;
+      margin-top: 12px;
     }
 
     @include media-breakpoint-up(md) {

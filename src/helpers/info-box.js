@@ -29,6 +29,21 @@ module.exports = function(options) {
     let svg = ``;
 
     switch (icon.name) {
+      case 'number-1':
+        svg = `<svg  class="icon ${icon.color ? `icon--${icon.color}` : ``}" width="37" height="37">
+                 <use xlink:href="${root}assets/img/symbol/sprite.svg#number-1">
+              </svg>`
+        break;
+      case 'number-2':
+        svg = `<svg  class="icon ${icon.color ? `icon--${icon.color}` : ``}" width="37" height="37">
+                 <use xlink:href="${root}assets/img/symbol/sprite.svg#number-2">
+              </svg>`
+        break;
+      case 'number-3':
+        svg = `<svg  class="icon ${icon.color ? `icon--${icon.color}` : ``}" width="37" height="37">
+                 <use xlink:href="${root}assets/img/symbol/sprite.svg#number-3">
+              </svg>`
+        break;
       case 'security':
         svg = `<svg  class="icon ${icon.color ? `icon--${icon.color}` : ``}" width="38" height="48">
                  <use xlink:href="${root}assets/img/symbol/sprite.svg#security">
