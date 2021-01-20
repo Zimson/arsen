@@ -13,9 +13,26 @@
     grid-row-gap: 85px;
   }
 
-  & > *:nth-child(even) {
+  & > *:nth-child(2) {
     margin-top: 42px;
-    margin-bottom: 84px;
+    margin-bottom: 82px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 112px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin: 0;
+    }
+  }
+
+  & > *:nth-child(4) {
+    margin-top: 42px;
+    margin-bottom: 82px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 92px;
+    }
 
     @include media-breakpoint-up(lg) {
       margin: 0;
