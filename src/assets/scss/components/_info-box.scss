@@ -41,9 +41,9 @@
   }
 
   &__title {
-    margin: 0 0 7px;
-    font-size: 18px;
-    line-height: 1.5;
+    margin: 0 0 8px 0;
+    font-size: 18.2px;
+    line-height: 28px;
     letter-spacing: -0.62px;
     font-weight: 500;
     color: var(--gray-color);
@@ -53,22 +53,23 @@
     }
 
     @include media-breakpoint-up(md) {
-      font-size: 20px;
-      line-height: 1.7;
+      font-size: 20.2px;
+      line-height: 35px;
       letter-spacing: -0.69px;
     }
   }
 
   &__text {
     margin: 0;
-    font-size: 15px;
+    font-size: 15.2px;
     font-weight: 300;
-    line-height: 1.6;
+    line-height: 24px;
     letter-spacing: -0.2px;
     color: var(--gray-color);
 
     @include media-breakpoint-up(md) {
-      font-size: 17px;
+      font-size: 17.2px;
+      line-height: 26px;
       letter-spacing: -0.59px;
     }
   }
