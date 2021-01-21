@@ -192,6 +192,7 @@
     color: var(--gray-color);
 
     @include media-breakpoint-up(sm) {
+      //margin-bottom: 32px;
       //max-width: 520px;
       text-align: center;
     }
@@ -205,6 +206,12 @@
 
     @include media-breakpoint-up(xl) {
       max-width: 840px;
+    }
+
+    .page-section:first-of-type & {
+      @include media-breakpoint-up(sm) {
+        margin-bottom: 32px;
+      }
     }
   }
 

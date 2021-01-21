@@ -1,8 +1,11 @@
 .links-box {
-  //width: 100%;
   display: block;
   border: 1px solid rgba(#000000, 0.2);
   border-radius: 40px;
+
+  @include media-breakpoint-up(sm) {
+    //width: 100%;
+  }
 
   &:not(:last-child) {
     margin-bottom: var(--links-box-mg-bottom);
