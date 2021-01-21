@@ -79,6 +79,10 @@
       letter-spacing: -0.59px;
     }
 
+    @include media-breakpoint-up(lg) {
+      max-width: 740px;
+    }
+
     &--lh-sm {
       @include media-breakpoint-up(md) {
         line-height: 26px;
