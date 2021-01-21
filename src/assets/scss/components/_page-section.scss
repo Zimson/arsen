@@ -192,7 +192,6 @@
     color: var(--gray-color);
 
     @include media-breakpoint-up(sm) {
-      //margin-bottom: 32px;
       //max-width: 520px;
       text-align: center;
     }
@@ -211,6 +210,10 @@
     .page-section:first-of-type & {
       @include media-breakpoint-up(sm) {
         margin-bottom: 32px;
+      }
+
+      @include media-breakpoint-up(sm) {
+        margin-bottom: 36px;
       }
     }
   }

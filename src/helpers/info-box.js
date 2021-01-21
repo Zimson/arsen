@@ -3,6 +3,8 @@ module.exports = function(options) {
   const text = options.hash.text;
   const width = options.hash.width;
   const height = options.hash.height;
+  const titleMod = options.hash.titleMod;
+  const textMod = options.hash.textMod;
   const link = options.hash.link ? JSON.parse(options.hash.link) : null;
   const icon = options.hash.icon ? JSON.parse(options.hash.icon) : null;
   const count = options.hash.count;
@@ -69,8 +71,8 @@ module.exports = function(options) {
 
   const block = `<article class="${cssClass}" ${count ? `data-count="${count}"` : ``}>
                     ${icon ? renderIcon(icon) : ``}
-                    <h1 class="info-box__title">${title}</h1>
-                    <p class="info-box__text">${text}</p>
+                    <h1 class="info-box__title ${titleMod ? `info-box__title--${titleMod}` : ``}">${title}</h1>
+                    <p class="info-box__text ${textMod ? `info-box__text--${textMod}` : ``}" >${text}</p>
                    ${link ? renderLink(link) : ``}
                  </article>`;
 

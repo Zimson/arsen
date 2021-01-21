@@ -62,7 +62,7 @@
       letter-spacing: -0.69px;
     }
 
-    &--lh-lg {
+    &--lh-35-md {
       @include media-breakpoint-up(md) {
         line-height: 35px;
       }
@@ -87,7 +87,7 @@
       max-width: 740px;
     }
 
-    &--lh-sm {
+    &--lh-26-md {
       @include media-breakpoint-up(md) {
         line-height: 26px;
       }

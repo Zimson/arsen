@@ -11,6 +11,10 @@
     margin-bottom: var(--links-box-mg-bottom);
 
     @include media-breakpoint-up(md) {
+      margin-bottom: var(--links-box-mg-bottom-md);
+    }
+
+    @include media-breakpoint-up(md) {
       margin-bottom: 0;
     }
   }
