@@ -103,6 +103,10 @@
       }
     }
 
+    .page-section:nth-of-type(2) & {
+     padding-bottom: 165px;
+    }
+
     .page-section:last-of-type & {
       padding-top: 92px;
       padding-bottom: 90px;

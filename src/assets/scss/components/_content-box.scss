@@ -24,6 +24,11 @@
     max-width: 940px;
   }
 
+  @include media-breakpoint-up(xl) {
+    padding-right: 48px;
+    padding-left: 48px;
+  }
+
   &__title {
     margin-top: 0;
     margin-bottom: 8px;
