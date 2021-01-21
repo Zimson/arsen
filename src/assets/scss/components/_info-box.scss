@@ -1,5 +1,5 @@
 .info-box {
-  --icon-space: 18px;
+  //--icon-space: 18px;
 
   margin-bottom: 40px;
   display: flex;
@@ -11,21 +11,21 @@
     margin-bottom: 0;
   }
 
-  &[data-count]::before {
-    content: attr(data-count);
-    margin-bottom: var(--icon-space);
-    width: 37px;
-    height: 37px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-family: $font-family;
-    font-size: 20px;
-    color: var(--purple-dark-color);
-    border: 2px solid var(--purple-dark-color);
-    border-radius: 50%;
-    box-sizing: border-box;
-  }
+  //&[data-count]::before {
+  //  content: attr(data-count);
+  //  margin-bottom: var(--icon-space);
+  //  width: 37px;
+  //  height: 37px;
+  //  display: flex;
+  //  justify-content: center;
+  //  align-items: center;
+  //  font-family: $font-family;
+  //  font-size: 20px;
+  //  color: var(--purple-dark-color);
+  //  border: 2px solid var(--purple-dark-color);
+  //  border-radius: 50%;
+  //  box-sizing: border-box;
+  //}
 
   @include media-breakpoint-up(sm) {
     align-items: center;
@@ -41,6 +41,8 @@
   }
 
   &__title {
+    --icon-space: 12px;
+
     margin: 0 0 8px 0;
     font-size: 18.2px;
     line-height: 28px;
@@ -49,11 +51,15 @@
     color: var(--gray-color);
 
     svg + & {
-      margin-top: 12px;
+      margin-top: var(--icon-space);
     }
 
     .info-box--icon-size-lg svg + & {
       margin-top: 16px;
+
+      @include media-breakpoint-up(md) {
+        margin-top: var(--icon-space);
+      }
     }
 
     @include media-breakpoint-up(md) {
