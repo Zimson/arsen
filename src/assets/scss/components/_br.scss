@@ -1,39 +1,69 @@
 .br {
   display: none;
 
-  &--up-xs {
+  &--show-xs {
     @include media-breakpoint-up(xs) {
       display: block;
     }
   }
 
-  &--up-sm {
+  &--show-sm {
     @include media-breakpoint-up(sm) {
       display: block;
     }
   }
 
-  &--up-md {
+  &--hide-sm {
+    @include media-breakpoint-up(sm) {
+      display: none;
+    }
+  }
+
+  &--show-md {
     @include media-breakpoint-up(md) {
       display: block;
     }
   }
 
-  &--up-lg {
+  &--hide-md {
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
+  }
+
+  &--show-lg {
     @include media-breakpoint-up(lg) {
       display: block;
     }
   }
 
-  &--up-xl {
+  &--hide-lg {
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+  }
+
+  &--show-xl {
     @include media-breakpoint-up(xl) {
       display: block;
     }
   }
 
-  &--up-xxl {
+  &--hide-xl {
+    @include media-breakpoint-up(xl) {
+      display: none;
+    }
+  }
+
+  &--show-xxl {
     @include media-breakpoint-up(xxl) {
       display: block;
+    }
+  }
+
+  &--hide-xxl {
+    @include media-breakpoint-up(xxl) {
+      display: none;
     }
   }
 }

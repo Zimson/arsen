@@ -144,6 +144,11 @@
 
   &__title {
     margin: 0 0 16px 0;
+    max-width: 322px;
+
+    @include media-breakpoint-up(sm) {
+      max-width: unset;
+    }
 
     svg + & {
       margin-top: 30px;
@@ -161,6 +166,7 @@
       @include clear-link-outline();
 
       @include media-breakpoint-up(sm) {
+        max-width: auto;
         text-align: center;
       }
 
@@ -182,6 +188,7 @@
     color: var(--gray-color);
 
     @include media-breakpoint-up(sm) {
+      //max-width: 520px;
       text-align: center;
     }
 
