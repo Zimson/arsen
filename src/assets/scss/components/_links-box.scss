@@ -9,12 +9,13 @@
   }
 
   @include hover {
-    border-color: rgba(#000000, 0.3);
+    border-color: rgba(#000000, 0.6);
+    background-color: rgba(#000000, 0.04);
   }
 
   &__body {
     position: relative;
-    padding: 4px 35px 4px 28px;
+    padding: 4px 14px 4px 28px;
     width: 100%;
     height: 72px;
     display: flex;
@@ -22,6 +23,7 @@
     justify-content: space-between;
     box-sizing: border-box;
     cursor: pointer;
+    user-select: none;
   }
 
   &__list {
@@ -37,23 +39,27 @@
   }
 
   &__item {
-    margin-bottom: 7px;
+
+    &:not(:last-child) {
+      margin-bottom: 8px;
+    }
   }
 
   &__link {
     display: flex;
     align-items: center;
-
-    svg {
-      margin-left: 5px;
-      display: inline-block;
-    }
+    user-select: none;
   }
 
   &__toggle-arrow {
+    transform: rotate3d(0, 0, 1, 90deg);
 
     .links-box__input:checked ~ .links-box__body  & {
-      transform: rotate3d(0, 0, 1, 90deg);
+      transform: rotate3d(0, 0, 1, -90deg);
+    }
+
+    .links-box--link & {
+      transform: rotate3d(0, 0, 1, 0deg);
     }
   }
 }

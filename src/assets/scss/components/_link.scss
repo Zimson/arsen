@@ -18,6 +18,8 @@
     background-color: var(--blue-dark-color);
     opacity: 0;
 
+    @include clear-link-outline();
+
     @include hover() {
       opacity: 1;
     }

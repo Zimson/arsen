@@ -214,3 +214,12 @@
     outline: none;
   }
 }
+
+@mixin clear-link-outline {
+  outline: 0;
+
+  &:focus,
+  &:active {
+    outline: 0;
+  }
+}

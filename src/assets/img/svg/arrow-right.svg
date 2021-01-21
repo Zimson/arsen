@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<svg width="7px" height="10px" viewBox="0 0 7 10" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>Shape</title>
+<svg width="48px" height="38px" viewBox="0 0 48 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>icon-arrow-new-page-caps-b</title>
     <desc>Created with Sketch.</desc>
-    <defs></defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="arrow-right" transform="translate(-6.000000, -14.000000)" fill="var(--icon-color, #000000)" fill-rule="nonzero">
-            <path d="M10.0710678,19.035533 L7.24264069,16.2071058 C6.8521164,15.8165815 6.8521164,15.1834166 7.24264069,14.7928923 C7.63316498,14.402368 8.26632996,14.402368 8.65685425,14.7928923 L12.8994949,19.035533 L8.65685425,23.2781736 C8.26632996,23.6686979 7.63316498,23.6686979 7.24264069,23.2781736 C6.8521164,22.8876494 6.8521164,22.2544844 7.24264069,21.8639601 L10.0710678,19.035533 Z" id="Shape"></path>
+    <g id="icon-arrow-new-page-caps-b" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <rect id="Rectangle" fill-opacity="0" fill="#FFFFFF" x="0" y="0" width="48" height="38"></rect>
+        <g id="icon/input/arrow-new_page-3" transform="translate(6.000000, 14.000000)" fill="var(--icon-color, #000000)">
+            <path d="M4.07106781,5.03553295 L1.24264069,2.20710583 C0.852116395,1.81658154 0.852116395,1.18341656 1.24264069,0.792892265 C1.63316498,0.402367973 2.26632996,0.402367973 2.65685425,0.792892265 L6.89949494,5.03553295 L2.65685425,9.27817364 C2.26632996,9.66869793 1.63316498,9.66869793 1.24264069,9.27817364 C0.852116395,8.88764935 0.852116395,8.25448437 1.24264069,7.86396008 L4.07106781,5.03553295 Z" id="Combined-Shape"></path>
         </g>
     </g>
 </svg>

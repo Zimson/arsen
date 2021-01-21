@@ -61,7 +61,7 @@ module.exports = function(options) {
   function renderLink(link) {
     return `<div class="info-box__link">
         <a ${link.href ? `href="${link.href}"` : ``} class="link link--${link.color}" ${link.dataModal ? `data-modal="${link.dataModal}"` : ``}>${link.text}</a>
-        <svg class="icon icon--${link.color}" width="6" height="9">
+        <svg class="icon icon--${link.color}" width="48" height="38">
            <use xlink:href="${root}assets/img/symbol/sprite.svg#arrow-right">
         </svg>
     </div>`

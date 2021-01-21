@@ -18,8 +18,8 @@ module.exports = function(options) {
   cssClass+= allMods;
 
   function renderToggleArrow() {
-    return `<svg class="links-box__toggle-arrow" width="8" height="13">
-               <use xlink:href="${root}assets/img/symbol/sprite.svg#toggle-arrow">
+    return `<svg class="links-box__toggle-arrow" width="48" height="38">
+               <use xlink:href="${root}assets/img/symbol/sprite.svg#caret">
             </svg>`
   }
 
@@ -40,8 +40,8 @@ module.exports = function(options) {
                 ${links.map((link) => `<li class="links-box__item">
                     <div class="links-box__link">
                       <a href="${link.href}" class="link">${link.text}</a>
-                      <svg class="icon" width="17" height="13">
-                         <use xlink:href="${root}assets/img/symbol/sprite.svg#forward-arrow">
+                      <svg class="icon" width="48" height="38">
+                         <use xlink:href="${root}assets/img/symbol/sprite.svg#arrow-forward">
                       </svg>
                     </div>
                   

@@ -54,8 +54,14 @@
 
     @include media-breakpoint-up(md) {
       font-size: 20.2px;
-      line-height: 35px;
+      line-height: 32px;
       letter-spacing: -0.69px;
+    }
+
+    &--lh-lg {
+      @include media-breakpoint-up(md) {
+        line-height: 35px;
+      }
     }
   }
 
@@ -69,19 +75,23 @@
 
     @include media-breakpoint-up(md) {
       font-size: 17.2px;
-      line-height: 26px;
+      line-height: 28px;
       letter-spacing: -0.59px;
+    }
+
+    &--lh-sm {
+      @include media-breakpoint-up(md) {
+        line-height: 26px;
+      }
     }
   }
 
   &__link {
     margin-top: 16px;
+    display: flex;
+    align-items: center;
     text-transform: uppercase;
     cursor: pointer;
-  }
-
-  &__link svg {
-    margin-left: 5px;
-    display: inline-block;
+    user-select: none;
   }
 }

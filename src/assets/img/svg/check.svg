@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="37px" height="37px" viewBox="0 0 37 37" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
     <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
-    <title>icon-check-medium-g</title>
+    <title>icon-check-medium-b</title>
     <desc>Created with Sketch.</desc>
-    <g id="icon-check-medium-g" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+    <g id="icon-check-medium-b" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
         <g id="icon-check-medium" transform="translate(2.000000, 2.000000)" fill="var(--icon-color, #000000)">
             <path d="M16.5,0 C25.6126984,0 33,7.38730163 33,16.5 C33,25.6126984 25.6126984,33 16.5,33 C7.38730163,33 0,25.6126984 0,16.5 C0,7.38730163 7.38730163,0 16.5,0 Z M16.5,2 C8.49187113,2 2,8.49187113 2,16.5 C2,24.5081289 8.49187113,31 16.5,31 C24.5081289,31 31,24.5081289 31,16.5 C31,8.49187113 24.5081289,2 16.5,2 Z M23.9246212,11.3180195 C24.5104076,11.9038059 24.5104076,12.8535534 23.9246212,13.4393398 L14.3786797,22.9852814 L9.0753788,17.6819805 C8.48959236,17.0961941 8.48959236,16.1464466 9.0753788,15.5606602 C9.66116524,14.9748737 10.6109127,14.9748737 11.1966991,15.5606602 L14.3786797,18.7426407 L21.8033009,11.3180195 C22.3890873,10.732233 23.3388348,10.732233 23.9246212,11.3180195 Z" id="Combined-Shape"></path>
         </g>
