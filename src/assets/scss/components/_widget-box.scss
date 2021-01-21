@@ -32,8 +32,12 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 90px;
-    padding: 22px 18px 18px;
+    //padding: 19px 24px 21px;
     width: 320px;
+    height: 438px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     background-color: var(--white-color);
     box-shadow: -2px 25px 33px 1px rgba(137, 1, 167, 0.14), 0 1px 7px 0 rgba(149, 2, 119, 0.2);
     border-radius: 54px;

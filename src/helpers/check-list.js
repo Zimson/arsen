@@ -18,8 +18,8 @@ module.exports = function(options) {
     <ul class="${cssClass}">
         ${items && items.map((item) => {
           return `<li class="check-list__item">
-              <svg class="icon" width="48px" height="38px">
-                 <use xlink:href="${root}assets/img/symbol/sprite.svg#check-list">
+              <svg class="icon" width="14px" height="12px">
+                 <use xlink:href="${root}assets/img/symbol/sprite.svg#check-list-1">
               </svg>            
               ${item}
           </li>`  

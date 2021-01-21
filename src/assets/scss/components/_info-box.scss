@@ -52,6 +52,10 @@
       margin-top: 12px;
     }
 
+    .info-box--icon-size-lg svg + & {
+      margin-top: 16px;
+    }
+
     @include media-breakpoint-up(md) {
       font-size: 20.2px;
       line-height: 32px;
@@ -91,11 +95,15 @@
   }
 
   &__link {
-    margin-top: 16px;
+    margin-top: 13px;
     display: flex;
     align-items: center;
     text-transform: uppercase;
     cursor: pointer;
     user-select: none;
+
+    svg {
+      margin-left: 8px;
+    }
   }
 }

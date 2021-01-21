@@ -1,5 +1,5 @@
 .page-section {
-  --skew-angle: 5deg;
+  --skew-angle: 6.5deg;
 
   position: relative;
 
@@ -89,8 +89,8 @@
     }
 
     .page-section:first-of-type & {
-      padding-top: 85px;
-      padding-bottom: 115px;
+      padding-top: 76px;
+      padding-bottom: 110px;
 
       @include media-breakpoint-up(md) {
         padding-top: 115px;
@@ -103,7 +103,7 @@
     }
 
     .page-section:last-of-type & {
-      padding-top: 90px;
+      padding-top: 92px;
       padding-bottom: 90px;
       background-color: var(--pink-light-color);
       align-items: center;
@@ -131,6 +131,10 @@
       }
     }
 
+    .page-section--solid.--end & {
+      padding-bottom: 150px;
+    }
+
     .page-section--solid.--end + .page-section & {
       padding-top: 100px;
       padding-bottom: 120px;
@@ -151,7 +155,7 @@
     }
 
     svg + & {
-      margin-top: 30px;
+      margin-top: 26px;
     }
 
     a {

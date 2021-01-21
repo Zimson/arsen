@@ -62,12 +62,16 @@
   }
 
   &__link {
-    margin-top: 34px;
+    margin-top: 30px;
     display: inline-flex;
     align-items: center;
     text-transform: uppercase;
     user-select: none;
 
     @include clear-link-outline();
+
+    svg {
+      margin-left: 8px;
+    }
   }
 }

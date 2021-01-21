@@ -1,7 +1,9 @@
 .check-list {
   @include list-clear();
-
-  margin-top: 36px;
+  //position: relative;
+  //left: -15px;
+  margin-top: 26px;
+  margin-bottom: 5px;
 
   @include media-breakpoint-up(md) {
     display: grid;
@@ -16,14 +18,28 @@
   }
 
   &__item {
+    position: relative;
     display: flex;
     align-items: center;
     font-family: $font-family;
-    font-size: 15px;
+    font-size: 15.2px;
     font-weight: 300;
-    line-height: 2.1;
+    line-height: 32px;
     letter-spacing: -0.2px;
     color: var(--gray-color);
+    //
+    //&::before {
+    //  content: "";
+    //  position: absolute;
+    //  top: 50%;
+    //  transform: translateY(-50%);
+    //  left: 0;
+    //  width: 48px;
+    //  height: 48px;
+    //  background-image: url("check-list");
+    //  background-repeat: no-repeat;
+    //  background-position: 50% 50%;
+    //}
 
     @include media-breakpoint-up(md) {
       font-size: 17px;
@@ -32,11 +48,15 @@
     }
 
     &:nth-child(2n):not(&:last-child) {
-      margin-bottom: 20px;
+      margin-bottom: 23px;
 
       @include media-breakpoint-up(md) {
         margin-bottom: 0;
       }
+    }
+
+    svg {
+      margin-right: 22px;
     }
   }
 }
