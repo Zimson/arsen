@@ -8,7 +8,7 @@
 
   @include media-breakpoint-up(lg) {
     display: grid;
-    grid-template-columns: 410px 1fr;
+    grid-template-columns:  minmax(410px, 1fr) minmax(386px, 1fr);
     align-items: unset;
     grid-column-gap: 12px;
     grid-row-gap: 80px;
@@ -18,7 +18,7 @@
     position: relative;
 
     @include media-breakpoint-up(lg) {
-      right: -30px;
+      right: -20px;
       margin: 0;
       justify-self: center;
     }
