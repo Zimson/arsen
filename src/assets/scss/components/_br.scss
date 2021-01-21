@@ -1,0 +1,39 @@
+.br {
+  display: none;
+
+  &--up-xs {
+    @include media-breakpoint-up(xs) {
+      display: block;
+    }
+  }
+
+  &--up-sm {
+    @include media-breakpoint-up(sm) {
+      display: block;
+    }
+  }
+
+  &--up-md {
+    @include media-breakpoint-up(md) {
+      display: block;
+    }
+  }
+
+  &--up-lg {
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
+
+  &--up-xl {
+    @include media-breakpoint-up(xl) {
+      display: block;
+    }
+  }
+
+  &--up-xxl {
+    @include media-breakpoint-up(xxl) {
+      display: block;
+    }
+  }
+}
