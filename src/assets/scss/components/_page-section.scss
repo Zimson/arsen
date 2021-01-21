@@ -88,7 +88,7 @@
       padding-bottom: 190px;
     }
 
-    .page-section:first-of-type & {
+    .page-section--widget & {
       padding-top: 76px;
       padding-bottom: 110px;
 
@@ -103,11 +103,11 @@
       }
     }
 
-    .page-section:nth-of-type(2) & {
+    .page-section--widget-details & {
      padding-bottom: 165px;
     }
 
-    .page-section:last-of-type & {
+    .page-section--cashbox & {
       padding-top: 92px;
       padding-bottom: 90px;
       background-color: var(--pink-light-color);
@@ -140,7 +140,7 @@
       padding-bottom: 150px;
     }
 
-    .page-section--solid.--end + .page-section & {
+    .page-section--api & {
       padding-top: 100px;
       padding-bottom: 120px;
 
