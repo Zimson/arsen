@@ -19,6 +19,7 @@
 
   &__item {
     position: relative;
+    padding-left: 35px;
     display: flex;
     align-items: center;
     font-family: $font-family;
@@ -27,19 +28,25 @@
     line-height: 32px;
     letter-spacing: -0.2px;
     color: var(--gray-color);
-    //
-    //&::before {
-    //  content: "";
-    //  position: absolute;
-    //  top: 50%;
-    //  transform: translateY(-50%);
-    //  left: 0;
-    //  width: 48px;
-    //  height: 48px;
-    //  background-image: url("check-list");
-    //  background-repeat: no-repeat;
-    //  background-position: 50% 50%;
-    //}
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: -1px;
+      left: -16px;
+      width: 48px;
+      height: 38px;
+      background-image: url("check-list");
+      background-repeat: no-repeat;
+
+      @include media-breakpoint-up(sm) {
+        left: 0;
+      }
+    }
+
+    @include media-breakpoint-up(sm) {
+      padding-left: 52px;
+    }
 
     @include media-breakpoint-up(md) {
       font-size: 17px;
