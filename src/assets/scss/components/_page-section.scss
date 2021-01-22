@@ -101,6 +101,10 @@
         padding-top: 105px;
         padding-bottom: 150px;
       }
+
+      @include media-breakpoint-up(xxl) {
+        padding-right: 25px;
+      }
     }
 
     .page-section--widget-details & {
@@ -175,7 +179,7 @@
       @include clear-link-outline();
 
       @include media-breakpoint-up(sm) {
-        max-width: auto;
+        max-width: 100%;
         text-align: center;
       }
 
@@ -184,6 +188,10 @@
         letter-spacing: -1.16px;
         line-height: 48px;
       }
+    }
+
+    .page-section--widget & {
+      margin-left: -15px;
     }
   }
 
@@ -212,13 +220,17 @@
       max-width: 840px;
     }
 
-    .page-section:first-of-type & {
+    .page-section--widget & {
       @include media-breakpoint-up(sm) {
         margin-bottom: 32px;
       }
 
-      @include media-breakpoint-up(sm) {
+      @include media-breakpoint-up(md) {
         margin-bottom: 36px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        margin-left: -15px;
       }
     }
   }
@@ -249,8 +261,11 @@
     user-select: none;
 
     @include media-breakpoint-up(md) {
+      margin-right: unset;
+      margin-left: unset;
       margin-bottom: 100px;
       max-width: 304px;
+      //align-self: center;
     }
 
     &:focus {
@@ -260,6 +275,12 @@
     @include hover {
       background-color: var(--blue-dark-color);
       color: var(--white-color);
+    }
+
+    .page-section--widget & {
+      @include media-breakpoint-up(xxl) {
+        margin-left: -15px;
+      }
     }
   }
 }
