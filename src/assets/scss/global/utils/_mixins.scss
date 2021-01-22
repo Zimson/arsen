@@ -166,8 +166,8 @@
 @mixin container {
   margin-right: auto;
   margin-left: auto;
-  padding-right: $container-padding-x;
-  padding-left: $container-padding-x;
+  padding-right: var(--container-padding-x);
+  padding-left: var(--container-padding-x);
   //max-width: 1170px;
   min-width: 300px;
   //max-width: 374px;
@@ -175,9 +175,10 @@
   //outline: 1px solid red;
 
   @include media-breakpoint-up(sm) {
+    --container-padding-x: 40px;
     //max-width: 520px;
-    padding-right: 40px;
-    padding-left: 40px;
+    padding-right: var(--container-padding-x);
+    padding-left: var(--container-padding-x);
   }
 
   @include media-breakpoint-up(md) {

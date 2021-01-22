@@ -1,5 +1,6 @@
 .page-section {
   --skew-angle: 6.5deg;
+  --container-cut: 15px;
 
   position: relative;
 
@@ -103,7 +104,7 @@
       }
 
       @include media-breakpoint-up(xxl) {
-        padding-right: 25px;
+        padding-right: calc(var(--container-padding-x) - var(--container-cut));
       }
     }
 
@@ -191,7 +192,7 @@
     }
 
     .page-section--widget & {
-      margin-left: -15px;
+      margin-left: calc(-1 * var(--container-cut));
     }
   }
 
@@ -230,7 +231,7 @@
       }
 
       @include media-breakpoint-up(xxl) {
-        margin-left: -15px;
+        margin-left: calc(-1 * var(--container-cut));
       }
     }
   }
