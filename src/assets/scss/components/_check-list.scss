@@ -14,6 +14,7 @@
     padding-left: 23px;
     display: grid;
     grid-template-columns: repeat(2, minmax(276px, 1fr));
+    grid-template-rows: repeat(2, 32px);
     grid-column-gap: 10px;
     justify-content: start;
     box-sizing: border-box;
@@ -51,6 +52,7 @@
     }
 
     @include media-breakpoint-up(md) {
+      grid-column-gap: 8px;
       font-size: 17.2px;
       line-height: 32px;
       letter-spacing: -0.59px;
@@ -70,12 +72,19 @@
 
     &:nth-child(even) {
       margin-top: -5px;
-      color: red;
+
+      @include media-breakpoint-up(md) {
+        margin-top: 0;
+      }
     }
 
     .check-list--api & {
 
       &:nth-child(3) {
+        @include media-breakpoint-up(md) {
+          order: 4;
+        }
+
         @include media-breakpoint-up(lg) {
           order: 1;
         }
@@ -92,11 +101,15 @@
       }
 
       &:nth-child(5) {
-        @include media-breakpoint-up(md) {
-          order: 2;
-        }
+        //@include media-breakpoint-up(md) {
+        //  order: 2;
+        //}
 
         @include media-breakpoint-up(md) {
+          order: 3;
+        }
+
+        @include media-breakpoint-up(lg) {
           order: 1;
         }
       }
