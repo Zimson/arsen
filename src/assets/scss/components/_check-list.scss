@@ -15,8 +15,11 @@
   }
 
   @include media-breakpoint-up(lg) {
+    padding: 0;
+    width: 100%;
+    //grid-row-gap: -3px;
     grid-template-columns: repeat(3, auto);
-    grid-column-gap: 42px;
+    grid-column-gap: 27px;
   }
 
   &__item {
@@ -29,13 +32,17 @@
 
     position: relative;
     padding-left: 35px;
-    display: flex;
-    align-items: center;
+    //display: flex;
+    //align-items: center;
+    display: grid;
+    grid-template-columns: 48px auto;
+    grid-column-gap: 8px;
     font-family: $font-family;
     font-size: 15.2px;
     font-weight: 300;
     line-height: 32px;
     letter-spacing: -0.2px;
+    text-align: left;
     color: var(--gray-color);
 
     @include media-breakpoint-up(sm) {
@@ -49,6 +56,10 @@
       letter-spacing: -0.59px;
     }
 
+    @include media-breakpoint-up(lg) {
+      padding-left: 0px;
+    }
+
     &:nth-child(2n):not(&:last-child) {
       margin-bottom: 23px;
 
@@ -57,36 +68,55 @@
       }
     }
 
-    &::before {
-      content: "";
-      position: absolute;
-      top: -1px;
-      left: -16px;
-      width: 48px;
-      height: 38px;
-      background-image: url("check-list");
-      background-repeat: no-repeat;
-
-      @include media-breakpoint-up(sm) {
-        left: 0;
-      }
-
-      @include media-breakpoint-up(md) {
-        top: -2px;
-      }
+    &:nth-child(even) {
+      top: -5px;
+      color: red;
     }
 
+    //&::before {
+    //  content: "";
+    //  //position: absolute;
+    //  //top: -1px;
+    //  //left: -16px;
+    //  //width: 48px;
+    //  height: 38px;
+    //  background-image: url("check-list");
+    //  background-repeat: no-repeat;
+    //
+    //  @include media-breakpoint-up(sm) {
+    //    left: 0;
+    //  }
+    //
+    //  @include media-breakpoint-up(md) {
+    //    top: -2px;
+    //  }
+    //}
+
     .check-list--api & {
+
+      &:nth-child(3) {
+        @include media-breakpoint-up(lg) {
+          order: 1;
+        }
+      }
 
       &:nth-child(4) {
         @include media-breakpoint-up(md) {
           order: 1;
+        }
+
+        @include media-breakpoint-up(lg) {
+          order: 2;
         }
       }
 
       &:nth-child(5) {
         @include media-breakpoint-up(md) {
           order: 2;
+        }
+
+        @include media-breakpoint-up(md) {
+          order: 1;
         }
       }
     }

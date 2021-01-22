@@ -17,7 +17,10 @@ module.exports = function(options) {
   const svg = `
     <ul class="${cssClass}">
         ${items && items.map((item) => {
-          return `<li class="check-list__item">         
+          return `<li class="check-list__item">
+              <svg class="icon" width="48px" height="38px">
+                 <use xlink:href="${root}assets/img/symbol/sprite.svg#check-list">
+              </svg>            
               ${item}
           </li>`  
         }).join(``)}
