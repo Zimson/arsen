@@ -21,6 +21,7 @@
   }
 
   @include media-breakpoint-up(lg) {
+    margin-bottom: 7px;
     padding: 0;
     width: 100%;
     grid-template-columns: repeat(3, auto);
