@@ -60,11 +60,14 @@
 
   &__widget img {
     display: block;
-    width: 288px;
-    height: 398px;
+    margin-top: -4px;
+    //width: 288px;
+    //height: 398px;
+
 
     @include media-breakpoint-up(sm) {
-      width: 312px;
+      margin-top: 0;
+      //width: 312px;
     }
   }
 
