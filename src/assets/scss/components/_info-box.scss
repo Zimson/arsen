@@ -108,6 +108,10 @@
     cursor: pointer;
     user-select: none;
 
+    @include media-breakpoint-up(sm) {
+      transform: translateX(var(--arrow-icon-shift));
+    }
+
     svg {
       margin-left: 8px;
     }

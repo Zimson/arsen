@@ -109,7 +109,11 @@
     }
 
     .page-section--widget-details & {
-     padding-bottom: 130px; //165
+      padding-bottom: 135px; //165
+
+      @include media-breakpoint-up(sm) {
+        padding-bottom: 130px;
+      }
     }
 
     .page-section--cashbox & {

@@ -29,6 +29,13 @@
     padding-left: 48px;
   }
 
+  &--links-box {
+    @include media-breakpoint-up(sm) {
+      padding-right: 36px;
+      padding-left: 36px;
+    }
+  }
+
   &__title {
     margin-top: 0;
     margin-bottom: 8px;
@@ -76,7 +83,7 @@
     @include clear-link-outline();
 
     @include media-breakpoint-up(sm) {
-      transform: translateX(28px);
+      transform: translateX(var(--arrow-icon-shift));
     }
 
     svg {

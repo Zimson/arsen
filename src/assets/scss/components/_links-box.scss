@@ -4,7 +4,7 @@
   border-radius: 40px;
 
   @include media-breakpoint-up(sm) {
-    //width: 100%;
+    width: 100%;
   }
 
   &:not(:last-child) {
