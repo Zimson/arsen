@@ -192,7 +192,9 @@
     }
 
     .page-section--widget & {
-      margin-left: calc(-1 * var(--container-cut));
+      @include media-breakpoint-up(xxl) {
+        margin-left: calc(-1 * var(--container-cut));
+      }
     }
   }
 
