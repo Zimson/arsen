@@ -4,7 +4,10 @@
   position: relative;
   left: -15px;
   margin-top: 26px;
-  //margin-bottom: px;
+
+  @include media-breakpoint-up(sm) {
+    left: 0;
+  }
 
   @include media-breakpoint-up(md) {
     padding-right: 23px;
