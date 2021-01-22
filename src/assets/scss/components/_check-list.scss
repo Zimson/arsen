@@ -28,6 +28,12 @@
     grid-column-gap: 27px;
   }
 
+  @include media-breakpoint-up(xl) {
+    padding-right: 29px;
+    padding-left: 27px;
+    justify-content: space-between;
+  }
+
   &__item {
 
     @for $i from 1 through 100 {
@@ -59,9 +65,9 @@
       letter-spacing: -0.59px;
     }
 
-    @include media-breakpoint-up(lg) {
-      grid-column-gap: 8px;
-    }
+    //@include media-breakpoint-up(xl) {
+    //  grid-column-gap: 8px;
+    //}
 
     &:nth-child(2n):not(&:last-child) {
       margin-bottom: 15px;
