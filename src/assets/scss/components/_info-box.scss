@@ -112,6 +112,10 @@
       transform: translateX(var(--arrow-icon-shift));
     }
 
+    @include media-breakpoint-up(lg) {
+      transform: unset;
+    }
+
     svg {
       margin-left: 8px;
     }

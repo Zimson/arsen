@@ -118,6 +118,17 @@
       @include media-breakpoint-up(md) {
         padding-bottom: 190px;
       }
+
+      @include media-breakpoint-up(lg) {
+        padding-top: 192px;
+        padding-bottom: 140px;
+      }
+    }
+
+    .page-section--test & {
+      @include media-breakpoint-up(lg) {
+        padding-bottom: 200px;
+      }
     }
 
     .page-section--cashbox & {
