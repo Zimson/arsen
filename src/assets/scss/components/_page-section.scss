@@ -123,6 +123,10 @@
         padding-top: 192px;
         padding-bottom: 140px;
       }
+
+      @include media-breakpoint-up(xl) {
+        padding-bottom: 166px;
+      }
     }
 
     .page-section--test & {

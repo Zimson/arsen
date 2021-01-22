@@ -39,6 +39,11 @@
       padding-right: 40px;
       padding-left: 40px;
     }
+
+    @include media-breakpoint-up(xl) {
+      padding-right: 48px;
+      padding-left: 48px;
+    }
   }
 
   &__title {
