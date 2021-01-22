@@ -95,7 +95,7 @@
 
       @include media-breakpoint-up(md) {
         padding-top: 115px;
-        padding-bottom: 145px;
+        padding-bottom: 150px;
       }
 
       @include media-breakpoint-up(lg) {
@@ -113,6 +113,10 @@
 
       @include media-breakpoint-up(sm) {
         padding-bottom: 130px;
+      }
+
+      @include media-breakpoint-up(md) {
+        padding-bottom: 190px;
       }
     }
 
