@@ -220,7 +220,10 @@
   outline: 0;
 
   &:focus,
-  &:active {
+  &:active,
+  &:hover,
+  &:link,
+  &:visited {
     outline: 0;
   }
 }

@@ -36,7 +36,7 @@
   &__list {
     @include list-clear();
 
-    margin-bottom: 25px;
+    margin-bottom: 20px; //25
     padding: 0 28px;
     display: none;
 
@@ -45,17 +45,14 @@
     }
   }
 
-  &__item {
-
-    &:not(:last-child) {
-      margin-bottom: 8px;
-    }
-  }
-
   &__link {
     display: flex;
     align-items: center;
     user-select: none;
+
+    svg {
+      margin-left: -1px;
+    }
   }
 
   &__toggle-arrow {
