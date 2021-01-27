@@ -122,6 +122,7 @@
       @include media-breakpoint-up(lg) {
         padding-top: 192px;
         padding-bottom: 140px;
+        max-width: 1042px;
       }
 
       @include media-breakpoint-up(xl) {
@@ -211,10 +212,6 @@
       margin-top: 26px;
     }
 
-    a {
-
-    }
-
     .page-section--widget & {
       @include media-breakpoint-up(xxl) {
         margin-left: calc(-1 * var(--container-cut));
@@ -232,19 +229,14 @@
     color: var(--gray-color);
 
     @include media-breakpoint-up(sm) {
-      //max-width: 520px;
       text-align: center;
     }
 
     @include media-breakpoint-up(md) {
-      //max-width: 688px;
+      max-width: 840px;
       font-size: 20.2px;
       line-height: 32px;
       letter-spacing: -0.4px;
-    }
-
-    @include media-breakpoint-up(xl) {
-      max-width: 840px;
     }
 
     .page-section--widget & {

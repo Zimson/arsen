@@ -78,6 +78,7 @@
     }
 
     @include media-breakpoint-up(md) {
+      max-width: 740px;
       font-size: 17.2px;
       line-height: 28px;
       letter-spacing: -0.59px;
