@@ -5,6 +5,16 @@ import './utils/polyfill';
 
 import Modal from './modules/Modal';
 
+function scrollToAnchor() {
+  if (!window.location.hash) return;
+
+  const anchor = document.querySelector(window.location.hash);
+
+  if (anchor) {
+    anchor.scrollIntoView({block: "start", behavior: "smooth"});
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function() {
   const iframes = document.querySelectorAll('iframe');
 
@@ -13,6 +23,9 @@ document.addEventListener('DOMContentLoaded', function() {
     iframe.src = src;
   });
 
+  // setTimeout(() => {
+  //   scrollToAnchor();
+  // }, 0)
 });
 
 document.addEventListener('click', function(e) {
