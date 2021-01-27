@@ -36,7 +36,7 @@
   &__list {
     @include list-clear();
 
-    margin-bottom: 20px; //25
+    margin-bottom: 23px; //25
     padding: 0 28px;
     display: none;
 
@@ -46,16 +46,28 @@
   }
 
   &__item {
+    margin-top: 6px;
+    margin-bottom: 8px;
     text-align: left;
   }
 
   &__link {
-    display: flex;
-    align-items: center;
-    user-select: none;
+    @include link();
 
-    svg {
-      margin-left: -1px;
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: -11px;
+      right: -45px;
+      width: 48px;
+      height: 38px;
+      display: inline-block;
+      background: url("arrow-forward") no-repeat;
+      vertical-align: middle;
+    }
+
+    span {
+      vertical-align: middle;
     }
   }
 

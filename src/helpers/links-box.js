@@ -38,13 +38,9 @@ module.exports = function(options) {
             </div>    
             <ul class="links-box__list">
                 ${links.map((link) => `<li class="links-box__item">
-                    <div class="links-box__link">
-                      <a href="${link.href}" class="link" target="_blank">${link.text}</a>
-                      <svg class="icon" width="48" height="38">
-                         <use xlink:href="${root}assets/img/symbol/sprite.svg#arrow-forward">
-                      </svg>
-                    </div>
-                  
+                    <a href="${link.href}" class="links-box__link" target="_blank">
+                        <span>${link.text}</span>
+                    </a>
                 </li>`).join(``)}
             </ul>
         </label>`
