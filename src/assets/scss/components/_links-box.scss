@@ -45,6 +45,10 @@
     }
   }
 
+  &__item {
+    text-align: left;
+  }
+
   &__link {
     display: flex;
     align-items: center;
