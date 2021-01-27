@@ -182,36 +182,37 @@
   &__title {
     margin: 0 0 16px 0;
     max-width: 322px;
+    font-family: $font-family;
+    font-size: 29px;
+    font-weight: 400;
+    line-height: 38px;
+    letter-spacing: -0.5px;
+    color: rgba(var(--black-color), 0.9);
+    text-decoration: none;
+
+    @include clear-link-outline();
 
     @include media-breakpoint-up(sm) {
       max-width: unset;
+      text-align: center;
     }
+
+    @include media-breakpoint-up(md) {
+      font-size: 38px;
+      letter-spacing: -1.16px;
+      line-height: 48px;
+    }
+
+    //@include media-breakpoint-up(sm) {
+    //  max-width: unset;
+    //}
 
     svg + & {
       margin-top: 26px;
     }
 
     a {
-      font-family: $font-family;
-      font-size: 29px;
-      font-weight: 400;
-      line-height: 38px;
-      letter-spacing: -0.5px;
-      color: rgba(var(--black-color), 0.9);
-      text-decoration: none;
 
-      @include clear-link-outline();
-
-      @include media-breakpoint-up(sm) {
-        max-width: 100%;
-        text-align: center;
-      }
-
-      @include media-breakpoint-up(md) {
-        font-size: 38px;
-        letter-spacing: -1.16px;
-        line-height: 48px;
-      }
     }
 
     .page-section--widget & {
