@@ -40,4 +40,13 @@
       }
     }
   }
+
+  &--more {
+    @-moz-document url-prefix() {
+
+      &::after {
+        top: -12px;
+      }
+    }
+  }
 }

@@ -257,4 +257,11 @@
       opacity: 1;
     }
   }
+
+  @-moz-document url-prefix() {
+
+    &::before {
+      bottom: -5px;
+    }
+  }
 }
