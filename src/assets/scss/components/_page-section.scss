@@ -277,7 +277,7 @@
     border: 1px solid var(--blue-dark-color);
     border-radius: 40px;
     box-sizing: border-box;
-    transition: all .3s;
+    transition: background-color .3s;
     user-select: none;
 
     @include media-breakpoint-up(md) {
