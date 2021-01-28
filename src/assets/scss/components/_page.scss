@@ -1,0 +1,9 @@
+.page {
+  &--modal-open {
+    overflow: hidden;
+
+    body {
+      //position: fixed;
+    }
+  }
+}

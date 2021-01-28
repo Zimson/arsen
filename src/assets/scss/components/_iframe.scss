@@ -1,8 +1,15 @@
 .iframe {
 
   &--widget {
+    position: relative;
     margin-top: 10px;
-    width: 100%;
+    margin-left: -12px;
+    width: calc(100% + 25px);
     height: 398px;
+
+    @include media-breakpoint-up(sm) {
+      margin-left: unset;
+      width: 100%;
+    }
   }
 }
