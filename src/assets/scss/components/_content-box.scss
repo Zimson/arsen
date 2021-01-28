@@ -86,20 +86,6 @@
   }
 
   &__link {
-    margin-top: 30px;
-    display: inline-flex;
-    align-items: center;
-    text-transform: uppercase;
-    user-select: none;
-
-    @include clear-link-outline();
-
-    @include media-breakpoint-up(sm) {
-      transform: translateX(var(--arrow-icon-shift));
-    }
-
-    svg {
-      margin-left: 8px;
-    }
+    margin-top: 35px;
   }
 }

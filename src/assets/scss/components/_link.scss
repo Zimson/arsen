@@ -16,4 +16,28 @@
     line-height: inherit;
     letter-spacing: inherit;
   }
+
+  &--more {
+    text-transform: uppercase;
+    user-select: none;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: -9px;
+      right: -55px;
+      width: 48px;
+      height: 38px;
+      display: inline-block;
+      background: url("arrow-right--blue") no-repeat;
+      vertical-align: middle;
+    }
+
+    &.link--purple {
+
+      &::after {
+        background: url("arrow-right--purple") no-repeat;
+      }
+    }
+  }
 }
