@@ -46,9 +46,16 @@
   }
 
   &__item {
-    margin-top: 6px;
+    margin-top: 8px;
     margin-bottom: 8px;
     text-align: left;
+
+    @-moz-document url-prefix() {
+
+      & {
+        margin-top: 7px;
+      }
+    }
   }
 
   &__link {
@@ -57,17 +64,20 @@
     &::after {
       content: "";
       position: absolute;
-      bottom: -11px;
-      right: -45px;
+      bottom: -10px;
+      right: -46px;
       width: 48px;
       height: 38px;
       display: inline-block;
       background: url("arrow-forward") no-repeat;
-      vertical-align: middle;
     }
 
-    span {
-      vertical-align: middle;
+    @-moz-document url-prefix() {
+
+      &:after {
+        bottom: -11px;
+        right: -43px;
+      }
     }
   }
 
