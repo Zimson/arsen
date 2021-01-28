@@ -645,12 +645,27 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
+
+function scrollToAnchor() {
+  if (!window.location.hash) return;
+  var anchor = document.querySelector(window.location.hash);
+
+  if (anchor) {
+    anchor.scrollIntoView({
+      block: "start",
+      behavior: "smooth"
+    });
+  }
+}
+
 document.addEventListener('DOMContentLoaded', function () {
   var iframes = document.querySelectorAll('iframe');
   iframes.forEach(function (iframe) {
     var src = iframe.dataset.src;
     iframe.src = src;
-  });
+  }); // setTimeout(() => {
+  //   scrollToAnchor();
+  // }, 0)
 });
 document.addEventListener('click', function (e) {
   var modalTrigger = e.target.closest('[data-modal]');
