@@ -794,7 +794,7 @@ function () {
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! /Users/nekki/projects/arsenal-pay/src/assets/js/app.js */"./src/assets/js/app.js");
+module.exports = __webpack_require__(/*! /Users/nekki/projects/arsenal/src/assets/js/app.js */"./src/assets/js/app.js");
 
 
 /***/ })
