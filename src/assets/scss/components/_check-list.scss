@@ -21,9 +21,9 @@
   }
 
   @include media-breakpoint-up(lg) {
-    margin-bottom: 7px;
+    margin-bottom: 9px;
+    margin-left: -2px;
     padding: 0;
-    width: 100%;
     grid-template-columns: repeat(3, auto);
     grid-column-gap: 27px;
   }
