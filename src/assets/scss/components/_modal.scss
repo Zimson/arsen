@@ -13,9 +13,6 @@
   height: 100%;
   display: none;
   flex-direction: column;
-  flex-grow: 1;
-  align-items: center;
-  justify-content: center;
   background-color: rgba(#000000, 0.2);
   box-sizing: border-box;
   overflow-y: auto;
@@ -26,6 +23,7 @@
 
   &__body {
     position: relative;
+    margin: auto;
     padding: var(--body-padding);
     padding-right: var(--body-padding);
     max-width: 450px;
