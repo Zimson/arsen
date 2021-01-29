@@ -26,6 +26,7 @@
     position: relative;
     margin-right: auto;
     margin-left: auto;
+    width: 360px;
 
     @include media-breakpoint-up(sm) {
       width: 458px;

@@ -60,11 +60,16 @@
 
   &__link {
     @include link();
+    display: inline-block;
+
+    &::before {
+      display: none;
+    }
 
     &::after {
       content: "";
       position: absolute;
-      bottom: -10px;
+      bottom: -4px;
       right: -46px;
       width: 48px;
       height: 38px;
@@ -72,12 +77,37 @@
       background: url("arrow-forward") no-repeat;
     }
 
-    @-moz-document url-prefix() {
+    //@-moz-document url-prefix() {
+    //
+    //  &:after {
+    //    bottom: -11px;
+    //    right: -43px;
+    //  }
+    //}
+  }
 
-      &:after {
-        bottom: -11px;
-        right: -43px;
+  &__link span {
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: 2px;
+      width: 100%;
+      height: 1px;
+      background-color: var(--blue-dark-color);
+      opacity: 0;
+
+      @include hover() {
+        opacity: 1;
       }
+    }
+  }
+
+  &__link br {
+    display: block;
+
+    @include media-breakpoint-up(x) {
+      display: none;
     }
   }
 
