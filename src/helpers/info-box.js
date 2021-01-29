@@ -62,7 +62,7 @@ module.exports = function(options) {
 
   function renderLink(link) {
     return `<div class="info-box__link">
-        <a ${link.href ? `href="${link.href}"` : ``} class="link link--more link--${link.color}" ${link.dataModal ? `data-modal="${link.dataModal}"` : ``}>${link.text}</a>
+        <a ${link.href ? `href="${link.href}"` : ``} class="link link--more link--${link.color}" ${link.dataModal ? `data-modal="${link.dataModal}"` : ``}><span>${link.text}</span></a>
     </div>`
   }
 

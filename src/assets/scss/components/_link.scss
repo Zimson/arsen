@@ -1,6 +1,21 @@
 .link {
   @include link();
 
+  &::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 100%;
+    height: 1px;
+    background-color: var(--blue-dark-color);
+    opacity: 0;
+
+    @include hover() {
+      opacity: 1;
+    }
+  }
+
   &--purple {
     color: var(--purple-dark-color);
 
@@ -21,16 +36,40 @@
     text-transform: uppercase;
     user-select: none;
 
+    &::before {
+      display: none;
+    }
+
     &::after {
       content: "";
       position: absolute;
-      top: -9px;
-      right: -55px;
-      width: 48px;
-      height: 38px;
+      top: 50%;
+      transform: translateY(-50%);
+      right: -20px;
+      //margin-left: 10px;
+      width: 14px;
+      height: 14px;
       display: inline-block;
       background: url("arrow-right--blue") no-repeat;
-      vertical-align: middle;
+    }
+
+    span {
+      position: relative;
+
+      &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        bottom: -4px;
+        width: 100%;
+        height: 1px;
+        background-color: var(--blue-dark-color);
+        opacity: 0;
+
+        @include hover() {
+          opacity: 1;
+        }
+      }
     }
 
     &.link--purple {
@@ -38,15 +77,19 @@
       &::after {
         background: url("arrow-right--purple") no-repeat;
       }
-    }
-  }
 
-  &--more {
-    @-moz-document url-prefix() {
-
-      &::after {
-        top: -12px;
+      span::before {
+        background-color: var(--purple-dark-color);
       }
     }
   }
+
+  //&--more {
+  //  @-moz-document url-prefix() {
+  //
+  //    &::after {
+  //      top: -12px;
+  //    }
+  //  }
+  //}
 }
