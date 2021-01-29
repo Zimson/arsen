@@ -29,8 +29,10 @@
   }
 
   @include media-breakpoint-up(xl) {
+    margin-left: 0;
     padding-right: 29px;
     padding-left: 27px;
+    width: 100%;
     justify-content: space-between;
   }
 
@@ -53,10 +55,6 @@
     letter-spacing: -0.2px;
     text-align: left;
     color: var(--gray-color);
-
-    @include media-breakpoint-up(sm) {
-
-    }
 
     @include media-breakpoint-up(md) {
       grid-column-gap: 8px;
