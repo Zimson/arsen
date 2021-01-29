@@ -33,6 +33,9 @@
   }
 
   &--more {
+    --icon-size: 14px;
+
+    line-height: var(--icon-size);
     text-transform: uppercase;
     user-select: none;
 
@@ -45,10 +48,9 @@
       position: absolute;
       top: 50%;
       transform: translateY(-50%);
-      right: -20px;
-      //margin-left: 10px;
-      width: 14px;
-      height: 14px;
+      right: -21px;
+      width: var(--icon-size);
+      height: var(--icon-size);
       display: inline-block;
       background: url("arrow-right--blue") no-repeat;
     }
