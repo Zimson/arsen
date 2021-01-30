@@ -715,7 +715,7 @@ function () {
   }, {
     key: "_close",
     value: function _close(e) {
-      if (e.target.closest('[data-close]')) {
+      if (e.target.hasAttribute(['data-close'])) {
         this.$el.classList.remove('modal--open');
         document.documentElement.classList.remove('page--modal-open');
       }
