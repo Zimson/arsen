@@ -45,6 +45,20 @@
 
   &__item--tab {
 
+    @include media-breakpoint-only(xs) {
+      margin-top: 42px;
+      margin-bottom: 82px;
+      width: 320px;
+      height: 100px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: 1px solid #d9d9d9;
+      border-radius: 70px;
+      box-shadow: -2px 26px 40px 1px rgba(0, 0, 0, 0.08), 0 1px 7px 0 rgba(0, 0, 0, 0.09);
+      box-sizing: border-box;
+    }
+
     @include media-breakpoint-up(sm) {
       margin-top: 30px;
       margin-bottom: 20px;
@@ -60,6 +74,15 @@
   }
 
   &__item--fields {
+
+    @include media-breakpoint-only(xs) {
+      margin-top: 42px;
+      margin-bottom: 82px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 320px;
+    }
 
     @include media-breakpoint-up(sm) {
       margin-top: 30px;
@@ -77,8 +100,23 @@
 
   &__item--card {
 
+    @include media-breakpoint-only(xs) {
+      margin-top: 54px;
+      margin-bottom: 0;
+      width: 100%;
+      max-width: 320px;
+      height: 210px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border: solid 1px #d9d9d9;
+      border-radius: 50px;
+      box-shadow: -2px 26px 36px 1px rgba(0, 0, 0, 0.08), 0 1px 7px 0 rgba(0, 0, 0, 0.09);
+      box-sizing: border-box;
+    }
+
     @include media-breakpoint-up(sm) {
-      margin-top: 35px;
+      margin-top: 41px;
     }
 
     @include media-breakpoint-up(md) {
