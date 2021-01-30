@@ -1,6 +1,7 @@
 .page {
   &--modal-open {
     overflow: hidden;
+    padding-right: 15px;
 
     body {
       overflow: hidden;
