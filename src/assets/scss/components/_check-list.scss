@@ -63,10 +63,6 @@
       letter-spacing: -0.59px;
     }
 
-    //@include media-breakpoint-up(xl) {
-    //  grid-column-gap: 8px;
-    //}
-
     &:nth-child(2n):not(&:last-child) {
       margin-bottom: 15px;
 
@@ -106,9 +102,6 @@
       }
 
       &:nth-child(5) {
-        //@include media-breakpoint-up(md) {
-        //  order: 2;
-        //}
 
         @include media-breakpoint-up(md) {
           order: 3;
@@ -121,4 +114,7 @@
     }
   }
 
+  &__item svg {
+    margin-top: -2px;
+  }
 }
