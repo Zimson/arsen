@@ -137,4 +137,8 @@
       background-color: rgba(#000000, 0.04);
     }
   }
+
+  &__close svg {
+    pointer-events: none;
+  }
 }
