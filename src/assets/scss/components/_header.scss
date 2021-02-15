@@ -21,4 +21,47 @@
     display: block;
     text-decoration: none;
   }
+
+  &__burger {
+    --line-width: 28px;
+    --line-height: 1px;
+    --line-color: rgba(#000000, 0.8);
+
+    @include btn-default();
+
+    position: relative;
+    width: var(--line-width);
+    height: 18px;
+    display: block;
+
+    @include media-breakpoint-up(lg) {
+      display: none;
+    }
+
+    span {
+      position: relative;
+      display: block;
+      width: var(--line-width);
+      height: var(--line-height);
+      background-color: rgba(#000000, 0.8);
+
+      &::before,
+      &::after {
+        content: "";
+        position: absolute;
+        left: 0;
+        width: var(--line-width);
+        height: var(--line-height);
+        background-color: rgba(#000000, 0.8);
+      }
+
+      &::before {
+        top: -8px;
+      }
+
+      &::after {
+        top: 8px;
+      }
+    }
+  }
 }

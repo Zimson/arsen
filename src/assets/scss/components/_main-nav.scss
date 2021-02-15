@@ -1,7 +1,11 @@
 .main-nav {
   @include list-clear();
 
-  display: flex;
+  display: none;
+
+  @include media-breakpoint-up(lg) {
+    display: flex;
+  }
 
   &__item {
 
