@@ -54,9 +54,126 @@
     </script>
   </head>
 <body>
+  <header class="header">
+    <nav class="header__container">
+      <a href="#" class="header__logo">
+        <svg class="icon" width="74" height="42">
+                   <use xlink:href="assets/img/symbol/sprite.svg#main-logo">
+                </svg>
+      </a>
+      <ul class="main-nav">
+        <li class="main-nav__item">
+          <a href="https://arsenalpay.ru/cashbox.html" class="link link--sm link--black">Онлайн касса</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="https://arsenalpay.ru/tariffs.html" class="link link--sm link--black">Тарифы</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="https://arsenalpay.ru/priem-platezhej-v-instagram.html" class="link link--sm link--black">Платежи в Instagram</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="https://arsenalpay.ru//priem-platezhej-na-sajte.html" class="link link--sm link--black">Платежи на сайте</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="https://arsenalpay.ru/quickstart.html" class="link link--sm link--black">Платежи без сайта</a>
+        </li>
+        <li class="main-nav__item main-nav__item--login">
+          <a href="https://arsenalpay.ru/dashboard/login" class="link link--sm link--black">Войти</a>
+        </li>
+      </ul>
+      <button type="button" class="header__burger" data-open-mobile>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <div class="mobile-nav" data-mobile-close>
+    <div class="mobile-nav__main">
+      <button type="button" class="mobile-nav__close" data-mobile-close>
+        <svg class="icon" width="12" height="12">
+                   <use xlink:href="assets/img/symbol/sprite.svg#cross">
+                </svg>
+      </button>
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/cashbox.html">Онлайн касса</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/tariffs.html">Тарифы</a>
+        </li>
+      </ul>
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/priem-platezhej-v-instagram.html">Платежи в Instagram</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/priem-platezhej-na-sajte.html">Платежи на сайте</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/quickstart.html">Платежи без сайта</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/travel.html">Турфирмам</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/providers.html">Провайдерам</a>
+        </li>
+      </ul>
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/about.html">О компании</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/contacts.html">Контакты</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/blog/">Блог</a>
+        </li>
+      </ul>
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/documentation/index.html">Документация</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/support.html">Поддержка</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/developers.html">Разработчикам</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/partnership.html">Агентам</a>
+        </li>
+      </ul>
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/demo.html">Демо магазин</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/pay/">Оплата услуг</a>
+        </li>
+      </ul>
+      <a href="https://arsenalpay.ru/dashboard/login" class="mobile-nav__login" target="_blank">Войти</a>
+      
+      <div class="social">
+          <span class="social__label">Мы в соц. сетях</span>
+          <a href="https://www.instagram.com/arsenal_pay/" class="social__item">
+              <img src="/assets/img/svg/instagram.svg" width="48" height="38" alt="Instagram">
+          </a>
+          <a href="tg://resolve?domain=arsenalpay" class="social__item">
+              <img src="/assets/img/svg/telegram.svg" width="48" height="38" alt="Telegram">
+          </a>
+          <a href="https://www.facebook.com/ArsenalPay.ru" class="social__item">
+              <img src="/assets/img/svg/facebook.svg" width="48" height="38" alt="Facebook">
+          </a>
+    </div>
+      <div class="lang">
+        <a href="https://arsenalpay.ru" class="lang__item active" target="_blank">Русский</a>
+        <a href="https://arsenalpay.com" class="lang__item" target="_blank">English</a>
+      </div>
+    </div>
+  </div>
   <div id="page" class="page-inner">
     
-    <section class="page-section page-section--widget page-section--bg-purple page-section--no-skew-top">
+    <section class="page-section page-section--widget page-section--bg-purple page-section--no-skew-top page-section--under-header">
       <div class="page-section__container">
         <h2 class="page-section__title">Разработчикам</h2>
         <p class="page-section__text">Готовые CMS плагины, виджет оплаты для интернет-магазинов и&nbsp;лендингов.</p>
@@ -727,7 +844,7 @@
                   </svg>
         <h2 class="page-section__title">Начать прием платежей с&nbsp;кассой</h2>
         <p class="page-section__text">Вам не&nbsp;нужно покупать или брать в&nbsp;аренду свою&nbsp;кассу</p>
-        <a href="https://arsenalpay.ru/dashboard/registration-type" class="page-section__btn">Подключиться</a>
+        <a href="https://arsenalpay.ru/dashboard/registration-type" class="page-section__btn" style="margin-bottom: 0">Подключиться</a>
       </div>
     </section>
     
@@ -745,6 +862,91 @@
     </article>
     
   </div>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__links">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/about.html" class="link link--sm link--black link--footer">О компании</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/contacts.html" class="link link--sm link--black link--footer">Контакты</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/blog/" class="link link--sm link--black link--footer">Блог</a>
+          </li>
+        </ul>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/cashbox.html" class="link link--sm link--black link--footer">Онлайн касса</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/tariffs.html" class="link link--sm link--black link--footer">Тарифы</a>
+          </li>
+        </ul>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/priem-platezhej-v-instagram.html" class="link link--sm link--black link--footer">Платежи в Instagram</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru//priem-platezhej-na-sajte.html" class="link link--sm link--black link--footer">Платежи на сайте</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/quickstart.html" class="link link--sm link--black link--footer">Платежи без сайта</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/travel.html" class="link link--sm link--black link--footer">Турфирмам</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/providers.html" class="link link--sm link--black link--footer">Провайдерам</a>
+          </li>
+        </ul>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/documentation/index.html" class="link link--sm link--black link--footer">Документация</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/support.html" class="link link--sm link--black link--footer">Поддержка</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/developers.html" class="link link--sm link--black link--footer">Разработчикам</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/partnership.html" class="link link--sm link--black link--footer">Агентам</a>
+          </li>
+        </ul>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/demo.html" class="link link--sm link--black link--footer">Демо магазин</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/pay/" class="link link--sm link--black link--footer">Оплата услуг</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__social">
+        
+      <div class="social social--footer">
+          <span class="social__label">Мы в соц. сетях</span>
+          <a href="https://www.instagram.com/arsenal_pay/" class="social__item">
+              <img src="/assets/img/svg/instagram.svg" width="48" height="38" alt="Instagram">
+          </a>
+          <a href="tg://resolve?domain=arsenalpay" class="social__item">
+              <img src="/assets/img/svg/telegram.svg" width="48" height="38" alt="Telegram">
+          </a>
+          <a href="https://www.facebook.com/ArsenalPay.ru" class="social__item">
+              <img src="/assets/img/svg/facebook.svg" width="48" height="38" alt="Facebook">
+          </a>
+    </div>
+        <div class="footer__lang">
+          <div class="lang">
+            <a href="https://arsenalpay.ru" class="lang__item active" target="_blank">Русский</a>
+            <a href="https://arsenalpay.com" class="lang__item" target="_blank">English</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
 <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXu6wNP79AG7OHTlyBMRufLdjdvSmwo0A"></script>-->
 <script src="assets/js/app.js"></script>
 </body>

@@ -641,7 +641,9 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils_polyfill__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./utils/polyfill */ "./src/assets/js/utils/polyfill.js");
 /* harmony import */ var _utils_polyfill__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_utils_polyfill__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _modules_Modal__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./modules/Modal */ "./src/assets/js/modules/Modal/index.js");
+/* harmony import */ var _modules_MobileNav__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./modules/MobileNav */ "./src/assets/js/modules/MobileNav/index.js");
  //polyfill
+
 
 
 
@@ -669,12 +671,66 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 document.addEventListener('click', function (e) {
   var modalTrigger = e.target.closest('[data-modal]');
+  var mobileNavTrigger = e.target.closest('[data-open-mobile]');
 
   if (modalTrigger) {
     var modalId = modalTrigger.dataset.modal;
     new _modules_Modal__WEBPACK_IMPORTED_MODULE_2__["default"](document.getElementById(modalId));
   }
+
+  if (mobileNavTrigger) {
+    new _modules_MobileNav__WEBPACK_IMPORTED_MODULE_3__["default"]();
+  }
 });
+
+/***/ }),
+
+/***/ "./src/assets/js/modules/MobileNav/index.js":
+/*!**************************************************!*\
+  !*** ./src/assets/js/modules/MobileNav/index.js ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "default", function() { return MobileNav; });
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); return Constructor; }
+
+var MobileNav =
+/*#__PURE__*/
+function () {
+  function MobileNav() {
+    _classCallCheck(this, MobileNav);
+
+    this.$el = document.querySelector('.mobile-nav');
+    this.$el.addEventListener('click', this._close.bind(this));
+
+    this._open();
+  }
+
+  _createClass(MobileNav, [{
+    key: "_open",
+    value: function _open() {
+      document.documentElement.classList.add('page--mobile-nav-open');
+    }
+  }, {
+    key: "_close",
+    value: function _close(e) {
+      if (e.target.hasAttribute(['data-mobile-close'])) {
+        document.documentElement.classList.remove('page--mobile-nav-open');
+      }
+    }
+  }]);
+
+  return MobileNav;
+}();
+
+
 
 /***/ }),
 
