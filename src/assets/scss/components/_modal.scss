@@ -115,30 +115,10 @@
   }
 
   &__close {
-    @include btn-default();
-
-    --btn-size: 38px;
+    @include close-btn();
 
     position: absolute;
     top: 22px;
     right: 22px;
-    width: var(--btn-size);
-    height: var(--btn-size);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid rgba(#000000, 0.25);
-    border-radius: 50%;
-    transition: all 0.25s;
-    cursor: pointer;
-
-    @include hover {
-      border-color: rgba(#000000, 0.6);
-      background-color: rgba(#000000, 0.04);
-    }
-  }
-
-  &__close svg {
-    pointer-events: none;
   }
 }
