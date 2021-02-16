@@ -1,83 +1,65 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="18px" height="18px" viewBox="0 0 18 18" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 51.2 (57519) - http://www.bohemiancoding.com/sketch -->
-    <title>Group 2</title>
-    <desc>Created with Sketch.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="48" height="38" viewBox="0 0 48 38">
     <defs>
-        <path d="M11.724,0 C13.531,0 14.434,0 15.408,0.307 C16.47,0.694 17.306,1.53 17.692,2.592 C18,3.565 18,4.47 18,6.276 L18,11.724 C18,13.531 18,14.434 17.692,15.408 C17.306,16.47 16.47,17.306 15.408,17.692 C14.435,18 13.531,18 11.724,18 L6.276,18 C4.468,18 3.565,18 2.592,17.692 C1.53,17.306 0.694,16.47 0.308,15.408 C0,14.435 0,13.53 0,11.724 L0,6.276 C0,4.469 0,3.565 0.307,2.592 C0.695,1.53 1.53,0.694 2.593,0.308 C3.565,0 4.468,0 6.276,0 L11.724,0 Z" id="path-1"></path>
-        <linearGradient x1="52.792%" y1="-8.824%" x2="90.731%" y2="100%" id="linearGradient-3">
-            <stop stop-color="#2B4AF4" offset="0%"></stop>
-            <stop stop-color="#C928DD" offset="41.094%"></stop>
-            <stop stop-color="#F61372" offset="100%"></stop>
+        <filter id="rhfy1w2ord" width="153.3%" height="153.3%" x="-26.6%" y="-26.6%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1.725"/>
+        </filter>
+        <filter id="a0s9z5ssce" width="164.3%" height="164.3%" x="-32.1%" y="-32.1%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1.725"/>
+        </filter>
+        <filter id="t8xpkducyf" width="165.4%" height="165.4%" x="-32.7%" y="-32.7%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1.725"/>
+        </filter>
+        <filter id="7n9gwq0aug" width="184.1%" height="184.1%" x="-42.1%" y="-42.1%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1.725"/>
+        </filter>
+        <filter id="hb69tafzfh" width="187.5%" height="187.5%" x="-43.7%" y="-43.7%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1.353"/>
+        </filter>
+        <filter id="menn2rxpqi" width="235.9%" height="235.9%" x="-67.9%" y="-67.9%" filterUnits="objectBoundingBox">
+            <feGaussianBlur in="SourceGraphic" stdDeviation="1.353"/>
+        </filter>
+        <linearGradient id="j4xbb5ro5b" x1="52.792%" x2="90.731%" y1="-8.824%" y2="100%">
+            <stop offset="0%" stop-color="#2B4AF4"/>
+            <stop offset="41.094%" stop-color="#C928DD"/>
+            <stop offset="100%" stop-color="#F61372"/>
         </linearGradient>
-        <path d="M11.724,0 C13.531,0 14.434,0 15.408,0.307 C16.47,0.694 17.306,1.53 17.692,2.592 C18,3.565 18,4.47 18,6.276 L18,11.724 C18,13.531 18,14.434 17.692,15.408 C17.306,16.47 16.47,17.306 15.408,17.692 C14.435,18 13.531,18 11.724,18 L6.276,18 C4.468,18 3.565,18 2.592,17.692 C1.53,17.306 0.694,16.47 0.308,15.408 C0,14.435 0,13.53 0,11.724 L0,6.276 C0,4.469 0,3.565 0.307,2.592 C0.695,1.53 1.53,0.694 2.593,0.308 C3.565,0 4.468,0 6.276,0 L11.724,0 Z" id="path-4"></path>
-        <path d="M11.724,0 C13.531,0 14.434,0 15.408,0.307 C16.47,0.694 17.306,1.53 17.692,2.592 C18,3.565 18,4.47 18,6.276 L18,11.724 C18,13.531 18,14.434 17.692,15.408 C17.306,16.47 16.47,17.306 15.408,17.692 C14.435,18 13.531,18 11.724,18 L6.276,18 C4.468,18 3.565,18 2.592,17.692 C1.53,17.306 0.694,16.47 0.308,15.408 C0,14.435 0,13.53 0,11.724 L0,6.276 C0,4.469 0,3.565 0.307,2.592 C0.695,1.53 1.53,0.694 2.593,0.308 C3.565,0 4.468,0 6.276,0 L11.724,0 Z" id="path-6"></path>
-        <path d="M11.724,0 C13.531,0 14.434,0 15.408,0.307 C16.47,0.694 17.306,1.53 17.692,2.592 C18,3.565 18,4.47 18,6.276 L18,11.724 C18,13.531 18,14.434 17.692,15.408 C17.306,16.47 16.47,17.306 15.408,17.692 C14.435,18 13.531,18 11.724,18 L6.276,18 C4.468,18 3.565,18 2.592,17.692 C1.53,17.306 0.694,16.47 0.308,15.408 C0,14.435 0,13.53 0,11.724 L0,6.276 C0,4.469 0,3.565 0.307,2.592 C0.695,1.53 1.53,0.694 2.593,0.308 C3.565,0 4.468,0 6.276,0 L11.724,0 Z" id="path-8"></path>
-        <path d="M11.724,0 C13.531,0 14.434,0 15.408,0.307 C16.47,0.694 17.306,1.53 17.692,2.592 C18,3.565 18,4.47 18,6.276 L18,11.724 C18,13.531 18,14.434 17.692,15.408 C17.306,16.47 16.47,17.306 15.408,17.692 C14.435,18 13.531,18 11.724,18 L6.276,18 C4.468,18 3.565,18 2.592,17.692 C1.53,17.306 0.694,16.47 0.308,15.408 C0,14.435 0,13.53 0,11.724 L0,6.276 C0,4.469 0,3.565 0.307,2.592 C0.695,1.53 1.53,0.694 2.593,0.308 C3.565,0 4.468,0 6.276,0 L11.724,0 Z" id="path-10"></path>
-        <path d="M11.724,0 C13.531,0 14.434,0 15.408,0.307 C16.47,0.694 17.306,1.53 17.692,2.592 C18,3.565 18,4.47 18,6.276 L18,11.724 C18,13.531 18,14.434 17.692,15.408 C17.306,16.47 16.47,17.306 15.408,17.692 C14.435,18 13.531,18 11.724,18 L6.276,18 C4.468,18 3.565,18 2.592,17.692 C1.53,17.306 0.694,16.47 0.308,15.408 C0,14.435 0,13.53 0,11.724 L0,6.276 C0,4.469 0,3.565 0.307,2.592 C0.695,1.53 1.53,0.694 2.593,0.308 C3.565,0 4.468,0 6.276,0 L11.724,0 Z" id="path-12"></path>
-        <path d="M11.724,0 C13.531,0 14.434,0 15.408,0.307 C16.47,0.694 17.306,1.53 17.692,2.592 C18,3.565 18,4.47 18,6.276 L18,11.724 C18,13.531 18,14.434 17.692,15.408 C17.306,16.47 16.47,17.306 15.408,17.692 C14.435,18 13.531,18 11.724,18 L6.276,18 C4.468,18 3.565,18 2.592,17.692 C1.53,17.306 0.694,16.47 0.308,15.408 C0,14.435 0,13.53 0,11.724 L0,6.276 C0,4.469 0,3.565 0.307,2.592 C0.695,1.53 1.53,0.694 2.593,0.308 C3.565,0 4.468,0 6.276,0 L11.724,0 Z" id="path-14"></path>
+        <path id="s1ae5598wa" d="M11.724 0c1.807 0 2.71 0 3.684.307 1.062.387 1.898 1.223 2.284 2.285C18 3.565 18 4.47 18 6.276v5.448c0 1.807 0 2.71-.308 3.684-.386 1.062-1.222 1.898-2.284 2.284-.973.308-1.877.308-3.684.308H6.276c-1.808 0-2.711 0-3.684-.308C1.53 17.306.694 16.47.308 15.408 0 14.435 0 13.53 0 11.724V6.276c0-1.807 0-2.711.307-3.684C.695 1.53 1.53.694 2.593.308 3.565 0 4.468 0 6.276 0h5.448z"/>
     </defs>
-    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="instagram" transform="translate(-15.000000, -10.000000)">
-            <g id="Group-2" transform="translate(15.000000, 10.000000)">
-                <g id="Group">
-                    <g id="prefix__a-link" fill="#FFFFFF" fill-rule="nonzero">
-                        <path d="M11.724,0 C13.531,0 14.434,0 15.408,0.307 C16.47,0.694 17.306,1.53 17.692,2.592 C18,3.565 18,4.47 18,6.276 L18,11.724 C18,13.531 18,14.434 17.692,15.408 C17.306,16.47 16.47,17.306 15.408,17.692 C14.435,18 13.531,18 11.724,18 L6.276,18 C4.468,18 3.565,18 2.592,17.692 C1.53,17.306 0.694,16.47 0.308,15.408 C0,14.435 0,13.53 0,11.724 L0,6.276 C0,4.469 0,3.565 0.307,2.592 C0.695,1.53 1.53,0.694 2.593,0.308 C3.565,0 4.468,0 6.276,0 L11.724,0 Z" id="prefix__a"></path>
+    <g fill="none" fill-rule="evenodd">
+        <g>
+            <g>
+                <g>
+                    <g>
+                        <g>
+                            <g>
+                                <g>
+                                    <g>
+                                        <g>
+                                            <path fill="#FFF" fill-opacity="0" d="M0 0H48V38H0z" transform="translate(-215 -11178) translate(190 2311) translate(0 7047) translate(0 912) translate(0 574) translate(25 76) translate(0 228) translate(0 30)"/>
+                                            <g transform="translate(-215 -11178) translate(190 2311) translate(0 7047) translate(0 912) translate(0 574) translate(25 76) translate(0 228) translate(0 30) translate(15 10)">
+                                                <mask id="jpf2qadp7c" fill="#fff">
+                                                    <use xlink:href="#s1ae5598wa"/>
+                                                </mask>
+                                                <use fill="#FFF" xlink:href="#s1ae5598wa"/>
+                                                <path fill="url(#j4xbb5ro5b)" d="M0 0H18V18H0z" mask="url(#jpf2qadp7c)"/>
+                                                <circle cx="5.959" cy="17.174" r="9.721" fill="#FF1E48" filter="url(#rhfy1w2ord)" mask="url(#jpf2qadp7c)"/>
+                                                <circle cx="8.051" cy="11.389" r="8.051" fill="#D71C92" filter="url(#a0s9z5ssce)" mask="url(#jpf2qadp7c)"/>
+                                                <circle cx="7.453" cy="16.172" r="7.91" fill="#FE6127" filter="url(#t8xpkducyf)" mask="url(#jpf2qadp7c)"/>
+                                                <circle cx="5.786" cy="19.165" r="6.152" fill="#FEE990" filter="url(#7n9gwq0aug)" mask="url(#jpf2qadp7c)" opacity=".655"/>
+                                                <circle cx="5.871" cy="19.898" r="4.641" fill="#FEE990" filter="url(#hb69tafzfh)" mask="url(#jpf2qadp7c)"/>
+                                                <circle cx="9.773" cy="10.969" r="2.988" fill="#FE2746" filter="url(#menn2rxpqi)" mask="url(#jpf2qadp7c)"/>
+                                            </g>
+                                            <g transform="translate(-215 -11178) translate(190 2311) translate(0 7047) translate(0 912) translate(0 574) translate(25 76) translate(0 228) translate(0 30) translate(17.455 12.455)">
+                                                <path fill="#FFF" d="M12.01 1.114c1.194 1.187 1.078 2.829 1.078 4.141v2.567c0 1.313.104 3.1-1.079 4.281-1.182 1.181-2.864.974-4.177.974H5.265c-1.313 0-3.065.208-4.247-.974C-.165 10.921.009 9.135.009 7.823V5.254c0-1.312-.174-2.959 1.009-4.141C2.023.109 3.439.008 4.648 0h3.796c1.191.006 2.55.104 3.565 1.113zm-.892.84c-.872-.872-1.744-.766-2.82-.766H4.8c-1.075 0-2.006-.105-2.876.766-.872.87-.733 1.767-.733 2.843v3.496c0 1.076-.138 1.985.733 2.855.871.87 1.8.754 2.876.754h3.497c1.076 0 2.054.014 2.82-.754.766-.766.79-1.78.79-2.855V4.797c0-1.076-.019-2.069-.79-2.843z"/>
+                                                <circle cx="6.545" cy="6.545" r="2.791" stroke="#FFF" stroke-width="1.173"/>
+                                                <circle cx="10.062" cy="3.029" r="1" fill="#FFF"/>
+                                            </g>
+                                        </g>
+                                    </g>
+                                </g>
+                            </g>
+                        </g>
                     </g>
-                    <g id="Clipped">
-                        <mask id="mask-2" fill="white">
-                            <use xlink:href="#path-1"></use>
-                        </mask>
-                        <g id="prefix__a"></g>
-                        <polygon id="Shape" fill="url(#linearGradient-3)" fill-rule="nonzero" mask="url(#mask-2)" points="0 0 18 0 18 18 0 18"></polygon>
-                    </g>
-                    <g id="Clipped">
-                        <mask id="mask-5" fill="white">
-                            <use xlink:href="#path-4"></use>
-                        </mask>
-                        <g id="prefix__a"></g>
-                        <circle id="Oval" fill="#FF1E48" fill-rule="nonzero" mask="url(#mask-5)" cx="5.959" cy="17.174" r="9.721"></circle>
-                    </g>
-                    <g id="Clipped">
-                        <mask id="mask-7" fill="white">
-                            <use xlink:href="#path-6"></use>
-                        </mask>
-                        <g id="prefix__a"></g>
-                        <circle id="Oval" fill="#D71C92" fill-rule="nonzero" mask="url(#mask-7)" cx="8.051" cy="11.389" r="8.051"></circle>
-                    </g>
-                    <g id="Clipped">
-                        <mask id="mask-9" fill="white">
-                            <use xlink:href="#path-8"></use>
-                        </mask>
-                        <g id="prefix__a"></g>
-                        <circle id="Oval" fill="#FE6127" fill-rule="nonzero" mask="url(#mask-9)" cx="7.453" cy="16.172" r="7.91"></circle>
-                    </g>
-                    <g id="Clipped">
-                        <mask id="mask-11" fill="white">
-                            <use xlink:href="#path-10"></use>
-                        </mask>
-                        <g id="prefix__a"></g>
-                        <circle id="Oval" fill="#FEE990" fill-rule="nonzero" opacity="0.655" mask="url(#mask-11)" cx="5.786" cy="19.165" r="6.152"></circle>
-                    </g>
-                    <g id="Clipped">
-                        <mask id="mask-13" fill="white">
-                            <use xlink:href="#path-12"></use>
-                        </mask>
-                        <g id="prefix__a"></g>
-                        <circle id="Oval" fill="#FEE990" fill-rule="nonzero" mask="url(#mask-13)" cx="5.871" cy="19.898" r="4.641"></circle>
-                    </g>
-                    <g id="Clipped">
-                        <mask id="mask-15" fill="white">
-                            <use xlink:href="#path-14"></use>
-                        </mask>
-                        <g id="prefix__a"></g>
-                        <circle id="Oval" fill="#FE2746" fill-rule="nonzero" mask="url(#mask-15)" cx="9.773" cy="10.969" r="2.988"></circle>
-                    </g>
-                </g>
-                <g id="Group" transform="translate(2.455000, 2.455000)">
-                    <path d="M12.01,1.114 C13.204,2.301 13.088,3.943 13.088,5.255 L13.088,7.822 C13.088,9.135 13.192,10.922 12.009,12.103 C10.827,13.284 9.145,13.077 7.832,13.077 L5.265,13.077 C3.952,13.077 2.2,13.285 1.018,12.103 C-0.165,10.921 0.009,9.135 0.009,7.823 L0.009,5.254 C0.009,3.942 -0.165,2.295 1.018,1.113 C2.023,0.109 3.439,0.008 4.648,0 L8.444,0 C9.635,0.006 10.994,0.104 12.009,1.113 L12.01,1.114 Z M11.118,1.954 C10.246,1.082 9.374,1.188 8.298,1.188 L4.8,1.188 C3.725,1.188 2.794,1.083 1.924,1.954 C1.052,2.824 1.191,3.721 1.191,4.797 L1.191,8.293 C1.191,9.369 1.053,10.278 1.924,11.148 C2.795,12.018 3.724,11.902 4.8,11.902 L8.297,11.902 C9.373,11.902 10.351,11.916 11.117,11.148 C11.883,10.382 11.907,9.368 11.907,8.293 L11.907,4.797 C11.907,3.721 11.888,2.728 11.117,1.954 L11.118,1.954 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
-                    <circle id="Oval" stroke="#FFFFFF" stroke-width="1.173" cx="6.545" cy="6.545" r="2.791"></circle>
-                    <circle id="Oval" fill="#FFFFFF" fill-rule="nonzero" cx="10.062" cy="3.029" r="1"></circle>
                 </g>
             </g>
         </g>

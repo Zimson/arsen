@@ -10,6 +10,7 @@
     height: 1px;
     background-color: var(--blue-dark-color);
     opacity: 0;
+    transition: all 0.3s;
 
     @include hover() {
       opacity: 1;
@@ -27,6 +28,11 @@
   &--sm {
     font-size: 12.4px;
     line-height: 15px;
+    font-weight: 400;
+
+    &::before {
+      bottom: -3px;
+    }
   }
 
   &--black {
