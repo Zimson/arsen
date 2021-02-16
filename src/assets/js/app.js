@@ -4,6 +4,7 @@ import 'what-input';
 import './utils/polyfill';
 
 import Modal from './modules/Modal';
+import MobileNav from './modules/MobileNav';
 
 function scrollToAnchor() {
   if (!window.location.hash) return;
@@ -31,9 +32,14 @@ document.addEventListener('DOMContentLoaded', function() {
 document.addEventListener('click', function(e) {
 
   const modalTrigger = e.target.closest('[data-modal]');
+  const mobileNavTrigger = e.target.closest('[data-open-mobile]');
 
   if (modalTrigger) {
     const modalId = modalTrigger.dataset.modal;
     new Modal(document.getElementById(modalId));
+  }
+
+  if (mobileNavTrigger) {
+    new MobileNav();
   }
 });

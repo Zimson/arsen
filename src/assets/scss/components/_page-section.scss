@@ -14,6 +14,14 @@
     transform: skewY(var(--skew-angle));
   }
 
+  &--under-header {
+    padding-top: 63px;
+
+    //@include media-breakpoint-only(md) {
+    //  padding-top: 104px;
+    //}
+  }
+
   &--inverse {
     --skew-angle: -5deg;
   }
