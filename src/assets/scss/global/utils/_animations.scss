@@ -3,3 +3,16 @@
     transform: rotateZ(360deg);
   }
 }
+
+
+@keyframes show-mobile-nav {
+  100% {
+    transform: translateX(0);
+  }
+}
+
+@keyframes hide-mobile-nav {
+  100% {
+    transform: translateX(-250px);
+  }
+}

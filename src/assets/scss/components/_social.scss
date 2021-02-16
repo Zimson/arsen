@@ -4,6 +4,8 @@
   align-items: center;
 
   &--footer {
+    grid-column-gap: 16px;
+
     @include media-breakpoint-up(lg) {
       grid-column-gap: 10px;
     }
