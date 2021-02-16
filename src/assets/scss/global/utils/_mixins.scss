@@ -168,15 +168,12 @@
   margin-left: auto;
   padding-right: var(--container-padding-x);
   padding-left: var(--container-padding-x);
-  //max-width: 1170px;
   min-width: 300px;
-  //max-width: 374px;
   box-sizing: border-box;
-  //outline: 1px solid red;
 
   @include media-breakpoint-up(sm) {
     --container-padding-x: 40px;
-    //max-width: 520px;
+
     padding-right: var(--container-padding-x);
     padding-left: var(--container-padding-x);
   }

@@ -2,6 +2,21 @@
 
   &__container {
     @include container();
+
+
+    @include media-breakpoint-up(lg) {
+      max-width: 820px;
+      box-sizing: content-box;
+    }
+
+
+    @include media-breakpoint-up(xxl) {
+      max-width: 900px;
+    }
+
+    @include media-breakpoint-up(xxxl) {
+      max-width: 1040px;
+    }
   }
 
   &__links {

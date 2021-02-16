@@ -106,7 +106,7 @@
   &__link br {
     display: block;
 
-    @include media-breakpoint-up(x) {
+    @media (min-width: 414px) {
       display: none;
     }
   }
