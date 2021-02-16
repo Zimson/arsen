@@ -9,12 +9,11 @@
 
   &__item {
 
-    &:not(last-child) {
-      margin-right: 22px;
-    }
+    margin-right: 22px;
 
     &--login {
       margin-left: 12px;
+      margin-right: 12px;
     }
   }
 

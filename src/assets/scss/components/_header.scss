@@ -7,11 +7,22 @@
   padding-top: 20px;
 
   &__container {
+
     @include container();
 
     display: flex;
     align-items: center;
     justify-content: flex-end;
+
+    @include media-breakpoint-up(sm) {
+      padding-right: 20px;
+      padding-left: 20px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding-right: 11px;
+      padding-left: 10px;
+    }
   }
 
   &__logo {

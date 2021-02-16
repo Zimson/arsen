@@ -2,7 +2,6 @@
   display: grid;
   grid-template-columns: repeat(3, auto);
   align-items: center;
-  grid-column-gap: 16px;
 
   &--footer {
     @include media-breakpoint-up(lg) {
@@ -56,8 +55,7 @@
     }
   }
 
-  &__item svg {
-    position: relative;
-    z-index: 2;
+  &__item img {
+    width: unset;
   }
 }
