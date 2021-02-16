@@ -4,6 +4,10 @@
 
   position: relative;
 
+  @include media-breakpoint-only(xxl) {
+    --container-cut: 30px;
+  }
+
   &::after {
     position: absolute;
     top: 0;
@@ -111,7 +115,7 @@
         padding-bottom: 150px;
       }
 
-      @include media-breakpoint-up(xxl) {
+      @include media-breakpoint-up(xl) {
         padding-right: calc(var(--container-padding-x) - var(--container-cut));
       }
     }
@@ -130,13 +134,13 @@
       @include media-breakpoint-up(lg) {
         padding-top: 192px;
         padding-bottom: 115px;
-        max-width: 1042px;
+        //max-width: 1042px;
         overflow: hidden;
       }
 
       @include media-breakpoint-up(xl) {
         padding-bottom: 140px;
-        max-width: 1072px;
+        //max-width: 1072px;
       }
     }
 
@@ -223,7 +227,7 @@
     }
 
     .page-section--widget & {
-      @include media-breakpoint-up(xxl) {
+      @include media-breakpoint-up(xl) {
         margin-left: calc(-1 * var(--container-cut));
       }
     }
@@ -258,7 +262,7 @@
         margin-bottom: 36px;
       }
 
-      @include media-breakpoint-up(xxl) {
+      @include media-breakpoint-up(xl) {
         margin-left: calc(-1 * var(--container-cut));
       }
     }
@@ -307,8 +311,8 @@
     }
 
     .page-section--widget & {
-      @include media-breakpoint-up(xxl) {
-        margin-left: -15px;
+      @include media-breakpoint-up(xl) {
+        margin-left: calc(-1 * var(--container-cut));
       }
     }
   }
