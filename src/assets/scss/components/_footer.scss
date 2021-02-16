@@ -1,0 +1,41 @@
+.footer {
+
+  &__container {
+    @include container();
+  }
+
+  &__links {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      margin: 76px 0 68px 0;
+      display: grid;
+      grid-template-columns: repeat(5, auto);
+      justify-content: space-between;
+    }
+  }
+
+  &__social {
+    margin: 40px 0 42px 0;
+    display: flex;
+    justify-content: center;
+
+    @include media-breakpoint-up(lg) {
+      margin: 0 0 28px 0;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  &__lang {
+    display: none;
+
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
+
+  &__list {
+    @include list-clear();
+  }
+}

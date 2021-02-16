@@ -24,6 +24,23 @@
     }
   }
 
+  &--sm {
+    font-size: 12.4px;
+    line-height: 15px;
+  }
+
+  &--black {
+    color: rgba(#000000, 0.8);
+
+    &::before {
+      background-color: rgba(#000000, 0.5);
+    }
+  }
+
+  &--footer {
+    line-height: 32px;
+  }
+
   &--in-text {
     font-family: inherit;
     font-size: inherit;
