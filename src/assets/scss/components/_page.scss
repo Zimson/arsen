@@ -1,5 +1,6 @@
 .page {
-  &--modal-open {
+  &--modal-open,
+  &--mobile-nav-open {
     overflow: hidden;
     padding-right: 15px;
 
