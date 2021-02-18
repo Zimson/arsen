@@ -4,6 +4,10 @@
     overflow: hidden;
     padding-right: 15px;
 
+    &.touch {
+      padding-right: 0;
+    }
+
     body {
       overflow: hidden;
     }

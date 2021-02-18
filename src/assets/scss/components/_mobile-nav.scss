@@ -14,7 +14,6 @@
   overflow-y: auto;
   opacity: 0;
   transition: all 0.3s linear;
-  //overflow-x: hidden;
 
   .page--mobile-nav-open & {
     display: flex;
@@ -31,7 +30,7 @@
     --border-radius: 20px;
     --side-space: 30px;
 
-    position: relative;
+    position: absolute;
     padding: 60px var(--side-space) 64px;
     display: flex;
     flex-direction: column;
@@ -41,15 +40,16 @@
     border-top-left-radius: var(--border-radius);
     border-bottom-left-radius: var(--border-radius);
     box-sizing: border-box;
-    transform: translateX(var(--sidebar-width));
+    transform: translate3d(var(--sidebar-width), 0, 0);
     transition: all 0.3s linear;
+    will-change: trasform;
 
 
     .page--mobile-nav-open & {
-      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
 
       @include media-breakpoint-up(lg) {
-        transform: translateX(var(--sidebar-width));
+        transform: translate3d(var(--sidebar-width), 0, 0);
       }
     }
 
@@ -76,13 +76,14 @@
   }
 
   &__close {
-    --btn-position: 20px;
-
     @include close-btn();
 
     position: absolute;
-    top: var(--btn-position);
-    right: var(--btn-position);
+    top: 14px;
+    right: 17px;
+
+    width: 38px;
+    height: 36px;
   }
 
   &__login {
