@@ -18,7 +18,7 @@ module.exports = function(options) {
 
   const block = `
     <div class="${cssClass}">
-        <span class="social__label">Мы в соц. сетях</span>
+        <span class="social__label">Мы в соц сетях</span>
         <a href="https://www.instagram.com/arsenal_pay/" class="social__item">
             <img src="${root}assets/img/svg/instagram.svg" width="48" height="38" alt="Instagram">
         </a>

@@ -1,6 +1,8 @@
 .main-nav {
   @include list-clear();
 
+  position: relative;
+  top: -2px;
   display: none;
 
   @include media-breakpoint-up(lg) {
@@ -12,7 +14,7 @@
     margin-right: 22px;
 
     &--login {
-      margin-left: 12px;
+      margin-left: 11px;
       margin-right: 12px;
     }
   }
@@ -29,7 +31,7 @@
       top: 50%;
       left: 50%;
       transform: translateY(-50%) translateX(-50%);
-      width: 62px;
+      width: 61px;
       height: 28px;
       border: 1px solid red;
       border-radius: 18px;
