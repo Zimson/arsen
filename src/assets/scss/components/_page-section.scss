@@ -19,11 +19,11 @@
   }
 
   &--under-header {
-    padding-top: 62px;
+    padding-top: 52px;
 
-    //@include media-breakpoint-only(md) {
-    //  padding-top: 104px;
-    //}
+    @include media-breakpoint-up(lg) {
+      padding-top: 62px;
+    }
   }
 
   &--inverse {
