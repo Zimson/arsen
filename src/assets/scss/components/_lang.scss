@@ -14,7 +14,7 @@
     display: block;
     font-family: $font-family;
     font-size: 12.4px;
-    line-height: 18px;
+    line-height: 1.45;
     color: rgba(#000000, 0.8);
     border-radius: var(--border-radius);
     text-decoration: none;
@@ -31,7 +31,6 @@
     &.active {
       background-color: #4682ff;
       color: var(--white-color);
-      font-weight: 500;
 
       @include hover {
         background-color: #4682ff;

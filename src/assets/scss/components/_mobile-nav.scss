@@ -97,11 +97,12 @@
     text-decoration: none;
     text-align: center;
     color: rgba(#000000, 0.8);
-    border: 1px solid rgba(#000000, 0.16);
+    border: 1px solid rgba(#000000, 0.25);
     border-radius: 20px;
     transition: background-color .3s linear, border-color .3s linear;
 
     @include hover {
+      border-color: rgba(#000000, 0.6);
       background-color: rgba(#000000, 0.04);
     }
   }

@@ -9,15 +9,19 @@
     @include media-breakpoint-up(lg) {
       grid-column-gap: 10px;
     }
+
+    @include media-breakpoint-up(xxl) {
+      //grid-column-gap: 11px;
+    }
   }
 
   &__label {
     grid-column: 1 / -1;
     font-family: $font-family;
     font-size: 12.4px;
-    line-height: 32px;
+    line-height: 31px;
     text-align: center;
-    letter-spacing: 0;
+    letter-spacing: 0.085px;
     color: rgba(#000000, 0.8);
 
     .social--footer & {
@@ -56,6 +60,10 @@
     .social--footer &:first-of-type {
       @include media-breakpoint-up(lg) {
         margin-left: -15px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        margin-left: -14px;
       }
     }
   }
