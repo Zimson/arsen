@@ -1,0 +1,31 @@
+.rate-box {
+  margin-bottom: 24px;
+  font-family: $font-family;
+  text-align: center;
+
+  &__count {
+    font-size: 51.6px;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -1.33px;
+  }
+
+  sub {
+    font-size: 25px;
+    font-weight: 300;
+    line-height: normal;
+    letter-spacing: -0.96px;
+  }
+
+  &__label {
+    font-size: 15.2px;
+    line-height: 24px;
+    letter-spacing: -0.2px;
+    color: var(--gray-color);
+
+    b {
+      font-weight: 500;
+    }
+  }
+
+}

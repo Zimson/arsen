@@ -13,13 +13,13 @@ module.exports = function(options) {
   if (mods !== 'undefined' && mods ) {
     const modsList = mods.split(',');
       for (let i = 0; i < modsList.length; i++) {
-        allMods = allMods + '' + modsList[i].trim();
+        allMods = allMods + ' img--' + modsList[i].trim();
       }
   }
 
   cssClass+= allMods;
 
-  return `<picture>
+  return `<picture class="${cssClass}">
     ${breakpoints.xxl ? `<source media="(min-width: 1440px)" srcset="${root}assets/img/content/${name}--xxl.${ext} 1x, ${root}assets/img/content/${name}--xxl@2x.${ext} 2x, ${root}assets/img/content/${name}--xxl@3x.${ext} 3x">` : ``}
     ${breakpoints.xl ? `<source media="(min-width: 1280px)" srcset="${root}assets/img/content/${name}--xl.${ext} 1x, ${root}assets/img/content/${name}--xl@2x.${ext} 2x, ${root}assets/img/content/${name}--xl@3x.${ext} 3x">` : ``}
     ${breakpoints.lg ? `<source media="(min-width: 900px)" srcset="${root}assets/img/content/${name}--lg.${ext} 1x, ${root}assets/img/content/${name}--lg@2x.${ext} 2x, ${root}assets/img/content/${name}--lg@3x.${ext} 3x">` : ``}

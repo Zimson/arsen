@@ -51,10 +51,15 @@ module.exports = function(options) {
                  <use xlink:href="${root}assets/img/symbol/sprite.svg#security">
               </svg>`
         break;
-      default:
+      case 'check':
         svg = `<svg  class="icon ${icon.color ? `icon--${icon.color}` : ``}" width="37" height="37">
                  <use xlink:href="${root}assets/img/symbol/sprite.svg#check">
               </svg>`;
+        break;
+      default:
+        svg = `<svg  class="icon ${icon.color ? `icon--${icon.color}` : ``}" width="${width}" height="${height}">
+                 <use xlink:href="${root}assets/img/symbol/sprite.svg#${icon.name}">
+              </svg>`
     }
 
     return svg;
