@@ -5,6 +5,7 @@ import './utils/polyfill';
 
 import Modal from './modules/Modal';
 import MobileNav from './modules/MobileNav';
+import './modules/Slider';
 
 function scrollToAnchor() {
   if (!window.location.hash) return;
