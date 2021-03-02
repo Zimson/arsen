@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     new Slider({ target: '#reviewsSlider', settings: {
         slidesPerView: 1,
-        spaceBetween: 1
+        spaceBetween: 20
       }});
   }
 });

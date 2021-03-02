@@ -1,5 +1,4 @@
 .swiper {
-  position: relative;
 
   $swiper-btn-size: 42px;
 
@@ -21,14 +20,21 @@
   //  }
   //}
 
+  &-container {
+    position: relative;
+    padding: 60px 20px;
+    left: -20px;
+    width: 100%;
+  }
+
   &-slide {
 
     .swiper--shadow &:first-child {
-      box-shadow: 15px 14px 21px rgba($black-color, 0.1);
+      box-shadow: 15px 14px 21px rgba(#000000, 0.1);
     }
 
     .swiper--shadow &:last-child {
-      box-shadow: -15px 14px 21px rgba($black-color, 0.1);
+      box-shadow: -15px 14px 21px rgba(#000000, 0.1);
     }
   }
 
@@ -58,14 +64,9 @@
     height: $swiper-btn-size;
     display: none;
     border: none;
-    background-color: $primary-color;
+    background-color: red;
     border-radius: 50%;
     cursor: pointer;
-
-    .swiper--examples & {
-      top: 80px;
-      transform: unset;
-    }
 
     @include media-breakpoint-up(xl) {
       display: block;
@@ -89,7 +90,7 @@
 
       &::before {
         left: 10px;
-        border-right-color: $black-color;
+        border-right-color: var(--black-color);
       }
     }
 
@@ -98,7 +99,7 @@
 
       &::before {
         right: 8px;
-        border-left-color:$black-color;
+        border-left-color: var(--black-color);
       }
     }
   }
