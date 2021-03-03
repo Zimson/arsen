@@ -22,8 +22,8 @@ export default class Slider {
 
     this._slider = new Swiper(target, Object.assign(this._settings, {
       navigation: {
-        nextEl: target.parentNode.querySelector('.swiper-button-prev'),
-        prevEl: target.parentNode.querySelector('.swiper-button-next'),
+        nextEl: target.parentNode.querySelector('.swiper-button-next'),
+        prevEl: target.parentNode.querySelector('.swiper-button-prev'),
         disabledClass: 'swiper-button-disabled',
         hiddenClass: 'swiper-button-hidden'
       },

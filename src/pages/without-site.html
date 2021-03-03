@@ -112,10 +112,10 @@ layout: default
     {{> reviews-slider }}
   </div>
 </section>
-<section class="page-section">
+<section class="page-section page-section--solid">
   <div class="page-section__container">
     <h2 class="page-section__title">Вопросы и ответы</h2>
-    <div class="content-box">
+    <div>
       {{{ info-box title="Почему можно не&nbsp;иметь свой интернет магазин?"  text='Мы&nbsp;создали страницу оплаты, с&nbsp;которой вам не&nbsp;обязательно иметь интернет магазин.
       Вам достаточно просто дать ссылку на&nbsp;страницу своим клиентам и&nbsp;они оплатят нужную сумму.
       Все данные о&nbsp;платеже сохранятся в&nbsp;вашем личном кабинете. Фискальный чек отправляется покупателю на&nbsp;email и&nbsp;в&nbsp;ФНС через ОФД.
@@ -130,3 +130,14 @@ layout: default
     </div>
   </div>
 </section>
+
+<a class="link link--more" data-modal="kassa">Пример фискального чека</a>
+
+<article id="kassa" class="modal modal--check" data-close>
+  <div class="modal__body">
+    <button type="button" class="modal__close" data-close>
+      {{{ icon name="cross" width="12" height="12" }}}
+    </button>
+    {{{ img name="check" mods="check"}}}
+  </div>
+</article>

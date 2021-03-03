@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="38px" viewBox="0 0 48 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>icon/input/arrow-forward</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon/input/arrow-forward" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M40.236039,12.6357866 C39.8455147,13.0263109 39.8455147,13.6594759 40.236039,14.0500002 L45.1857864,18.9997477 L40.236039,23.9494951 C39.8455147,24.3400194 39.8455147,24.9731844 40.236039,25.3637087 C40.6265633,25.754233 41.2597282,25.754233 41.6502525,25.3637087 L48.0142136,18.9997477 L41.6502525,12.6357866 C41.2597282,12.2452623 40.6265633,12.2452623 40.236039,12.6357866 Z M31.6,18 C31.0477153,18 30.6,18.4477153 30.6,19 C30.6,19.5522847 31.0477153,20 31.6,20 L40.6,20 C41.1522847,20 41.6,19.5522847 41.6,19 C41.6,18.4477153 41.1522847,18 40.6,18 L31.6,18 Z" id="Shape" fill="var(--icon-color, #000000)"></path>
+    </g>
+</svg>

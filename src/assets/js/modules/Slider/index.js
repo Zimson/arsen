@@ -14,9 +14,16 @@ document.addEventListener('DOMContentLoaded', function () {
   if (reviewsSlider) {
 
     new Slider({ target: '#reviewsSlider', settings: {
-        slidesPerView: 1,
-        spaceBetween: 20
-      }});
+        slidesPerView: 'auto',
+        spaceBetween: 20,
+        freeMode: true,
+        breakpointsInverse: true,
+        // breakpoints: {
+        //   [MediaQuery.SM]: {
+        //     spaceBetween: 20
+        //   }
+        // }
+      }, turnOffOnBreakPoint: 1280});
   }
 });
 

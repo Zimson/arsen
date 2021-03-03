@@ -62,8 +62,30 @@
       max-width: 940px;
     }
 
-    @include media-breakpoint-up(xxl) {
+    .modal--check & {
+      padding: 20px 0 0 0;
+      width: 100%;
+      max-width: 360px;
+      height: 840px;
+      min-height: 840px;
+      max-height: 840px;
+      background-color: #f3f3f3;
+      overflow: hidden;
 
+      @include media-breakpoint-up(sm) {
+        padding: 20px 0 0 0;
+      }
+
+      @include media-breakpoint-up(md) {
+        max-width: 635px;
+        height: 1450px;
+        min-height: 1450px;
+        max-height: 1450px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        padding: 20px 0 0 0;
+      }
     }
   }
 
@@ -120,5 +142,6 @@
     position: absolute;
     top: 22px;
     right: 22px;
+    z-index: 10;
   }
 }
