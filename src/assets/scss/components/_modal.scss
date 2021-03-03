@@ -2,6 +2,8 @@
   --body-padding: 20px;
   --body-padding-sm: 40px;
   --body-padding-xl: 50px;
+  --modal-height: 820px;
+  --modal-width: 450px;
 
   position: fixed;
   top: 0;
@@ -26,69 +28,57 @@
     margin: auto;
     padding: var(--body-padding);
     padding-right: var(--body-padding);
-    max-width: 450px;
-    height: 820px;
-    min-height: 820px;
-    max-height: 820px;
+    width: 100%;
+    max-width: var(--modal-width);
+    height: var(--modal-height);
+    min-height: var(--modal-height);
+    max-height: var(--modal-height);
     display: flex;
     flex-direction: column;
     flex: 1;
-    //flex-shrink: 0;
     background-color: var(--white-color);
     box-shadow: -2px 35px 53px 1px rgba(0, 0, 0, 0.25), 0 1px 7px 0 rgba(0, 0, 0, 0.18);
     border-radius: 38px;
     box-sizing: border-box;
 
     @include media-breakpoint-up(sm) {
+      --modal-width: 560px;
+      --modal-height: 700px;
+
       padding: var(--body-padding-sm);
-      max-width: 560px;
-      height: 700px;
-      min-height: 700px;
-      max-height: 700px;
       text-align: center;
     }
 
     @include media-breakpoint-up(md) {
-      max-width: 728px;
+      --modal-width: 728px;
     }
 
     @include media-breakpoint-up(lg) {
-      max-width: 860px;
-      //max-height: 765px;
+      --modal-width: 860px;
     }
 
     @include media-breakpoint-up(xl) {
+      --modal-width: 940px;
+
       padding: var(--body-padding-xl);
-      max-width: 940px;
     }
 
     .modal--check & {
+      --modal-height: 750px;
+      --modal-width: 320px;
+
       padding: 20px 0 0 0;
-      width: 100%;
-      max-width: 320px;
-      height: 750px;
-      min-height: 750px;
-      max-height: 750px;
       background-color: #f3f3f3;
       overflow: hidden;
 
       @include media-breakpoint-up(sm) {
-        padding: 20px 0 0 0;
-        max-width: 520px;
-        height: 840px;
-        min-height: 1200px;
-        max-height: 1200px;
+        --modal-height: 1200px;
+        --modal-width: 520px;
       }
 
       @include media-breakpoint-up(md) {
-        max-width: 635px;
-        height: 1460px;
-        min-height: 1460px;
-        max-height: 1460px;
-      }
-
-      @include media-breakpoint-up(xl) {
-        padding: 20px 0 0 0;
+        --modal-height: 1460px;
+        --modal-width: 635px;
       }
     }
   }
