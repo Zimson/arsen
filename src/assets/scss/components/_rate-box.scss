@@ -4,10 +4,17 @@
   text-align: center;
 
   &__count {
+    position: relative;
     font-size: 51.6px;
     font-weight: 300;
     line-height: normal;
     letter-spacing: -1.33px;
+
+    &[data-prefix]::before {
+      content: attr(data-prefix);
+      position: absolute;
+      left: -30px;
+    }
   }
 
   sub {
@@ -17,7 +24,7 @@
     letter-spacing: -0.96px;
   }
 
-  &__label {
+  &__text {
     font-size: 15.2px;
     line-height: 24px;
     letter-spacing: -0.2px;
