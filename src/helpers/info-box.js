@@ -66,9 +66,27 @@ module.exports = function(options) {
   }
 
   function renderLink(link) {
-    return `<div class="info-box__link">
-        <a ${link.href ? `href="${link.href}"` : ``} class="link link--more link--${link.color}" ${link.dataModal ? `data-modal="${link.dataModal}"` : ``}><span>${link.text}</span></a>
-    </div>`
+    let box = ``;
+
+    switch (link.type) {
+      case 'button':
+        box = `<div class="info-box__btn">
+           <a ${link.href ? `href="${link.href}"` : ``} class="btn ${link.color ? `btn--${link.color}` : ``}" ${link.dataModal ? `data-modal="${link.dataModal}"` : ``}>
+              ${link.icon ? 
+                `<svg  class="icon ${link.color ? `icon--${link.color}` : ``}" width="48" height="38">
+                    <use xlink:href="${root}assets/img/symbol/sprite.svg#${link.icon}">
+                </svg>` : ``}  
+              <span>${link.text}</span>
+           </a>
+        </div>`;
+        break;
+      default:
+        box = `<div class="info-box__link">
+           <a ${link.href ? `href="${link.href}"` : ``} class="link link--more link--${link.color}" ${link.dataModal ? `data-modal="${link.dataModal}"` : ``}><span>${link.text}</span></a>
+        </div>`;
+    }
+
+    return box;
   }
 
   const block = `<article class="${cssClass}" ${count ? `data-count="${count}"` : ``}>

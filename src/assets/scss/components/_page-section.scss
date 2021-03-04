@@ -272,42 +272,14 @@
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 80px;
-    padding: 5px;
-    width: 100%;
-    max-width: 320px;
-    height: 52px;
-    display: inline-flex;
-    justify-content: center;
-    align-items: center;
-    font-family: $font-family;
-    font-size: 17px;
-    font-weight: 500;
-    line-height: 20px;
-    letter-spacing: -0.2px;
-    color: var(--blue-dark-color);
-    text-transform: uppercase;
-    text-decoration: none;
-    border: 1px solid var(--blue-dark-color);
-    border-radius: 40px;
-    box-sizing: border-box;
-    transition: background-color, color .3s;
-    user-select: none;
+
+    @include btn();
 
     @include media-breakpoint-up(md) {
       margin-right: unset;
       margin-left: unset;
       margin-bottom: 100px;
       max-width: 304px;
-      //align-self: center;
-    }
-
-    &:focus {
-      outline: none;
-    }
-
-    @include hover {
-      background-color: var(--blue-dark-color);
-      color: var(--white-color);
     }
 
     .page-section--widget & {
