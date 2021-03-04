@@ -2,6 +2,8 @@
   position: relative;
 
   &--messanger {
+    margin-top: -15px;
+    margin-bottom: 20px;
     left: calc(-1 * var(--container-padding-x));
     width: unset;
 

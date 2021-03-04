@@ -25,6 +25,14 @@
     }
   }
 
+  &--pink {
+    color: var(--pink-dark-color);
+
+    &::before {
+      background-color: var(--pink-dark-color);
+    }
+  }
+
   &--sm {
     font-size: 12.4px;
     line-height: 15px;
