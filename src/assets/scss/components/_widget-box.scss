@@ -56,6 +56,14 @@
     //@include media-breakpoint-up(xl) {
     //  margin-left: 40px;
     //}
+
+    &--no-site {
+      --border-radius-top: 50px;
+      --border-radius-bottom: 36px;
+
+      height: 794px;
+      border-radius: var(--border-radius-top) var(--border-radius-top) var(--border-radius-bottom) var(--border-radius-bottom);
+    }
   }
 
   &__widget img {
