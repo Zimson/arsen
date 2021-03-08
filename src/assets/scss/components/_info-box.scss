@@ -32,6 +32,17 @@
     margin-bottom: 24px;
   }
 
+  &--mgb-sm-48 {
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 48px;
+    }
+  }
+
+  &--text-left {
+    text-align: left;
+    align-items: flex-start;
+  }
+
   &__title {
     --icon-space: 12px;
 
