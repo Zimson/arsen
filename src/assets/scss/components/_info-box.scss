@@ -106,5 +106,10 @@
 
   &__btn {
     margin-top: 22px;
+
+    @include media-breakpoint-up(sm) {
+      width: 100%;
+      max-width: 480px;
+    }
   }
 }

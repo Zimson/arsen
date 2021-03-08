@@ -1,32 +1,56 @@
 .content-box {
+
+  @mixin box-shadow() {
+    padding: 56px 20px 54px;
+    border-radius: 38px;
+    box-shadow: -2px 35px 53px 1px rgba(0, 0, 0, 0.08), 0 1px 7px 0 rgba(0, 0, 0, 0.09);
+
+    @include media-breakpoint-up(sm) {
+      padding-right: 40px;
+      padding-left: 40px;
+    }
+
+    @include media-breakpoint-up(md) {
+      padding-top: 66px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      padding-right: 48px;
+      padding-left: 48px;
+    }
+  }
+
   margin-top: 15px;
-  padding: 56px 20px 54px;
   width: 100%;
   display: flex;
   flex-direction: column;
   box-sizing: border-box;
   background-color: var(--white-color);
-  border-radius: 38px;
-  box-shadow: -2px 35px 53px 1px rgba(0, 0, 0, 0.08), 0 1px 7px 0 rgba(0, 0, 0, 0.09);
+
+
+  &--shadow-xs {
+    @include box-shadow();
+  }
+
+  &--shadow-sm {
+    @include media-breakpoint-up(sm) {
+      @include box-shadow();
+    }
+  }
+
+  &--shadow-md {
+    @include media-breakpoint-up(md) {
+      @include box-shadow();
+    }
+  }
 
   @include media-breakpoint-up(sm) {
-    padding-right: 40px;
-    padding-left: 40px;
     align-items: center;
     text-align: center;
   }
 
-  @include media-breakpoint-up(md) {
-    padding-top: 66px;
-  }
-
   @include media-breakpoint-up(lg) {
     max-width: 940px;
-  }
-
-  @include media-breakpoint-up(xl) {
-    padding-right: 48px;
-    padding-left: 48px;
   }
 
   &--links-box {

@@ -71,7 +71,7 @@ module.exports = function(options) {
     switch (link.type) {
       case 'button':
         box = `<div class="info-box__btn">
-           <a ${link.href ? `href="${link.href}"` : ``} class="btn ${link.color ? `btn--${link.color}` : ``}" ${link.dataModal ? `data-modal="${link.dataModal}"` : ``}>
+           <a ${link.href ? `href="${link.href}"` : ``} class="btn ${link.color ? `btn--${link.color} btn--full-width-sm` : ``}" ${link.dataModal ? `data-modal="${link.dataModal}"` : ``}>
               ${link.icon ? 
                 `<svg  class="icon ${link.color ? `icon--${link.color}` : ``}" width="48" height="38">
                     <use xlink:href="${root}assets/img/symbol/sprite.svg#${link.icon}">

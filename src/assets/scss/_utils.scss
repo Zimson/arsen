@@ -1,0 +1,17 @@
+.u--show-sm {
+  @include media-breakpoint-up(sm) {
+    display: block;
+  }
+}
+
+.u--hide-sm {
+  @include media-breakpoint-up(sm) {
+    display: none;
+  }
+}
+
+.u--no-mgb-sm {
+  @include media-breakpoint-up(sm) {
+    margin-bottom: 0;
+  }
+}

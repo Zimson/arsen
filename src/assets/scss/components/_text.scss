@@ -10,4 +10,20 @@
   &--ls-36 {
     letter-spacing: -0.36px;
   }
+
+  &--center {
+    text-align: center;
+  }
+
+  &--center-sm {
+    @include media-breakpoint-up(sm) {
+      text-align: center;
+    }
+  }
+
+  &--no-mgb-sm {
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 0;
+    }
+  }
 }

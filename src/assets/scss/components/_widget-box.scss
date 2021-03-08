@@ -68,6 +68,13 @@
       margin-bottom: 49px;
       height: 794px;
       border-radius: var(--border-radius-top) var(--border-radius-top) var(--border-radius-bottom) var(--border-radius-bottom);
+
+      @include media-breakpoint-up(sm) {
+        width: 360px;
+        height: 864px;
+        border-bottom-left-radius: var(--border-radius-top);
+        border-bottom-right-radius: var(--border-radius-top);
+      }
     }
   }
 
@@ -81,6 +88,12 @@
     @include media-breakpoint-up(sm) {
       margin-top: 0;
       //width: 312px;
+    }
+
+    .widget-box--no-site & {
+      @include media-breakpoint-up(sm) {
+        margin-top: 19px;
+      }
     }
   }
 
