@@ -30,13 +30,3 @@ img {
     -webkit-overflow-scrolling:touch; /* So iOS Safari gets the inertia & rubber-band effect */
   }
 }
-
-p {
-  margin: 0 0 16px 0;
-  font-family: $font-family;
-  font-size: 18.2px;
-  font-weight: 300;
-  line-height: 28px;
-  letter-spacing: -0.26px;
-  color: var(--gray-color);
-}

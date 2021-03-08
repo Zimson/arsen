@@ -3,9 +3,9 @@
 
   &--messanger {
     margin-top: -15px;
-    margin-bottom: 20px;
+    margin-bottom: 8px;
     left: calc(-1 * var(--container-padding-x));
-    width: unset;
-
+    width: 600px;
+    height: 220px;
   }
 }

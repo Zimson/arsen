@@ -5,7 +5,7 @@
 
   &-container {
     position: relative;
-    padding: 53px var(--container-padding-x) 60px;
+    padding: 73px var(--container-padding-x) 60px;
     left: calc(-1 * var(--container-padding-x));
     width: 100%;
 
@@ -28,7 +28,7 @@
     @include btn-default();
 
     position: absolute;
-    top: 8px;
+    top: 27px;
     z-index: 10;
     cursor: pointer;
 
@@ -61,6 +61,7 @@
     }
 
     &-disabled svg {
+      --icon-color: rgba(0, 0, 0, 0.3);
 
       @include hover() {
         --icon-color: rgba(0, 0, 0, 0.3);
