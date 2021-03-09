@@ -20,6 +20,10 @@
     margin-top: 40px;
   }
 
+  &--no-mgt {
+    margin-top: 0;
+  }
+
   &::before {
     content: "";
     position: absolute;

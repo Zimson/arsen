@@ -109,10 +109,14 @@ layout: default
     <p class="text text--md-size-lg">Вы&nbsp;платите только за&nbsp;успешные платежи и&nbsp;экономите 50&nbsp;000&nbsp;₽ в&nbsp;год. <br class="br br--show-lg"/><a
       href="#" class="link link--pink link--in-text">Бесплатные опции</a>&nbsp;&mdash; <br class="br br--show-xs br--hide-sm">своя страница оплаты, онлайн касса, выставление счёта, возврат платежа, холдирование платежей,
       кнопки WhatsApp, Telegram, Viber, важные ссылки, автоматическая <br class="br br--show-sm">email рассылка.</p>
-    <div style="margin-top: 15px;">
-      {{{ rate-box count="3" text="Комиссия за успешный платеж <br class='br br--show-xs' /><b>от ArsenalPay</b>" }}}
-      {{{ rate-box count="2" prefix="+" text="Комиссия за успешный платеж <br class='br br--show-xs' /><b>от Visa, Mastercard, Мир</b>" }}}
-      {{{ note text='["У нас нет дополнительных комиссий и звездочек в договоре."]' mods="mgt-40, text-lg"}}}
+    <div class="rate">
+      <div class="rate__item">
+        {{{ rate-box count="3" text="Комиссия за успешный платеж <br class='br br--show-xs' /><b>от ArsenalPay</b>" }}}
+        {{{ rate-box count="2" prefix="+" text="Комиссия за успешный платеж <br class='br br--show-xs' /><b>от Visa, Mastercard, Мир</b>" }}}
+      </div>
+      <div class="rate__item">
+        {{{ note text='["У нас нет дополнительных комиссий и звездочек в договоре."]' mods="no-mgt, text-lg"}}}
+      </div>
     </div>
   </div>
 </section>

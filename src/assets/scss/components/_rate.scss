@@ -1,0 +1,15 @@
+.rate {
+  margin-top: 15px;
+
+  @include media-breakpoint-up(md) {
+    margin-top: 32px;
+  }
+
+  &__item {
+
+    &:nth-child(2) {
+      margin-top: 50px;
+      max-width: 348px;
+    }
+  }
+}
