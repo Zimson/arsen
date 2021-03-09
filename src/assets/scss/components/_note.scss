@@ -11,6 +11,7 @@
   text-align: left;
 
   @include media-breakpoint-up(md) {
+    margin-top: 25px;
     max-width: 660px;
     text-align: center;
   }
@@ -40,7 +41,7 @@
 
     @include media-breakpoint-up(md) {
       font-size: 16.1px;
-      letter-spacing: -0.55px;
+      //letter-spacing: -0.55px;
     }
   }
 

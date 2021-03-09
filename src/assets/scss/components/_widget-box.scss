@@ -76,6 +76,11 @@
         border-bottom-left-radius: var(--border-radius-top);
         border-bottom-right-radius: var(--border-radius-top);
       }
+
+      @include media-breakpoint-up(md) {
+        margin-top: 22px;
+        margin-bottom: 77px;
+      }
     }
   }
 
@@ -114,6 +119,16 @@
 
     .widget-box--no-site & > *:not(:last-child) {
       margin-bottom: 24px;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: 40px;
+      }
+    }
+
+    .widget-box--no-site & {
+      @include media-breakpoint-up(md) {
+        max-width: 540px;
+      }
     }
 
     //.widget-box--no-site & > *:last-child svg {

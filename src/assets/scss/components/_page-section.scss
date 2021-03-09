@@ -274,6 +274,35 @@
     }
   }
 
+  &__content {
+    position: relative;
+  }
+
+  &__content--social {
+    margin-top: 70px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: -65px;
+      width: 400px;
+      height: 560px;
+      background-repeat: no-repeat;
+      //background-size: ;
+    }
+
+    &::before {
+      left: -300px;
+      background-image: url("social-left");
+    }
+
+    &::after {
+      right: -300px;
+      background-image: url("social-right");
+    }
+  }
+
   &__btn {
     margin-right: auto;
     margin-left: auto;

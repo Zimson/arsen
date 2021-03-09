@@ -27,6 +27,24 @@
   box-sizing: border-box;
   background-color: var(--white-color);
 
+  //&--shadow {
+  //  @include media-breakpoint-up(md) {
+  //    max-width: 100%;
+  //  }
+  //}
+
+  @include media-breakpoint-up(sm) {
+    align-items: center;
+    text-align: center;
+  }
+
+  //@include media-breakpoint-up(md) {
+  //  max-width: 540px;
+  //}
+
+  @include media-breakpoint-up(lg) {
+    max-width: 940px;
+  }
 
   &--shadow-xs {
     @include box-shadow();
@@ -55,15 +73,6 @@
 
   &--faq {
     margin-top: 25px;
-  }
-
-  @include media-breakpoint-up(sm) {
-    align-items: center;
-    text-align: center;
-  }
-
-  @include media-breakpoint-up(lg) {
-    max-width: 940px;
   }
 
   &--links-box {
