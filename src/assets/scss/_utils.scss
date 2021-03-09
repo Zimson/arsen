@@ -1,4 +1,6 @@
 .u--show-sm {
+  display: none;
+
   @include media-breakpoint-up(sm) {
     display: block;
   }
@@ -6,6 +8,20 @@
 
 .u--hide-sm {
   @include media-breakpoint-up(sm) {
+    display: none;
+  }
+}
+
+.u--show-md {
+  display: none;
+
+  @include media-breakpoint-up(md) {
+    display: block;
+  }
+}
+
+.u--hide-md {
+  @include media-breakpoint-up(md) {
     display: none;
   }
 }

@@ -1,19 +1,23 @@
 .info-box {
-  //--icon-space: 18px;
+  --icon-space: 12px;
 
   margin-bottom: 40px;
   display: flex;
   flex-direction: column;
   font-family: $font-family;
 
+  @include media-breakpoint-up(sm) {
+    align-items: center;
+    text-align: center;
+  }
+
   &--no-mg-b,
   &:last-of-type {
     margin-bottom: 0;
   }
 
-  @include media-breakpoint-up(sm) {
-    align-items: center;
-    text-align: center;
+  &--icon-space-lg {
+    --icon-space: 16px;
   }
 
   &--align-left-lg {
@@ -25,7 +29,11 @@
   }
 
   &--mgb-63 {
-    margin-bottom: 63px;
+    margin-bottom: 60px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 83px;
+    }
   }
 
   &--mgb-24 {
@@ -44,8 +52,6 @@
   }
 
   &__title {
-    --icon-space: 12px;
-
     margin: 0 0 8px 0;
     font-size: 18.2px;
     line-height: 28px;

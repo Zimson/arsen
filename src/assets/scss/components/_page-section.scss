@@ -121,6 +121,11 @@
       }
     }
 
+    .page-section--under-slider & {
+      margin-top: -70px;
+      padding-top: 0;
+    }
+
     .page-section--widget-details & {
       padding-bottom: 135px; //165
 

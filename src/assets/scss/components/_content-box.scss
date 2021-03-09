@@ -44,6 +44,19 @@
     }
   }
 
+  &--quick-start {
+    margin-top: 45px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 20px;
+      padding-top: 90px;
+    }
+  }
+
+  &--faq {
+    margin-top: 25px;
+  }
+
   @include media-breakpoint-up(sm) {
     align-items: center;
     text-align: center;

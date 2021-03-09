@@ -2,12 +2,18 @@
   position: relative;
   margin: 16px auto 0;
   padding: 24px 20px 14px;
+  width: 100%;
   max-width: 320px;
   background-color: #45ba6e;
   box-shadow: -2px 25px 33px 1px rgba(0, 0, 0, 0.12), 0 6px 15px 0 rgba(0, 0, 0, 0.18);
   border-radius: 20px;
   box-sizing: border-box;
   text-align: left;
+
+  @include media-breakpoint-up(md) {
+    max-width: 660px;
+    text-align: center;
+  }
 
   &--mgt-40 {
     margin-top: 40px;
@@ -31,6 +37,11 @@
     line-height: 24px;
     letter-spacing: -0.4px;
     color: var(--white-color);
+
+    @include media-breakpoint-up(md) {
+      font-size: 16.1px;
+      letter-spacing: -0.55px;
+    }
   }
 
   &--text-lg p {
