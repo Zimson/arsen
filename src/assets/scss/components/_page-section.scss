@@ -124,6 +124,10 @@
     .page-section--under-slider & {
       margin-top: -70px;
       padding-top: 0;
+
+      @include media-breakpoint-up(md) {
+        margin-top: -128px;
+      }
     }
 
     .page-section--widget-details & {

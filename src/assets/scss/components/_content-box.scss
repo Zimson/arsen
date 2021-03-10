@@ -73,6 +73,10 @@
 
   &--faq {
     margin-top: 25px;
+
+    @include media-breakpoint-up(md) {
+      margin-top: 33px;
+    }
   }
 
   &--links-box {

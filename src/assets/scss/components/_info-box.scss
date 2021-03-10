@@ -53,6 +53,12 @@
     }
   }
 
+  &--mgb-md-42 {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 42px;
+    }
+  }
+
   &--text-left {
     text-align: left;
     align-items: flex-start;
