@@ -245,6 +245,20 @@
         padding-bottom: 65px;
       }
     }
+
+    .page-section--easy & {
+      padding-top: 122px;
+      padding-bottom: 60px;
+    }
+
+    .page-section--social & {
+      padding-top: 0px;
+      padding-bottom: 90px;
+
+      @include media-breakpoint-up(sm) {
+        padding-bottom: 75px;
+      }
+    }
   }
 
   &__title {
@@ -332,13 +346,15 @@
 
     &::before,
     &::after {
-      content: "";
       position: absolute;
       top: -65px;
       width: 400px;
       height: 560px;
       background-repeat: no-repeat;
-      //background-size: ;
+
+      @include media-breakpoint-up(md) {
+        content: "";
+      }
 
       @include media-breakpoint-up(xl) {
         top: -67px;

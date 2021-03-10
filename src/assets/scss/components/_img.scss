@@ -2,14 +2,17 @@
   position: relative;
 
   &--messanger {
-    margin-top: -15px;
-    margin-bottom: 8px;
-    left: calc(-1 * var(--container-padding-x));
-    width: 600px;
-    height: 220px;
+    margin-top: -65px;
+    margin-bottom: 18px;
+    left: -60px;
+    width: 440px;
+    height: 190px;
+
 
     @include media-breakpoint-up(sm) {
-      margin-top: 3px;
+      width: 600px;
+      height: 220px;
+      margin-top: -67px;
       margin-bottom: 0;
       left: 0;
     }
