@@ -9,23 +9,29 @@ module.exports = function(options) {
   const icon = options.hash.icon ? JSON.parse(options.hash.icon) : null;
   const count = options.hash.count;
   const mods = options.hash.mods;
+  const titleMods = options.hash.titleMods;
+  const textMods = options.hash.textMods;
   const root = options.data.root.root;
-  let cssClass = 'info-box';
-  let allMods = '';
 
-  if (mods !== 'undefined' && mods ) {
-    const modsList = mods.split(',');
+  function setMods(cls, mods) {
+    let cssClass = cls;
+    let allMods = '';
+
+    if (mods !== 'undefined' && mods ) {
+      const modsList = mods.split(',');
       for (let i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' info-box--' + modsList[i].trim();
+        allMods = allMods + ` ${cls}--` + modsList[i].trim();
       }
+    }
+
+    cssClass+= allMods;
+
+    return cssClass;
   }
 
-  cssClass+= allMods;
-
-  function renderCheckIcon() {
-
-  }
-
+  const boxClass = setMods('info-box', mods);
+  const titleClass = setMods('info-box__title', titleMods);
+  const textClass = setMods('info-box__text', textMods);
 
   function renderIcon(icon) {
     let svg = ``;
@@ -89,13 +95,12 @@ module.exports = function(options) {
     return box;
   }
 
-  const block = `<article class="${cssClass}" ${count ? `data-count="${count}"` : ``}>
+  const block = `<article class="${boxClass}" ${count ? `data-count="${count}"` : ``}>
                     ${icon ? renderIcon(icon) : ``}
-                    <h1 class="info-box__title ${titleMod ? `info-box__title--${titleMod}` : ``}">${title}</h1>
-                    <p class="info-box__text ${textMod ? `info-box__text--${textMod}` : ``}" >${text}</p>
+                    <h1 class="${titleClass}">${title}</h1>
+                    <p class="${textClass}" >${text}</p>
                    ${link ? renderLink(link) : ``}
                  </article>`;
 
   return block;
-
 }

@@ -252,7 +252,7 @@
     }
 
     .page-section--social & {
-      padding-top: 0px;
+      padding-top: 0;
       padding-bottom: 90px;
 
       @include media-breakpoint-up(sm) {
