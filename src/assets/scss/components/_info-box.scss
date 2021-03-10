@@ -59,6 +59,18 @@
     }
   }
 
+  &--mgb-md-40 {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 40px;
+    }
+  }
+
+  //&--mgb-lg-60 {
+  //  @include media-breakpoint-up(md) {
+  //    margin-bottom: px;
+  //  }
+  //}
+
   &--text-left {
     text-align: left;
     align-items: flex-start;

@@ -1,15 +1,31 @@
 .rate {
   margin-top: 15px;
+  width: 100%;
 
   @include media-breakpoint-up(md) {
     margin-top: 32px;
   }
 
+  @include media-breakpoint-up(lg) {
+    display: flex;
+    justify-content: space-between;
+  }
+
   &__item {
+    position: relative;
+
+    &:nth-child(1) {
+      margin-left: 36px;
+    }
 
     &:nth-child(2) {
       margin-top: 50px;
       max-width: 348px;
+
+      @include media-breakpoint-up(lg) {
+        margin-top: 27px;
+        margin-right: 8px;
+      }
     }
   }
 }
