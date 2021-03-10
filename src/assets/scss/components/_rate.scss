@@ -9,6 +9,7 @@
   @include media-breakpoint-up(lg) {
     display: flex;
     justify-content: space-between;
+    max-width: 820px;
   }
 
   &__item {

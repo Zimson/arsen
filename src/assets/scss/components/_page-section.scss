@@ -115,7 +115,9 @@
         padding-top: 105px;
         padding-bottom: 150px;
       }
+    }
 
+    .page-section--cut & {
       @include media-breakpoint-up(xl) {
         padding-right: calc(var(--container-padding-x) - var(--container-cut));
       }
@@ -236,7 +238,7 @@
       margin-top: 26px;
     }
 
-    .page-section--widget & {
+    .page-section--cut & {
       @include media-breakpoint-up(xl) {
         margin-left: calc(-1 * var(--container-cut));
       }
@@ -271,7 +273,9 @@
       @include media-breakpoint-up(md) {
         margin-bottom: 36px;
       }
+    }
 
+    .page-section--cut & {
       @include media-breakpoint-up(xl) {
         margin-left: calc(-1 * var(--container-cut));
       }
@@ -294,16 +298,36 @@
       height: 560px;
       background-repeat: no-repeat;
       //background-size: ;
+
+      @include media-breakpoint-up(xl) {
+        top: -67px;
+      }
     }
 
     &::before {
       left: -300px;
       background-image: url("social-left");
+
+      @include media-breakpoint-up(lg) {
+        left: -310px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        left: -403px;
+      }
     }
 
     &::after {
       right: -300px;
       background-image: url("social-right");
+
+      @include media-breakpoint-up(lg) {
+        right: -310px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        right: -403px;
+      }
     }
   }
 
@@ -321,10 +345,17 @@
       max-width: 304px;
     }
 
-    .page-section--widget & {
+    .page-section--cut & {
       @include media-breakpoint-up(xl) {
         margin-left: calc(-1 * var(--container-cut));
       }
+    }
+  }
+
+  //icon's shift
+  &--cut .icon {
+    @include media-breakpoint-up(xl) {
+      margin-left: calc(-1 * var(--container-cut));
     }
   }
 }
