@@ -16,5 +16,9 @@
       margin-bottom: 0;
       left: 0;
     }
+
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
   }
 }

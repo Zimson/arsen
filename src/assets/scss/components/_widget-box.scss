@@ -76,7 +76,7 @@
       --border-radius-bottom: 36px;
 
       margin-bottom: 49px;
-      height: 794px;
+      height: 793px;
       border-radius: var(--border-radius-top) var(--border-radius-top) var(--border-radius-bottom) var(--border-radius-bottom);
 
       @include media-breakpoint-up(sm) {
@@ -89,7 +89,7 @@
 
       @include media-breakpoint-up(md) {
         margin-top: 22px;
-        margin-bottom: 77px;
+        margin-bottom: 80px;
       }
 
       @include media-breakpoint-up(lg) {

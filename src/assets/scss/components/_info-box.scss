@@ -75,6 +75,12 @@
     }
   }
 
+  &--mgb-md-44 {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 44px;
+    }
+  }
+
   &--text-left {
     text-align: left;
     align-items: flex-start;
@@ -121,12 +127,7 @@
     letter-spacing: -0.2px;
     color: var(--gray-color);
 
-    @include media-breakpoint-up(sm) {
-      max-width: 520px;
-    }
-
     @include media-breakpoint-up(md) {
-      max-width: 540px;
       font-size: 17.2px;
       line-height: 28px;
       letter-spacing: -0.59px;
@@ -136,7 +137,19 @@
       max-width: 740px;
     }
 
-    &--lh-26-md {
+    &--mw-sm-520 {
+      @include media-breakpoint-up(sm) {
+        max-width: 520px;
+      }
+    }
+
+    &--mw-md-540 {
+      @include media-breakpoint-up(md) {
+        max-width: 540px;
+      }
+    }
+
+    &--lh-md-26 {
       @include media-breakpoint-up(md) {
         line-height: 26px;
       }
