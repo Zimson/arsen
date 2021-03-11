@@ -2,13 +2,26 @@
   @include btn();
 
   svg + span {
+    margin-left: 10px;
+    display: inline-block;
     font-size: 15.8px;
     line-height: 24px;
     letter-spacing: -0.24px;
     text-transform: none;
+
+    @include media-breakpoint-up(sm) {
+      margin-left: auto;
+      margin-right: auto;
+      transform: translateX(-12px);
+    }
   }
 
   &--full-width-sm {
     max-width: 100%;
+  }
+
+  &--align-left {
+    justify-content: flex-start;
+    text-align: left;
   }
 }
