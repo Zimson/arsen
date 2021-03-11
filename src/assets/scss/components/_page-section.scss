@@ -183,8 +183,22 @@
       }
     }
 
+    .page-section--solid.--start & {
+      @include media-breakpoint-up(md) {
+        padding-top: 150px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding-top: 140px;
+      }
+    }
+
     .page-section--solid.--end & {
       padding-bottom: 150px;
+
+      @include media-breakpoint-up(lg) {
+        padding-bottom: 180px;
+      }
     }
 
     .page-section--api & {
@@ -194,6 +208,10 @@
       @include media-breakpoint-up(md) {
         padding-top: 140px;
         padding-bottom: 160px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding-top: 150px;
       }
     }
 
@@ -362,34 +380,6 @@
   }
 
   &__text {
-    //margin: 0 0 36px 0;
-    //font-family: $font-family;
-    //font-size: 18.2px;
-    //font-weight: 300;
-    //line-height: 28px;
-    //letter-spacing: -0.36px;
-    //color: var(--gray-color);
-    //
-    //@include media-breakpoint-up(sm) {
-    //  text-align: center;
-    //}
-    //
-    //@include media-breakpoint-up(md) {
-    //  max-width: 840px;
-    //  font-size: 20.2px;
-    //  line-height: 32px;
-    //  letter-spacing: -0.4px;
-    //}
-    //
-    //.page-section--widget & {
-    //  @include media-breakpoint-up(sm) {
-    //    margin-bottom: 32px;
-    //  }
-    //
-    //  @include media-breakpoint-up(md) {
-    //    margin-bottom: 36px;
-    //  }
-    //}
 
     .page-section--cut & {
       @include media-breakpoint-up(xl) {

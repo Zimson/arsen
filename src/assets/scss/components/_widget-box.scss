@@ -129,10 +129,13 @@
   &__content {
 
     .widget-box--dev & {
-      margin-top: 46px;
+
+      @include media-breakpoint-up(lg) {
+        padding-top: 46px;
+      }
 
       @include media-breakpoint-up(xl) {
-        margin-top: 56px;
+        padding-top: 56px;
       }
     }
 
