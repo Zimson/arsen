@@ -16,6 +16,10 @@
     text-align: center;
   }
 
+  @include media-breakpoint-up(xxl) {
+    margin-top: 40px;
+  }
+
   &--mgt-40 {
     margin-top: 40px;
   }

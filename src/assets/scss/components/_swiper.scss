@@ -16,8 +16,12 @@
     width: 100%;
 
     @include media-breakpoint-up(xl) {
-      overflow: unset;
       left: -59px;
+      overflow: unset;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      left: -85px;
     }
   }
 
@@ -27,6 +31,10 @@
     &:not(:last-child) {
       @include media-breakpoint-up(xl) {
         margin-right: 20px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        margin-right: 46px;
       }
     }
   }

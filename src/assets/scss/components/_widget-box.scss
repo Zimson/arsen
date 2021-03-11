@@ -99,6 +99,10 @@
       @include media-breakpoint-up(xl) {
         margin-left: -16px;
       }
+
+      @include media-breakpoint-up(xxl) {
+        margin-left: -36px;
+      }
     }
   }
 

@@ -27,7 +27,8 @@
   }
 
   &--inverse {
-    --skew-angle: -5deg;
+    //--skew-angle: -5deg;
+    --skew-angle: -3deg;
   }
 
   &--no-skew-top {
@@ -432,6 +433,10 @@
       @include media-breakpoint-up(xl) {
         left: -403px;
       }
+
+      @include media-breakpoint-up(xxl) {
+        left: -443px;
+      }
     }
 
     &::after {
@@ -444,6 +449,10 @@
 
       @include media-breakpoint-up(xl) {
         right: -403px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        right: -443px;
       }
     }
   }
