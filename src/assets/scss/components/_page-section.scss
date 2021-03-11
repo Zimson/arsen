@@ -123,15 +123,6 @@
       }
     }
 
-    .page-section--under-slider & {
-      margin-top: -70px;
-      padding-top: 0;
-
-      @include media-breakpoint-up(md) {
-        margin-top: -128px;
-      }
-    }
-
     .page-section--widget-details & {
       padding-bottom: 135px; //165
 
@@ -292,6 +283,35 @@
 
       @include media-breakpoint-up(lg) {
         padding-bottom: 130px;
+      }
+    }
+
+    .page-section--reviews & {
+      padding-top: 115px;
+
+      @include media-breakpoint-up(md) {
+        padding-top: 160px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        padding-top: 168px;
+      }
+    }
+
+    .page-section--over-footer & {
+      padding-bottom: 95px;
+
+      @include media-breakpoint-up(md) {
+        padding-bottom: 80px;
+      }
+    }
+
+    .page-section--under-slider & {
+      margin-top: -70px;
+      padding-top: 0;
+
+      @include media-breakpoint-up(md) {
+        margin-top: -128px;
       }
     }
   }

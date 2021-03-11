@@ -149,6 +149,12 @@
       }
     }
 
+    &--mw-lg-820 {
+      @include media-breakpoint-up(lg) {
+        max-width: 820px;
+      }
+    }
+
     &--lh-md-26 {
       @include media-breakpoint-up(md) {
         line-height: 26px;
