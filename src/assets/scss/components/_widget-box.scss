@@ -7,25 +7,30 @@
   }
 
   @include media-breakpoint-up(lg) {
-    padding-left: 20px;
     display: grid;
-    grid-template-columns: 348px 1fr;
+    grid-template-columns: auto 1fr;
     grid-template-rows: auto 1fr;
-    grid-column-gap: 72px;
     align-items: start;
   }
 
-  @include media-breakpoint-up(xl) {
-    padding-left: 76px;
-    grid-column-gap: 100px;
-  }
+  &--dev {
+    @include media-breakpoint-up(lg) {
+      padding-left: 20px;
+      grid-column-gap: 72px;
+    }
 
-  @include media-breakpoint-up(xxl) {
-    padding-left: 60px;
-  }
+    @include media-breakpoint-up(xl) {
+      padding-left: 80px;
+      grid-column-gap: 100px;
+    }
 
-  @include media-breakpoint-up(xxl) {
-    grid-column-gap: 140px;
+    @include media-breakpoint-up(xxl) {
+      padding-left: 60px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      grid-column-gap: 140px;
+    }
   }
 
   &--no-site {
@@ -109,13 +114,9 @@
   &__widget img {
     display: block;
     margin-top: -4px;
-    //width: 288px;
-    //height: 398px;
-
 
     @include media-breakpoint-up(sm) {
       margin-top: 0;
-      //width: 312px;
     }
 
     .widget-box--no-site & {
@@ -126,6 +127,14 @@
   }
 
   &__content {
+
+    .widget-box--dev & {
+      margin-top: 46px;
+
+      @include media-breakpoint-up(xl) {
+        margin-top: 56px;
+      }
+    }
 
     //& > *:not(:last-child) {
     //  margin-bottom: 60px;

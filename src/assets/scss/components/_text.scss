@@ -12,6 +12,18 @@
     margin-bottom: 36px;
   }
 
+  &--mgb-sm-32 {
+    @include media-breakpoint-up(sm) {
+      margin-bottom: 32px;
+    }
+  }
+
+  &--mgb-md-36 {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 36px;
+    }
+  }
+
   &--ls-36 {
     letter-spacing: -0.36px;
   }
