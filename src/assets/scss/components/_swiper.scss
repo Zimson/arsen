@@ -68,7 +68,7 @@
     }
 
     svg {
-      --icon-color: rgba(0, 0, 0, 0.3);
+      --icon-color: var(--blue-dark-color);
 
       @include hover() {
         --icon-color: var(--blue-dark-color);
