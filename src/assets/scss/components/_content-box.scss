@@ -1,8 +1,7 @@
 .content-box {
 
   @mixin box-shadow() {
-    padding: 56px 20px 54px;
-    padding-bottom: 30px;
+    padding: 56px 20px 30px;
     border-radius: 38px;
     box-shadow: -2px 35px 53px 1px rgba(0, 0, 0, 0.08), 0 1px 7px 0 rgba(0, 0, 0, 0.09);
 
@@ -78,6 +77,10 @@
     @include media-breakpoint-up(md) {
       margin-top: 33px;
     }
+  }
+
+  &--pdb-54 {
+    padding-bottom: 54px;
   }
 
   &--links-box {

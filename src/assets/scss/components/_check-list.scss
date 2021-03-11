@@ -2,7 +2,7 @@
   @include list-clear();
 
   position: relative;
-  left: -15px;
+  left: -16px;
   margin-top: 26px;
 
   @include media-breakpoint-up(sm) {
@@ -64,7 +64,7 @@
     }
 
     &:nth-child(2n):not(&:last-child) {
-      margin-bottom: 15px;
+      margin-bottom: 19px;
 
       @include media-breakpoint-up(md) {
         margin-bottom: 0;
