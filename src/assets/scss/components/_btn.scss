@@ -1,6 +1,8 @@
 .btn {
   @include btn();
 
+  cursor: pointer;
+
   svg + span {
     margin-left: 10px;
     display: inline-block;
@@ -13,6 +15,12 @@
       margin-left: auto;
       margin-right: auto;
       transform: translateX(-12px);
+    }
+  }
+
+  @include hover {
+    svg {
+      --icon-color: var(--white-color);
     }
   }
 

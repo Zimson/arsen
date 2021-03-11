@@ -20,6 +20,14 @@
     text-align: center;
   }
 
+  &--bold {
+    font-weight: 500;
+  }
+
+  &--pink {
+    color: var(--pink-dark-color);
+  }
+
   &--center-sm {
     @include media-breakpoint-up(sm) {
       text-align: center;
