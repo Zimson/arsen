@@ -38,11 +38,15 @@
 
     @include media-breakpoint-up(lg) {
       padding-left: 0;
-      grid-column-gap: 52px;
+      grid-column-gap: 60px;
     }
 
     @include media-breakpoint-up(xl) {
-      grid-column-gap: 90px;
+      grid-column-gap: 95px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      grid-column-gap: 110px;
     }
   }
 
@@ -106,7 +110,7 @@
       }
 
       @include media-breakpoint-up(xxl) {
-        margin-left: -36px;
+        margin-left: -40px;
       }
     }
   }
