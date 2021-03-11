@@ -265,6 +265,11 @@
 
       @include media-breakpoint-up(md) {
         padding-bottom: 110px;
+        overflow: hidden;
+      }
+
+      @include media-breakpoint-up(xl) {
+        overflow: unset;
       }
     }
 
