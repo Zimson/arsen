@@ -24,6 +24,16 @@
     margin-top: 0;
   }
 
+  &--w-full {
+    max-width: 100%;
+  }
+
+  &--text-sm-center {
+    @include media-breakpoint-up(sm) {
+      text-align: center;
+    }
+  }
+
   &::before {
     content: "";
     position: absolute;
