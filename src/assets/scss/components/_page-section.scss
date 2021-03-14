@@ -394,6 +394,8 @@
 
   &__content--social {
     margin-top: 70px;
+    display: flex;
+    flex-direction: column;
 
     &::before,
     &::after {
@@ -443,6 +445,14 @@
 
       @include media-breakpoint-up(xxl) {
         right: -443px;
+      }
+    }
+
+    picture {
+      align-self: center;
+
+      @include media-breakpoint-up(md) {
+        display: none;
       }
     }
   }
