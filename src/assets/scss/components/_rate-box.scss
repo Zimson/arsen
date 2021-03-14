@@ -10,6 +10,18 @@
     align-items: baseline;
   }
 
+  @-moz-document url-prefix() {
+    margin-bottom: 30px;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 25px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 27px;
+    }
+  }
+
   &__count {
     position: relative;
     //margin-left: 29px;
@@ -32,6 +44,10 @@
       content: attr(data-prefix);
       position: absolute;
       left: -40px;
+    }
+
+    @-moz-document url-prefix() {
+      margin-bottom: 4px;
     }
   }
 
