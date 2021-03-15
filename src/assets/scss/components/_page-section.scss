@@ -277,6 +277,7 @@
     .page-section--social & {
       padding-top: 0;
       padding-bottom: 90px;
+      overflow: hidden;
 
       @include media-breakpoint-up(sm) {
         padding-bottom: 75px;
@@ -284,7 +285,6 @@
 
       @include media-breakpoint-up(md) {
         padding-bottom: 110px;
-        overflow: hidden;
       }
 
       @include media-breakpoint-up(xl) {
