@@ -4,7 +4,10 @@
   cursor: pointer;
 
   svg + span {
-    margin-left: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    transform: translateX(-11px);
+    //margin-left: 10px;
     display: inline-block;
     font-size: 15.8px;
     line-height: 24px;
@@ -12,9 +15,7 @@
     text-transform: none;
 
     @include media-breakpoint-up(sm) {
-      margin-left: auto;
-      margin-right: auto;
-      transform: translateX(-12px);
+
     }
   }
 
