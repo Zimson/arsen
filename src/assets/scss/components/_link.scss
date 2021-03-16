@@ -10,7 +10,7 @@
     height: 1px;
     background-color: var(--blue-dark-color);
     opacity: 0;
-    transition: all 0.3s;
+    transition: background-color 0.3s;
 
     @include hover() {
       opacity: 1;

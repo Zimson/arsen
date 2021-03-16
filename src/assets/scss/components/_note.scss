@@ -32,12 +32,6 @@
     max-width: 100%;
   }
 
-  &--text-sm-center {
-    @include media-breakpoint-up(sm) {
-      text-align: center;
-    }
-  }
-
   &::before {
     content: "";
     position: absolute;
@@ -48,7 +42,7 @@
     background: url("message-tail") no-repeat;
   }
 
-  p {
+  &__text {
     margin: 0 0 10px 0;
     font-family: $font-family;
     font-size: 14.8px;
@@ -59,13 +53,26 @@
 
     @include media-breakpoint-up(md) {
       font-size: 16.1px;
-      //letter-spacing: -0.55px;
     }
-  }
 
-  &--text-lg p {
-    font-size: 16.1px;
-    font-weight: 500;
-    letter-spacing: -0.45px;
+    &--lg {
+      font-size: 16.1px;
+      font-weight: 500;
+      letter-spacing: -0.45px;
+    }
+
+    &--mgb-md-0 {
+      &:not(:last-child) {
+        @include media-breakpoint-up(md) {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &--sm-center {
+      @include media-breakpoint-up(sm) {
+        text-align: center;
+      }
+    }
   }
 }

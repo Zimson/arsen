@@ -31,3 +31,21 @@
     margin-bottom: 0;
   }
 }
+
+.u--mgb-sm-36 {
+  @include media-breakpoint-up(sm) {
+    margin-bottom: 36px;
+  }
+}
+
+.u--mgb-sm-16 {
+  @include media-breakpoint-up(sm) {
+    margin-bottom: 16px;
+  }
+}
+
+.u--no-mgb-md {
+  @include media-breakpoint-up(md) {
+    margin-bottom: 0;
+  }
+}

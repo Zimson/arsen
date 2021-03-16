@@ -1,21 +1,30 @@
 module.exports = function(options) {
   const text = options.hash.text ?  JSON.parse(options.hash.text) : null;
   const mods = options.hash.mods;
+  const textMods = options.hash.textMods;
   const root = options.data.root.root;
-  let cssClass = 'note';
-  let allMods = '';
 
-  if (mods !== 'undefined' && mods ) {
-    const modsList = mods.split(',');
+  function setMods(cls, mods) {
+    let cssClass = cls;
+    let allMods = '';
+
+    if (mods !== 'undefined' && mods ) {
+      const modsList = mods.split(',');
       for (let i = 0; i < modsList.length; i++) {
-        allMods = allMods + ' note--' + modsList[i].trim();
+        allMods = allMods + ` ${cls}--` + modsList[i].trim();
       }
+    }
+
+    cssClass+= allMods;
+
+    return cssClass;
   }
 
-  cssClass+= allMods;
+  const noteClass = setMods('note', mods);
+  const textClass = setMods('note__text', textMods);
 
-  const note = `<article class="${cssClass}">
-                  ${text.map((p) => `<p>${p}</p>`).join(``)}
+  const note = `<article class="${noteClass}">
+                  ${text.map((p) => `<p class="${textClass}">${p}</p>`).join(``)}
           </article>`
 
   return note;

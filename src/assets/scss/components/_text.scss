@@ -32,6 +32,12 @@
     text-align: center;
   }
 
+  &--center-sm {
+    @include media-breakpoint-up(sm) {
+      text-align: center;
+    }
+  }
+
   &--bold {
     font-weight: 500;
   }
@@ -52,6 +58,12 @@
     }
   }
 
+  &--no-mgb-md {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+  }
+
   &--md-size-lg {
     @include media-breakpoint-up(md) {
       font-size: 20.2px;
@@ -63,6 +75,18 @@
   &--lg-inline {
     @include media-breakpoint-up(lg) {
       display: inline;
+    }
+  }
+
+  &--inline-sm {
+    @include media-breakpoint-up(sm) {
+      display: inline;
+    }
+  }
+
+  &--block-md {
+    @include media-breakpoint-up(md) {
+      display: block;
     }
   }
 }
