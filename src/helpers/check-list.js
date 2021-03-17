@@ -19,7 +19,7 @@ module.exports = function(options) {
         ${items && items.map((item) => {
           return `<li class="check-list__item">
               <svg class="icon" width="48px" height="38px">
-                 <use xlink:href="${root}assets/img/symbol/sprite.svg#check-list">
+                 <use xlink:href="${root}assets/img/symbol/sprite.svg#check-list" />
               </svg>            
               ${item}
           </li>`  

@@ -38,7 +38,7 @@ function loadConfig() {
 // Build the "dist" folder by running all of the below tasks
 // Sass must be run later so UnCSS can search for used classes in the others assets.
 gulp.task('build',
- gulp.series(clean, gulp.parallel(pages, javascript, images, fonts, svg, copy), sass));
+ gulp.series(clean, gulp.parallel(pages, javascript, images, fonts, favicons, svg, copy), sass));
 
 // Build the site, run the server, and watch for file changes
 gulp.task('default',
@@ -159,6 +159,11 @@ function fonts() {
     .pipe(gulp.dest(PATHS.dist + '/assets/fonts'));
 }
 
+function favicons() {
+  return gulp.src('./src/assets/favicons/**/*.*')
+    .pipe(gulp.dest(PATHS.dist));
+}
+
 function deploy() {
   return gulp.src('./dist/**/*').pipe(ghPages());
 }
@@ -214,5 +219,6 @@ function watch() {
   gulp.watch('src/assets/js/**/*.js').on('all', gulp.series(javascript, browser.reload));
   gulp.watch('src/assets/img/**/*').on('all', gulp.series(images, browser.reload));
   gulp.watch('src/assets/fonts/**/*').on('all', gulp.series(fonts, browser.reload));
+  gulp.watch('src/assets/favicons/**/*').on('all', gulp.series(favicons, browser.reload));
   gulp.watch('src/assets/img/svg/*.svg').on('all', gulp.series(svg, browser.reload));
 }

@@ -39,32 +39,32 @@ module.exports = function(options) {
     switch (icon.name) {
       case 'number-1':
         svg = `<svg  class="icon ${icon.color ? `icon--${icon.color}` : ``}" width="37" height="37">
-                 <use xlink:href="${root}assets/img/symbol/sprite.svg#number-1">
+                 <use xlink:href="${root}assets/img/symbol/sprite.svg#number-1" />
               </svg>`
         break;
       case 'number-2':
         svg = `<svg  class="icon ${icon.color ? `icon--${icon.color}` : ``}" width="37" height="37">
-                 <use xlink:href="${root}assets/img/symbol/sprite.svg#number-2">
+                 <use xlink:href="${root}assets/img/symbol/sprite.svg#number-2" />
               </svg>`
         break;
       case 'number-3':
         svg = `<svg  class="icon ${icon.color ? `icon--${icon.color}` : ``}" width="37" height="37">
-                 <use xlink:href="${root}assets/img/symbol/sprite.svg#number-3">
+                 <use xlink:href="${root}assets/img/symbol/sprite.svg#number-3" />
               </svg>`
         break;
       case 'security':
         svg = `<svg  class="icon ${icon.color ? `icon--${icon.color}` : ``}" width="38" height="48">
-                 <use xlink:href="${root}assets/img/symbol/sprite.svg#security">
+                 <use xlink:href="${root}assets/img/symbol/sprite.svg#security" />
               </svg>`
         break;
       case 'check':
         svg = `<svg  class="icon ${icon.color ? `icon--${icon.color}` : ``}" width="37" height="37">
-                 <use xlink:href="${root}assets/img/symbol/sprite.svg#check">
+                 <use xlink:href="${root}assets/img/symbol/sprite.svg#check" />
               </svg>`;
         break;
       default:
         svg = `<svg  class="icon ${icon.color ? `icon--${icon.color}` : ``}" width="${width}" height="${height}">
-                 <use xlink:href="${root}assets/img/symbol/sprite.svg#${icon.name}">
+                 <use xlink:href="${root}assets/img/symbol/sprite.svg#${icon.name}" />
               </svg>`
     }
 
@@ -80,7 +80,7 @@ module.exports = function(options) {
            <a ${link.href ? `href="${link.href}"` : ``} class="btn ${link.color ? `btn--${link.color} btn--full-width-sm btn--align-left` : ``}" ${link.dataModal ? `data-modal="${link.dataModal}"` : ``}>
               ${link.icon ? 
                 `<svg  class="icon ${link.color ? `icon--${link.color}` : ``}" width="48" height="38" style="margin-left: 2px;">
-                    <use xlink:href="${root}assets/img/symbol/sprite.svg#${link.icon}">
+                    <use xlink:href="${root}assets/img/symbol/sprite.svg#${link.icon}" />
                 </svg>` : ``}  
               <span>${link.text}</span>
            </a>

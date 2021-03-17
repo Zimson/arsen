@@ -19,13 +19,13 @@ module.exports = function(options) {
 
   function renderToggleArrow() {
     return `<svg class="links-box__toggle-arrow" width="48" height="38">
-               <use xlink:href="${root}assets/img/symbol/sprite.svg#caret">
+               <use xlink:href="${root}assets/img/symbol/sprite.svg#caret" />
             </svg>`
   }
 
   function renderLogo(logo) {
     return `<svg ${logo.width ? `width="${logo.width}"` : ``} ${logo.height ? `height="${logo.height}"` : ``}>
-               <use xlink:href="${root}assets/img/symbol/sprite.svg#${logo.name}">
+               <use xlink:href="${root}assets/img/symbol/sprite.svg#${logo.name}" />
             </svg>`
   }
 
