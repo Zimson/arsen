@@ -1,67 +1,93 @@
 <!doctype html>
 <html class="no-js page" lang="ru">
-  <head>
-    <title>Main page</title>
-    <meta charset="utf-8" />
-    <meta http-equiv="x-ua-compatible" content="ie=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link rel="image_src" href="" />
-    <link rel="canonical" href="" />
-    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
-    <link rel="stylesheet" href="assets/css/app.css">
-  
-    <!-- для twitter и больших картинок в telegram -->
-    <meta property="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@arsenalpay" />
-    <meta name="twitter:creator" content="@arsenalpay" />
+
+<head>
+  <title>Main page</title>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="" />
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+  <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+
+  <link rel="icon" type="image/png" sizes=«120x120» href="/favicon-120x120.png" />
+  <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
+
+  <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png">
+  <link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png">
+
+  <link rel="mask-icon" href="website_icon.svg" color="#FF6047">
+
+  <meta name="msapplication-TileColor" content="#FF6047">
+  <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+  <meta name="msapplication-square70x70logo" content="/mstile-70x70.png">
+  <meta name="msapplication-square150x150logo" content="/mstile-150x150.png">
+  <meta name="msapplication-wide310x150logo" content="/mstile-310x310.png">
+  <meta name="msapplication-square310x310logo" content="/mstile-310x150.png">
+  <meta name="application-name" content=«ArsenalPay»>
+
+  <link rel="image_src" href="" />
+  <link rel="canonical" href="" />
+  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/app.css">
+
+  <!-- для twitter и больших картинок в telegram -->
+  <meta property="twitter:card" content="summary_large_image" />
+  <meta name="twitter:site" content="@arsenalpay" />
+  <meta name="twitter:creator" content="@arsenalpay" />
   <!--  <meta name="twitter:title" content="ArsenalPay | Разработчикам" />-->
-    <meta name="twitter:title" content="" />
-    <meta name="twitter:description" content="" />
-    <meta property="twitter:image" content="" />
-  
-    <!-- для FB, VK и квадратная картинка для WhatsApp -->
-    <!--  FB берет самую большую картинку, WhatsApp  должен брать квадратную.-->
-    <meta property="vk:image" content="" />
-    <meta property="og:image" content="" />
-    <meta property="og:image:secure_url" content="" />
-    <meta property="og:image:width" content=“1200” />
-    <meta property="og:image:height" content=“630” />
-    <meta property="og:image" content="" />
-    <meta property="og:image:width" content=“540” />
-    <meta property="og:image:height" content=“540” />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:type" content="website" />
-    <meta property="og:site_name" content="ArsenalPay" />
-    <meta property="og:url" content="" />
-    <meta property="og:title" content="" />
-    <meta property="og:description" content="" />
-  
-    <script>
-      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
-        function cth(c){document.documentElement.classList.add(c)}
-        'ontouchstart' in window?cth('touch'):cth('no-touch');
-        if(typeof InstallTrigger!=='undefined')cth('firefox');
-        if(/constructor/i.test(window.HTMLElement)||(function(p){return p.toString()==="[object SafariRemoteNotification]"})(!window['safari']||(typeof safari!=='undefined'&&safari.pushNotification)))cth('safari');
-        if(/*@cc_on!@*/false||!!document.documentMode)cth('ie');
-        if(!(/*@cc_on!@*/false||!!document.documentMode)&&!!window.StyleMedia)cth('edge');
-        if(!!window.chrome&&(!!window.chrome.webstore||!!window.chrome.runtime))cth('chrome');
-        if(~navigator.appVersion.indexOf("Win"))cth('windows');
-        if(~navigator.appVersion.indexOf("Mac"))cth('osx');
-        if(~navigator.appVersion.indexOf("Linux"))cth('linux');
-    </script>
-  </head>
+  <meta name="twitter:title" content="" />
+  <meta name="twitter:description" content="" />
+  <meta property="twitter:image" content="" />
+
+  <!-- для FB, VK и квадратная картинка для WhatsApp -->
+  <!--  FB берет самую большую картинку, WhatsApp  должен брать квадратную.-->
+  <meta property="vk:image" content="" />
+  <meta property="og:image" content="" />
+  <meta property="og:image:secure_url" content="" />
+  <meta property="og:image:width" content=“1200” />
+  <meta property="og:image:height" content=“630” />
+  <meta property="og:image" content="" />
+  <meta property="og:image:width" content=“540” />
+  <meta property="og:image:height" content=“540” />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="ArsenalPay" />
+  <meta property="og:url" content="" />
+  <meta property="og:title" content="" />
+  <meta property="og:description" content="" />
+
+  <script>
+    document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+
+    function cth(c) {
+      document.documentElement.classList.add(c)
+    }
+    'ontouchstart' in window ? cth('touch') : cth('no-touch');
+    if (typeof InstallTrigger !== 'undefined') cth('firefox');
+    if (/constructor/i.test(window.HTMLElement) || (function(p) {
+        return p.toString() === "[object SafariRemoteNotification]"
+      })(!window['safari'] || (typeof safari !== 'undefined' && safari.pushNotification))) cth('safari');
+    if ( /*@cc_on!@*/ false || !!document.documentMode) cth('ie');
+    if (!( /*@cc_on!@*/ false || !!document.documentMode) && !!window.StyleMedia) cth('edge');
+    if (!!window.chrome && (!!window.chrome.webstore || !!window.chrome.runtime)) cth('chrome');
+    if (~navigator.appVersion.indexOf("Win")) cth('windows');
+    if (~navigator.appVersion.indexOf("Mac")) cth('osx');
+    if (~navigator.appVersion.indexOf("Linux")) cth('linux');
+  </script>
+</head>
+
 <body>
   <header class="header">
     <nav class="header__container">
       <a href="#" class="header__logo">
-  <!--      <img src="assets/img/svg/main-logo.svg"  alt="Логотип">-->
+        <!--      <img src="assets/img/svg/main-logo.svg"  alt="Логотип">-->
         <svg class="icon" width="74" height="42">
-                   <use xlink:href="assets/img/symbol/sprite.svg#main-logo">
-                </svg>
+          <use xlink:href="assets/img/symbol/sprite.svg#main-logo" />
+        </svg>
       </a>
       <ul class="main-nav">
         <li class="main-nav__item">
@@ -92,8 +118,8 @@
     <div class="mobile-nav__main">
       <button type="button" class="mobile-nav__close" data-mobile-close>
         <svg class="icon" width="11" height="11">
-                   <use xlink:href="assets/img/symbol/sprite.svg#cross">
-                </svg>
+          <use xlink:href="assets/img/symbol/sprite.svg#cross" />
+        </svg>
       </button>
       <ul class="mobile-nav__list">
         <li class="mobile-nav__item">
@@ -154,19 +180,19 @@
         </li>
       </ul>
       <a href="https://arsenalpay.ru/dashboard/login" class="mobile-nav__login">Войти</a>
-      
+
       <div class="social">
-          <span class="social__label">Мы в соцсетях</span>
-          <a href="https://www.instagram.com/arsenal_pay/" class="social__item" target="_blank">
-              <img src="assets/img/svg/instagram.svg" width="48" height="38" alt="Instagram">
-          </a>
-          <a href="tg://resolve?domain=arsenalpay" class="social__item">
-              <img src="assets/img/svg/telegram.svg" width="48" height="38" alt="Telegram">
-          </a>
-          <a href="https://www.facebook.com/ArsenalPay.ru" class="social__item" target="_blank">
-              <img src="assets/img/svg/facebook.svg" width="48" height="38" alt="Facebook">
-          </a>
-    </div>
+        <span class="social__label">Мы в соцсетях</span>
+        <a href="https://www.instagram.com/arsenal_pay/" class="social__item" target="_blank">
+          <img src="assets/img/svg/instagram.svg" width="48" height="38" alt="Instagram">
+        </a>
+        <a href="tg://resolve?domain=arsenalpay" class="social__item">
+          <img src="assets/img/svg/telegram.svg" width="48" height="38" alt="Telegram">
+        </a>
+        <a href="https://www.facebook.com/ArsenalPay.ru" class="social__item" target="_blank">
+          <img src="assets/img/svg/facebook.svg" width="48" height="38" alt="Facebook">
+        </a>
+      </div>
       <div class="lang">
         <a href="https://arsenalpay.ru" class="lang__item active">
           <span>Русский</span>
@@ -178,15 +204,15 @@
     </div>
   </div>
   <div id="page" class="page-inner">
-    
+
     <h1>Hello</h1>
-    
+
   </div>
   <section class="page-section page-section--cashbox page-section--bg-pink page-section--no-skew">
     <div class="page-section__container">
       <svg class="icon icon--pink" width="122" height="120">
-                   <use xlink:href="assets/img/symbol/sprite.svg#kassa">
-                </svg>
+        <use xlink:href="assets/img/symbol/sprite.svg#kassa" />
+      </svg>
       <h2 class="page-section__title">Начать приём платежей с&nbsp;кассой</h2>
       <p class="text text--mgb-36 text--md-size-lg">Вам не&nbsp;нужно покупать или брать в&nbsp;аренду свою&nbsp;кассу</p>
       <a href="" class="page-section__btn" style="margin-bottom: 0">Подключиться</a>
@@ -255,19 +281,19 @@
         </ul>
       </div>
       <div class="footer__social">
-        
-      <div class="social social--footer">
+
+        <div class="social social--footer">
           <span class="social__label">Мы в соцсетях</span>
           <a href="https://www.instagram.com/arsenal_pay/" class="social__item" target="_blank">
-              <img src="assets/img/svg/instagram.svg" width="48" height="38" alt="Instagram">
+            <img src="assets/img/svg/instagram.svg" width="48" height="38" alt="Instagram">
           </a>
           <a href="tg://resolve?domain=arsenalpay" class="social__item">
-              <img src="assets/img/svg/telegram.svg" width="48" height="38" alt="Telegram">
+            <img src="assets/img/svg/telegram.svg" width="48" height="38" alt="Telegram">
           </a>
           <a href="https://www.facebook.com/ArsenalPay.ru" class="social__item" target="_blank">
-              <img src="assets/img/svg/facebook.svg" width="48" height="38" alt="Facebook">
+            <img src="assets/img/svg/facebook.svg" width="48" height="38" alt="Facebook">
           </a>
-    </div>
+        </div>
         <div class="footer__lang">
           <div class="lang">
             <a href="https://arsenalpay.ru" class="lang__item active">
@@ -281,7 +307,8 @@
       </div>
     </div>
   </footer>
-<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXu6wNP79AG7OHTlyBMRufLdjdvSmwo0A"></script>-->
-<script src="assets/js/app.js"></script>
+  <!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXu6wNP79AG7OHTlyBMRufLdjdvSmwo0A"></script>-->
+  <script src="assets/js/app.js"></script>
 </body>
+
 </html>
