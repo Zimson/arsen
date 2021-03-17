@@ -32,10 +32,10 @@ module.exports = function(options) {
   if (links) {
     return `<label class="${cssClass}">
             <input type="checkbox" class="links-box__input" name="${name}" hidden />
-            <div class="links-box__body">
+            <span class="links-box__body">
                 ${logo ? renderLogo(logo) : ``}
                 ${renderToggleArrow()}
-            </div>    
+            </span>    
             <ul class="links-box__list">
                 ${links.map((link) => `<li class="links-box__item">
                     <a href="${link.href}" class="links-box__link" target="_blank">
@@ -46,10 +46,10 @@ module.exports = function(options) {
         </label>`
   } else {
     return `<a href="${href}" class="${cssClass}" target="_blank">
-            <div class="links-box__body">
+            <span class="links-box__body">
                 ${logo ? renderLogo(logo) : ``}
                 ${renderToggleArrow()}
-            </div>    
+            </span>   
         </a>`
   }
 }
