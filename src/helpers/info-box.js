@@ -97,7 +97,7 @@ module.exports = function(options) {
 
   const block = `<article class="${boxClass}" ${count ? `data-count="${count}"` : ``}>
                     ${icon ? renderIcon(icon) : ``}
-                    <h1 class="${titleClass}">${title}</h1>
+                    <h3 class="${titleClass}">${title}</h3>
                     <p class="${textClass}" >${text}</p>
                    ${link ? renderLink(link) : ``}
                  </article>`;
