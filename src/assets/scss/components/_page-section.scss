@@ -26,6 +26,10 @@
     }
   }
 
+  &--under-slider {
+    z-index: 1; // fix text blur under slider
+  }
+
   &--inverse {
     //--skew-angle: -5deg;
     --skew-angle: -3deg;
