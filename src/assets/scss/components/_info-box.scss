@@ -161,11 +161,29 @@
       }
     }
 
+    &--mw-lg-400 {
+      @include media-breakpoint-up(lg) {
+        max-width: 400px;
+      }
+    }
+
     &--lh-md-26 {
       @include media-breakpoint-up(md) {
         line-height: 26px;
       }
     }
+  }
+
+  &__label {
+    display: block;
+    margin-bottom: 12px;
+    padding: 4px 9px;
+    font-size: 11.4px;
+    font-weight: 600;
+    line-height: 16px;
+    color: var(--pink-dark-color);
+    background-color: #ffdbf1;
+    border-radius: 20px;
   }
 
   &__link {

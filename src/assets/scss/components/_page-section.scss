@@ -79,6 +79,10 @@
     background-color: var(--pink-light-color);
   }
 
+  &--instagram {
+    z-index: 10;
+  }
+
   //&:last-of-type {
   //  @include media-breakpoint-only(md) {
   //    background-color: var(--white-color);
@@ -340,6 +344,20 @@
 
       @include media-breakpoint-up(md) {
         margin-top: -128px;
+      }
+    }
+
+    .page-section--instagram & {
+      @include media-breakpoint-up(lg) {
+        padding-top: 105px;
+        padding-bottom: 20px;
+      }
+    }
+
+    .page-section--instagram-mock & {
+      @include media-breakpoint-up(lg) {
+        padding-top: 40px;
+        padding-bottom: 50px;
       }
     }
 

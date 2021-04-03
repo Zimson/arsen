@@ -1,6 +1,7 @@
 module.exports = function(options) {
   const title = options.hash.title;
   const text = options.hash.text;
+  const label = options.hash.label;
   const width = options.hash.width;
   const height = options.hash.height;
   const titleMod = options.hash.titleMod;
@@ -32,6 +33,10 @@ module.exports = function(options) {
   const boxClass = setMods('info-box', mods);
   const titleClass = setMods('info-box__title', titleMods);
   const textClass = setMods('info-box__text', textMods);
+
+  function renderLabel(label) {
+    return `<span class="info-box__label">${label}</span>`
+  }
 
   function renderIcon(icon) {
     let svg = ``;
@@ -97,6 +102,7 @@ module.exports = function(options) {
 
   const block = `<article class="${boxClass}" ${count ? `data-count="${count}"` : ``}>
                     ${icon ? renderIcon(icon) : ``}
+                    ${label ? renderLabel(label) : ``}
                     <h3 class="${titleClass}">${title}</h3>
                     <p class="${textClass}" >${text}</p>
                    ${link ? renderLink(link) : ``}

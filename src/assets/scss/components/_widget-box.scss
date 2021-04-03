@@ -50,10 +50,37 @@
     }
   }
 
+  &--instagram {
+
+    @include media-breakpoint-up(lg) {
+      position: relative;
+      margin-top: -10px;
+      grid-template-columns: 360px 340px;
+      grid-column-gap: 80px;
+      width: 100%;
+    }
+  }
+
   &--dashboard {
     margin-top: 50px;
 
     @include media-breakpoint-up(lg) {
+      grid-column-gap: 40px;
+    }
+  }
+
+  &--buttons {
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 60px;
+      grid-column-gap: 40px;
+    }
+  }
+
+  &--multilink {
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 60px;
       grid-column-gap: 40px;
     }
   }
@@ -83,10 +110,6 @@
     @include media-breakpoint-up(lg) {
       margin-bottom: 0;
     }
-
-    //@include media-breakpoint-up(xl) {
-    //  margin-left: 40px;
-    //}
 
     .widget-box--no-site & {
       --border-radius-top: 50px;
@@ -122,11 +145,62 @@
       }
     }
 
+    .widget-box--instagram & {
+
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 360px;
+        height: 866px;
+      }
+    }
+
     .widget-box--dashboard & {
       width: 350px;
       height: 726px;
       box-shadow: none;
       background: none;
+    }
+
+    .widget-box--buttons & {
+      width: 320px;
+      height: 272px;
+
+      @include media-breakpoint-up(md) {
+        width: 360px;
+        border-radius: 30px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin-top: 15px;
+      }
+    }
+
+    .widget-box--multilink & {
+      width: 320px;
+      height: 332px;
+
+      @include media-breakpoint-up(md) {
+        width: 360px;
+        border-radius: 30px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin-top: 15px;
+      }
+    }
+
+    .widget-box--email & {
+      width: 360px;
+      height: 305px;
+      box-shadow: none;
+      background: none;
+      border-radius: 0;
+
+      @include media-breakpoint-up(sm) {
+        width: 376px;
+      }
     }
   }
 
@@ -171,6 +245,13 @@
     .widget-box--dashboard & {
       @include media-breakpoint-up(lg) {
         margin-top: 40px;
+      }
+    }
+
+    .widget-box--instagram & {
+      @include media-breakpoint-up(lg) {
+        margin-top: 59px;
+        grid-column: 2 / 3;
       }
     }
   }
