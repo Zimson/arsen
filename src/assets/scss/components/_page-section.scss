@@ -348,6 +348,9 @@
     }
 
     .page-section--instagram & {
+      padding-top: 75px;
+      padding-bottom: 65px;
+
       @include media-breakpoint-up(lg) {
         padding-top: 105px;
         padding-bottom: 20px;
@@ -355,6 +358,9 @@
     }
 
     .page-section--instagram-mock & {
+      padding-top: 79px;
+      padding-bottom: 45px;
+
       @include media-breakpoint-up(lg) {
         padding-top: 40px;
         padding-bottom: 50px;

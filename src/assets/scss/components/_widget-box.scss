@@ -52,6 +52,10 @@
 
   &--instagram {
 
+    @include media-breakpoint-up(sm) {
+      margin-top: -27px;
+    }
+
     @include media-breakpoint-up(lg) {
       position: relative;
       margin-top: -10px;
@@ -146,6 +150,13 @@
     }
 
     .widget-box--instagram & {
+      margin-bottom: 60px;
+      width: 320px;
+      height: 794px;
+
+      @include media-breakpoint-up(sm) {
+        margin-bottom: 97px;
+      }
 
       @include media-breakpoint-up(lg) {
         position: absolute;
@@ -249,6 +260,7 @@
     }
 
     .widget-box--instagram & {
+
       @include media-breakpoint-up(lg) {
         margin-top: 59px;
         grid-column: 2 / 3;
