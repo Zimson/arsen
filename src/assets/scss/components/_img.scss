@@ -18,8 +18,19 @@
       left: 0;
     }
 
-    @include media-breakpoint-up(md) {
-      display: none;
-    }
+    //@include media-breakpoint-up(lg) {
+    //  width: 286px;
+    //  height: 578px;
+    //}
+
+    //@include media-breakpoint-up(md) {
+    //  display: none;
+    //}
+  }
+
+  &--hide-lg {
+    //@include media-breakpoint-up(lg) {
+    //  display: none;
+    //}
   }
 }

@@ -85,6 +85,18 @@
     }
   }
 
+  &--mgb-md-60 {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 60px;
+    }
+  }
+
+  &--mgb-lg-34 {
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 34px;
+    }
+  }
+
   &--text-left {
     text-align: left;
     align-items: flex-start;
