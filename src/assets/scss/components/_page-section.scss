@@ -408,6 +408,23 @@
       }
     }
 
+    .page-section--payments & {
+      padding-top: 105px;
+      padding-bottom: 85px;
+
+      @include media-breakpoint-up(sm) {
+        padding-top: 100px;
+      }
+
+      @include media-breakpoint-up(md) {
+        padding-top: 140px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding-bottom: 105px;
+      }
+    }
+
     .page-section--no-pdb & {
       padding-bottom: 0;
     }
@@ -476,6 +493,7 @@
 
   &__content {
     position: relative;
+    width: 100%;
   }
 
   &__content--social {
@@ -536,10 +554,6 @@
 
     picture {
       align-self: center;
-
-      //@include media-breakpoint-up(md) {
-      //  display: none;
-      //}
     }
 
     &.no-bg {
@@ -547,6 +561,25 @@
       &::after {
         display: none;
       }
+    }
+  }
+
+  &__content--payments {
+    margin-top: 27px;
+
+    @include media-breakpoint-up(sm) {
+      margin-top: 50px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      margin-top: 49px;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-column-gap: 20px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-column-gap: 0;
     }
   }
 
