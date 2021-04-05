@@ -32,6 +32,13 @@
         margin-left: 32px;
       }
     }
+
+    .media-box--email & {
+      margin-top: 25px;
+      margin-bottom: 42px;
+      width: 376px;
+      height: 305px;
+    }
   }
 
   &__img img {

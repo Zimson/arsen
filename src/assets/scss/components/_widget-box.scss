@@ -190,8 +190,11 @@
     }
 
     .widget-box--buttons & {
+      margin-top: 28px;
+      margin-bottom: 40px;
       width: 320px;
       height: 272px;
+      border-radius: 32px;
 
       @include media-breakpoint-up(md) {
         width: 360px;
@@ -204,8 +207,11 @@
     }
 
     .widget-box--multilink & {
+      margin-top: 28px;
+      margin-bottom: 40px;
       width: 320px;
       height: 332px;
+      border-radius: 30px;
 
       @include media-breakpoint-up(md) {
         width: 360px;
@@ -214,18 +220,6 @@
 
       @include media-breakpoint-up(lg) {
         margin-top: 15px;
-      }
-    }
-
-    .widget-box--email & {
-      width: 360px;
-      height: 305px;
-      box-shadow: none;
-      background: none;
-      border-radius: 0;
-
-      @include media-breakpoint-up(sm) {
-        width: 376px;
       }
     }
   }

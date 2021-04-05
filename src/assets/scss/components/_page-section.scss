@@ -411,6 +411,11 @@
     .page-section--no-pdb & {
       padding-bottom: 0;
     }
+
+    .page-section--no-pdt & {
+      padding-top: 0;
+      padding-bottom: 96px;
+    }
   }
 
   &__title {
