@@ -97,6 +97,13 @@
     }
   }
 
+  &--mgb-xl-60 {
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 60px;
+    }
+  }
+
+
   &--text-left {
     text-align: left;
     align-items: flex-start;

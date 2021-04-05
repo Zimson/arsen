@@ -170,8 +170,23 @@
     .widget-box--dashboard & {
       width: 350px;
       height: 726px;
+      display: none;
       box-shadow: none;
       background: none;
+
+      @include media-breakpoint-up(lg) {
+        left: -20px;
+        margin-top: 15px;
+        display: block;
+      }
+
+      @include media-breakpoint-up(xl) {
+        left: 5px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        left: -12px;
+      }
     }
 
     .widget-box--buttons & {
@@ -253,17 +268,32 @@
       }
     }
 
-    .widget-box--dashboard & {
-      @include media-breakpoint-up(lg) {
-        margin-top: 40px;
-      }
-    }
+    //.widget-box--dashboard & {
+    //  @include media-breakpoint-up(lg) {
+    //    margin-top: 40px;
+    //  }
+    //}
 
     .widget-box--instagram & {
 
       @include media-breakpoint-up(lg) {
         margin-top: 59px;
         grid-column: 2 / 3;
+      }
+    }
+
+    .widget-box--dashboard & {
+
+      @include media-breakpoint-up(lg) {
+        margin-top: 78px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        margin-left: 42px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        margin-left: 63px;
       }
     }
   }

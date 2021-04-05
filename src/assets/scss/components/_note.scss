@@ -24,6 +24,18 @@
     margin-top: 40px;
   }
 
+  &--mgt-sm-32 {
+     @include media-breakpoint-up(sm) {
+       margin-top: 32px;
+     }
+  }
+
+  &--mgt-md-50 {
+    @include media-breakpoint-up(md) {
+      margin-top: 50px;
+    }
+  }
+
   &--no-mgt {
     margin-top: 0;
   }
@@ -40,6 +52,14 @@
     width: 46px;
     height: 26px;
     background: url("message-tail") no-repeat;
+  }
+
+  &--blue {
+    background-color: var(--blue-dark-color);
+
+    &::before {
+      background: url("message-tail--blue") no-repeat;
+    }
   }
 
   &__text {

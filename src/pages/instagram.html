@@ -135,42 +135,49 @@ footerLink: "https://arsenalpay.ru/dashboard/quickstart?step=1"
   </div>
 </section>
 
-<section class="page-section page-section--widget-no-site page-section--bg-purple page-section--cut  page-section--no-pdb">
+<section class="page-section page-section--online-kassa page-section--bg-purple page-section--cut page-section--no-skew-bottom">
   <div class="page-section__container">
-    {{{ icon name="pay-page-big" width="80" height="100" mods="purple" }}}
-    <h2 class="page-section__title">Онлайн касса бесплатно. Свою кассу покупать не&nbsp;нужно.</h2>
+    {{{ icon name="kassa" width="122" height="120" mods="blue" }}}
+    <h2 class="page-section__title">Онлайн касса бесплатно. <br class="br br--show-xs">Свою кассу покупать не&nbsp;нужно.</h2>
     <div class="page-section__text">
-      <p class="text text--center-sm text--md-size-lg">Вы&nbsp;получаете полностью готовую к&nbsp;работе онлайн кассу ArsenalPay. В&nbsp;соответствии с&nbsp;54-ФЗ.</p>
+      <div>
+        <p class="text text--center-sm text--md-size-lg text--inline-sm">Вы&nbsp;получаете полностью готовую к&nbsp;работе
+          <br class="br br--show-sm br--hide-md">онлайн кассу ArsenalPay.</p><br class="br br--show-xl">
+        <p class="text text--center-sm text--md-size-lg text--inline-sm">В&nbsp;соответствии с&nbsp;54-ФЗ.</p>
+      </div>
     </div>
-    {{{ note text='["Не&nbsp;нужно покупать или брать в <br class=\"br br--show-xs br--hide-sm\">аренду свою онлайн кассу.",
-    "Не&nbsp;нужно тратить время и&nbsp;деньги&nbsp;на разработку и&nbsp;поддержку своего сайта.",
-    "Не&nbsp;нужно тратить деньги на&nbsp;SSL сертификат и&nbsp;хостинг для сайта."]' textMods="mgb-md-0" }}}
+    {{{ note text='["Не&nbsp;нужно покупать свою кассу и&nbsp;фискальный накопитель.",
+    "Не&nbsp;нужно заключать договор с&nbsp;ОФД и&nbsp;регистрировать кассу в&nbsp;налоговой.",
+    "Не&nbsp;нужно вручную пробивать чеки и&nbsp;отправлять их&nbsp;клиенту."]' mods="blue, mgt-sm-32, mgt-md-50" textMods="mgb-md-0" }}}
     <div class="widget-box widget-box--dashboard">
       <div class="widget-box__widget">
         {{{ img name="widget-dashboard" }}}
       </div>
       <div class="widget-box__content">
         {{{ info-box
-        title="Каждая оплата проходит через кассу"
-        text='Ваш клиент оплачивает услугу или товар.
+        title="Каждая оплата проходит через&nbsp;кассу"
+        text='Ваш клиент оплачивает услугу или товар. <br class="br br--show-md">
         Каждая оплата проходит через онлайн кассу ArsenalPay.'
-        mods="align-left-lg, mgb-24, mgb-md-40"
-        textMods="mw-sm-520, mw-md-540"
+        mods="align-left-lg, mgb-24, mgb-md-60, mgb-lg-34, mgb-xl-60"
+        titleMods="lh-35-md"
+        textMods="mw-sm-520, mw-md-540, lh-md-26"
         }}}
         {{{ info-box
         title="Чек формируется автоматически"
         text='В&nbsp;кассе формируется фискальный чек с&nbsp;данными вашего&nbsp;ИП или юрлица.
         Далее этот чек отправляется через ОФД в&nbsp;налоговую автоматически.'
-        mods="align-left-lg, mgb-24, mgb-md-40"
-        textMods="mw-sm-520, mw-md-540"
+        mods="align-left-lg, mgb-24, mgb-md-60, mgb-lg-34, mgb-xl-60"
+        titleMods="lh-35-md"
+        textMods="mw-sm-520, mw-md-540, lh-md-26"
         }}}
         {{{ info-box
-        title="Все чеки сохраняются в&nbsp;личном кабинете"
+        title="Все чеки сохраняются в&nbsp;личном&nbsp;кабинете"
         text='Все платежи и&nbsp;чеки сохраняются в&nbsp;вашем личном кабинете.
         Каждый чек можно быстро найти, проверить и&nbsp;распечатать.'
         link='{"type": "button", "text": "Пример фискального чека", "dataModal": "kassa", "icon": "invoice-medium", "color": "blue"}'
-        mods="align-left-lg, mgb-24, mgb-md-40"
-        textMods="mw-sm-520, mw-md-540"
+        mods="align-left-lg, mgb-24, mgb-md-60, mgb-lg-34, mgb-xl-60"
+        titleMods="lh-35-md"
+        textMods="mw-sm-520, mw-md-540, lh-md-26"
         }}}
       </div>
     </div>
