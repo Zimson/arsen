@@ -304,3 +304,26 @@
     color: var(--white-color);
   }
 }
+
+
+@mixin label {
+  display: block;
+  margin-bottom: 12px;
+  padding: 4px 9px;
+  align-self: flex-start;
+  font-size: 11.4px;
+  font-weight: 600;
+  line-height: 16px;
+  letter-spacing: 0.1px;
+  color: var(--pink-dark-color);
+  background-color: #ffdbf1;
+  border-radius: 20px;
+
+  @include media-breakpoint-up(sm) {
+    align-self: center;
+  }
+
+  @include media-breakpoint-up(lg) {
+    align-self: flex-start;
+  }
+}
