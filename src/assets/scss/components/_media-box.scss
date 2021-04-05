@@ -12,6 +12,10 @@
     position: relative;
     align-self: center;
 
+    .media-box--reverse-lg & {
+      order: 2;
+    }
+
     .media-box--social & {
       margin-top: 5px;
       margin-bottom: 20px;
@@ -38,6 +42,24 @@
       margin-bottom: 42px;
       width: 376px;
       height: 305px;
+      flex-shrink: 0;
+
+      @include media-breakpoint-up(md) {
+        margin-top: 45px;
+        margin-bottom: 60px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin-top: 75px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        margin-top: 52px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        right: -40px;
+      }
     }
   }
 
@@ -62,6 +84,7 @@
   }
 
   &__content {
+    position: relative;
 
     .media-box--social & {
       @include media-breakpoint-up(lg) {
@@ -75,6 +98,22 @@
 
       @include media-breakpoint-up(xxl) {
         margin-left: 90px;
+      }
+    }
+
+    .media-box--email & {
+      @include media-breakpoint-up(lg) {
+        margin-top: 75px;
+        margin-right: 45px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        margin-top: 78px;
+        margin-right: 65px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        margin-left: -20px;
       }
     }
   }
