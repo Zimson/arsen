@@ -1,4 +1,7 @@
 .widget-box {
+  --widget-instagram--xs: 1178px;
+  --widget-instagram--sm: 934px;
+
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -52,17 +55,29 @@
   }
 
   &--instagram {
+    position: relative;
 
     @include media-breakpoint-up(sm) {
       margin-top: -27px;
     }
 
     @include media-breakpoint-up(lg) {
-      position: relative;
-      margin-top: -10px;
-      grid-template-columns: 360px 340px;
-      grid-column-gap: 80px;
+      margin-top: -20px;
+      margin-left: -102px;
+      grid-template-columns: 524px 340px;
+      grid-column-gap: 8px;
       width: 100%;
+    }
+
+    @include media-breakpoint-up(xl) {
+      margin-left: -108px;
+      grid-template-columns: 524px auto;
+      grid-column-gap: 52px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      margin-left: -150px;
+      grid-column-gap: 90px;
     }
   }
 
@@ -152,20 +167,27 @@
     }
 
     .widget-box--instagram & {
+      position: absolute;
       margin-bottom: 60px;
-      width: 320px;
-      height: 794px;
+      //max-width: 384px;
+      width: 384px;
+      height: var(--widget-instagram--xs);
+      align-self: center;
+      background-color: transparent;
+      box-shadow: none;
 
       @include media-breakpoint-up(sm) {
         margin-bottom: 97px;
+        width: 583px;
+        height: var(--widget-instagram--sm);
       }
 
       @include media-breakpoint-up(lg) {
         position: absolute;
         top: 0;
         left: 0;
-        width: 360px;
-        height: 866px;
+        width: auto;
+        height: 934px;
       }
     }
 
@@ -301,8 +323,20 @@
     .widget-box--instagram & {
 
       @include media-breakpoint-up(lg) {
-        margin-top: 59px;
+        margin-top: 67px;
         grid-column: 2 / 3;
+      }
+    }
+
+    .widget-box--instagram .widget-box__widget + & {
+      padding-top: var(--widget-instagram--xs);
+
+      @include media-breakpoint-up(sm) {
+        padding-top: var(--widget-instagram--sm);
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding-top: 0;
       }
     }
 
