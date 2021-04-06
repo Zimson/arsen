@@ -13,7 +13,9 @@
     align-self: center;
 
     .media-box--reverse-lg & {
-      order: 2;
+      @include media-breakpoint-up(lg) {
+        order: 2;
+      }
     }
 
     .media-box--social & {
