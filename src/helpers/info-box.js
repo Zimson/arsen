@@ -72,6 +72,11 @@ module.exports = function(options) {
                  <use xlink:href="${root}assets/img/symbol/sprite.svg#check-medium" />
               </svg>`;
         break;
+      case 'check-circle-medium':
+        svg = `<svg  class="icon ${icon.color ? `icon--${icon.color}` : ``}" width="48" height="38">
+                 <use xlink:href="${root}assets/img/symbol/sprite.svg#check-circle-medium" />
+              </svg>`;
+        break;
       default:
         svg = `<svg  class="icon ${icon.color ? `icon--${icon.color}` : ``}" width="${width}" height="${height}">
                  <use xlink:href="${root}assets/img/symbol/sprite.svg#${icon.name}" />

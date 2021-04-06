@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="38px" viewBox="0 0 48 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 61.2 (89653) - https://sketch.com -->
+    <title>icon/input/check-circle-medium-bold</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon/input/check-circle-medium-bold" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/input/-none" fill="#FFFFFF" fill-opacity="0">
+            <rect id="Rectangle" x="0" y="0" width="48" height="38"></rect>
+        </g>
+        <path d="M24,7.5 C30.3512746,7.5 35.5,12.6487254 35.5,19 C35.5,25.3512746 30.3512746,30.5 24,30.5 C17.6487254,30.5 12.5,25.3512746 12.5,19 C12.5,12.6487254 17.6487254,7.5 24,7.5 Z M24,8.5 C18.2010101,8.5 13.5,13.2010101 13.5,19 C13.5,24.7989899 18.2010101,29.5 24,29.5 C29.7989899,29.5 34.5,24.7989899 34.5,19 C34.5,13.2010101 29.7989899,8.5 24,8.5 Z M29.6066017,15.5928934 C29.997126,15.9834177 29.997126,16.6165827 29.6066017,17.007107 L22.5355339,24.0781748 L18.2928932,19.8355341 C17.9023689,19.4450098 17.9023689,18.8118448 18.2928932,18.4213205 C18.6834175,18.0307962 19.3165825,18.0307962 19.7071068,18.4213205 L22.5355339,21.2497477 L28.1923882,15.5928934 C28.5829124,15.2023691 29.2160774,15.2023691 29.6066017,15.5928934 Z" id="Combined-Shape" fill="#F20C92"></path>
+    </g>
+</svg>

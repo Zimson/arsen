@@ -440,14 +440,16 @@
 
       @include media-breakpoint-up(sm) {
         padding-top: 100px;
+        padding-bottom: 70px;
       }
 
       @include media-breakpoint-up(md) {
         padding-top: 140px;
+        padding-bottom: 100px;
       }
 
       @include media-breakpoint-up(lg) {
-        padding-bottom: 105px;
+        //padding-bottom: 105px;
       }
     }
 
@@ -591,9 +593,13 @@
   }
 
   &__content--payments {
-    margin-top: 27px;
+    margin-top: 16px;
 
     @include media-breakpoint-up(sm) {
+      margin-top: 45px;
+    }
+
+    @include media-breakpoint-up(md) {
       margin-top: 50px;
     }
 

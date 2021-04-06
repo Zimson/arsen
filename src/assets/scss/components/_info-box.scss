@@ -23,6 +23,10 @@
     --icon-space: 8px;
   }
 
+  &--icon-space-md-0 {
+    --icon-space: 0;
+  }
+
   &--align-left-lg {
     @include media-breakpoint-up(lg) {
       align-items: start;
@@ -32,15 +36,18 @@
   }
 
   &--icon-left-xs {
+    position: relative;
 
     @include media-breakpoint-only(xs) {
+      margin-left: -12px;
       display: grid;
       grid-template-columns: auto 1fr;
-      grid-column-gap: 15px;
+      grid-column-gap: 3px;
 
       svg {
         grid-column: 1 / 2;
         grid-row: 1 / 2;
+        align-self: center;
       }
     }
   }
@@ -49,6 +56,10 @@
     @include media-breakpoint-up(sm) {
       display: flex;
     }
+  }
+
+  &--mgb-15 {
+    margin-bottom: 15px;
   }
 
   &--mgb-24 {
@@ -197,7 +208,7 @@
       max-width: 740px;
     }
 
-    .info-box--icon-left & {
+    .info-box--icon-left-xs & {
       grid-column: 2 / 3;
       grid-row: 2 / 3;
     }
