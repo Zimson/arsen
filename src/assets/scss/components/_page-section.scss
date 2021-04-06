@@ -374,11 +374,15 @@
     }
 
     .page-section--social-inst & {
-
+      padding-bottom: 110px;
 
       @include media-breakpoint-up(md) {
         padding-top: 164px;
         padding-bottom: 120px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding-bottom: 110px;
       }
     }
 

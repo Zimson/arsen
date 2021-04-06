@@ -236,6 +236,18 @@
       }
     }
 
+    &--mw-lg-400 {
+      @include media-breakpoint-up(lg) {
+        max-width: 400px;
+      }
+    }
+
+    &--mw-xl-520 {
+      @include media-breakpoint-up(xl) {
+        max-width: 520px;
+      }
+    }
+
     &--lh-md-26 {
       @include media-breakpoint-up(md) {
         line-height: 26px;
