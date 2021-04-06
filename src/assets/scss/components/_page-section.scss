@@ -414,12 +414,13 @@
       }
 
       @include media-breakpoint-up(lg) {
-
+        margin-top: -35px;
+        padding-top: 137px;
       }
 
       @include media-breakpoint-up(xl) {
-        margin-top: -35px;
-        padding-top: 110px;
+        margin-top: -60px;
+        padding-top: 136px;
       }
 
       @include media-breakpoint-up(xxl) {
