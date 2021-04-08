@@ -1,6 +1,7 @@
 .widget-box {
-  --widget-instagram--xs: 1178px;
-  --widget-instagram--sm: 934px;
+  --widget-instagram-height--xs: 1178px;
+  --widget-instagram-height--sm: 934px;
+  --widget-instagram-width--sm: 583px;
 
   display: flex;
   flex-direction: column;
@@ -55,6 +56,8 @@
   }
 
   &--instagram {
+    --shift-left: -42px;
+
     position: relative;
 
     @include media-breakpoint-up(sm) {
@@ -73,14 +76,17 @@
     }
 
     @include media-breakpoint-up(xl) {
-      margin-left: -108px;
-      grid-template-columns: 524px auto;
+
+      left: var(--shift-left);
+      width: calc(100% - var(--shift-left));
+      grid-template-columns: var(--widget-instagram-width--sm) auto;
       grid-column-gap: 52px;
     }
 
     @include media-breakpoint-up(xxl) {
-      margin-left: -150px;
-      grid-column-gap: 90px;
+      --shift-left: -52px;
+      width: calc(100% + 60px);
+      grid-column-gap: 92px;
     }
   }
 
@@ -174,15 +180,15 @@
       margin-bottom: 60px;
       //max-width: 384px;
       width: 384px;
-      height: var(--widget-instagram--xs);
+      height: var(--widget-instagram-height--xs);
       align-self: center;
       background-color: transparent;
       box-shadow: none;
 
       @include media-breakpoint-up(sm) {
         margin-bottom: 97px;
-        width: 583px;
-        height: var(--widget-instagram--sm);
+        width: var(--widget-instagram-width--sm);
+        height: var(--widget-instagram-height--sm);
       }
 
       @include media-breakpoint-up(lg) {
@@ -191,6 +197,11 @@
         left: 0;
         width: auto;
         height: 934px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        width: var(--widget-instagram-width--sm);
+        height: var(--widget-instagram-height--sm);
       }
     }
 
@@ -337,10 +348,10 @@
     }
 
     .widget-box--instagram .widget-box__widget + & {
-      padding-top: var(--widget-instagram--xs);
+      padding-top: var(--widget-instagram-height--xs);
 
       @include media-breakpoint-up(sm) {
-        padding-top: var(--widget-instagram--sm);
+        padding-top: var(--widget-instagram-height--sm);
       }
 
       @include media-breakpoint-up(lg) {
