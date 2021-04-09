@@ -71,6 +71,10 @@
     background-color: var(--green-light-color);
   }
 
+  &--bg-green-middle {
+    background-color: var(--green-middle-color);
+  }
+
   &--bg-blue {
     background-color: var(--blue-light-color);
   }
@@ -352,8 +356,8 @@
     }
 
     .page-section--instagram-mock & {
-      padding-top: 79px;
-      padding-bottom: 45px;
+      padding-top: 78px;
+      padding-bottom: 40px;
 
       @include media-breakpoint-up(sm) {
         padding-top: 58px;
@@ -387,6 +391,7 @@
     }
 
     .page-section--dashboard & {
+      margin-top: 7px;
       padding-bottom: 85px;
 
       @include media-breakpoint-up(sm) {
@@ -435,8 +440,8 @@
     }
 
     .page-section--payments & {
-      padding-top: 105px;
-      padding-bottom: 85px;
+      padding-top: 50px;
+      padding-bottom: 90px;
 
       @include media-breakpoint-up(sm) {
         padding-top: 100px;
@@ -451,6 +456,11 @@
       @include media-breakpoint-up(lg) {
         //padding-bottom: 105px;
       }
+    }
+
+    .page-section--instagram-reviews & {
+      padding-top: 124px;
+      padding-bottom: 60px;
     }
 
     .page-section--no-pdb & {
@@ -593,7 +603,7 @@
   }
 
   &__content--payments {
-    margin-top: 16px;
+    margin-top: 20px;
 
     @include media-breakpoint-up(sm) {
       margin-top: 45px;

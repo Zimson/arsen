@@ -1,5 +1,6 @@
 module.exports = function(options) {
   const text = options.hash.text ?  JSON.parse(options.hash.text) : null;
+  const style = options.hash.style;
   const mods = options.hash.mods;
   const textMods = options.hash.textMods;
   const root = options.data.root.root;
@@ -23,7 +24,7 @@ module.exports = function(options) {
   const noteClass = setMods('note', mods);
   const textClass = setMods('note__text', textMods);
 
-  const note = `<article class="${noteClass}">
+  const note = `<article class="${noteClass}" ${style ? `style="${style}"` : ``}>
                   ${text.map((p) => `<p class="${textClass}">${p}</p>`).join(``)}
           </article>`
 

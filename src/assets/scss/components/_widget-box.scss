@@ -59,6 +59,7 @@
     --shift-left: -42px;
 
     position: relative;
+    margin-top: 2px;
 
     @include media-breakpoint-up(sm) {
       margin-top: -27px;

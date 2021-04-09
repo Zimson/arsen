@@ -58,8 +58,8 @@
     }
   }
 
-  &--mgb-15 {
-    margin-bottom: 15px;
+  &--mgb-18 {
+    margin-bottom: 18px;
   }
 
   &--mgb-24 {
@@ -182,11 +182,14 @@
       }
     }
 
-    .info-box--icon-left & {
-      margin-top: 0;
-      grid-column: 2 / 3;
-      grid-row: 1 / 2;
-      align-self: center;
+    //.info-box--icon-left & {
+    //  margin-top: -5px;
+    //  grid-column: 2 / 3;
+    //  grid-row: 1 / 2;
+    //}
+
+    .info-box--icon-left-xs svg + & {
+      margin-top: 6px;
     }
   }
 

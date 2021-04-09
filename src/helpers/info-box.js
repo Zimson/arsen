@@ -68,7 +68,7 @@ module.exports = function(options) {
               </svg>`;
         break;
       case 'check-medium':
-        svg = `<svg  class="icon ${icon.color ? `icon--${icon.color}` : ``}" width="48" height="42">
+        svg = `<svg  class="icon ${icon.color ? `icon--${icon.color}` : ``}" width="52" height="46">
                  <use xlink:href="${root}assets/img/symbol/sprite.svg#check-medium" />
               </svg>`;
         break;
