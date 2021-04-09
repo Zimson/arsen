@@ -18,6 +18,10 @@
       padding-right: 48px;
       padding-left: 48px;
     }
+
+    .page-section__title + & {
+      margin-top: 35px;
+    }
   }
 
   margin-top: 15px;

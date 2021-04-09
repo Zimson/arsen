@@ -194,6 +194,10 @@
       @include media-breakpoint-up(sm) {
         margin-top: 8px;
       }
+
+      @include media-breakpoint-up(md) {
+        margin-top: 0;
+      }
     }
   }
 
