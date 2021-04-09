@@ -190,6 +190,10 @@
 
     .info-box--icon-left-xs svg + & {
       margin-top: 6px;
+
+      @include media-breakpoint-up(sm) {
+        margin-top: 8px;
+      }
     }
   }
 

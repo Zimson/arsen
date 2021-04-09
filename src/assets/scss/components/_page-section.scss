@@ -360,7 +360,7 @@
       padding-bottom: 40px;
 
       @include media-breakpoint-up(sm) {
-        padding-top: 58px;
+        padding-top: 61px;
       }
 
       @include media-breakpoint-up(md) {
@@ -439,12 +439,17 @@
       }
     }
 
+    .page-section--no-subscribe-instagram & {
+      padding-top: 98px;
+      padding-bottom: 60px;
+    }
+
     .page-section--payments & {
-      padding-top: 50px;
+      padding-top: 105px;
       padding-bottom: 90px;
 
       @include media-breakpoint-up(sm) {
-        padding-top: 100px;
+        padding-top: 107px;
         padding-bottom: 70px;
       }
 
@@ -461,6 +466,10 @@
     .page-section--instagram-reviews & {
       padding-top: 124px;
       padding-bottom: 60px;
+
+      @include media-breakpoint-up(sm) {
+        padding-top: 120px;
+      }
     }
 
     .page-section--no-pdb & {
