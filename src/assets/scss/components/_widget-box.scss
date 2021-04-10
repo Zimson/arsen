@@ -215,7 +215,7 @@
 
       @include media-breakpoint-up(lg) {
         left: -20px;
-        margin-top: 15px;
+        margin-top: 9px;
         display: block;
       }
 
@@ -363,7 +363,7 @@
     .widget-box--dashboard & {
 
       @include media-breakpoint-up(lg) {
-        margin-top: 78px;
+        margin-top: 70px;
       }
 
       @include media-breakpoint-up(xl) {
