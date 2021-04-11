@@ -389,6 +389,10 @@
       @include media-breakpoint-up(lg) {
         padding-bottom: 110px;
       }
+
+      @include media-breakpoint-up(xl) {
+        padding-top: 170px;
+      }
     }
 
     .page-section--dashboard & {
@@ -439,6 +443,14 @@
       @include media-breakpoint-up(xxl) {
         margin-top: -95px;
         padding-top: 140px;
+        padding-bottom: 135px;
+      }
+    }
+
+    .page-section--easy-instagram & {
+      @include media-breakpoint-up(xxl) {
+        padding-top: 170px;
+        padding-bottom: 160px;
       }
     }
 
