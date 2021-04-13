@@ -56,7 +56,7 @@
   }
 
   &--instagram {
-    --shift-left: -42px;
+    --shift-left: -76px;
 
     position: relative;
     margin-top: 2px;
@@ -70,10 +70,10 @@
     }
 
     @include media-breakpoint-up(lg) {
-      margin-left: -102px;
-      grid-template-columns: 524px 340px;
+      left: -27px;
+      grid-template-columns: 524px minmax(340px, 400px);
       grid-column-gap: 8px;
-      width: 100%;
+      width: auto;
     }
 
     @include media-breakpoint-up(xl) {
@@ -85,7 +85,7 @@
     }
 
     @include media-breakpoint-up(xxl) {
-      --shift-left: -52px;
+      --shift-left: -104px;
       width: calc(100% + 60px);
       grid-column-gap: 92px;
     }
