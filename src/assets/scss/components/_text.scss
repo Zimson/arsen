@@ -24,6 +24,13 @@
     }
   }
 
+  &--inherit {
+    font-size: inherit;
+    font-weight: inherit;
+    line-height: inherit;
+    letter-spacing: inherit;
+  }
+
   &--ls-36 {
     letter-spacing: -0.36px;
   }
