@@ -23,9 +23,9 @@
     //  height: 578px;
     //}
 
-    //@include media-breakpoint-up(md) {
-    //  display: none;
-    //}
+    @include media-breakpoint-up(md) {
+      display: none;
+    }
   }
 
   &--hide-lg {

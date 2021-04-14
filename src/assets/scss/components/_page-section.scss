@@ -638,36 +638,36 @@
     }
 
     &::before {
-      left: -300px;
+      left: -182px;
       background-image: url("social-left");
 
       @include media-breakpoint-up(lg) {
-        left: -310px;
+        left: -125px;
       }
 
       @include media-breakpoint-up(xl) {
-        left: -403px;
+        left: -147px;
       }
 
       @include media-breakpoint-up(xxl) {
-        left: -443px;
+        left: -188px;
       }
     }
 
     &::after {
-      right: -300px;
+      right: -182px;
       background-image: url("social-right");
 
       @include media-breakpoint-up(lg) {
-        right: -310px;
+        right: -125px;
       }
 
       @include media-breakpoint-up(xl) {
-        right: -403px;
+        right: -147px;
       }
 
       @include media-breakpoint-up(xxl) {
-        right: -443px;
+        right: -188px;
       }
     }
 
