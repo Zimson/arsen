@@ -196,13 +196,19 @@
         position: absolute;
         top: 0;
         left: 0;
-        width: auto;
+        width: 524px;
         height: 934px;
       }
 
       @include media-breakpoint-up(xl) {
         width: var(--widget-instagram-width--sm);
         height: var(--widget-instagram-height--sm);
+      }
+
+      picture {
+        display: block;
+        width: inherit;
+        height: inherit;
       }
     }
 
