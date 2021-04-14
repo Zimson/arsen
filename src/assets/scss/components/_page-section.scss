@@ -67,6 +67,18 @@
     }
   }
 
+  &--bg-purple-darken {
+    background-color: var(--purple-darken-color);
+
+    &::before {
+      background-color: var(--purple-darken-color);
+    }
+
+    &::after {
+      background-color: var(--purple-darken-color);
+    }
+  }
+
   &--bg-green {
     background-color: var(--green-light-color);
   }
@@ -79,8 +91,16 @@
     background-color: var(--blue-light-color);
   }
 
+  &--bg-blue-darken {
+    background-color: var(--blue-darken-color);
+  }
+
   &--bg-pink {
     background-color: var(--pink-light-color);
+  }
+
+  &--bg-pink-lighten {
+    background-color: var(--pink-lighten-color);
   }
 
   &--instagram {
@@ -544,7 +564,7 @@
 
   &__title {
     margin: 0 0 16px 0;
-    max-width: 322px;
+    //max-width: 322px;
     font-family: $font-family;
     font-size: 29px;
     font-weight: 400;

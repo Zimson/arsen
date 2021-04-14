@@ -8,6 +8,12 @@
     justify-content: flex-start;
   }
 
+  &--social {
+    @include media-breakpoint-up(lg) {
+      width: auto;
+    }
+  }
+
   &__img {
     position: relative;
     align-self: center;
@@ -29,13 +35,16 @@
 
       @include media-breakpoint-up(lg) {
         margin-top: 90px;
-        margin-left: 38px;
         align-self: unset;
       }
 
       @include media-breakpoint-up(xl) {
         margin-top: 60px;
-        margin-left: 32px;
+        margin-left: -30px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        margin-left: 0;
       }
     }
 
@@ -46,17 +55,21 @@
       height: 305px;
       flex-shrink: 0;
 
+      @include media-breakpoint-up(sm) {
+        margin-top: 43px;
+      }
+
       @include media-breakpoint-up(md) {
-        margin-top: 45px;
+        margin-top: 60px;
         margin-bottom: 60px;
       }
 
       @include media-breakpoint-up(lg) {
-        margin-top: 75px;
+        margin-top: 93px;
       }
 
       @include media-breakpoint-up(xl) {
-        margin-top: 52px;
+        margin-top: 70px;
       }
 
       @include media-breakpoint-up(xxl) {
@@ -105,12 +118,12 @@
 
     .media-box--email & {
       @include media-breakpoint-up(lg) {
-        margin-top: 75px;
+        margin-top: 90px;
         margin-right: 45px;
       }
 
       @include media-breakpoint-up(xl) {
-        margin-top: 78px;
+        margin-top: 95px;
         //margin-left: 2px;
         margin-right: 65px;
       }
