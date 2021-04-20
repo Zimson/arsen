@@ -107,6 +107,10 @@
     z-index: 10;
   }
 
+  &--social {
+    overflow: hidden;
+  }
+
   &__container {
     @include container();
 
@@ -299,7 +303,6 @@
     .page-section--social & {
       padding-top: 0;
       padding-bottom: 90px;
-      overflow: hidden;
 
       @include media-breakpoint-up(sm) {
         padding-bottom: 75px;
