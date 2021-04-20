@@ -537,7 +537,7 @@
       padding-bottom: 0;
     }
 
-    .page-section--no-pdt & {
+    .page-section--instagram-solid & {
       padding-top: 0;
       padding-bottom: 96px;
 
@@ -559,6 +559,10 @@
       @include media-breakpoint-up(xl) {
         margin-top: -7px;
       }
+    }
+
+    .page-section--no-pdt & {
+      padding-top: 0;
     }
   }
 
@@ -740,6 +744,37 @@
   &--cut &__container > .icon {
     @include media-breakpoint-up(xl) {
       margin-left: calc(-1 * var(--container-cut));
+    }
+  }
+
+  &__alert {
+
+    &--top {
+      margin: 14px 0 26px 0;
+
+      @include media-breakpoint-up(sm) {
+         margin-bottom: 24px;
+      }
+
+      @include media-breakpoint-up(md) {
+        margin-top: 52px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin-top: 43px;
+      }
+
+      @include media-breakpoint-up(md) {
+        margin-left: -6px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        margin-left: -20px;
+      }
+
+      @include media-breakpoint-up(xxl) {
+        margin-left: -35px;
+      }
     }
   }
 }

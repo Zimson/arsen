@@ -25,7 +25,7 @@ module.exports = function(options) {
 
   const alert = `<article class="${alertClass}" ${style ? `style="${style}"` : ``}>
                   <svg  class="icon" width="48" height="38">
-                    <use xlink:href="${root}assets/img/symbol/sprite.svg#check" />
+                    <use xlink:href="${root}assets/img/symbol/sprite.svg#alert-success" />
                   </svg>
                   <span class="alert__text">${text}</span>
                 </article>`;
