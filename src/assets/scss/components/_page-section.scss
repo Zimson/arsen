@@ -51,16 +51,14 @@
     }
   }
 
-  &:not(&--no-skew),
-  &:not(&--no-skew-top),
-  &:not(&--no-skew-bottom) {
+  &:not(&--no-skew) {
     transform: skewY(calc(-1 * var(--skew-angle)));
   }
 
   &--no-skew,
   &--no-skew-top,
   &--no-skew-bottom {
-    --skew-angle: 0;
+    //--skew-angle: 0;
   }
 
   &--bg-purple {
@@ -117,6 +115,7 @@
 
   &--social {
     overflow: hidden;
+    --skew-angle: 0;
   }
 
   &__container {
