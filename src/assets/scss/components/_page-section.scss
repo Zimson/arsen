@@ -758,8 +758,12 @@
   }
 
   &__alert {
-    max-width: 400px;
+    width: 100%;
     align-self: center;
+
+    @include media-breakpoint-up(sm) {
+      max-width: 400px;
+    }
 
     &--top {
       margin: 14px 0 26px 0;
