@@ -759,6 +759,8 @@
   }
 
   &__alert {
+    max-width: 400px;
+    align-self: center;
 
     &--top {
       margin: 14px 0 26px 0;
