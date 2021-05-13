@@ -10,6 +10,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
+    "@vuelidate/core": "^2.0.0-alpha.16",
+    "@vuelidate/validators": "^2.0.0-alpha.13",
     "baron": "^3.0.3",
     "chart.js": "^2.9.3",
     "chartjs-plugin-datalabels": "^0.7.0",
@@ -26,6 +28,7 @@
     "postcss-svg": "^3.0.0",
     "svg4everybody": "^2.1.9",
     "swiper": "^5.0.3",
+    "vue": "^3.0.11",
     "what-input": "^5.1.2"
   },
   "devDependencies": {

@@ -1,0 +1,132 @@
+---
+layout: default
+
+title: "Разработчикам"
+description: "Готовые CMS плагины. Виджет оплаты для интернет-магазинов и лендингов. Интеграция и тестирование виджета оплаты.
+Настройка онлайн-кассы. ArsenalPay API для интеграции платежей."
+
+image: "https://arsenalpay.ru/arsenalpay-developers-fb.png"
+canonical: "https://arsenalpay.ru/developers.html"
+
+twitterTitle: "ArsenalPay | Разработчикам"
+twitterDescription: "Готовые CMS плагины. Виджет оплаты для интернет-магазинов и лендингов. Интеграция и тестирование виджета оплаты.
+Настройка онлайн-кассы. ArsenalPay API для интеграции платежей."
+twitterImage: "arsenalpay-developers-tw.png"
+
+vkImage: "https://arsenalpay.ru/arsenalpay-developers-vk.png"
+
+ogImageFb: "arsenalpay-developers-fb.png"
+ogSecureUrl: "https://arsenalpay.ru/arsenalpay-developers-fb.png"
+ogImage: "https://arsenalpay.ru/arsenalpay-developers-square.png"
+ogUrl: "https://arsenalpay.ru/developers.html"
+ogTitle: "ArsenalPay | Разработчикам"
+ogDescription: "Готовые CMS плагины. Виджет оплаты для интернет-магазинов и лендингов. Интеграция и тестирование виджета оплаты.
+Настройка онлайн-кассы. ArsenalPay API для интеграции платежей."
+
+footerLink: "https://arsenalpay.ru/dashboard/registration-type"
+
+---
+
+<div id="app">
+  <section class="page-section page-section--without-site page-section--under-header page-section--bg-green page-section--no-skew">
+    <div  class="page-section__container" >
+      <!--    <div class="page-section__alert page-section__alert&#45;&#45;top">-->
+      <!--      {{{ alert text="Теперь приём платежей доступен и самозанятым" }}}-->
+      <!--    </div>-->
+      <h1 class="page-section__title">Поддержка! {{activeTab}}</h1>
+      <div class="u--mgb-sm-36">
+        <p class="text text--ls-36 text--inline-sm text--md-size-lg">Частые вопросы, обратная связь, проверка платежа, поиск чека, инструкции по оплате.</p>
+      </div>
+      <ul class="tabs-nav tabs-nav--support">
+        <li class="tabs-nav__item" :class="{ active: activeTab === 1 }"  @click="setActiveTab(1)">Покупателям</li>
+        <li class="tabs-nav__item" :class="{ active: activeTab === 2 }"  @click="setActiveTab(2)">Продавцам</li>
+      </ul>
+    </div>
+  </section>
+
+  <div class="page-section">
+    <div class="page-section__container">
+      <div class="tabs-panel" v-if="activeTab === 1">
+        <div class="actions-group">
+          <button type="button" class="action" @click="showModal('payments')">
+            {{{ icon name="check--sm" width="62" height="62" mods="green" }}}
+            <span class="action__text">Узнать о своём платеже</span>
+          </button>
+          <button type="button" class="action" @click="showModal('findCheck')">
+            {{{ icon name="check--sm" width="62" height="62" mods="green" }}}
+            <span class="action__text">Найти свой чек</span>
+          </button>
+          <button type="button" class="action" @click="showModal('deleteAutoPayment')">
+            {{{ icon name="timer--sm" width="62" height="62" mods="green" }}}
+            <span class="action__text">Удалить автоплатёж</span>
+          </button>
+          <button type="button" class="action" @click="showModal('deleteSavedCard')">
+            {{{ icon name="save-card--sm" width="62" height="62" mods="green" }}}
+            <span class="action__text">Удалить сохранённую карту</span>
+          </button>
+        </div>
+        <section class="page-section page-section--test">
+          <div id="testirovanie-oplaty-i-kassy" class="page-section__container">
+            {{{ icon name="test" width="116" height="116" mods="green" }}}
+            <h2 class="page-section__title">Частые вопросы</h2>
+            <ul class="tabs-nav tabs-nav--sm">
+              <li class="tabs-nav__item" :class="{ active: activeInnerTab === 1 }"  @click="setActiveInnerTab(1)">Оплата</li>
+              <li class="tabs-nav__item" :class="{ active: activeInnerTab === 2 }"  @click="setActiveInnerTab(2)">Возврат</li>
+              <li class="tabs-nav__item" :class="{ active: activeInnerTab === 3 }"  @click="setActiveInnerTab(3)">Доставка</li>
+              <li class="tabs-nav__item" :class="{ active: activeInnerTab === 4 }"  @click="setActiveInnerTab(4)">Безопасность</li>
+            </ul>
+            <div class="tabs-panel" v-if="activeInnerTab === 1">
+              One
+            </div>
+            <div class="tabs-panel" v-else-if="activeInnerTab === 2">
+              Two
+            </div>
+            <div class="tabs-panel" v-else-if="activeInnerTab === 3">
+              Three
+            </div>
+            <div class="tabs-panel" v-else-if="activeInnerTab === 4">
+              Four
+            </div>
+          </div>
+        </section>
+        <section class="page-section">
+          <div class="page-section__container">
+            {{{ icon name="test" width="116" height="116" mods="green" }}}
+            <h2 class="page-section__title">Инструкции по оплате</h2>
+            <div class="actions-group">
+              <button type="button" class="action">
+                {{{ icon name="rub-big" width="62" height="62" mods="green" }}}
+                <span class="action__text">Оплата картой</span>
+              </button>
+              <button type="button" class="action">
+                {{{ icon name="rub-big" width="62" height="62" mods="green" }}}
+                <span class="action__text">Оплата сохранённой картой</span>
+              </button>
+              <button type="button" class="action">
+<!--                {{{ icon name="rub-big" width="62" height="62" mods="green" }}}-->
+                <span class="action__text">Оплата с баланса телефона</span>
+              </button>
+              <button type="button" class="action">
+                {{{ icon name="rub-big" width="62" height="62" mods="green" }}}
+                <span class="action__text">Оплата с электронного кошелька</span>
+              </button>
+              <button type="button" class="action">
+                {{{ icon name="rub-big" width="62" height="62" mods="green" }}}
+                <span class="action__text">Подключить автоплатёж</span>
+              </button>
+              <button type="button" class="action">
+                {{{ icon name="rub-big" width="62" height="62" mods="green" }}}
+                <span class="action__text">Удалить автоплатёж</span>
+              </button>
+            </div>
+          </div>
+        </section>
+      </div>
+      <div class="tabs-panel" v-else>
+
+      </div>
+    </div>
+  </div>
+  <p>Data: {{modal}} {{ isModalOpen }}</p>
+  <modal :id="modal.id" :isOpen="isModalOpen"></modal>
+</div>

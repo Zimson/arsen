@@ -121,6 +121,7 @@
   &__container {
     @include container();
 
+    position: relative;
     padding-top: 130px;
     padding-bottom: 130px;
     display: flex;

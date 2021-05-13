@@ -1,0 +1,45 @@
+.tabs-nav {
+  --border-radius: 46px;
+
+  @include list-clear();
+
+  display: flex;
+  border: 1px solid #d9d9d9;
+  background-color: var(--white-color);
+  border-radius: var(--border-radius);
+
+  &--support {
+    position: absolute;
+    z-index: 10;
+    bottom: -45px;
+  }
+
+  &__item {
+    padding: 34px 70px 34px 68px;
+    font-family: $font-family;
+    font-size: 20.2px;
+    font-weight: 500;
+    line-height: 1.09;
+    letter-spacing: -0.69px;
+    color: var(--gray-color);
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    transition: all 0.15s ease-in;
+
+    &.active {
+      box-shadow: -2px 25px 33px 1px rgba(0, 0, 0, 0.12), 0 6px 15px 0 rgba(0, 0, 0, 0.18);
+      background-color: var(--blue-dark-color);
+      color: var(--white-color);
+    }
+
+    .tabs-nav--sm & {
+      padding: 35px 30px;
+
+      &.active {
+        background-color: var(--green-dark-color);
+      }
+    }
+  }
+
+
+}
