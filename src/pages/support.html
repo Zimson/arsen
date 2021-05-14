@@ -33,7 +33,7 @@ footerLink: "https://arsenalpay.ru/dashboard/registration-type"
       <!--    <div class="page-section__alert page-section__alert&#45;&#45;top">-->
       <!--      {{{ alert text="Теперь приём платежей доступен и самозанятым" }}}-->
       <!--    </div>-->
-      <h1 class="page-section__title">Поддержка! {{activeTab}}</h1>
+      <h1 class="page-section__title">Поддержка</h1>
       <div class="u--mgb-sm-36">
         <p class="text text--ls-36 text--inline-sm text--md-size-lg">Частые вопросы, обратная связь, проверка платежа, поиск чека, инструкции по оплате.</p>
       </div>
@@ -127,6 +127,5 @@ footerLink: "https://arsenalpay.ru/dashboard/registration-type"
       </div>
     </div>
   </div>
-  <p>Data: {{modal}} {{ isModalOpen }}</p>
-  <modal :id="modal.id" :isOpen="isModalOpen"></modal>
+  <app-modal :id="modal.id" v-if="modal.isOpen" v-on:close="closeModal($event)"></app-modal>
 </div>

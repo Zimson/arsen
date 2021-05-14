@@ -50,16 +50,16 @@ document.addEventListener('click', function(e) {
 });
 
 const app = createApp({
-  data: () => ({
-    activeTab: 1,
-    activeInnerTab: 1,
-    isModalOpen: true,
-    modal: {
-      id: '',
-
-    }
-
-  }),
+  data () {
+   return {
+     activeTab: 1,
+     activeInnerTab: 1,
+     modal: {
+       id: 'DS',
+       isOpen: false
+     }
+   }
+  },
   methods: {
     setActiveTab(pos) {
       this.activeTab = pos;
@@ -68,11 +68,16 @@ const app = createApp({
       this.activeInnerTab = pos;
     },
     showModal(id) {
-      this.modal.id = id;
-      this.isModalOpen = true;
+      this.modal = Object.assign(this.modal, {
+        id: id,
+        isOpen: true
+      })
+
+      console.log('modal', this.modal);
     },
-    closeModal() {
-      this.currentModal = '';
+    closeModal(data) {
+      this.modal.id = '';
+      this.modal.isOpen = data;
     }
   },
   computed: {
@@ -82,7 +87,7 @@ const app = createApp({
 
 app.use(VCalendar, {})
 
-app.component('modal', {
+app.component('app-modal', {
   setup () {
     const state = reactive({
       firstNumbers: '',
@@ -112,37 +117,32 @@ app.component('modal', {
   },
   props: {
     id: String,
-    title: String,
     isOpen: Boolean,
   },
-  data() {
-    return {
-      isOpen: true
-    }
-  },
-  // validations () {
+  // data() {
   //   return {
-  //     firstNumbers: {required}, // Matches this.firstName
+  //     isOpen: true
   //   }
   // },
   methods: {
     closeModal() {
-      // this.isOpen = false;
+      this.$emit('close', false);
     },
     submit(data) {
       console.log('submit', data);
     }
   },
-  updated(data) {
-    console.log('updated 22', this.isOpen)
+  mounted(data) {
+
+
   },
   template: `
-    <article class="modal" v-if="isOpen">
+    <article class="modal">
       <div class="modal__body" id="deleteAutoPaymentForm">
         <button type="button" class="modal__close" @click="closeModal($event)">
 <!--      {{{ icon name="cross" width="12" height="12" }}}-->
         </button>
-        <h1 class="modal__title">{{title}}</h1>
+        <h1 class="modal__title">{{id}}</h1>
         <form action="" method="" @submit.prevent="submit($event)" >
           <input type="text" v-model="v$.firstNumbers.$model" :class="{ error: v$.firstNumbers.$invalid && v$.firstNumbers.$dirty}" @blur="v$.firstNumbers.$touch" placeholder="Первые 6 цифр" />
           <div class="input-errors" v-if="v$.firstNumbers.required.$invalid && v$.firstNumbers.$dirty">
