@@ -3,8 +3,9 @@ import 'what-input';
 //polyfill
 import './utils/polyfill';
 import {createApp, reactive} from 'vue/dist/vue.esm-bundler';
-import useVuelidate from '@vuelidate/core'
-import {required, minLength, maxLength, numeric} from '@vuelidate/validators'
+import useVuelidate from '@vuelidate/core';
+import {required, minLength, maxLength, numeric} from '@vuelidate/validators';
+import VCalendar from 'v-calendar';
 
 import Modal from './modules/Modal';
 import MobileNav from './modules/MobileNav';
@@ -78,6 +79,8 @@ const app = createApp({
 
   }
 });
+
+app.use(VCalendar, {})
 
 app.component('modal', {
   setup () {
@@ -168,6 +171,15 @@ app.component('modal', {
           <div class="input-errors" v-else-if="v$.sum.numeric.$invalid && v$.sum.$dirty">
             <div class="error-msg">{{ v$.sum.numeric.$message }}</div>
           </div>
+          <v-date-picker v-model="date">
+            <template v-slot="{ inputValue, inputEvents }">
+              <input
+                class="px-2 py-1 border rounded focus:outline-none focus:border-blue-300"
+                :value="inputValue"
+                v-on="inputEvents"
+              />
+            </template>
+          </v-date-picker>  
           <button type="submit">Найти автоплатеж</button>
         </form>
       </div>
