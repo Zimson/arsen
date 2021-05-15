@@ -1,0 +1,22 @@
+.input {
+
+  &__field {
+    padding: 16px 20px 16px 20px;
+    width: 100%;
+    border-radius: 26px;
+    border: 1px solid #d9d9d9;
+    background-color: var(--white-color);
+    box-sizing: border-box;
+
+    &:focus {
+      outline: none;
+    }
+
+    .input--sum & {
+      padding-left: 50px;
+      background-image: url("../../img/svg/rub--bg");
+      background-repeat: no-repeat;
+      background-position: 0 50%;
+    }
+  }
+}
