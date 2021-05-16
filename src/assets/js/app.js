@@ -88,42 +88,37 @@ const app = createApp({
 app.use(VCalendar, {});
 
 app.component('app-alert', {
-  // props: {
-  //   'type': 'success'
-  // },
-  data() {
-    return {
-      // type: this.$props.type
-    }
+  props: {
+    type: String,
+    text: String
   },
   template: `
-    <article class="alert" :class="'alert--'">
+    <article class="alert" :class="type">
       <svg  class="icon" width="48" height="38">
         <use xlink:href="assets/img/symbol/sprite.svg#alert-success" />
       </svg>
-      <span class="alert__text">Alert</span>
+      <span class="alert__text">{{ text }}</span>
     </article>
   `
 });
 
 app.component('app-result-box', {
-  // props: {
-  //   'type': 'success'
-  // },
-  data() {
-    return {
-      // type: this.$props.type
-    }
+  props: {
+    id: String,
+    items: Array,
+    errorText: String,
+    type: String
   },
   template: `
-    <article class="result-box" >
+    <article class="result-box" :class="{success: items && items.length, error: !items && errorText}">
       <dl class="result-box__main">
-        <dt>Сайт</dt>
-        <dd>inetvl.ru</dd>
-        <dt>Идентификатор</dt>
-        <dd>12345678</dd>
+        <template v-if="items && items.length" v-for="item in items" :key="item">
+          <dt>{{item.title}}</dt>
+          <dd>{{item.text}}</dd>
+        </template>
+        <p v-if="!items && errorText" class="result-box__text">{{ errorText }}</p>
       </dl>
-      <button type="button" class="result-box__btn">Удалить</button>
+      <button type="button" class="result-box__btn" v-if="id === 'deleteAutoPayment' || id === 'deleteSavedCard'">Удалить</button>
     </article>
   `
 });
@@ -162,12 +157,66 @@ app.component('app-modal', {
   },
   data() {
     return {
-      titleMap: {
-        payments: 'Узнать о своем платеже',
-        findCheck: 'Найти свой чек',
-        deleteAutoPayment: 'Удалить автоплатеж',
-        deleteSavedCard: 'Удалить сохраненную карту'
-      }
+      formDataMap: {
+        payments: {
+          title: 'Узнать о своем платеже',
+          sumField: 'Введите сумму платежа',
+          alert: {success: 'Ваш платёж найден', error: 'Ваш платёж не найден'},
+          button: 'Найти платеж'
+        },
+        findCheck: {
+          title: 'Найти свой чек',
+          sumField: 'Введите сумму платежа',
+          alert: {success: 'Ваш чек найден', error: 'Ваш чек не найден'},
+          button: 'Найти чек'
+        },
+        deleteAutoPayment: {
+          title: 'Удалить автоплатеж',
+          sumField: 'Введите сумму автоплатежа',
+          alert: {success: 'Автоплатёж найден', error: 'Автоплатёж не найден'},
+          button: 'Найти автоплатеж'
+        },
+        deleteSavedCard: {
+          title: 'Удалить сохраненную карту',
+          sumField: 'Введите сумму последнего платежа',
+          alert: {success: 'Сохранённая карта найдена', error: 'Сохранённая карта не найдена'},
+          button: 'Найти сохраненную карту'
+        }
+      },
+      formResultMap: {
+        payments: {
+          data: [
+            [{title: 'Дата платежа', text: '10.12.2020 23:55 (МСК)'}, {title: 'Статус платежа', text: 'Успешный платеж'}, {title: 'Сайт', text: 'inetvl.ru'}, {title: 'Сумма платежа', text: '1 500 ₽'}],
+            [{title: 'Дата платежа', text: '10.12.2020 20:02 (МСК)'}, {title: 'Статус платежа', text: 'Неуспешный платеж'}, {title: 'Сайт', text: 'inetvl.ru'}, {title: 'Сумма платежа', text: '1 500 ₽'}],
+            [{title: 'Дата платежа', text: '10.12.2020 14:02 (МСК)'}, {title: 'Статус платежа', text: 'Возврат платежа'}, {title: 'Сайт', text: 'inetvl.ru'}, {title: 'Сумма платежа', text: '1 500 ₽'}, {title: 'Сумма возврата', text: '1 500 ₽'}]
+          ],
+          error: 'Возможно данные введены неверно, проверьте данные и попробуйте еще раз.'
+        },
+        findCheck: {
+          data: [
+            [{title: 'Дата платежа', text: '10.12.2020 14:22'}, {title: 'Ссылка на чек', text: 'https://consumer.1-ofd.ru/#/ticket/5b340eee-d516-40dc-afef-9ebda75c9d82'}],
+            [{title: 'Дата платежа', text: '10.12.2020 18:00'}, {title: 'Ссылка на чек', text: 'https://consumer.1-ofd.ru/#/ticket/5b340eee-d516-40dc-afef-9ebda75c9d82'}]
+          ],
+          error: 'Возможно данные введены неверно, проверьте данные и попробуйте еще раз.'
+        },
+        deleteAutoPayment: {
+          data: [
+            [{title: 'Сайт', text: 'inetvl.ru'}, {title: 'Идентификатор', text: '12345678'}],
+            [{title: 'Сайт', text: 'inetvl.ru'}, {title: 'Идентификатор', text: '2223333'}]
+          ],
+          error: 'Возможно данные введены неверно, или этот автоплатёж уже удален.'
+        },
+        deleteSavedCard: {
+          data: [
+            [{title: 'Сайт', text: 'inetvl.ru'}, {title: 'Идентификатор', text: '12345678'}],
+            [{title: 'Сайт', text: 'inetvl.ru'}, {title: 'Идентификатор', text: '2223333'}]
+          ],
+          error: 'Возможно данные введены неверно, или эта сохранённая карта уже удалена.'
+        }
+      },
+      currentData: '',
+      formIsValid: false,
+      formSubmitted: false
     }
   },
   methods: {
@@ -175,16 +224,21 @@ app.component('app-modal', {
       this.$emit('close', false);
     },
     submit(data) {
-      console.log('submit', data);
+
+      if (this.v$.$invalid) {
+        this.formIsValid = false;
+      } else if (!this.v$.$invalid) {
+        this.formIsValid = true;
+        this.currentData = this.formResultMap[this.id];
+      }
+
+      this.formSubmitted = true;
+
+      // setTimeout(() => { this.formSubmitted = false }, 500);
     }
   },
   mounted(data) {
-    // this.titleMap = {
-    //   payments: 'Узнать о своем платеже',
-    //   findCheck: 'Найти свой чек',
-    //   deleteAutoPayment: 'Удалить автоплатеж',
-    //   deleteSavedCard: 'Удалить сохраненную карту'
-    // }
+
   },
   template: `
     <article class="modal">
@@ -192,7 +246,7 @@ app.component('app-modal', {
         <button type="button" class="modal__close" @click="closeModal($event)">
 <!--      {{{ icon name="cross" width="12" height="12" }}}-->
         </button>
-        <h1 class="modal__title">{{titleMap[id]}}</h1>
+        <h1 class="modal__title">{{formDataMap[id].title}}</h1>
         <div class="modal__scroll">
           <form action="" method="" @submit.prevent="submit($event)" class="form" >
             <div class="form__label">Введите номер карты</div>
@@ -239,12 +293,13 @@ app.component('app-modal', {
             <!--            </v-date-picker>-->
             <!--          </div>-->
 
-            <button type="submit" class="form__submit">Найти автоплатеж</button>
+            <button type="submit" class="form__submit">{{formDataMap[id].button}}</button>
             <div class="form__alert">
-              <app-alert type="success"></app-alert>
+              <app-alert v-if="formSubmitted && !formIsValid" type="error" :text="formDataMap[id].alert.error"></app-alert>
+              <app-alert v-if="formSubmitted && formIsValid && currentData" type="success" :text="formDataMap[id].alert.success"></app-alert>
             </div>
-            <app-result-box></app-result-box>
-            <app-result-box></app-result-box>
+            <app-result-box :id="id"  v-for="items in currentData.data" :items="items" type="success"></app-result-box>
+            <app-result-box  v-if="formSubmitted && !formIsValid" :id="id" :errorText="currentData.error"  type="error"></app-result-box>
           </form>
         </div>
       </div>
