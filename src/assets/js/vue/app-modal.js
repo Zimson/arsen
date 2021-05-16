@@ -108,9 +108,9 @@ export default {
         this.formIsValid = false;
       } else if (!this.v$.$invalid) {
         this.formIsValid = true;
-        this.currentData = this.formResultMap[this.id];
       }
 
+      this.currentData = this.formResultMap[this.id];
       this.formSubmitted = true;
 
       // setTimeout(() => { this.formSubmitted = false }, 500);
@@ -177,7 +177,7 @@ export default {
               <app-alert v-if="formSubmitted && !formIsValid" type="error" :text="formDataMap[id].alert.error"></app-alert>
               <app-alert v-if="formSubmitted && formIsValid && currentData" type="success" :text="formDataMap[id].alert.success"></app-alert>
             </div>
-            <app-result-box :id="id"  v-for="items in currentData.data" :items="items" type="success"></app-result-box>
+            <app-result-box :id="id"  v-if="formSubmitted && formIsValid" v-for="items in currentData.data" :items="items" type="success"></app-result-box>
             <app-result-box  v-if="formSubmitted && !formIsValid" :id="id" :errorText="currentData.error"  type="error"></app-result-box>
           </form>
         </div>
