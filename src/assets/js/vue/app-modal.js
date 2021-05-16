@@ -95,15 +95,24 @@ export default {
       },
       currentData: '',
       formIsValid: false,
-      formSubmitted: false
+      formSubmitted: false,
+      formHelpId: ''
     }
   },
   methods: {
     closeModal() {
       this.$emit('close', false);
     },
+    showHelpMessage(id, event) {
+      if (this.formHelpId === id) {
+        this.formHelpId = '';
+        event.target.classList.remove('active');
+      } else {
+        this.formHelpId = id;
+        event.target.classList.add('active');
+      }
+    },
     submit(data) {
-
       if (this.v$.$invalid) {
         this.formIsValid = false;
       } else if (!this.v$.$invalid) {
@@ -131,32 +140,33 @@ export default {
             <div class="form__label">Введите номер карты</div>
             <div class="form__row">
               <div class="form__field">
-                <div class="input">
-                  <input type="text" class="input__field" v-model="v$.firstNumbers.$model" :class="{ error: v$.firstNumbers.$invalid && v$.firstNumbers.$dirty}" @blur="v$.firstNumbers.$touch" placeholder="Первые 6 цифр" />
-                  <div class="input__error" v-if="v$.firstNumbers.required.$invalid && v$.firstNumbers.$dirty">{{ v$.firstNumbers.required.$message }}</div>
-                  <div class="input__error" v-else-if="v$.firstNumbers.numeric.$invalid && v$.firstNumbers.$dirty">{{ v$.firstNumbers.numeric.$message }}</div>
-                  <div class="input__error" v-else-if="v$.firstNumbers.minLength.$invalid && v$.firstNumbers.$dirty">{{ v$.firstNumbers.minLength.$message }}</div>
+                <div class="input" :class="{ error: v$.firstNumbers.$invalid && v$.firstNumbers.$dirty}">
+                  <input type="text" class="input__field" v-model="v$.firstNumbers.$model" @blur="v$.firstNumbers.$touch" placeholder="Первые 6 цифр" />
                 </div>
               </div>
               <div class="form__field">
-                <div class="input">
-                  <input type="text" class="input__field" v-model="v$.lastNumbers.$model" :class="{ error: v$.lastNumbers.$invalid && v$.lastNumbers.$dirty}" @blur="v$.lastNumbers.$touch" placeholder="Последние 4 цифры"/>
-                  <div class="input__error" v-if="v$.lastNumbers.required.$invalid && v$.lastNumbers.$dirty">{{ v$.lastNumbers.required.$message }}</div>
-                  <div class="input__error" v-else-if="v$.lastNumbers.numeric.$invalid && v$.lastNumbers.$dirty">{{ v$.lastNumbers.numeric.$message }}</div>
-                  <div class="input__error" v-else-if="v$.lastNumbers.minLength.$invalid && v$.lastNumbers.$dirty">{{ v$.lastNumbers.minLength.$message }}</div>
+                <div class="input" :class="{ error: v$.lastNumbers.$invalid && v$.lastNumbers.$dirty}">
+                  <input type="text" class="input__field" v-model="v$.lastNumbers.$model" @blur="v$.lastNumbers.$touch" placeholder="Последние 4 цифры"/>
                 </div>
               </div>
+              <div class="form__message" v-if="v$.firstNumbers.required.$invalid && v$.firstNumbers.$dirty">{{ v$.firstNumbers.required.$message }}</div>
+              <div class="form__message" v-else-if="v$.firstNumbers.numeric.$invalid && v$.firstNumbers.$dirty">{{ v$.firstNumbers.numeric.$message }}</div>
+              <div class="form__message" v-else-if="v$.firstNumbers.minLength.$invalid && v$.firstNumbers.$dirty">{{ v$.firstNumbers.minLength.$message }}</div>
+              <div class="form__message" v-if="v$.lastNumbers.required.$invalid && v$.lastNumbers.$dirty">{{ v$.lastNumbers.required.$message }}</div>
+              <div class="form__message" v-else-if="v$.lastNumbers.numeric.$invalid && v$.lastNumbers.$dirty">{{ v$.lastNumbers.numeric.$message }}</div>
+              <div class="form__message" v-else-if="v$.lastNumbers.minLength.$invalid && v$.lastNumbers.$dirty">{{ v$.lastNumbers.minLength.$message }}</div>
             </div>
             <div class="form__label">Введите сумму автоплатежа</div>
             <div class="form__row form__row--help">
               <div class="form__field">
-                <div class="input input--sum">
-                  <input type="text" class="input__field" v-model="v$.sum.$model" :class="{ error: v$.sum.$invalid && v$.sum.$dirty}" @blur="v$.sum.$touch" placeholder="Сумма"/>
-                  <div class="input__error" v-if="v$.sum.required.$invalid && v$.sum.$dirty">{{ v$.sum.required.$message }}</div>
-                  <div class="input__error" v-else-if="v$.sum.numeric.$invalid && v$.sum.$dirty">{{ v$.sum.numeric.$message }}</div>
+                <div class="input input--sum" :class="{ error: v$.sum.$invalid && v$.sum.$dirty}">
+                  <input type="text" class="input__field" v-model="v$.sum.$model" @blur="v$.sum.$touch" placeholder="Сумма"/>
                 </div>
               </div>
-              <button type="button" class="form__help">?</button>
+              <button type="button" class="form__help" @click="showHelpMessage('sumHelp', $event)">?</button>
+              <div class="form__message" v-if="v$.sum.required.$invalid && v$.sum.$dirty">{{ v$.sum.required.$message }}</div>
+              <div class="form__message" v-else-if="v$.sum.numeric.$invalid && v$.sum.$dirty">{{ v$.sum.numeric.$message }}</div>
+              <div class="form__message" v-if="formHelpId === 'sumHelp'">Даные о платеже можно взять из мобильного приложения вашего банка или из смс от банка.</div>
             </div>
             <!--          <div class="form__field">-->
             <!--            <v-date-picker v-model="date">-->
