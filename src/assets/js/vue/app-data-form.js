@@ -2,6 +2,65 @@ import {reactive} from 'vue/dist/vue.esm-bundler';
 import useVuelidate from '@vuelidate/core';
 import {required, minLength, maxLength, numeric, helpers} from '@vuelidate/validators';
 
+const formDataMap = {
+  payments: {
+    title: 'Узнать о своем платеже',
+      sumField: 'Введите сумму платежа',
+      alert: {success: 'Ваш платёж найден', error: 'Ваш платёж не найден'},
+    button: 'Найти платеж'
+  },
+  findCheck: {
+    title: 'Найти свой чек',
+      sumField: 'Введите сумму платежа',
+      alert: {success: 'Ваш чек найден', error: 'Ваш чек не найден'},
+    button: 'Найти чек'
+  },
+  deleteAutoPayment: {
+    title: 'Удалить автоплатеж',
+      sumField: 'Введите сумму автоплатежа',
+      alert: {success: 'Автоплатёж найден', error: 'Автоплатёж не найден'},
+    button: 'Найти автоплатеж'
+  },
+  deleteSavedCard: {
+    title: 'Удалить сохраненную карту',
+      sumField: 'Введите сумму последнего платежа',
+      alert: {success: 'Сохранённая карта найдена', error: 'Сохранённая карта не найдена'},
+    button: 'Найти сохраненную карту'
+  }
+};
+
+const formResultMap = {
+  payments: {
+    data: [
+      [{title: 'Дата платежа', text: '10.12.2020 23:55 (МСК)'}, {title: 'Статус платежа', text: 'Успешный платеж'}, {title: 'Сайт', text: 'inetvl.ru'}, {title: 'Сумма платежа', text: '1 500 ₽'}],
+      [{title: 'Дата платежа', text: '10.12.2020 20:02 (МСК)'}, {title: 'Статус платежа', text: 'Неуспешный платеж'}, {title: 'Сайт', text: 'inetvl.ru'}, {title: 'Сумма платежа', text: '1 500 ₽'}],
+      [{title: 'Дата платежа', text: '10.12.2020 14:02 (МСК)'}, {title: 'Статус платежа', text: 'Возврат платежа'}, {title: 'Сайт', text: 'inetvl.ru'}, {title: 'Сумма платежа', text: '1 500 ₽'}, {title: 'Сумма возврата', text: '1 500 ₽'}]
+    ],
+      error: 'Возможно данные введены неверно, проверьте данные и попробуйте еще раз.'
+  },
+  findCheck: {
+    data: [
+      [{title: 'Дата платежа', text: '10.12.2020 14:22'}, {title: 'Ссылка на чек', text: 'https://consumer.1-ofd.ru/#/ticket/5b340eee-d516-40dc-afef-9ebda75c9d82'}],
+      [{title: 'Дата платежа', text: '10.12.2020 18:00'}, {title: 'Ссылка на чек', text: 'https://consumer.1-ofd.ru/#/ticket/5b340eee-d516-40dc-afef-9ebda75c9d82'}]
+    ],
+      error: 'Возможно данные введены неверно, проверьте данные и попробуйте еще раз.'
+  },
+  deleteAutoPayment: {
+    data: [
+      [{title: 'Сайт', text: 'inetvl.ru'}, {title: 'Идентификатор', text: '12345678'}],
+      [{title: 'Сайт', text: 'inetvl.ru'}, {title: 'Идентификатор', text: '2223333'}]
+    ],
+      error: 'Возможно данные введены неверно, или этот автоплатёж уже удален.'
+  },
+  deleteSavedCard: {
+    data: [
+      [{title: 'Сайт', text: 'inetvl.ru'}, {title: 'Идентификатор', text: '12345678'}],
+      [{title: 'Сайт', text: 'inetvl.ru'}, {title: 'Идентификатор', text: '2223333'}]
+    ],
+      error: 'Возможно данные введены неверно, или эта сохранённая карта уже удалена.'
+  }
+};
+
 export default  {
   setup () {
     const state = reactive({
@@ -12,79 +71,43 @@ export default  {
     const rules = {
       firstNumbers: {
         required: helpers.withMessage(
-          ({
-             $pending,
-             $invalid,
-             $params,
-             $model
-           }) => `Поле обязательно для заполнения`,
+          () => `Поле обязательно для заполнения`,
           required,
         ),
         numeric: helpers.withMessage(
-          ({
-             $pending,
-             $invalid,
-             $params,
-             $model
-           }) => `Ввести можно только цифры`,
+          () => `Ввести можно только цифры`,
           numeric,
         ),
         minLength: helpers.withMessage(
           ({
-             $pending,
-             $invalid,
-             $params,
-             $model
+             $params
            }) => `Должно быть введено ${$params.min} цифры`,
           minLength(6),
         )
       },
       lastNumbers: {
         required: helpers.withMessage(
-          ({
-             $pending,
-             $invalid,
-             $params,
-             $model
-           }) => `Поле обязательно для заполнения`,
+          () => `Поле обязательно для заполнения`,
           required,
         ),
         numeric: helpers.withMessage(
-          ({
-             $pending,
-             $invalid,
-             $params,
-             $model
-           }) => `Ввести можно только цифры`,
+          () => `Ввести можно только цифры`,
           numeric,
         ),
         minLength: helpers.withMessage(
           ({
-             $pending,
-             $invalid,
-             $params,
-             $model
+             $params
            }) => `Должно быть введено ${$params.min} цифры`,
           minLength(4),
         )
       },
       sum: {
         required: helpers.withMessage(
-          ({
-             $pending,
-             $invalid,
-             $params,
-             $model
-           }) => `Поле обязательно для заполнения`,
+          () => `Поле обязательно для заполнения`,
           required,
         ),
         numeric: helpers.withMessage(
-          ({
-             $pending,
-             $invalid,
-             $params,
-             $model
-           }) => `Ввести можно только цифры`,
+          () => `Ввести можно только цифры`,
           numeric,
         )
       }
@@ -101,63 +124,8 @@ export default  {
   },
   data() {
     return {
-      formDataMap: {
-        payments: {
-          title: 'Узнать о своем платеже',
-          sumField: 'Введите сумму платежа',
-          alert: {success: 'Ваш платёж найден', error: 'Ваш платёж не найден'},
-          button: 'Найти платеж'
-        },
-        findCheck: {
-          title: 'Найти свой чек',
-          sumField: 'Введите сумму платежа',
-          alert: {success: 'Ваш чек найден', error: 'Ваш чек не найден'},
-          button: 'Найти чек'
-        },
-        deleteAutoPayment: {
-          title: 'Удалить автоплатеж',
-          sumField: 'Введите сумму автоплатежа',
-          alert: {success: 'Автоплатёж найден', error: 'Автоплатёж не найден'},
-          button: 'Найти автоплатеж'
-        },
-        deleteSavedCard: {
-          title: 'Удалить сохраненную карту',
-          sumField: 'Введите сумму последнего платежа',
-          alert: {success: 'Сохранённая карта найдена', error: 'Сохранённая карта не найдена'},
-          button: 'Найти сохраненную карту'
-        }
-      },
-      formResultMap: {
-        payments: {
-          data: [
-            [{title: 'Дата платежа', text: '10.12.2020 23:55 (МСК)'}, {title: 'Статус платежа', text: 'Успешный платеж'}, {title: 'Сайт', text: 'inetvl.ru'}, {title: 'Сумма платежа', text: '1 500 ₽'}],
-            [{title: 'Дата платежа', text: '10.12.2020 20:02 (МСК)'}, {title: 'Статус платежа', text: 'Неуспешный платеж'}, {title: 'Сайт', text: 'inetvl.ru'}, {title: 'Сумма платежа', text: '1 500 ₽'}],
-            [{title: 'Дата платежа', text: '10.12.2020 14:02 (МСК)'}, {title: 'Статус платежа', text: 'Возврат платежа'}, {title: 'Сайт', text: 'inetvl.ru'}, {title: 'Сумма платежа', text: '1 500 ₽'}, {title: 'Сумма возврата', text: '1 500 ₽'}]
-          ],
-          error: 'Возможно данные введены неверно, проверьте данные и попробуйте еще раз.'
-        },
-        findCheck: {
-          data: [
-            [{title: 'Дата платежа', text: '10.12.2020 14:22'}, {title: 'Ссылка на чек', text: 'https://consumer.1-ofd.ru/#/ticket/5b340eee-d516-40dc-afef-9ebda75c9d82'}],
-            [{title: 'Дата платежа', text: '10.12.2020 18:00'}, {title: 'Ссылка на чек', text: 'https://consumer.1-ofd.ru/#/ticket/5b340eee-d516-40dc-afef-9ebda75c9d82'}]
-          ],
-          error: 'Возможно данные введены неверно, проверьте данные и попробуйте еще раз.'
-        },
-        deleteAutoPayment: {
-          data: [
-            [{title: 'Сайт', text: 'inetvl.ru'}, {title: 'Идентификатор', text: '12345678'}],
-            [{title: 'Сайт', text: 'inetvl.ru'}, {title: 'Идентификатор', text: '2223333'}]
-          ],
-          error: 'Возможно данные введены неверно, или этот автоплатёж уже удален.'
-        },
-        deleteSavedCard: {
-          data: [
-            [{title: 'Сайт', text: 'inetvl.ru'}, {title: 'Идентификатор', text: '12345678'}],
-            [{title: 'Сайт', text: 'inetvl.ru'}, {title: 'Идентификатор', text: '2223333'}]
-          ],
-          error: 'Возможно данные введены неверно, или эта сохранённая карта уже удалена.'
-        }
-      },
+      formDataMap,
+      formResultMap,
       currentData: '',
       formIsValid: false,
       formSubmitted: false,
