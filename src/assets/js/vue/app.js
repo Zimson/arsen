@@ -5,6 +5,7 @@ import VueMask, { VueMaskDirective, VueMaskFilter } from 'v-mask';
 import appAlert from './app-alert';
 import appResultBox from './app-result-box';
 import appModal from './app-modal';
+import appDataForm from './app-data-form';
 
 const app = createApp({
   data () {
@@ -43,6 +44,7 @@ const app = createApp({
 app.component('app-alert', appAlert);
 app.component('app-result-box', appResultBox);
 app.component('app-modal', appModal);
+app.component('app-data-form', appDataForm);
 
 app.use(VCalendar, {});
 // app.use(VueMask);

@@ -127,5 +127,7 @@ footerLink: "https://arsenalpay.ru/dashboard/registration-type"
       </div>
     </div>
   </div>
-  <app-modal :id="modal.id" v-if="modal.isOpen" v-on:close="closeModal($event)"></app-modal>
+  <app-modal :id="modal.id" v-if="modal.isOpen" v-on:close="closeModal($event)">
+    <app-data-form :id="modal.id"></app-data-form>
+  </app-modal>
 </div>
