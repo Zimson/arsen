@@ -1,6 +1,6 @@
 import {createApp, reactive} from 'vue/dist/vue.esm-bundler';
 import VCalendar from 'v-calendar';
-
+import VueMask, { VueMaskDirective, VueMaskFilter } from 'v-mask';
 
 import appAlert from './app-alert';
 import appResultBox from './app-result-box';
@@ -45,4 +45,8 @@ app.component('app-result-box', appResultBox);
 app.component('app-modal', appModal);
 
 app.use(VCalendar, {});
+// app.use(VueMask);
+
 app.mount('#app');
+
+console.log('app', app);

@@ -1,6 +1,20 @@
 import {reactive} from 'vue/dist/vue.esm-bundler';
 import useVuelidate from '@vuelidate/core';
-import {required, minLength, maxLength, numeric} from '@vuelidate/validators';
+import {required, minLength, maxLength, numeric, helpers} from '@vuelidate/validators';
+
+const validations = {
+  name: {
+    minLength: helpers.withMessage(
+      ({
+         $pending,
+         $invalid,
+         $params,
+         $model
+       }) => `This field has a value of '${$model}' but must have a min length of ${$params.min} so it is ${$invalid ? 'invalid' : 'valid'}`,
+      minLength(4),
+    ),
+  }
+};
 
 export default {
   setup () {
@@ -11,18 +25,82 @@ export default {
     });
     const rules = {
       firstNumbers: {
-        required,
-        numeric,
-        minLength: minLength(6)
+        required: helpers.withMessage(
+          ({
+             $pending,
+             $invalid,
+             $params,
+             $model
+           }) => `Поле обязательно для заполнения`,
+          required,
+        ),
+        numeric: helpers.withMessage(
+          ({
+             $pending,
+             $invalid,
+             $params,
+             $model
+           }) => `Ввести можно только цифры`,
+          numeric,
+        ),
+        minLength: helpers.withMessage(
+          ({
+             $pending,
+             $invalid,
+             $params,
+             $model
+           }) => `Должно быть введено ${$params.min} цифры`,
+          minLength(6),
+        )
       },
       lastNumbers: {
-        required,
+        required: helpers.withMessage(
+      ({
+         $pending,
+         $invalid,
+         $params,
+         $model
+       }) => `Поле обязательно для заполнения`,
+      required,
+       ),
+        numeric: helpers.withMessage(
+        ({
+           $pending,
+           $invalid,
+           $params,
+           $model
+         }) => `Ввести можно только цифры`,
         numeric,
-        minLength: minLength(4)
+      ),
+        minLength: helpers.withMessage(
+        ({
+           $pending,
+           $invalid,
+           $params,
+           $model
+         }) => `Должно быть введено ${$params.min} цифры`,
+        minLength(4),
+       )
       },
       sum: {
-        required,
-        numeric
+        required: helpers.withMessage(
+          ({
+             $pending,
+             $invalid,
+             $params,
+             $model
+           }) => `Поле обязательно для заполнения`,
+          required,
+        ),
+        numeric: helpers.withMessage(
+          ({
+             $pending,
+             $invalid,
+             $params,
+             $model
+           }) => `Ввести можно только цифры`,
+          numeric,
+        )
       }
     }
 
@@ -122,6 +200,10 @@ export default {
       this.currentData = this.formResultMap[this.id];
       this.formSubmitted = true;
 
+      setTimeout(() => {
+        // this.formSubmitted = false;
+      }, 1000);
+
       // setTimeout(() => { this.formSubmitted = false }, 500);
     }
   },
@@ -132,7 +214,9 @@ export default {
     <article class="modal">
       <div class="modal__body" id="deleteAutoPaymentForm">
         <button type="button" class="modal__close" @click="closeModal($event)">
-<!--      {{{ icon name="cross" width="12" height="12" }}}-->
+          <svg  class="icon" width="12" height="12">
+            <use xlink:href="assets/img/symbol/sprite.svg#cross" />
+          </svg>
         </button>
         <h1 class="modal__title">{{formDataMap[id].title}}</h1>
         <div class="modal__scroll">
@@ -141,7 +225,7 @@ export default {
             <div class="form__row">
               <div class="form__field">
                 <div class="input" :class="{ error: v$.firstNumbers.$invalid && v$.firstNumbers.$dirty}">
-                  <input type="text" class="input__field" v-model="v$.firstNumbers.$model" @blur="v$.firstNumbers.$touch" placeholder="Первые 6 цифр" />
+                  <input type="text" class="input__field"  v-model="v$.firstNumbers.$model" @blur="v$.firstNumbers.$touch" placeholder="Первые 6 цифр" />
                 </div>
               </div>
               <div class="form__field">
@@ -182,7 +266,12 @@ export default {
             <!--            </v-date-picker>-->
             <!--          </div>-->
 
-            <button type="submit" class="form__submit">{{formDataMap[id].button}}</button>
+            <button type="submit" class="form__submit">
+              <svg v-if="formSubmitted" class="icon" width="48" height="38">
+                <use xlink:href="assets/img/symbol/sprite.svg#loader--lg" />
+              </svg>
+              <span v-else>{{formDataMap[id].button}}</span>
+            </button>
             <div class="form__alert">
               <app-alert v-if="formSubmitted && !formIsValid" type="error" :text="formDataMap[id].alert.error"></app-alert>
               <app-alert v-if="formSubmitted && formIsValid && currentData" type="success" :text="formDataMap[id].alert.success"></app-alert>

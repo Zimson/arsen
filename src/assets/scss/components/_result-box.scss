@@ -54,5 +54,10 @@
     border-radius: 40px;
     border: solid 1px #50bd5c;
     background-color: var(--white-color);
+
+    @include hover {
+      background-color: #50bd5c;
+      color: var(--white-color);
+    }
   }
 }
