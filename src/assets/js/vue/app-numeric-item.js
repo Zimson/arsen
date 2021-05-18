@@ -14,7 +14,7 @@ export default  {
       <svg  class="icon icon--purple" width="37" height="37">
         <use :xlink:href="icon"  />
       </svg>
-      <b class="numeric-item__title">{{ title }}</b>
+      <b class="numeric-item__title" v-html="title"></b>
       <p v-if="text" class="numeric-item__text" v-html="text"></p>
     </article>
   `

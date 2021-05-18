@@ -168,9 +168,55 @@ footerLink: "https://arsenalpay.ru/dashboard/registration-type"
       <app-numeric-item title="Вы можете сохранить другую карту" text="Нажмите кнопку «Оплатить другой картой» и поставьте галочку «запомнить мою карту». После успешной оплаты новая карта сохранится, и в следующий раз оплата будет происходить с неё." order="6"></app-numeric-item>
       <app-numeric-item title="Вы можете удалить сохранённую карту" text="Чтобы удалить сохранённую карту перейдите по <a class='link link--lg'>ссылке</a> и следуйте инструкциям.</a>" order="7"></app-numeric-item>
     </div>
-    <div v-else-if="modalContentType === 'phonePay'" style="margin-top: 40px;">phonePay</div>
-    <div v-else-if="modalContentType === 'walletPay'" style="margin-top: 40px;">walletPay</div>
-    <div v-else-if="modalContentType === 'addAutoPay'" style="margin-top: 40px;">addAutoPay</div>
-    <div v-else-if="modalContentType === 'deleteAutoPay'" style="margin-top: 40px;">deleteAutoPay</div>
+    <div v-else-if="modalContentType === 'phonePay'" style="margin-top: 40px;">
+      <app-numeric-item title="Чтобы оплатить со счета своего телефона, нажмите на сайте кнопку «Оплатить с телефона», или на значок телефона в открывшейся форме оплаты." order="1"></app-numeric-item>
+      <app-numeric-item title="Введите номер телефона, с которого хотите совершить оплату." order="2"></app-numeric-item>
+      <app-numeric-item title="Заполните остальные поля формы" order="3"></app-numeric-item>
+      <app-numeric-item title="Нажмите кнопку оплатить" order="4"></app-numeric-item>
+      <div class="row row--instruction">
+        {{{ img name="phone-pay-data" width="300" height="436" mods="with-auto, shadow"}}}
+        {{{ img name="phone-pay-result" width="300" heiht="452" mods="with-auto, shadow"}}}
+      </div>
+      <app-numeric-item title="На этот номер телефона придет смс с инструкциями оплаты" text="В смс также указана информация о комиссии." order="5"></app-numeric-item>
+      <app-numeric-item title="Если смс не пришла, перезагрузите страницу и попробуйте оплатить еще раз." text="Проверьте правильность номера телефона, также могут возникать проблемы с сотовой связью и смс может прийти не сразу." order="6"></app-numeric-item>
+      <app-numeric-item title="Информация об успешном списании средств придёт в смс" text="Информацию о платеже вы также можете увидеть на странице оплаты." order="7"></app-numeric-item>
+    </div>
+    <div v-else-if="modalContentType === 'walletPay'" style="margin-top: 40px;">
+      <app-numeric-item title="Чтобы оплатить со счета электронного кошелька, нажмите на сайте кнопку «Оплатить с кошелька», или на значок кошелька в открывшейся форме оплаты." order="1"></app-numeric-item>
+      <app-numeric-item title="Введите номер телефона, на который зарегистрирован ваш QIWI кошелек." order="2"></app-numeric-item>
+      <app-numeric-item title="Заполните остальные поля формы" text="" order="3"></app-numeric-item>
+      <app-numeric-item title="Нажмите кнопку оплатить" text="" order="4"></app-numeric-item>
+      <div class="row row--instruction">
+        {{{ img name="wallet-pay-data" width="300" height="470" mods="with-auto, shadow"}}}
+        {{{ img name="wallet-pay-result" width="300" heiht="452" mods="with-auto, shadow"}}}
+      </div>
+      <app-numeric-item title="В вашем QIWI кошельке появится счёт платежа" order="5"></app-numeric-item>
+      <app-numeric-item title="Перейдите на сайт QIWI, войдите в ваш личный кабинет, проверьте данные платежа и подтвердите его."  order="6"></app-numeric-item>
+      <app-numeric-item title="Информацию об успешной оплате вы получите сразу." order="7"></app-numeric-item>
+    </div>
+    <div v-else-if="modalContentType === 'addAutoPay'" style="margin-top: 40px;">
+      <app-numeric-item title="Для подключения автоплатежа сначала нужно совершить оплату" order="1"></app-numeric-item>
+      <app-numeric-item title="После успешной оплаты, на странице платежа появится кнопка «Подключить автоплатёж»." order="2"></app-numeric-item>
+      <app-numeric-item title="Нажмите кнопку «Подключить автоплатёж»" order="3"></app-numeric-item>
+      <app-numeric-item title="Автоплатёж подключится на сумму совершенной оплаты" order="4"></app-numeric-item>
+      <div class="row row--instruction">
+        {{{ img name="add-autopay-data" width="300" height="332" mods="with-auto, shadow"}}}
+        {{{ img name="add-autopay-result" width="300" heiht="388" mods="with-auto, shadow"}}}
+      </div>
+      <app-numeric-item title="Каждый раз при автоплатеже вы будете получать уведомления о списании средств." order="5"></app-numeric-item>
+      <app-numeric-item title="Если вы получили ошибку при подключении автоплатежа, значит с вашей карты нельзя совершать автоплатежи." text="Некоторые карты, например Maestro, не поддерживают функцию автоплатежей. Также некоторые банки могут не поддерживать эту функцию. Обратитесь в ваш банк или подключите автоплатёж на другую карту. Для этого необходимо совершить платёж с другой карты." order="6"></app-numeric-item>
+      <app-numeric-item title="Если вы хотите отключить автоплатёж, следуйте <a class='link link--lg'>этим инструкциям.</a>" order="7"></app-numeric-item>
+    </div>
+    <div v-else-if="modalContentType === 'deleteAutoPay'" style="margin-top: 40px;">
+      <app-numeric-item title="Первый вариант. Удалить автоплатёж можно на нашем сайте, <a class='link link--lg'>следуйте этой инструкции.</a>" order="1"></app-numeric-item>
+      <app-numeric-item title="Второй вариант. Удалить автоплатёж можно на сайте, где вы его подключали." text="Перейдите на сайт, где вы подключали автоплатёж, зайдите в свой личный кабинет. Перейдите в раздел оплаты. Вам откроется форма оплаты. Возможно для того, чтобы форма оплаты открылась, нужно ввести любую сумму платежа и нажать кнопку оплатить. Если у вас есть подключенный автоплатёж, то на форме оплаты это будет указано. Нажмите на блок с информацией об автоплатеже, далее нажмите на кнопку «Удалить автоплатёж»." order="2"></app-numeric-item>
+      <div class="row row--instruction">
+        {{{ img name="remove-autopay-data" width="300" height="434" mods="with-auto, shadow"}}}
+        {{{ img name="remove-autopay-result" width="300" heiht="567" mods="with-auto, shadow"}}}
+      </div>
+      <app-numeric-item title="Третий вариант. Удалить автоплатёж можно связавшись с менеджером сайта, на котором вы его подключали и попросить удалить ваш автоплатёж." order="3"></app-numeric-item>
+      <app-numeric-item title="После удаления автоплатежа деньги больше не будут списываться с вашей карты автоматически." order="4"></app-numeric-item>
+      <app-numeric-item title="Если вы не смогли удалить автоплатёж, <a class='link link--lg'>напишите нам.</a>" order="5"></app-numeric-item>
+    </div>
   </app-modal>
 </div>
