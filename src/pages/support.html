@@ -69,24 +69,19 @@ footerLink: "https://arsenalpay.ru/dashboard/registration-type"
           <div id="testirovanie-oplaty-i-kassy" class="page-section__container">
             {{{ icon name="test" width="116" height="116" mods="green" }}}
             <h2 class="page-section__title">Частые вопросы</h2>
-            <ul class="tabs-nav tabs-nav--sm">
-              <li class="tabs-nav__item" :class="{ active: activeInnerTab === 1 }"  @click="setActiveInnerTab(1)">Оплата</li>
-              <li class="tabs-nav__item" :class="{ active: activeInnerTab === 2 }"  @click="setActiveInnerTab(2)">Возврат</li>
-              <li class="tabs-nav__item" :class="{ active: activeInnerTab === 3 }"  @click="setActiveInnerTab(3)">Доставка</li>
-              <li class="tabs-nav__item" :class="{ active: activeInnerTab === 4 }"  @click="setActiveInnerTab(4)">Безопасность</li>
-            </ul>
-            <div class="tabs-panel" v-if="activeInnerTab === 1">
-              One
-            </div>
-            <div class="tabs-panel" v-else-if="activeInnerTab === 2">
-              Two
-            </div>
-            <div class="tabs-panel" v-else-if="activeInnerTab === 3">
-              Three
-            </div>
-            <div class="tabs-panel" v-else-if="activeInnerTab === 4">
-              Four
-            </div>
+            <app-faq :data="faqBuyerData"></app-faq>
+<!--            <div class="tabs-panel" v-if="activeInnerTab === 1">-->
+<!--              One-->
+<!--            </div>-->
+<!--            <div class="tabs-panel" v-else-if="activeInnerTab === 2">-->
+<!--              Two-->
+<!--            </div>-->
+<!--            <div class="tabs-panel" v-else-if="activeInnerTab === 3">-->
+<!--              Three-->
+<!--            </div>-->
+<!--            <div class="tabs-panel" v-else-if="activeInnerTab === 4">-->
+<!--              Four-->
+<!--            </div>-->
           </div>
         </section>
         <section class="page-section">
