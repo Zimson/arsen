@@ -1,0 +1,676 @@
+<!doctype html>
+<html class="no-js page" lang="ru">
+  <head>
+    <title>Разработчикам</title>
+    <meta charset="utf-8" />
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Готовые CMS плагины. Виджет оплаты для интернет-магазинов и лендингов. Интеграция и тестирование виджета оплаты. Настройка онлайн-кассы. ArsenalPay API для интеграции платежей." />
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="96x96" href="/favicon-96x96.png" />
+  
+    <link rel="icon" type="image/png" sizes="120x120" href="/favicon-120x120.png" />
+    <link rel="icon" type="image/png" sizes="192x192" href="/android-icon-192x192.png" />
+  
+    <link rel="apple-touch-icon" href="touch-icon-iphone.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="touch-icon-ipad.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="touch-icon-iphone-retina.png">
+    <link rel="apple-touch-icon" sizes="167x167" href="touch-icon-ipad-retina.png">
+  
+    <link rel="mask-icon" href="website_icon.svg" color="#FF6047">
+  
+    <meta name="msapplication-TileColor" content="#FF6047">
+    <meta name="msapplication-TileImage" content="/mstile-144x144.png">
+    <meta name="msapplication-square70x70logo" content="/mstile-70x70.png">
+    <meta name="msapplication-square150x150logo" content="/mstile-150x150.png">
+    <meta name="msapplication-wide310x150logo" content="/mstile-310x310.png">
+    <meta name="msapplication-square310x310logo" content="/mstile-310x150.png">
+    <meta name="application-name" content="ArsenalPay">
+  
+    <link rel="image_src" href="https://arsenalpay.ru/arsenalpay-developers-fb.png" />
+    <link rel="canonical" href="https://arsenalpay.ru/developers.html" />
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap&subset=cyrillic" rel="stylesheet">
+    <link rel="stylesheet" href="assets/css/app.css">
+  
+    <!-- для twitter и больших картинок в telegram -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta name="twitter:site" content="@arsenalpay" />
+    <meta name="twitter:creator" content="@arsenalpay" />
+  <!--  <meta name="twitter:title" content="ArsenalPay | Разработчикам" />-->
+    <meta name="twitter:title" content="ArsenalPay | Разработчикам" />
+    <meta name="twitter:description" content="Готовые CMS плагины. Виджет оплаты для интернет-магазинов и лендингов. Интеграция и тестирование виджета оплаты. Настройка онлайн-кассы. ArsenalPay API для интеграции платежей." />
+    <meta property="twitter:image" content="arsenalpay-developers-tw.png" />
+  
+    <!-- для FB, VK и квадратная картинка для WhatsApp -->
+    <!--  FB берет самую большую картинку, WhatsApp  должен брать квадратную.-->
+    <meta property="vk:image" content="https://arsenalpay.ru/arsenalpay-developers-vk.png" />
+    <meta property="og:image" content="arsenalpay-developers-fb.png" />
+    <meta property="og:image:secure_url" content="https://arsenalpay.ru/arsenalpay-developers-fb.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image" content="https://arsenalpay.ru/arsenalpay-developers-square.png" />
+    <meta property="og:image:width" content="540" />
+    <meta property="og:image:height" content="540" />
+    <meta property="og:image:type" content="image/png" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="ArsenalPay" />
+    <meta property="og:url" content="https://arsenalpay.ru/developers.html" />
+    <meta property="og:title" content="ArsenalPay | Разработчикам" />
+    <meta property="og:description" content="Готовые CMS плагины. Виджет оплаты для интернет-магазинов и лендингов. Интеграция и тестирование виджета оплаты. Настройка онлайн-кассы. ArsenalPay API для интеграции платежей." />
+  
+    <script>
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+        function cth(c){document.documentElement.classList.add(c)}
+        'ontouchstart' in window?cth('touch'):cth('no-touch');
+        if(typeof InstallTrigger!=='undefined')cth('firefox');
+        if(/constructor/i.test(window.HTMLElement)||(function(p){return p.toString()==="[object SafariRemoteNotification]"})(!window['safari']||(typeof safari!=='undefined'&&safari.pushNotification)))cth('safari');
+        if(/*@cc_on!@*/false||!!document.documentMode)cth('ie');
+        if(!(/*@cc_on!@*/false||!!document.documentMode)&&!!window.StyleMedia)cth('edge');
+        if(!!window.chrome&&(!!window.chrome.webstore||!!window.chrome.runtime))cth('chrome');
+        if(~navigator.appVersion.indexOf("Win"))cth('windows');
+        if(~navigator.appVersion.indexOf("Mac"))cth('osx');
+        if(~navigator.appVersion.indexOf("Linux"))cth('linux');
+    </script>
+  
+    <!-- vk, facebook end -->
+    <!-- Yandex.Metrika counter -->
+    <script async="" src="//www.google-analytics.com/analytics.js"></script>
+    <script async="" src="https://mc.yandex.ru/metrika/tag.js"></script>
+    <script type="text/javascript">
+      (function (m, e, t, r, i, k, a) {
+        m[i] = m[i] || function () {
+          (m[i].a = m[i].a || []).push(arguments)
+        };
+        m[i].l = 1 * new Date();
+        k = e.createElement(t), a = e.getElementsByTagName(t)[0], k.async = 1, k.src = r, a.parentNode.insertBefore(k, a)
+      })
+      (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+  
+      ym(28148454, "init", {
+        clickmap: true,
+        trackLinks: true,
+        accurateTrackBounce: true,
+        webvisor: true
+      });
+    </script>
+    <noscript>
+      <div><img src="https://mc.yandex.ru/watch/28148454" style="position:absolute; left:-9999px;" alt=""/></div>
+    </noscript>
+    <!-- /Yandex.Metrika counter -->
+    <!-- Google analytics-->
+    <script>
+      (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+          (i[r].q = i[r].q || []).push(arguments)
+        }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+          m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+      ga('create', 'UA-7963793-4', 'auto');
+      ga('send', 'pageview');
+    </script>
+    <!-- /Google analytics-->
+  </head>
+<body>
+  <header class="header">
+    <nav class="header__container">
+      <a href="https://arsenalpay.ru/" class="header__logo">
+  <!--      <img src="assets/img/svg/main-logo.svg"  alt="Логотип">-->
+        <svg class="icon" width="74" height="42">
+                   <use xlink:href="assets/img/symbol/sprite.svg#main-logo" />
+                </svg>
+      </a>
+      <ul class="main-nav">
+        <li class="main-nav__item">
+          <a href="https://arsenalpay.ru/cashbox.html" class="link link--sm link--black">Онлайн касса</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="https://arsenalpay.ru/tariffs.html" class="link link--sm link--black">Тарифы</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="https://arsenalpay.ru/priem-platezhej-v-instagram.html" class="link link--sm link--black">Платежи в Instagram</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="https://arsenalpay.ru//priem-platezhej-na-sajte.html" class="link link--sm link--black">Платежи на сайте</a>
+        </li>
+        <li class="main-nav__item">
+          <a href="https://arsenalpay.ru/quickstart.html" class="link link--sm link--black">Платежи без сайта</a>
+        </li>
+        <li class="main-nav__item main-nav__item--login">
+          <a href="https://arsenalpay.ru/dashboard/login" class="link link--sm link--black">Войти</a>
+        </li>
+      </ul>
+      <button type="button" class="header__burger" data-open-mobile>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+  <div class="mobile-nav" data-mobile-close>
+    <div class="mobile-nav__main">
+      <button type="button" class="mobile-nav__close" data-mobile-close>
+        <svg class="icon" width="11" height="11">
+                   <use xlink:href="assets/img/symbol/sprite.svg#cross" />
+                </svg>
+      </button>
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/cashbox.html">Онлайн касса</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/tariffs.html">Тарифы</a>
+        </li>
+      </ul>
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/priem-platezhej-v-instagram.html">Платежи в Instagram</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/priem-platezhej-na-sajte.html">Платежи на сайте</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/quickstart.html">Платежи без сайта</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/travel.html">Турфирмам</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/providers.html">Провайдерам</a>
+        </li>
+      </ul>
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/about.html">О компании</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/contacts.html">Контакты</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/blog/">Блог</a>
+        </li>
+      </ul>
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/documentation/index.html">Документация</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/support.html">Поддержка</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/developers.html">Разработчикам</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/partnership.html">Агентам</a>
+        </li>
+      </ul>
+      <ul class="mobile-nav__list">
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/demo.html">Демо магазин</a>
+        </li>
+        <li class="mobile-nav__item">
+          <a href="https://arsenalpay.ru/pay/">Оплата услуг</a>
+        </li>
+      </ul>
+      <a href="https://arsenalpay.ru/dashboard/login" class="mobile-nav__login">Войти</a>
+      
+      <div class="social">
+          <span class="social__label">Мы в соцсетях</span>
+          <a href="https://www.instagram.com/arsenal_pay/" class="social__item" target="_blank">
+              <img src="assets/img/svg/instagram.svg" width="48" height="38" alt="Instagram">
+          </a>
+          <a href="tg://resolve?domain=arsenalpay" class="social__item">
+              <img src="assets/img/svg/telegram.svg" width="48" height="38" alt="Telegram">
+          </a>
+          <a href="https://www.facebook.com/ArsenalPay.ru" class="social__item" target="_blank">
+              <img src="assets/img/svg/facebook.svg" width="48" height="38" alt="Facebook">
+          </a>
+    </div>
+      <div class="lang">
+        <a href="https://arsenalpay.ru" class="lang__item active">
+          <span>Русский</span>
+        </a>
+        <a href="https://arsenalpay.com" class="lang__item">
+          <span>English</span>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div id="page" class="page-inner">
+    
+    <div id="app">
+      <section class="page-section page-section--without-site page-section--under-header page-section--bg-green page-section--no-skew">
+        <div  class="page-section__container" >
+          <!--    <div class="page-section__alert page-section__alert&#45;&#45;top">-->
+          <!--      <article class="alert" >
+                      <svg  class="icon" width="48" height="38">
+                        <use xlink:href="assets/img/symbol/sprite.svg#alert-success" />
+                      </svg>
+                      <span class="alert__text">Теперь приём платежей доступен и самозанятым</span>
+                    </article>-->
+          <!--    </div>-->
+          <h1 class="page-section__title">Поддержка</h1>
+          <div class="u--mgb-sm-36">
+            <p class="text text--ls-36 text--inline-sm text--md-size-lg">Частые вопросы, обратная связь, проверка платежа, поиск чека, инструкции по оплате.</p>
+          </div>
+          <ul class="tabs-nav tabs-nav--support">
+            <li class="tabs-nav__item" :class="{ active: activeTab === 1 }"  @click="setActiveTab(1)">Покупателям</li>
+            <li class="tabs-nav__item" :class="{ active: activeTab === 2 }"  @click="setActiveTab(2)">Продавцам</li>
+          </ul>
+        </div>
+      </section>
+    
+      <div class="page-section">
+        <div class="page-section__container">
+          <div class="tabs-panel" v-if="activeTab === 1">
+            <div class="actions-group">
+              <button type="button" class="action" @click="showModal('payments', 'dataForm')">
+                <svg class="icon icon--green" width="62" height="62">
+                     <use xlink:href="assets/img/symbol/sprite.svg#rub--md" />
+                  </svg>
+                <span class="action__text">Узнать о своём платеже</span>
+              </button>
+              <button type="button" class="action" @click="showModal('findCheck', 'dataForm')">
+                <svg class="icon icon--green" width="62" height="62">
+                     <use xlink:href="assets/img/symbol/sprite.svg#check--md" />
+                  </svg>
+                <span class="action__text">Найти свой чек</span>
+              </button>
+              <button type="button" class="action" @click="showModal('deleteAutoPayment', 'dataForm')">
+                <svg class="icon icon--green" width="62" height="62">
+                     <use xlink:href="assets/img/symbol/sprite.svg#autopay--md" />
+                  </svg>
+                <span class="action__text">Удалить автоплатёж</span>
+              </button>
+              <button type="button" class="action" @click="showModal('deleteSavedCard', 'dataForm')">
+                <svg class="icon icon--green" width="62" height="62">
+                     <use xlink:href="assets/img/symbol/sprite.svg#saved-card--md" />
+                  </svg>
+                <span class="action__text">Удалить сохранённую карту</span>
+              </button>
+            </div>
+            <section class="page-section page-section--test">
+              <div id="testirovanie-oplaty-i-kassy" class="page-section__container">
+                <svg class="icon icon--green" width="116" height="116">
+                     <use xlink:href="assets/img/symbol/sprite.svg#question--big" />
+                  </svg>
+                <h2 class="page-section__title">Частые вопросы</h2>
+                <app-faq :data="faqBuyerData"></app-faq>
+              </div>
+            </section>
+            <section class="page-section">
+              <div class="page-section__container">
+                <svg class="icon icon--purple" width="126" height="92">
+                     <use xlink:href="assets/img/symbol/sprite.svg#settings" />
+                  </svg>
+                <h2 class="page-section__title">Инструкции по оплате</h2>
+                <div class="actions-group">
+                  <button type="button" class="action" @click="showModal('cardPay', 'cardPay')">
+                    <svg class="icon icon--green" width="62" height="62">
+                     <use xlink:href="assets/img/symbol/sprite.svg#card-circle--md" />
+                  </svg>
+                    <span class="action__text">Оплата картой</span>
+                  </button>
+                  <button type="button" class="action" @click="showModal('savedCardPay', 'savedCardPay')">
+                    <svg class="icon icon--green" width="62" height="62">
+                     <use xlink:href="assets/img/symbol/sprite.svg#saved-card-circle--md" />
+                  </svg>
+                    <span class="action__text">Оплата сохранённой картой</span>
+                  </button>
+                  <button type="button" class="action" @click="showModal('phonePay', 'phonePay')">
+                    <svg class="icon icon--green" width="62" height="62">
+                     <use xlink:href="assets/img/symbol/sprite.svg#phone-circle--md" />
+                  </svg>
+                    <span class="action__text">Оплата с баланса телефона</span>
+                  </button>
+                  <button type="button" class="action" @click="showModal('walletPay', 'walletPay')">
+                    <svg class="icon icon--green" width="62" height="62">
+                     <use xlink:href="assets/img/symbol/sprite.svg#wallet-circle--md" />
+                  </svg>
+                    <span class="action__text">Оплата с электронного кошелька</span>
+                  </button>
+                  <button type="button" class="action" @click="showModal('addAutoPay', 'addAutoPay')">
+                    <svg class="icon icon--green" width="62" height="62">
+                     <use xlink:href="assets/img/symbol/sprite.svg#timer-circle--md" />
+                  </svg>
+                    <span class="action__text">Подключить автоплатёж</span>
+                  </button>
+                  <button type="button" class="action" @click="showModal('deleteAutoPay', 'deleteAutoPay')">
+                    <svg class="icon icon--green" width="62" height="62">
+                     <use xlink:href="assets/img/symbol/sprite.svg#timer-circle--md" />
+                  </svg>
+                    <span class="action__text">Удалить автоплатёж</span>
+                  </button>
+                </div>
+              </div>
+            </section>
+          </div>
+          <div class="tabs-panel" v-else>
+            <section class="page-section page-section--test">
+              <div id="testirovanie-oplaty-i-kassy" class="page-section__container">
+                <svg class="icon icon--green" width="116" height="116">
+                     <use xlink:href="assets/img/symbol/sprite.svg#question--big" />
+                  </svg>
+                <h2 class="page-section__title">Частые вопросы</h2>
+                <app-faq :data="faqSellerData"></app-faq>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+      <section class="page-section page-section--bg-blue page-section--no-skew page-section--solid">
+        <div id="http-uvedomleniya" class="page-section__container">
+          <svg class="icon icon--purple" width="116" height="116">
+                     <use xlink:href="assets/img/symbol/sprite.svg#email" />
+                  </svg>
+          <h2 class="page-section__title">Не нашли ответ на свой вопрос?</h2>
+          <button @click="showModal('support', 'supportForm')">Связаться с нами</button>
+        </div>
+      </section>
+      <app-modal :id="modal.id" v-if="modal.isOpen" v-on:close="closeModal($event)">
+        <app-data-form v-if="modalContentType === 'dataForm'" :id="modal.id"></app-data-form>
+        <app-support-form v-else-if="modalContentType === 'supportForm'" :id="modal.id"></app-support-form>
+        <div v-else-if="modalContentType === 'cardPay'" style="margin-top: 40px;">
+          <app-numeric-item title="К оплате принимаются карты: Visa, Mastercard, Maestro, Мир. "  order="1"></app-numeric-item>
+          <app-numeric-item title="Введите данные вашей карты" text="Номер карты, дату истечения и код CVC (3 цифры с обратной стороны карты)." order="2"></app-numeric-item>
+          <div class="row row--instruction">
+            <picture class="img img--with-auto img--shadow">
+        
+        
+        
+        
+        
+        <img src="assets/img/content/card-data--xs.png" srcset="assets/img/content/card-data--xs@2x.png 2x, assets/img/content/card-data--xs@3x.png 3x" width="300" height="332" alt="" />
+      </picture>
+            <picture class="img img--with-auto">
+        
+        
+        
+        
+        
+        <img src="assets/img/content/visa-card--xs.png" srcset="assets/img/content/visa-card--xs@2x.png 2x, assets/img/content/visa-card--xs@3x.png 3x" width="340"  alt="" />
+      </picture>
+          </div>
+          <app-numeric-item title="Нажмите кнопку оплатить" text="Вас может перенаправить на страницу вашего банка для подтверждения оплаты. " order="3"></app-numeric-item>
+          <app-numeric-item title="Введите код подтверждения из смс" text="Вы подтверждаете оплату и вас перенаправит на страницу с данными платежа." order="4"></app-numeric-item>
+          <div class="row row--instruction" style="grid-column-gap: 50px;">
+            <picture class="img img--with-auto img--shadow">
+        
+        
+        
+        
+        
+        <img src="assets/img/content/password--xs.png" srcset="assets/img/content/password--xs@2x.png 2x, assets/img/content/password--xs@3x.png 3x" width="300" height="418" alt="" />
+      </picture>
+            <picture class="img img--with-auto img--shadow">
+        
+        
+        
+        
+        
+        <img src="assets/img/content/payment-success--xs.png" srcset="assets/img/content/payment-success--xs@2x.png 2x, assets/img/content/payment-success--xs@3x.png 3x" width="300"  alt="" />
+      </picture>
+          </div>
+          <app-numeric-item title="Чек о платеже придёт на ваш email" text="Если чек не пришёл на ваш email, вы можете найти свой чек <a class='link link--lg'>здесь.</a>" order="5"></app-numeric-item>
+        </div>
+        <div v-else-if="modalContentType === 'savedCardPay'" style="margin-top: 40px;">
+          <app-numeric-item title="При платеже вам не нужно вводить полные данные карты" text="Это ускоряет и упрощает процесс оплаты." order="1"></app-numeric-item>
+          <app-numeric-item title="Введите код CVC (3 цифры с обратной стороны карты)" text="Без этого кода безопасности оплата невозможна." order="2"></app-numeric-item>
+          <div class="row row--instruction">
+            <picture class="img img--with-auto img--shadow">
+        
+        
+        
+        
+        
+        <img src="assets/img/content/saved-card-data--xs.png" srcset="assets/img/content/saved-card-data--xs@2x.png 2x, assets/img/content/saved-card-data--xs@3x.png 3x" width="300" height="412" alt="" />
+      </picture>
+          </div>
+          <app-numeric-item title="Нажмите кнопку оплатить" text="Вас может перенаправить на страницу вашего банка для подтверждения оплаты." order="3"></app-numeric-item>
+          <app-numeric-item title="Введите код подтверждения из смс" text="Вы подтверждаете оплату и вас перенаправит на страницу с данными платежа." order="4"></app-numeric-item>
+          <div class="row row--instruction" style="grid-column-gap: 50px;">
+            <picture class="img img--with-auto img--shadow">
+        
+        
+        
+        
+        
+        <img src="assets/img/content/password--xs.png" srcset="assets/img/content/password--xs@2x.png 2x, assets/img/content/password--xs@3x.png 3x" width="300" height="418" alt="" />
+      </picture>
+            <picture class="img img--with-auto img--shadow">
+        
+        
+        
+        
+        
+        <img src="assets/img/content/payment-success--xs.png" srcset="assets/img/content/payment-success--xs@2x.png 2x, assets/img/content/payment-success--xs@3x.png 3x" width="300"  alt="" />
+      </picture>
+          </div>
+          <app-numeric-item title="Чек о платеже придёт на ваш email" text="Если чек не пришёл на ваш email, вы можете найти свой чек <a class='link link--lg'>здесь.</a>" order="5"></app-numeric-item>
+          <app-numeric-item title="Вы можете сохранить другую карту" text="Нажмите кнопку «Оплатить другой картой» и поставьте галочку «запомнить мою карту». После успешной оплаты новая карта сохранится, и в следующий раз оплата будет происходить с неё." order="6"></app-numeric-item>
+          <app-numeric-item title="Вы можете удалить сохранённую карту" text="Чтобы удалить сохранённую карту перейдите по <a class='link link--lg'>ссылке</a> и следуйте инструкциям.</a>" order="7"></app-numeric-item>
+        </div>
+        <div v-else-if="modalContentType === 'phonePay'" style="margin-top: 40px;">
+          <app-numeric-item title="Чтобы оплатить со счета своего телефона, нажмите на сайте кнопку «Оплатить с телефона», или на значок телефона в открывшейся форме оплаты." order="1"></app-numeric-item>
+          <app-numeric-item title="Введите номер телефона, с которого хотите совершить оплату." order="2"></app-numeric-item>
+          <app-numeric-item title="Заполните остальные поля формы" order="3"></app-numeric-item>
+          <app-numeric-item title="Нажмите кнопку оплатить" order="4"></app-numeric-item>
+          <div class="row row--instruction">
+            <picture class="img img--with-auto img--shadow">
+        
+        
+        
+        
+        
+        <img src="assets/img/content/phone-pay-data--xs.png" srcset="assets/img/content/phone-pay-data--xs@2x.png 2x, assets/img/content/phone-pay-data--xs@3x.png 3x" width="300" height="436" alt="" />
+      </picture>
+            <picture class="img img--with-auto img--shadow">
+        
+        
+        
+        
+        
+        <img src="assets/img/content/phone-pay-result--xs.png" srcset="assets/img/content/phone-pay-result--xs@2x.png 2x, assets/img/content/phone-pay-result--xs@3x.png 3x" width="300"  alt="" />
+      </picture>
+          </div>
+          <app-numeric-item title="На этот номер телефона придет смс с инструкциями оплаты" text="В смс также указана информация о комиссии." order="5"></app-numeric-item>
+          <app-numeric-item title="Если смс не пришла, перезагрузите страницу и попробуйте оплатить еще раз." text="Проверьте правильность номера телефона, также могут возникать проблемы с сотовой связью и смс может прийти не сразу." order="6"></app-numeric-item>
+          <app-numeric-item title="Информация об успешном списании средств придёт в смс" text="Информацию о платеже вы также можете увидеть на странице оплаты." order="7"></app-numeric-item>
+        </div>
+        <div v-else-if="modalContentType === 'walletPay'" style="margin-top: 40px;">
+          <app-numeric-item title="Чтобы оплатить со счета электронного кошелька, нажмите на сайте кнопку «Оплатить с кошелька», или на значок кошелька в открывшейся форме оплаты." order="1"></app-numeric-item>
+          <app-numeric-item title="Введите номер телефона, на который зарегистрирован ваш QIWI кошелек." order="2"></app-numeric-item>
+          <app-numeric-item title="Заполните остальные поля формы" text="" order="3"></app-numeric-item>
+          <app-numeric-item title="Нажмите кнопку оплатить" text="" order="4"></app-numeric-item>
+          <div class="row row--instruction">
+            <picture class="img img--with-auto img--shadow">
+        
+        
+        
+        
+        
+        <img src="assets/img/content/wallet-pay-data--xs.png" srcset="assets/img/content/wallet-pay-data--xs@2x.png 2x, assets/img/content/wallet-pay-data--xs@3x.png 3x" width="300" height="470" alt="" />
+      </picture>
+            <picture class="img img--with-auto img--shadow">
+        
+        
+        
+        
+        
+        <img src="assets/img/content/wallet-pay-result--xs.png" srcset="assets/img/content/wallet-pay-result--xs@2x.png 2x, assets/img/content/wallet-pay-result--xs@3x.png 3x" width="300"  alt="" />
+      </picture>
+          </div>
+          <app-numeric-item title="В вашем QIWI кошельке появится счёт платежа" order="5"></app-numeric-item>
+          <app-numeric-item title="Перейдите на сайт QIWI, войдите в ваш личный кабинет, проверьте данные платежа и подтвердите его."  order="6"></app-numeric-item>
+          <app-numeric-item title="Информацию об успешной оплате вы получите сразу." order="7"></app-numeric-item>
+        </div>
+        <div v-else-if="modalContentType === 'addAutoPay'" style="margin-top: 40px;">
+          <app-numeric-item title="Для подключения автоплатежа сначала нужно совершить оплату" order="1"></app-numeric-item>
+          <app-numeric-item title="После успешной оплаты, на странице платежа появится кнопка «Подключить автоплатёж»." order="2"></app-numeric-item>
+          <app-numeric-item title="Нажмите кнопку «Подключить автоплатёж»" order="3"></app-numeric-item>
+          <app-numeric-item title="Автоплатёж подключится на сумму совершенной оплаты" order="4"></app-numeric-item>
+          <div class="row row--instruction">
+            <picture class="img img--with-auto img--shadow">
+        
+        
+        
+        
+        
+        <img src="assets/img/content/add-autopay-data--xs.png" srcset="assets/img/content/add-autopay-data--xs@2x.png 2x, assets/img/content/add-autopay-data--xs@3x.png 3x" width="300" height="332" alt="" />
+      </picture>
+            <picture class="img img--with-auto img--shadow">
+        
+        
+        
+        
+        
+        <img src="assets/img/content/add-autopay-result--xs.png" srcset="assets/img/content/add-autopay-result--xs@2x.png 2x, assets/img/content/add-autopay-result--xs@3x.png 3x" width="300"  alt="" />
+      </picture>
+          </div>
+          <app-numeric-item title="Каждый раз при автоплатеже вы будете получать уведомления о списании средств." order="5"></app-numeric-item>
+          <app-numeric-item title="Если вы получили ошибку при подключении автоплатежа, значит с вашей карты нельзя совершать автоплатежи." text="Некоторые карты, например Maestro, не поддерживают функцию автоплатежей. Также некоторые банки могут не поддерживать эту функцию. Обратитесь в ваш банк или подключите автоплатёж на другую карту. Для этого необходимо совершить платёж с другой карты." order="6"></app-numeric-item>
+          <app-numeric-item title="Если вы хотите отключить автоплатёж, следуйте <a class='link link--lg'>этим инструкциям.</a>" order="7"></app-numeric-item>
+        </div>
+        <div v-else-if="modalContentType === 'deleteAutoPay'" style="margin-top: 40px;">
+          <app-numeric-item title="Первый вариант. Удалить автоплатёж можно на нашем сайте, <a class='link link--lg'>следуйте этой инструкции.</a>" order="1"></app-numeric-item>
+          <app-numeric-item title="Второй вариант. Удалить автоплатёж можно на сайте, где вы его подключали." text="Перейдите на сайт, где вы подключали автоплатёж, зайдите в свой личный кабинет. Перейдите в раздел оплаты. Вам откроется форма оплаты. Возможно для того, чтобы форма оплаты открылась, нужно ввести любую сумму платежа и нажать кнопку оплатить. Если у вас есть подключенный автоплатёж, то на форме оплаты это будет указано. Нажмите на блок с информацией об автоплатеже, далее нажмите на кнопку «Удалить автоплатёж»." order="2"></app-numeric-item>
+          <div class="row row--instruction">
+            <picture class="img img--with-auto img--shadow">
+        
+        
+        
+        
+        
+        <img src="assets/img/content/remove-autopay-data--xs.png" srcset="assets/img/content/remove-autopay-data--xs@2x.png 2x, assets/img/content/remove-autopay-data--xs@3x.png 3x" width="300" height="434" alt="" />
+      </picture>
+            <picture class="img img--with-auto img--shadow">
+        
+        
+        
+        
+        
+        <img src="assets/img/content/remove-autopay-result--xs.png" srcset="assets/img/content/remove-autopay-result--xs@2x.png 2x, assets/img/content/remove-autopay-result--xs@3x.png 3x" width="300"  alt="" />
+      </picture>
+          </div>
+          <app-numeric-item title="Третий вариант. Удалить автоплатёж можно связавшись с менеджером сайта, на котором вы его подключали и попросить удалить ваш автоплатёж." order="3"></app-numeric-item>
+          <app-numeric-item title="После удаления автоплатежа деньги больше не будут списываться с вашей карты автоматически." order="4"></app-numeric-item>
+          <app-numeric-item title="Если вы не смогли удалить автоплатёж, <a class='link link--lg'>напишите нам.</a>" order="5"></app-numeric-item>
+        </div>
+      </app-modal>
+    </div>
+    
+  </div>
+  <section class="page-section page-section--cashbox page-section--bg-pink page-section--no-skew">
+    <div class="page-section__container">
+      <svg class="icon icon--pink" width="122" height="120">
+                 <use xlink:href="assets/img/symbol/sprite.svg#kassa" />
+              </svg>
+      <div class="page-section__alert page-section__alert--bottom">
+        <article class="alert" >
+                  <svg  class="icon" width="48" height="38">
+                    <use xlink:href="assets/img/symbol/sprite.svg#alert-success" />
+                  </svg>
+                  <span class="alert__text">Теперь приём платежей доступен и самозанятым</span>
+                </article>
+      </div>
+      <h2 class="page-section__title">Начать приём платежей с&nbsp;кассой</h2>
+      <p class="text text--mgb-36 text--md-size-lg">Вам не&nbsp;нужно покупать или брать в&nbsp;аренду свою&nbsp;кассу</p>
+      <a href="https://arsenalpay.ru/dashboard/registration-type" class="page-section__btn" style="margin-bottom: 0">Подключиться</a>
+    </div>
+  </section>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__links">
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/about.html" class="link link--sm link--black link--footer">О компании</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/contacts.html" class="link link--sm link--black link--footer">Контакты</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/blog/" class="link link--sm link--black link--footer">Блог</a>
+          </li>
+        </ul>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/cashbox.html" class="link link--sm link--black link--footer">Онлайн касса</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/tariffs.html" class="link link--sm link--black link--footer">Тарифы</a>
+          </li>
+        </ul>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/priem-platezhej-v-instagram.html" class="link link--sm link--black link--footer">Платежи в Instagram</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru//priem-platezhej-na-sajte.html" class="link link--sm link--black link--footer">Платежи на сайте</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/quickstart.html" class="link link--sm link--black link--footer">Платежи без сайта</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/travel.html" class="link link--sm link--black link--footer">Турфирмам</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/providers.html" class="link link--sm link--black link--footer">Провайдерам</a>
+          </li>
+        </ul>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/documentation/index.html" class="link link--sm link--black link--footer">Документация</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/support.html" class="link link--sm link--black link--footer">Поддержка</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/developers.html" class="link link--sm link--black link--footer">Разработчикам</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/partnership.html" class="link link--sm link--black link--footer">Агентам</a>
+          </li>
+        </ul>
+        <ul class="footer__list">
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/demo.html" class="link link--sm link--black link--footer">Демо магазин</a>
+          </li>
+          <li class="footer__item">
+            <a href="https://arsenalpay.ru/pay/" class="link link--sm link--black link--footer">Оплата услуг</a>
+          </li>
+        </ul>
+      </div>
+      <div class="footer__social">
+        
+      <div class="social social--footer">
+          <span class="social__label">Мы в соцсетях</span>
+          <a href="https://www.instagram.com/arsenal_pay/" class="social__item" target="_blank">
+              <img src="assets/img/svg/instagram.svg" width="48" height="38" alt="Instagram">
+          </a>
+          <a href="tg://resolve?domain=arsenalpay" class="social__item">
+              <img src="assets/img/svg/telegram.svg" width="48" height="38" alt="Telegram">
+          </a>
+          <a href="https://www.facebook.com/ArsenalPay.ru" class="social__item" target="_blank">
+              <img src="assets/img/svg/facebook.svg" width="48" height="38" alt="Facebook">
+          </a>
+    </div>
+        <div class="footer__lang">
+          <div class="lang">
+            <a href="https://arsenalpay.ru" class="lang__item active">
+              <span>Русский</span>
+            </a>
+            <a href="https://arsenalpay.com" class="lang__item">
+              <span>English</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+<!--<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDXu6wNP79AG7OHTlyBMRufLdjdvSmwo0A"></script>-->
+<script src="assets/js/app.js"></script>
+</body>
+</html>
