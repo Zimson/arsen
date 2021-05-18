@@ -18,4 +18,12 @@
       margin-bottom: 0;
     }
   }
+
+  &--instruction {
+    margin: 50px 0;
+    padding-left: 53px;
+    grid-template-columns: repeat(2, 340px);
+    grid-column-gap: 30px;
+    align-items: start;
+  }
 }

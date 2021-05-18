@@ -8,6 +8,7 @@
     color: #1a1a1a;
     background-color: var(--white-color);
     box-sizing: border-box;
+    resize: none;
 
     &:focus {
       outline: none;

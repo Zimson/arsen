@@ -48,19 +48,19 @@ footerLink: "https://arsenalpay.ru/dashboard/registration-type"
     <div class="page-section__container">
       <div class="tabs-panel" v-if="activeTab === 1">
         <div class="actions-group">
-          <button type="button" class="action" @click="showModal('payments')">
+          <button type="button" class="action" @click="showModal('payments', 'dataForm')">
             {{{ icon name="check--sm" width="62" height="62" mods="green" }}}
             <span class="action__text">Узнать о своём платеже</span>
           </button>
-          <button type="button" class="action" @click="showModal('findCheck')">
+          <button type="button" class="action" @click="showModal('findCheck', 'dataForm')">
             {{{ icon name="check--sm" width="62" height="62" mods="green" }}}
             <span class="action__text">Найти свой чек</span>
           </button>
-          <button type="button" class="action" @click="showModal('deleteAutoPayment')">
+          <button type="button" class="action" @click="showModal('deleteAutoPayment', 'dataForm')">
             {{{ icon name="timer--sm" width="62" height="62" mods="green" }}}
             <span class="action__text">Удалить автоплатёж</span>
           </button>
-          <button type="button" class="action" @click="showModal('deleteSavedCard')">
+          <button type="button" class="action" @click="showModal('deleteSavedCard', 'dataForm')">
             {{{ icon name="save-card--sm" width="62" height="62" mods="green" }}}
             <span class="action__text">Удалить сохранённую карту</span>
           </button>
@@ -94,27 +94,27 @@ footerLink: "https://arsenalpay.ru/dashboard/registration-type"
             {{{ icon name="test" width="116" height="116" mods="green" }}}
             <h2 class="page-section__title">Инструкции по оплате</h2>
             <div class="actions-group">
-              <button type="button" class="action">
+              <button type="button" class="action" @click="showModal('cardPay', 'cardPay')">
                 {{{ icon name="rub-big" width="62" height="62" mods="green" }}}
                 <span class="action__text">Оплата картой</span>
               </button>
-              <button type="button" class="action">
+              <button type="button" class="action" @click="showModal('savedCardPay', 'savedCardPay')">
                 {{{ icon name="rub-big" width="62" height="62" mods="green" }}}
                 <span class="action__text">Оплата сохранённой картой</span>
               </button>
-              <button type="button" class="action">
+              <button type="button" class="action" @click="showModal('phonePay', 'phonePay')">
 <!--                {{{ icon name="rub-big" width="62" height="62" mods="green" }}}-->
                 <span class="action__text">Оплата с баланса телефона</span>
               </button>
-              <button type="button" class="action">
+              <button type="button" class="action" @click="showModal('walletPay', 'walletPay')">
                 {{{ icon name="rub-big" width="62" height="62" mods="green" }}}
                 <span class="action__text">Оплата с электронного кошелька</span>
               </button>
-              <button type="button" class="action">
+              <button type="button" class="action" @click="showModal('addAutoPay', 'addAutoPay')">
                 {{{ icon name="rub-big" width="62" height="62" mods="green" }}}
                 <span class="action__text">Подключить автоплатёж</span>
               </button>
-              <button type="button" class="action">
+              <button type="button" class="action" @click="showModal('deleteAutoPay', 'deleteAutoPay')">
                 {{{ icon name="rub-big" width="62" height="62" mods="green" }}}
                 <span class="action__text">Удалить автоплатёж</span>
               </button>
@@ -127,7 +127,50 @@ footerLink: "https://arsenalpay.ru/dashboard/registration-type"
       </div>
     </div>
   </div>
+  <section class="page-section page-section--bg-blue page-section--no-skew page-section--solid">
+    <div id="http-uvedomleniya" class="page-section__container">
+      {{{ icon name="http" width="116" height="116" mods="purple" }}}
+      <h2 class="page-section__title">Не нашли ответ на свой вопрос?</h2>
+      <button @click="showModal('support', 'supportForm')">Связаться с нами</button>
+    </div>
+  </section>
   <app-modal :id="modal.id" v-if="modal.isOpen" v-on:close="closeModal($event)">
-    <app-data-form :id="modal.id"></app-data-form>
+    <app-data-form v-if="modalContentType === 'dataForm'" :id="modal.id"></app-data-form>
+    <app-support-form v-else-if="modalContentType === 'supportForm'" :id="modal.id"></app-support-form>
+    <div v-else-if="modalContentType === 'cardPay'" style="margin-top: 40px;">
+      <app-numeric-item title="К оплате принимаются карты: Visa, Mastercard, Maestro, Мир. "  order="1"></app-numeric-item>
+      <app-numeric-item title="Введите данные вашей карты" text="Номер карты, дату истечения и код CVC (3 цифры с обратной стороны карты)." order="2"></app-numeric-item>
+      <div class="row row--instruction">
+        {{{ img name="card-data" width="300" height="332" mods="with-auto, shadow"}}}
+        {{{ img name="visa-card" width="340" heiht="218" mods="with-auto"}}}
+      </div>
+      <app-numeric-item title="Нажмите кнопку оплатить" text="Вас может перенаправить на страницу вашего банка для подтверждения оплаты. " order="3"></app-numeric-item>
+      <app-numeric-item title="Введите код подтверждения из смс" text="Вы подтверждаете оплату и вас перенаправит на страницу с данными платежа." order="4"></app-numeric-item>
+      <div class="row row--instruction" style="grid-column-gap: 50px;">
+        {{{ img name="password" width="300" height="418" mods="with-auto, shadow"}}}
+        {{{ img name="payment-success" width="300" heiht="307" mods="with-auto, shadow"}}}
+      </div>
+      <app-numeric-item title="Чек о платеже придёт на ваш email" text="Если чек не пришёл на ваш email, вы можете найти свой чек <a class='link link--lg'>здесь.</a>" order="5"></app-numeric-item>
+    </div>
+    <div v-else-if="modalContentType === 'savedCardPay'" style="margin-top: 40px;">
+      <app-numeric-item title="При платеже вам не нужно вводить полные данные карты" text="Это ускоряет и упрощает процесс оплаты." order="1"></app-numeric-item>
+      <app-numeric-item title="Введите код CVC (3 цифры с обратной стороны карты)" text="Без этого кода безопасности оплата невозможна." order="2"></app-numeric-item>
+      <div class="row row--instruction">
+        {{{ img name="saved-card-data" width="300" height="412" mods="with-auto, shadow"}}}
+      </div>
+      <app-numeric-item title="Нажмите кнопку оплатить" text="Вас может перенаправить на страницу вашего банка для подтверждения оплаты." order="3"></app-numeric-item>
+      <app-numeric-item title="Введите код подтверждения из смс" text="Вы подтверждаете оплату и вас перенаправит на страницу с данными платежа." order="4"></app-numeric-item>
+      <div class="row row--instruction" style="grid-column-gap: 50px;">
+        {{{ img name="password" width="300" height="418" mods="with-auto, shadow"}}}
+        {{{ img name="payment-success" width="300" heiht="307" mods="with-auto, shadow"}}}
+      </div>
+      <app-numeric-item title="Чек о платеже придёт на ваш email" text="Если чек не пришёл на ваш email, вы можете найти свой чек <a class='link link--lg'>здесь.</a>" order="5"></app-numeric-item>
+      <app-numeric-item title="Вы можете сохранить другую карту" text="Нажмите кнопку «Оплатить другой картой» и поставьте галочку «запомнить мою карту». После успешной оплаты новая карта сохранится, и в следующий раз оплата будет происходить с неё." order="6"></app-numeric-item>
+      <app-numeric-item title="Вы можете удалить сохранённую карту" text="Чтобы удалить сохранённую карту перейдите по <a class='link link--lg'>ссылке</a> и следуйте инструкциям.</a>" order="7"></app-numeric-item>
+    </div>
+    <div v-else-if="modalContentType === 'phonePay'" style="margin-top: 40px;">phonePay</div>
+    <div v-else-if="modalContentType === 'walletPay'" style="margin-top: 40px;">walletPay</div>
+    <div v-else-if="modalContentType === 'addAutoPay'" style="margin-top: 40px;">addAutoPay</div>
+    <div v-else-if="modalContentType === 'deleteAutoPay'" style="margin-top: 40px;">deleteAutoPay</div>
   </app-modal>
 </div>

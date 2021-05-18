@@ -1,7 +1,19 @@
 .img {
   position: relative;
 
-  &--messanger {
+  &--shadow {
+    padding: 20px;
+    border-radius: 36px;
+    box-shadow: -2px 28px 42px 1px rgba(0, 0, 0, 0.15), 0 1px 6px 0 rgba(0, 0, 0, 0.09);
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: var(--white-color);
+  }
+
+  &--with-auto img {
+    width: auto;
+  }
+
+  &--messanger img {
     margin-top: -65px;
     margin-bottom: 18px;
     margin-right: auto;

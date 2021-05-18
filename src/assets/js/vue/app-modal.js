@@ -2,7 +2,14 @@ const modalTitleMap = {
   payments: 'Узнать о своем платеже',
   findCheck: 'Найти свой чек',
   deleteAutoPayment: 'Удалить автоплатеж',
-  deleteSavedCard: 'Удалить сохраненную карту'
+  deleteSavedCard: 'Удалить сохраненную карту',
+  support: 'Свяжитесь с нами',
+  cardPay: 'Оплата картой',
+  savedCardPay: 'Оплата сохранённой картой',
+  phonePay: 'Оплата с баланса телефона',
+  walletPay: 'Оплата с QIWI кошелька',
+  addAutoPay: 'Подключить автоплатёж',
+  deleteAutoPay: 'Удалить автоплатёж'
 };
 
 export default {
