@@ -67,21 +67,9 @@ footerLink: "https://arsenalpay.ru/dashboard/registration-type"
         </div>
         <section class="page-section page-section--test">
           <div id="testirovanie-oplaty-i-kassy" class="page-section__container">
-            {{{ icon name="test" width="116" height="116" mods="green" }}}
+            {{{ icon name="question--big" width="116" height="116" mods="green" }}}
             <h2 class="page-section__title">Частые вопросы</h2>
             <app-faq :data="faqBuyerData"></app-faq>
-<!--            <div class="tabs-panel" v-if="activeInnerTab === 1">-->
-<!--              One-->
-<!--            </div>-->
-<!--            <div class="tabs-panel" v-else-if="activeInnerTab === 2">-->
-<!--              Two-->
-<!--            </div>-->
-<!--            <div class="tabs-panel" v-else-if="activeInnerTab === 3">-->
-<!--              Three-->
-<!--            </div>-->
-<!--            <div class="tabs-panel" v-else-if="activeInnerTab === 4">-->
-<!--              Four-->
-<!--            </div>-->
           </div>
         </section>
         <section class="page-section">
@@ -118,7 +106,13 @@ footerLink: "https://arsenalpay.ru/dashboard/registration-type"
         </section>
       </div>
       <div class="tabs-panel" v-else>
-
+        <section class="page-section page-section--test">
+          <div id="testirovanie-oplaty-i-kassy" class="page-section__container">
+            {{{ icon name="question--big" width="116" height="116" mods="green" }}}
+            <h2 class="page-section__title">Частые вопросы</h2>
+            <app-faq :data="faqSellerData"></app-faq>
+          </div>
+        </section>
       </div>
     </div>
   </div>

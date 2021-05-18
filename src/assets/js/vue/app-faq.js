@@ -2,7 +2,12 @@ const tabsNameMap = {
   payment: 'Оплата',
   return: 'Возврат',
   delivery: 'Доставка',
-  security: 'Безопасность'
+  security: 'Безопасность',
+  connection: 'Подключение',
+  money: 'Деньги',
+  kassa: 'Касса',
+  integration: 'Интеграция',
+  account: 'Личный кабинет'
 }
 
 export default  {
