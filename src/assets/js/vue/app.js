@@ -30,10 +30,7 @@ const faqBuyerData = {
       title: 'Оплата из-за границы',
       items: [
         { question: 'Карты каких стран можно использовать при оплате?', answer: '' },
-        { question: 'Могу ли я сделать заказ находясь за границей?', answer: '' },
-        { question: '', answer: '' },
-        { question: '', answer: '' },
-        { question: '', answer: '' }
+        { question: 'Могу ли я сделать заказ находясь за границей?', answer: '' }
       ]
     }
   ],
