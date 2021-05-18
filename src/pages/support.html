@@ -49,19 +49,19 @@ footerLink: "https://arsenalpay.ru/dashboard/registration-type"
       <div class="tabs-panel" v-if="activeTab === 1">
         <div class="actions-group">
           <button type="button" class="action" @click="showModal('payments', 'dataForm')">
-            {{{ icon name="check--sm" width="62" height="62" mods="green" }}}
+            {{{ icon name="rub--md" width="62" height="62" mods="green" }}}
             <span class="action__text">Узнать о своём платеже</span>
           </button>
           <button type="button" class="action" @click="showModal('findCheck', 'dataForm')">
-            {{{ icon name="check--sm" width="62" height="62" mods="green" }}}
+            {{{ icon name="check--md" width="62" height="62" mods="green" }}}
             <span class="action__text">Найти свой чек</span>
           </button>
           <button type="button" class="action" @click="showModal('deleteAutoPayment', 'dataForm')">
-            {{{ icon name="timer--sm" width="62" height="62" mods="green" }}}
+            {{{ icon name="autopay--md" width="62" height="62" mods="green" }}}
             <span class="action__text">Удалить автоплатёж</span>
           </button>
           <button type="button" class="action" @click="showModal('deleteSavedCard', 'dataForm')">
-            {{{ icon name="save-card--sm" width="62" height="62" mods="green" }}}
+            {{{ icon name="saved-card--md" width="62" height="62" mods="green" }}}
             <span class="action__text">Удалить сохранённую карту</span>
           </button>
         </div>
@@ -91,31 +91,31 @@ footerLink: "https://arsenalpay.ru/dashboard/registration-type"
         </section>
         <section class="page-section">
           <div class="page-section__container">
-            {{{ icon name="test" width="116" height="116" mods="green" }}}
+            {{{ icon name="settings" width="126" height="92" mods="purple" }}}
             <h2 class="page-section__title">Инструкции по оплате</h2>
             <div class="actions-group">
               <button type="button" class="action" @click="showModal('cardPay', 'cardPay')">
-                {{{ icon name="rub-big" width="62" height="62" mods="green" }}}
+                {{{ icon name="card-circle--md" width="62" height="62" mods="green" }}}
                 <span class="action__text">Оплата картой</span>
               </button>
               <button type="button" class="action" @click="showModal('savedCardPay', 'savedCardPay')">
-                {{{ icon name="rub-big" width="62" height="62" mods="green" }}}
+                {{{ icon name="saved-card-circle--md" width="62" height="62" mods="green" }}}
                 <span class="action__text">Оплата сохранённой картой</span>
               </button>
               <button type="button" class="action" @click="showModal('phonePay', 'phonePay')">
-<!--                {{{ icon name="rub-big" width="62" height="62" mods="green" }}}-->
+                {{{ icon name="phone-circle--md" width="62" height="62" mods="green" }}}
                 <span class="action__text">Оплата с баланса телефона</span>
               </button>
               <button type="button" class="action" @click="showModal('walletPay', 'walletPay')">
-                {{{ icon name="rub-big" width="62" height="62" mods="green" }}}
+                {{{ icon name="wallet-circle--md" width="62" height="62" mods="green" }}}
                 <span class="action__text">Оплата с электронного кошелька</span>
               </button>
               <button type="button" class="action" @click="showModal('addAutoPay', 'addAutoPay')">
-                {{{ icon name="rub-big" width="62" height="62" mods="green" }}}
+                {{{ icon name="timer-circle--md" width="62" height="62" mods="green" }}}
                 <span class="action__text">Подключить автоплатёж</span>
               </button>
               <button type="button" class="action" @click="showModal('deleteAutoPay', 'deleteAutoPay')">
-                {{{ icon name="rub-big" width="62" height="62" mods="green" }}}
+                {{{ icon name="timer-circle--md" width="62" height="62" mods="green" }}}
                 <span class="action__text">Удалить автоплатёж</span>
               </button>
             </div>
@@ -129,7 +129,7 @@ footerLink: "https://arsenalpay.ru/dashboard/registration-type"
   </div>
   <section class="page-section page-section--bg-blue page-section--no-skew page-section--solid">
     <div id="http-uvedomleniya" class="page-section__container">
-      {{{ icon name="http" width="116" height="116" mods="purple" }}}
+      {{{ icon name="email" width="116" height="116" mods="purple" }}}
       <h2 class="page-section__title">Не нашли ответ на свой вопрос?</h2>
       <button @click="showModal('support', 'supportForm')">Связаться с нами</button>
     </div>
