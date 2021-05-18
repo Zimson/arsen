@@ -50622,15 +50622,6 @@ var faqBuyerData = {
     }, {
       question: 'Могу ли я сделать заказ находясь за границей?',
       answer: ''
-    }, {
-      question: '',
-      answer: ''
-    }, {
-      question: '',
-      answer: ''
-    }, {
-      question: '',
-      answer: ''
     }]
   }],
   return: [{
