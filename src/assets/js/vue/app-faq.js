@@ -12,12 +12,16 @@ export default  {
   data() {
     return {
       activeTab: 0,
+      activeItem: null,
       tabsNameMap
     }
   },
   methods: {
     setActiveTab(tab) {
       this.activeTab = tab;
+    },
+    setActiveItem(data) {
+      this.activeItem = data;
     },
     setTabsName(data) {
       return data.map((item) => {
@@ -30,9 +34,9 @@ export default  {
     <div v-for="(tab, key, idx) in data" class="faq" :key="key" :style="{display: idx === activeTab ? 'block' : 'none'}">
       <div class="faq__section" v-for="section in tab">
         <h3 class="faq__title">{{section.title}}</h3>
-        <div class="faq__item" v-for="item in section.items">
+        <div class="faq__item" v-for="item in section.items" @click="setActiveItem(item)" :key="item">
           <b>{{item.question}}</b>
-          <p>{{item.answer}}</p>
+          <p v-if="activeItem === item">{{item.answer || 'Ответ'}}</p>
           <svg  class="icon" width="48" height="38">
             <use xlink:href="assets/img/symbol/sprite.svg#caret" />
           </svg>
