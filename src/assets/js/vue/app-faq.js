@@ -41,7 +41,12 @@ export default  {
         <h3 class="faq__title">{{section.title}}</h3>
         <div class="faq__item" v-for="item in section.items" @click="setActiveItem(item)" :key="item">
           <b v-html="item.question"></b>
-          <p v-if="activeItem === item" v-html="item.answer"></p>
+          <template v-if="Array.isArray(item.answer)">
+            <p v-for="text in item.answer" v-if="activeItem === item" v-html="text"></p>
+          </template>
+          <template v-else>
+            <p v-if="activeItem === item" v-html="item.answer"></p> 
+          </template>
           <svg  class="icon" width="48" height="38">
             <use xlink:href="assets/img/symbol/sprite.svg#caret" />
           </svg>
