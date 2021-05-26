@@ -1,18 +1,25 @@
 .faq {
-  margin: 16px 0 0;
+  position: relative;
+  margin-top: 16px;
+  //margin-left: px;
   padding: 62px 56px 68px;
+  width: calc(100% + 52px);
+  max-width: 940px;
+  justify-self: start;
   border-radius: 60px;
   background-color: #edfcf1;
   text-align: left;
+  box-sizing: border-box;
 
   &__section {
+
     &:not(:last-child) {
       margin-bottom: 40px;
     }
   }
 
   &__title {
-    margin: 0 0 24px;
+    margin: 0 0 15px;
     font-family: $font-family;
     font-size: 20.2px;
     font-weight: 500;
@@ -22,26 +29,18 @@
   }
 
   &__item {
-    margin-bottom: 10px;
-    padding: 4px 8px 11px 16px;
-    display: grid;
-    grid-template-columns: 1fr 48px;
-    align-items: center;
-    align-content: start;
-    border-radius: 23.5px;
-    background-color: #cef0d3;
-    cursor: pointer;
-  }
+    margin-bottom: 4px;
+    //padding: 4px 8px;
 
-  &__item b {
-    display: block;
-    grid-column: 1 / 2;
-    font-family: $font-family;
-    font-size: 17.2px;
-    font-weight: 300;
-    line-height: 24px;
-    letter-spacing: -0.59px;
-    color: var(--gray-color);
+    &--active {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      margin-left: -16px;
+      padding: 11px 0;
+      padding-left: 16px;
+      border-radius: 23.5px;
+      background-color: #cef0d3;
+    }
   }
 
   &__item p {
@@ -52,6 +51,37 @@
     font-size: 17.2px;
     line-height: 32px;
     letter-spacing: -0.59px;
+    color: var(--gray-color);
+  }
+
+  &__item-header {
+    margin-left: -16px;
+    padding: 10px 0;
+    padding-left: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 23.5px;
+    cursor: pointer;
+
+    @include hover {
+      background-color: #cef0d3;
+    }
+
+    .faq__item--active & {
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  }
+
+  &__item-header b {
+    display: block;
+    grid-column: 1 / 2;
+    font-family: $font-family;
+    font-size: 17.2px;
+    font-weight: 300;
+    line-height: 24px;
+    letter-spacing: -0.45px;
     color: var(--gray-color);
   }
 }
