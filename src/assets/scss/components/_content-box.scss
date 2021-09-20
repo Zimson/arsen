@@ -83,6 +83,30 @@
     }
   }
 
+  &--about {
+    margin-bottom: 56px;
+    padding-bottom: 15px;
+
+    @include media-breakpoint-up(sm) {
+      padding-top: 58px;
+      padding-bottom: 13px;
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-top: 12px;
+      padding-top: 67px;
+      padding-bottom: 26px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      max-width: 940px;
+    }
+  }
+
+  &--pdt-54 {
+    padding-top: 54px;
+  }
+
   &--pdb-54 {
     padding-bottom: 54px;
   }

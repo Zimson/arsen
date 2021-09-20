@@ -305,6 +305,12 @@
         line-height: 26px;
       }
     }
+
+    &--lsp-md-m055 {
+      @include media-breakpoint-up(md) {
+        letter-spacing: -0.55px;
+      }
+    }
   }
 
   &__label {

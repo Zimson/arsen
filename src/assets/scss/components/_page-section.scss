@@ -127,6 +127,10 @@
     display: flex;
     flex-direction: column;
 
+    &--about {
+      padding-bottom: 63px;
+    }
+
     @include media-breakpoint-up(sm) {
        align-items: center;
        text-align: center;
@@ -135,6 +139,11 @@
     @include media-breakpoint-up(md) {
       padding-top: 140px;
       padding-bottom: 190px;
+
+      &--about {
+        padding-top: 169px;
+        padding-bottom: 105px;
+      }
     }
 
     .page-section--widget & {
@@ -621,6 +630,20 @@
     .page-section--cut & {
       @include media-breakpoint-up(xl) {
         margin-left: calc(-1 * var(--container-cut));
+      }
+    }
+
+    &--about {
+      @include media-breakpoint-up(xs) {
+        max-width: 520px;
+      }
+
+      @include media-breakpoint-up(sm) {
+        max-width: 440px;
+      }
+
+      @include media-breakpoint-up(md) {
+        max-width: 648px;
       }
     }
   }
