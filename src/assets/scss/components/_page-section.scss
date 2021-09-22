@@ -127,7 +127,8 @@
     display: flex;
     flex-direction: column;
 
-    &--about {
+    &--about,
+    &--contacts {
       padding-bottom: 63px;
     }
 
@@ -140,7 +141,8 @@
       padding-top: 140px;
       padding-bottom: 190px;
 
-      &--about {
+      &--about,
+      &--contacts {
         padding-top: 169px;
         padding-bottom: 105px;
       }
@@ -640,6 +642,16 @@
 
       @include media-breakpoint-up(sm) {
         max-width: 440px;
+      }
+
+      @include media-breakpoint-up(md) {
+        max-width: 648px;
+      }
+    }
+
+    &--contacts {
+      @include media-breakpoint-up(xs) {
+        max-width: 520px;
       }
 
       @include media-breakpoint-up(md) {

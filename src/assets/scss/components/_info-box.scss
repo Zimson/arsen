@@ -180,6 +180,20 @@
     }
   }
 
+  &--contacts-row {
+    @include media-breakpoint-up(lg) {
+      width: 220px;
+
+      &:not(&:last-of-type) {
+        margin-right: 20px;
+      }
+
+      &:not(&:first-of-type) {
+        margin-left: 20px;
+      }
+    }
+  }
+
   &__title {
     margin: 0 0 8px 0;
     font-size: 18.2px;
