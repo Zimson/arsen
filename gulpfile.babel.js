@@ -85,7 +85,7 @@ function sass() {
 
   const postCssPlugins = [
     // Autoprefixer
-    autoprefixer({ browsers: COMPATIBILITY }),
+    autoprefixer({ overrideBrowserslist: COMPATIBILITY }),
     postcssSVG({ dirs: 'src/assets/img/svg/'})
     // UnCSS - Uncomment to remove unused styles in production
     // PRODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
