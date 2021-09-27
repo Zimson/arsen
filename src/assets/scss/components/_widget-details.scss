@@ -31,7 +31,7 @@
     width: 360px;
 
     @include media-breakpoint-up(sm) {
-      width: 458px;
+      width: auto;
     }
 
     @include media-breakpoint-up(lg) {

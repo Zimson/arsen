@@ -146,14 +146,14 @@
       --border-radius-top: 50px;
       --border-radius-bottom: 36px;
 
-      margin-bottom: 49px;
-      height: 793px;
+      margin-bottom: 48px;
+      height: 794px;
       border-radius: var(--border-radius-top) var(--border-radius-top) var(--border-radius-bottom) var(--border-radius-bottom);
 
       @include media-breakpoint-up(sm) {
-        margin-bottom: 59px;
+        margin-bottom: 56px;
         width: 360px;
-        height: 864px;
+        height: 867px;
         border-bottom-left-radius: var(--border-radius-top);
         border-bottom-right-radius: var(--border-radius-top);
       }
