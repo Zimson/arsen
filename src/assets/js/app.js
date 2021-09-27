@@ -1,12 +1,12 @@
 import 'what-input';
 
-//polyfill
+//polyfills
 import './utils/polyfill';
-
 
 import Modal from './modules/Modal';
 import MobileNav from './modules/MobileNav';
 import './modules/Slider';
+import CookiesAgreementNotifier from "./modules/CookiesAgreementNotifier";
 
 function scrollToAnchor() {
   if (!window.location.hash) return;
@@ -25,7 +25,9 @@ document.addEventListener('DOMContentLoaded', function() {
     const src = iframe.dataset.src;
     iframe.src = src;
   });
-
+  
+  new CookiesAgreementNotifier();
+  
   // setTimeout(() => {
   //   scrollToAnchor();
   // }, 0)
