@@ -9,7 +9,8 @@ const modalTitleMap = {
   phonePay: 'Оплата с баланса телефона',
   walletPay: 'Оплата с QIWI кошелька',
   addAutoPay: 'Подключить автоплатёж',
-  deleteAutoPay: 'Удалить автоплатёж'
+  deleteAutoPay: 'Удалить автоплатёж',
+  partnership: 'Станьте агентом',
 };
 
 export default {
@@ -17,28 +18,31 @@ export default {
     id: String,
     isOpen: Boolean,
   },
+  
   data() {
     return {
       modalTitleMap
     }
   },
+  
   methods: {
     closeModal() {
       this.$emit('close', false);
     }
   },
+  
+  
+  
   template: `
-    <article class="modal">
-      <div class="modal__body" id="deleteAutoPaymentForm">
+    <article v-if="isOpen" :class="{'modal': true, ['modal--' + id]: id === 'partnership', 'modal--open': isOpen}">
+      <div :class="{'modal__body': true, ['modal__body--' + id]: !!id}">
         <button type="button" class="modal__close" @click="closeModal($event)">
           <svg  class="icon" width="12" height="12">
             <use xlink:href="assets/img/symbol/sprite.svg#cross" />
           </svg>
         </button>
-        <h1 class="modal__title">{{modalTitleMap[id]}}</h1>
-        <div class="modal__scroll">
-         <slot></slot>
-        </div>
+        <h1 :class="{'modal__title': true, ['modal__title--' + id]: id === 'partnership'}">{{modalTitleMap[id]}}</h1>
+        <slot></slot>
       </div>
     </article>
   `

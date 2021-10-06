@@ -23,6 +23,13 @@
     display: flex;
   }
 
+  &--partnership {
+    flex-direction: row;
+    height: initial;
+    max-height: initial;
+    --modal-height: initial;
+  }
+
   &__body {
     position: relative;
     margin: auto;
@@ -61,6 +68,17 @@
       --modal-width: 940px;
 
       padding: var(--body-padding-xl);
+    }
+
+    &--partnership {
+      padding: 22px 0 80px;
+
+      @include media-breakpoint-up(sm) {
+        padding-bottom: 90px;
+        --modal-height: initial;
+        max-width: 940px;
+        width: calc(100% - 40px);
+      }
     }
 
     .modal--check & {
@@ -105,6 +123,11 @@
 
     @include media-breakpoint-up(xl) {
       margin-top: 30px;
+    }
+
+    &--partnership {
+      width: calc(100% - 40px);
+      margin: 58px auto 60px
     }
   }
 

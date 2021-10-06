@@ -132,6 +132,10 @@
       padding-bottom: 63px;
     }
 
+    &--partnership {
+      padding-bottom: 118px;
+    }
+
     @include media-breakpoint-up(sm) {
        align-items: center;
        text-align: center;
@@ -145,6 +149,18 @@
       &--contacts {
         padding-top: 169px;
         padding-bottom: 105px;
+      }
+
+      &--partnership {
+        padding-top: 168px;
+        padding-bottom: 162px;
+      }
+    }
+
+    @include media-breakpoint-up(xl) {
+      &--partnership {
+        padding-top: 169px;
+        padding-bottom: 161px;
       }
     }
 
@@ -601,6 +617,18 @@
 
     @include clear-link-outline();
 
+    &--partnership {
+      margin-bottom: 8px;
+
+      @include media-breakpoint-up(sm) {
+        margin-bottom: 16px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        margin-bottom: 17px;
+      }
+    }
+
     @include media-breakpoint-up(sm) {
       max-width: unset;
       text-align: center;
@@ -756,11 +784,27 @@
 
     @include btn();
 
+    &--partnership {
+      background-color: transparent;
+
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    &--mgb-36 {
+      margin-bottom: 36px;
+    }
+
     @include media-breakpoint-up(md) {
       margin-right: unset;
       margin-left: unset;
       margin-bottom: 100px;
       max-width: 304px;
+
+      &--mgb-36 {
+        margin-bottom: 36px;
+      }
     }
 
     .page-section--cut & {

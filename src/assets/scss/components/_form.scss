@@ -2,6 +2,12 @@
   width: 416px;
   margin: 60px auto 0;
 
+  &--partnership {
+    width: calc(100% - 40px);
+    max-width: 416px;
+    margin: 0 auto;
+  }
+
   &__row {
     margin-bottom: 30px;
     display: grid;
@@ -14,6 +20,7 @@
   }
 
   &__field {
+    max-width: 416px;
     &--full {
       grid-column: 1 / -1;
     }
@@ -29,11 +36,11 @@
     letter-spacing: -0.69px;
     color: var(--gray-color);
     text-align: left;
+    padding: 0 8px;
   }
 
   &__submit {
     margin-top: 10px;
-    padding: 16px 110px 16px 111px;
     width: 100%;
     font-family: $font-family;
     font-size: 17px;
@@ -46,6 +53,9 @@
     border: solid 1px #0c81ff;
     background-color: var(--white-color);
     cursor: pointer;
+    text-transform: uppercase;
+    max-width: 416px;
+    padding: 16px 0;
 
     @include hover {
       background-color: #0c81ff;

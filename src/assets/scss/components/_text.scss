@@ -8,6 +8,10 @@
   letter-spacing: -0.26px;
   color: var(--gray-color);
 
+  &--mgb-32 {
+    margin-bottom: 32px;
+  }
+
   &--mgb-36 {
     margin-bottom: 36px;
   }
@@ -25,6 +29,12 @@
   &--mgb-md-36 {
     @include media-breakpoint-up(md) {
       margin-bottom: 36px;
+    }
+  }
+
+  &--mgb-md-32 {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 32px;
     }
   }
 

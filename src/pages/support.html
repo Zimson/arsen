@@ -123,9 +123,9 @@ footerLink: "https://arsenalpay.ru/dashboard/registration-type"
       <button @click="showModal('support', 'supportForm')">Связаться с нами</button>
     </div>
   </section>
-  <app-modal :id="modal.id" v-if="modal.isOpen" v-on:close="closeModal($event)">
-    <app-data-form v-if="modalContentType === 'dataForm'" :id="modal.id"></app-data-form>
-    <app-support-form v-else-if="modalContentType === 'supportForm'" :id="modal.id"></app-support-form>
+  <app-modal :id="modalId" v-if="isModalOpen" v-on:close="closeModal($event)">
+    <app-data-form v-if="modalContentType === 'dataForm'" :id="modalId"></app-data-form>
+    <app-support-form v-else-if="modalContentType === 'supportForm'" :id="modalId"></app-support-form>
     <div v-else-if="modalContentType === 'cardPay'" style="margin-top: 40px;">
       <app-numeric-item title="К оплате принимаются карты: Visa, Mastercard, Maestro, Мир. "  order="1"></app-numeric-item>
       <app-numeric-item title="Введите данные вашей карты" text="Номер карты, дату истечения и код CVC (3 цифры с обратной стороны карты)." order="2"></app-numeric-item>

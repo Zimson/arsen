@@ -27,10 +27,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
   
   new CookiesAgreementNotifier();
-  
-  // setTimeout(() => {
-  //   scrollToAnchor();
-  // }, 0)
 });
 
 document.addEventListener('click', function(e) {
@@ -62,6 +58,6 @@ import './vue/app';
 //     placeholder: 'hhhhh'
 //   })
 // })
-
+//
 // Vue.createApp(deleteAutoPaymentForm).mount('#deleteAutoPaymentForm');
 
