@@ -27,6 +27,7 @@ footerLink: "https://arsenalpay.ru/dashboard/registration-type"
 ---
 
 <div id="app">
+
   <section class="page-section page-section--cut page-section--bg-green page-section--no-skew">
     <div class="page-section__container page-section__container--partnership">
       <h1 class="page-section__title page-section__title--partnership">Станьте нашим агентом</h1>
@@ -48,6 +49,7 @@ footerLink: "https://arsenalpay.ru/dashboard/registration-type"
       </div>
     </div>
   </section>
+
   <app-modal :id="modalId" :is-open="isModalOpen" v-on:close="closeModal($event)">
     <app-partnership-form :id="modalId"></app-partnership-form>
   </app-modal>

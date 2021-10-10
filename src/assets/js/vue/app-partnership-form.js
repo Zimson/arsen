@@ -2,15 +2,17 @@ import {reactive} from 'vue/dist/vue.esm-bundler';
 import useVuelidate from '@vuelidate/core';
 import {required, email, helpers} from '@vuelidate/validators';
 
-export default  {
-  setup () {
+import ApiService from "../services/ApiService";
+
+export default {
+  setup() {
     const state = reactive({
-      name: '',
+      contact: '',
       email: '',
       commentary: ''
     });
     const rules = {
-      name: {
+      contact: {
         required: helpers.withMessage(
           () => `Поле обязательно для заполнения`,
           required,
@@ -22,16 +24,16 @@ export default  {
           required,
         ),
         email: helpers.withMessage(
-          () => `Укажите кореектный email`,
+          () => `Укажите корректный email`,
           email,
         )
       },
       commentary: {},
     }
     
-    const v$ = useVuelidate(rules, state)
+    const v8n = useVuelidate(rules, state)
     
-    return {name , v$ }
+    return {name, v8n}
   },
   
   props: {
@@ -42,63 +44,111 @@ export default  {
   
   data() {
     return {
-      formIsValid: false,
-      formSubmitted: false
+      formSubmitted: false,
+      resultMessage: '',
     }
   },
   
   methods: {
-    submit(data) {
-      if (this.v$.$invalid) {
-        this.formIsValid = false;
-      } else if (!this.v$.$invalid) {
-        this.formIsValid = true;
+    submit() {
+      const {v8n, ip} = this;
+      const {$invalid, contact, email, commentary} = v8n;
+      
+      v8n.$touch();
+      
+      if ($invalid) {
+        return;
       }
       
       this.formSubmitted = true;
       
-      setTimeout(() => {
-        // this.formSubmitted = false;
-      }, 1000);
+      const body = {
+        ip,
+        email: email.$model,
+        contact: contact.$model,
+        comment: commentary.$model,
+        action: 2,
+      };
+      
+      ApiService.sendPartnershipRequest({body})
+        .then(resultMessage => {
+          if (resultMessage.toLowerCase().includes('ваше сообщение отправлено')) {
+            this.resultMessage = 'Ваша заявка успешно отправлена.\nМы свяжемся с вами для заключения договора в ближайшее время.'
+            
+            if (yaCounter28148454 && ga) {
+              yaCounter28148454.reachGoal("AgentSendRequest");
+              ga("send", "event", "form", "agent", "AgentSendRequest");
+            }
+            
+            return;
+          }
+          
+          throw new Error(resultMessage.toString());
+        })
+        .catch(error => {
+          this.resultMessage = 'Что-то пошло не так.\nПопробуйте отправить заявку ещё раз.'
+          console.error(error);
+        });
     }
   },
   
+  beforeMount() {
+    if (yaCounter28148454 && ga) {
+      yaCounter28148454.reachGoal('AgentButtonFillRequest');
+      ga('send', 'event', 'button', 'agent', 'AgentButtonFillRequest')
+    }
+    
+    
+    ApiService.getIp()
+      .then(ip => {this.ip = ip;})
+      .catch(error => console.error(error));
+  },
   
   template: `
-    <form action="" method="" @submit.prevent="submit($event)" class="form form--partnership" autocomplete="off" >
-      <label for="name" class="form__label">Ваше имя</label>
-      <div class="form__row">
-        <div class="form__field form__field--full">
-          <div class="input" :class="{ error: v$.name.$invalid && v$.name.$dirty}">
-            <input id="name" type="text" class="input__field"  v-model="v$.name.$model" @blur="v$.name.$touch" placeholder="Введите выше имя" />
+      <div v-if="!!resultMessage.length" class="form__result-message">{{resultMessage}}</div>
+      <form v-else method="" @submit.prevent="submit($event)" class="form form--partnership" autocomplete="off">
+        <label for="contact" class="form__label">Ваше имя</label>
+        <div class="form__row">
+          <div class="form__field form__field--full">
+            <div class="input" :class="{ error: v8n.contact.$invalid && v8n.contact.$dirty}">
+              <input id="contact" name="contact" type="text" class="input__field" v-model="v8n.contact.$model"
+                     @blur="v8n.contact.$touch" placeholder="Введите выше имя" :disabled="formSubmitted"/>
+            </div>
+          </div>
+          <div class="form__message" v-if="v8n.contact.required.$invalid && v8n.contact.$dirty">
+            {{ v8n.contact.required.$message }}
           </div>
         </div>
-        <div class="form__message" v-if="v$.name.required.$invalid && v$.name.$dirty">{{ v$.name.required.$message }}</div>
-      </div>
-      <label for="email" class="form__label">Ваш email</label>
-      <div class="form__row">
-        <div class="form__field form__field--full">
-          <div class="input" :class="{ error: v$.email.$invalid && v$.email.$dirty}">
-            <input id="email" type="text" class="input__field"  v-model="v$.email.$model" @blur="v$.email.$touch" placeholder="Введите ваш email" />
+        <label for="email" class="form__label">Ваш email</label>
+        <div class="form__row">
+          <div class="form__field form__field--full">
+            <div class="input" :class="{ error: v8n.email.$invalid && v8n.email.$dirty}">
+              <input id="email" name="email" type="text" class="input__field" v-model="v8n.email.$model"
+                     @blur="v8n.email.$touch" placeholder="Введите ваш email" :disabled="formSubmitted"/>
+            </div>
+          </div>
+          <div class="form__message" v-if="v8n.email.required.$invalid && v8n.email.$dirty" :disabled="formSubmitted">
+            {{ v8n.email.required.$message }}
+          </div>
+          <div class="form__message" v-else-if="v8n.email.email.$invalid && v8n.email.$dirty">
+            {{ v8n.email.email.$message }}
           </div>
         </div>
-        <div class="form__message" v-if="v$.email.required.$invalid && v$.email.$dirty">{{ v$.email.required.$message }}</div>
-        <div class="form__message" v-else-if="v$.email.email.$invalid && v$.email.$dirty">{{ v$.email.email.$message }}</div>
-      </div>
-      <label for="question" class="form__label">Комментарий</label>
-      <div class="form__row">
-        <div class="form__field form__field--full">
-          <div class="input">
-            <textarea  id="commentary" class="input__field" v-model="v$.commentary.$model" placeholder="Введите комментарий" cols="30" rows="12"></textarea>
+        <label for="commentary" class="form__label">Комментарий</label>
+        <div class="form__row">
+          <div class="form__field form__field--full">
+            <div class="input">
+              <textarea id="commentary" name="commentary" class="input__field" v-model="v8n.commentary.$model"
+                        placeholder="Введите комментарий" cols="30" rows="12" :disabled="formSubmitted"></textarea>
+            </div>
           </div>
         </div>
-      </div>
-      <button type="submit" class="form__submit">
-        <svg v-if="formSubmitted" class="icon" width="48" height="38">
-          <use xlink:href="assets/img/symbol/sprite.svg#loader--lg" />
-        </svg>
-        <span v-else>Отправить</span>
-      </button>
-    </form>
+        <button type="submit"
+                :class="{'form__submit': true, 'form__submit--partnership': true, 'form__submit--with-loader': !!formSubmitted}"
+                :disabled="formSubmitted">
+          <img v-if="formSubmitted" src="assets/img/svg/loader--lg.svg" class="icon form__submit__loader" width="48" height="36" />
+          <span v-else>Отправить</span>
+        </button>
+      </form>
   `
 }

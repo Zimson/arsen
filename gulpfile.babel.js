@@ -107,6 +107,10 @@ function sass() {
 let webpackConfig = {
   mode: (PRODUCTION ? 'production' : 'development'),
   plugins: [
+    new webpack2.DefinePlugin({
+      __VUE_OPTIONS_API__: 'true',
+      __VUE_PROD_DEVTOOLS__: 'false'
+    }),
     new webpack2.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',
