@@ -74,10 +74,14 @@ export default {
         .then(resultMessage => {
           if (resultMessage.toLowerCase().includes('ваше сообщение отправлено')) {
             this.resultMessage = 'Ваша заявка успешно отправлена.\nМы свяжемся с вами для заключения договора в ближайшее время.'
+  
+  
+            if (window.yaCounter28148454) {
+              window.yaCounter28148454.reachGoal("AgentSendRequest");
+            }
             
-            if (yaCounter28148454 && ga) {
-              yaCounter28148454.reachGoal("AgentSendRequest");
-              ga("send", "event", "form", "agent", "AgentSendRequest");
+            if (window.ga) {
+              window.ga("send", "event", "form", "agent", "AgentSendRequest");
             }
             
             return;
@@ -92,16 +96,18 @@ export default {
     }
   },
   
-  beforeMount() {
-    if (yaCounter28148454 && ga) {
-      yaCounter28148454.reachGoal('AgentButtonFillRequest');
-      ga('send', 'event', 'button', 'agent', 'AgentButtonFillRequest')
-    }
-    
-    
+  mounted() {
     ApiService.getIp()
       .then(ip => {this.ip = ip;})
       .catch(error => console.error(error));
+    
+    if (window.yaCounter28148454) {
+      window.yaCounter28148454.reachGoal('AgentButtonFillRequest');
+    }
+  
+    if (window.ga) {
+      window.ga('send', 'event', 'button', 'agent', 'AgentButtonFillRequest');
+    }
   },
   
   template: `
@@ -110,7 +116,7 @@ export default {
         <label for="contact" class="form__label">Ваше имя</label>
         <div class="form__row">
           <div class="form__field form__field--full">
-            <div class="input" :class="{ error: v8n.contact.$invalid && v8n.contact.$dirty}">
+            <div class="input">
               <input id="contact" name="contact" type="text" class="input__field" v-model="v8n.contact.$model"
                      @blur="v8n.contact.$touch" placeholder="Введите выше имя" :disabled="formSubmitted"/>
             </div>
@@ -122,7 +128,7 @@ export default {
         <label for="email" class="form__label">Ваш email</label>
         <div class="form__row">
           <div class="form__field form__field--full">
-            <div class="input" :class="{ error: v8n.email.$invalid && v8n.email.$dirty}">
+            <div class="input">
               <input id="email" name="email" type="text" class="input__field" v-model="v8n.email.$model"
                      @blur="v8n.email.$touch" placeholder="Введите ваш email" :disabled="formSubmitted"/>
             </div>

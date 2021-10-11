@@ -21,14 +21,5 @@
       background-repeat: no-repeat;
       background-position: 0 50%;
     }
-
-    .input.error & {
-      border-color: #f53963;
-      color: #f53963;
-
-      @include placeholder {
-        color: #f53963;
-      }
-    }
   }
 }
