@@ -4,10 +4,9 @@ import VCalendar from 'v-calendar';
 
 import appAlert from './app-alert';
 import appResultBox from './app-result-box';
-import appModal from './app-modal';
 import appDataForm from './app-data-form';
 import appSupportForm from './app-support-form';
-import appPartnershipForm from './app-partnership-form';
+import appPartnershipModal from './app-partnership-modal';
 import appNumericItem from './app-numeric-item';
 import appTabsNav from './app-tabs-nav';
 import appFaq from './app-faq';
@@ -18,7 +17,6 @@ const app = createApp({
     return {
       activeTab: 1,
       activeInnerTab: 1,
-      modalContentType: '',
       modalId: '',
       isModalOpen: false,
       faqBuyerData,
@@ -35,15 +33,19 @@ const app = createApp({
       this.activeInnerTab = pos;
     },
     
-    showModal(id, contentType) {
+    showModal(id) {
       this.modalId = id;
       this.isModalOpen = true;
-      this.modalContentType = contentType;
     },
     
-    closeModal(data) {
+    closeModal() {
       this.modalId = '';
-      this.isModalOpen = data;
+      this.isModalOpen = false;
+    },
+    
+    // use for destroyed "v-if"-components
+    createRandomKey() {
+      return Math.random();
     }
   },
   
@@ -52,15 +54,13 @@ const app = createApp({
 
 app.component('app-alert', appAlert);
 app.component('app-result-box', appResultBox);
-app.component('app-modal', appModal);
 app.component('app-data-form', appDataForm);
 app.component('app-support-form', appSupportForm);
-app.component('app-partnership-form', appPartnershipForm);
+app.component('app-partnership-modal', appPartnershipModal);
 app.component('app-numeric-item', appNumericItem);
 app.component('app-tabs-nav', appTabsNav);
 app.component('app-faq', appFaq);
 
 app.use(VCalendar, {});
-// app.use(VueMask);
 
 app.mount('#app');

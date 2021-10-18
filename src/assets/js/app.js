@@ -47,17 +47,3 @@ document.addEventListener('click', function(e) {
 
 import './vue/app';
 
-
-
-
-
-// const deleteAutoPaymentForm = ({
-//   data: () => ({
-//     el: '#deleteAutoPaymentForm',
-//     message: 'Hello Vue!',
-//     placeholder: 'hhhhh'
-//   })
-// })
-//
-// Vue.createApp(deleteAutoPaymentForm).mount('#deleteAutoPaymentForm');
-

@@ -10,38 +10,32 @@ const modalTitleMap = {
   walletPay: 'Оплата с QIWI кошелька',
   addAutoPay: 'Подключить автоплатёж',
   deleteAutoPay: 'Удалить автоплатёж',
-  partnership: 'Станьте агентом',
 };
 
 export default {
   props: {
-    id: String,
+    title: String,
     isOpen: Boolean,
+    onClose: Function,
+    classNameSuffix: String,
   },
   
   data() {
     return {
-      modalTitleMap
+      modalTitleMap,
     }
   },
-  
-  methods: {
-    closeModal() {
-      this.$emit('close', false);
-    }
-  },
-  
   
   
   template: `
-    <article v-if="isOpen" :class="{'modal': true, ['modal--' + id]: id === 'partnership', 'modal--open': isOpen}">
-      <div :class="{'modal__body': true, ['modal__body--' + id]: !!id}">
-        <button type="button" class="modal__close" @click="closeModal($event)">
+    <article v-if="isOpen" :class="{'modal': true, ['modal--' + classNameSuffix]: !!classNameSuffix, 'modal--open': isOpen}">
+      <div :class="{'modal__body': true, ['modal__body--' + classNameSuffix]: !!classNameSuffix}">
+        <button type="button" class="modal__close" @click="onClose($event)">
           <svg  class="icon" width="12" height="12">
             <use xlink:href="assets/img/symbol/sprite.svg#cross" />
           </svg>
         </button>
-        <h1 :class="{'modal__title': true, ['modal__title--' + id]: id === 'partnership'}">{{modalTitleMap[id]}}</h1>
+        <h1 :class="{'modal__title': true, ['modal__title--' + classNameSuffix]: !!classNameSuffix}">{{title}}</h1>
         <slot></slot>
       </div>
     </article>

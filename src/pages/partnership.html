@@ -49,8 +49,5 @@ footerLink: "https://arsenalpay.ru/dashboard/registration-type"
       </div>
     </div>
   </section>
-
-  <app-modal :id="modalId" :is-open="isModalOpen" v-on:close="closeModal($event)">
-    <app-partnership-form :id="modalId"></app-partnership-form>
-  </app-modal>
+  <app-partnership-modal :key="createRandomKey()" :id="modalId" :is-open="isModalOpen" :on-close="closeModal" :class-name-suffix="'partnership'"></app-partnership-modal>
 </div>
