@@ -39,11 +39,8 @@ export default {
   
   props: {
     title: String,
-    isOpen: Boolean,
     onClose: Function,
     id: String,
-    type: String,
-    text: String
   },
   
   components: {
@@ -121,7 +118,7 @@ export default {
   },
   
   template: `
-    <app-modal :title="'Станьте агентом'" :is-open="isOpen" :on-close="onClose">
+    <app-modal :id="id" :title="'Станьте агентом'" :on-close="onClose" :is-open="!!id">
     <div v-if="!!resultMessage.length" class="form__result-message">{{ resultMessage }}</div>
     <form v-else method="" @submit.prevent="submit($event)" class="form form--partnership" autocomplete="off">
       <label for="contact" class="form__label">Ваше имя</label>

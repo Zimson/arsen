@@ -12,12 +12,28 @@ const modalTitleMap = {
   deleteAutoPay: 'Удалить автоплатёж',
 };
 
-export default {
+const modalIds = {
+  partnership: 'partnership',
+};
+
+const modalHashes = {
+  agentModal: 'agentModal'
+};
+
+const hashToModal = {
+  [modalHashes.agentModal]: modalIds.partnership,
+};
+
+const modalToHash = {
+  [modalIds.partnership]: modalHashes.agentModal,
+};
+
+const AppModal = {
   props: {
+    id: String,
     title: String,
-    isOpen: Boolean,
     onClose: Function,
-    classNameSuffix: String,
+    isOpen: Boolean,
   },
   
   data() {
@@ -26,18 +42,30 @@ export default {
     }
   },
   
+  mounted() {
+    if (this.$refs.modal) {
+      this.$refs.modal.focus();
+    }
+  },
   
   template: `
-    <article v-if="isOpen" :class="{'modal': true, ['modal--' + classNameSuffix]: !!classNameSuffix, 'modal--open': isOpen}">
-      <div :class="{'modal__body': true, ['modal__body--' + classNameSuffix]: !!classNameSuffix}">
-        <button type="button" class="modal__close" @click="onClose($event)">
-          <svg  class="icon" width="12" height="12">
-            <use xlink:href="assets/img/symbol/sprite.svg#cross" />
-          </svg>
-        </button>
-        <h1 :class="{'modal__title': true, ['modal__title--' + classNameSuffix]: !!classNameSuffix}">{{title}}</h1>
-        <slot></slot>
-      </div>
+    <article tabindex="0" :class="{'modal': true, ['modal--' + id]: !!id, 'modal--open': !!isOpen}" @keyup.esc="onClose($event)" ref="modal">
+    <div :class="{'modal__body': true, ['modal__body--' + id]: !!id}">
+      <button type="button" class="modal__close" @click="onClose($event)">
+        <svg class="icon" width="12" height="12">
+          <use xlink:href="assets/img/symbol/sprite.svg#cross"/>
+        </svg>
+      </button>
+      <h1 :class="{'modal__title': true, ['modal__title--' + id]: !!id}">{{ title }}</h1>
+      <slot></slot>
+    </div>
     </article>
   `
-}
+};
+
+AppModal.modalIds = modalIds;
+AppModal.modalToHash = modalToHash;
+AppModal.modalHashes = modalHashes;
+AppModal.hashToModal = hashToModal;
+
+export default AppModal;

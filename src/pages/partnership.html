@@ -34,7 +34,7 @@ footerLink: "https://arsenalpay.ru/dashboard/registration-type"
       <div class="page-section__text">
         <p class="text text--mgb-32 text--mgb-sm-32 text--mgb-md-32 text--ls-26 text--md-size-lg">Приводите клиентов и получайте ежемесячный доход.</p>
       </div>
-      <button type="button" class="page-section__btn page-section__btn--partnership page-section__btn--mgb-36" @click="showModal('partnership')">Стать агентом</button>
+      <button type="button" class="page-section__btn page-section__btn--partnership page-section__btn--mgb-36" @click="showModal(modalIds.partnership)">Стать агентом</button>
       <div class="content-box content-box--shadow-xs content-box--partnership">
         {{{ info-box title="10% от нашей прибыли по каждому клиенту"  text='Вы ежемесячно получаете 10% от нашей прибыли
         по каждому клиенту, которому были подключены онлайн-платежи. Рассказывайте о продуктах и услугах ArsenalPay
@@ -49,5 +49,5 @@ footerLink: "https://arsenalpay.ru/dashboard/registration-type"
       </div>
     </div>
   </section>
-  <app-partnership-modal :key="createRandomKey()" :id="modalId" :is-open="isModalOpen" :on-close="closeModal" :class-name-suffix="'partnership'"></app-partnership-modal>
+  <app-partnership-modal v-if="modalId === modalIds.partnership" :id="modalId" :on-close="closeModal"></app-partnership-modal>
 </div>
