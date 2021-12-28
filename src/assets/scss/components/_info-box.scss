@@ -302,6 +302,12 @@
       }
     }
 
+    &--w-md-400 {
+      @include media-breakpoint-up(md) {
+        width: 400px;
+      }
+    }
+
     &--mw-lg-400 {
       @include media-breakpoint-up(lg) {
         max-width: 400px;

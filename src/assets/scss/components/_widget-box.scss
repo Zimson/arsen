@@ -1,6 +1,6 @@
 .widget-box {
-  --widget-instagram-height--xs: 1178px;
-  --widget-instagram-height--sm: 934px;
+  --widget-instagram-height--xs: 1234px;
+  --widget-instagram-height--sm: 996px;
   --widget-instagram-width--sm: 583px;
 
   display: flex;
@@ -147,19 +147,19 @@
       --border-radius-bottom: 36px;
 
       margin-bottom: 48px;
-      height: 794px;
+      height: 850px;
       border-radius: var(--border-radius-top) var(--border-radius-top) var(--border-radius-bottom) var(--border-radius-bottom);
 
       @include media-breakpoint-up(sm) {
         margin-bottom: 56px;
         width: 360px;
-        height: 867px;
+        height: 928px;
         border-bottom-left-radius: var(--border-radius-top);
         border-bottom-right-radius: var(--border-radius-top);
       }
 
       @include media-breakpoint-up(md) {
-        margin-top: 22px;
+        margin-top: 20px;
         margin-bottom: 80px;
       }
 
@@ -304,16 +304,9 @@
 
   &__widget img {
     display: block;
-    margin-top: -4px;
 
     @include media-breakpoint-up(sm) {
       margin-top: 0;
-    }
-
-    .widget-box--no-site & {
-      @include media-breakpoint-up(sm) {
-        margin-top: 19px;
-      }
     }
   }
 
@@ -339,13 +332,15 @@
       @include media-breakpoint-up(lg) {
         padding-top: 55px;
       }
-    }
 
-    //.widget-box--dashboard & {
-    //  @include media-breakpoint-up(lg) {
-    //    margin-top: 40px;
-    //  }
-    //}
+      @media screen and (min-width: 1000px){
+        padding-top: 70px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        padding-top: 90px;
+      }
+    }
 
     .widget-box--instagram & {
       @include media-breakpoint-up(sm) {
@@ -353,8 +348,12 @@
       }
 
       @include media-breakpoint-up(lg) {
-        margin-top: 67px;
+        margin-top: 40px;
         grid-column: 2 / 3;
+      }
+
+      @include media-breakpoint-up(xl) {
+        margin-top: 67px;
       }
     }
 
@@ -392,6 +391,10 @@
         margin-top: -3px;
       }
 
+      @media screen and (min-width: 1000px) {
+        margin-top: 25px;
+      }
+
       @include media-breakpoint-up(xl) {
         margin-top: 8px;
       }
@@ -407,10 +410,30 @@
         margin-left: 20px;
       }
 
+      @media screen and (min-width: 1000px){
+        margin-top: 55px;
+      }
+
       @include media-breakpoint-up(xl) {
         margin-top: 55px;
         margin-left: 40px;
       }
     }
+  }
+}
+
+picture.img.widget-box--instagram-img {
+  height: 1234px;
+
+  @include media-breakpoint-up(sm) {
+    height: 996px;
+  }
+}
+
+picture.img.widget-box--no-site-img {
+  height: 850px;
+
+  @include media-breakpoint-up(sm) {
+    height: 928px;
   }
 }

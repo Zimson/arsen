@@ -3,16 +3,16 @@ layout: default
 
 title: "Приём платежей без сайта с бесплатной онлайн кассой теперь и для самозанятых"
 description: "Принимайте платежи без своего сайта. Теперь прием платежей доступен и для самозанятых.
-Никаких расходов на сайт и кассу. Вы экономите от 60 000 руб. в год. Вы сможете принимать платежи в Instagram, WhatsApp,
-Telegram, VK, Facebook, свой сайт иметь не нужно."
+Никаких расходов на сайт и кассу. Вы экономите от 60 000 руб. в год. Вы сможете принимать платежи картами
+и Apple Pay в Instagram, WhatsApp, Telegram, VK, Facebook, свой сайт иметь не нужно."
 
 image: "https://arsenalpay.ru/priem-platezhej-bez-sajta-fb.png"
 canonical: "https://arsenalpay.ru/quickstart.html"
 
 twitterTitle: "ArsenalPay | Приём платежей без сайта с бесплатной онлайн кассой теперь и для самозанятых"
 twitterDescription: "Принимайте платежи без своего сайта. Теперь прием платежей доступен и для самозанятых.
-Никаких расходов на сайт и кассу. Вы экономите от 60 000 руб. в год. Вы сможете принимать платежи в Instagram, WhatsApp,
-Telegram, VK, Facebook, свой сайт иметь не нужно."
+Никаких расходов на сайт и кассу. Вы экономите от 60 000 руб. в год. Вы сможете принимать платежи картами
+и Apple Pay в Instagram, WhatsApp, Telegram, VK, Facebook, свой сайт иметь не нужно."
 twitterImage: "priem-platezhej-bez-sajta-tw.png"
 
 vkImage: "https://arsenalpay.ru/priem-platezhej-bez-sajta-vk.png"
@@ -22,9 +22,9 @@ ogSecureUrl: "https://arsenalpay.ru/priem-platezhej-bez-sajta-fb.png"
 ogImage: "https://arsenalpay.ru/priem-platezhej-bez-sajta-square.png"
 ogUrl: "https://arsenalpay.ru/quickstart.html"
 ogTitle: "ArsenalPay | Приём платежей без сайта с бесплатной онлайн кассой теперь и для самозанятых"
-ogDescription: "Принимайте платежи без своего сайта. Теперь прием платежей доступен и для самозанятых. Никаких расходов
-на сайт и кассу. Вы экономите от 60 000 руб. в год. Вы сможете принимать платежи в Instagram, WhatsApp, Telegram, VK, Facebook,
-свой сайт иметь не нужно."
+ogDescription: "Принимайте платежи без своего сайта. Теперь прием платежей доступен и для самозанятых.
+Никаких расходов на сайт и кассу. Вы экономите от 60 000 руб. в год. Вы сможете принимать платежи картами
+и Apple Pay в Instagram, WhatsApp, Telegram, VK, Facebook, свой сайт иметь не нужно."
 
 footerLink: "https://arsenalpay.ru/dashboard/quickstart?step=1"
 
@@ -39,7 +39,7 @@ footerLink: "https://arsenalpay.ru/dashboard/quickstart?step=1"
     <div class="u--mgb-sm-36">
       <p class="text text--ls-36 text--inline-sm text--md-size-lg">Вам больше не&nbsp;нужен свой сайт, чтобы принимать платежи. <br class="br br--show-md"></p>
       <p class="text text--ls-36 text--inline-sm text--md-size-lg">Принимайте оплату где угодно&nbsp;&mdash; в&nbsp;любых соцсетях или месенджерах.</p>
-      <p class="text text--ls-36 text--inline-sm text--mgb-36 text--md-size-lg"><br class="br br--show-lg">Карты всех стран мира: <br class="br br--show-xs br--hide-sm">Visa,&nbsp;MasterCard, Maestro,&nbsp;Мир.</p>
+      <p class="text text--ls-36 text--inline-sm text--mgb-36 text--md-size-lg"><br class="br br--show-lg">Карты всех стран мира: <br class="br br--show-xs br--hide-sm">Visa, MasterCard, Мир, Apple Pay.</p>
     </div>
     <a href="https://arsenalpay.ru/dashboard/quickstart?step=1" class="page-section__btn" style="margin-bottom: 0">Подключить</a>
   </div>
@@ -133,7 +133,7 @@ footerLink: "https://arsenalpay.ru/dashboard/quickstart?step=1"
     </div>
     <div class="widget-box widget-box--no-site">
       <div class="widget-box__widget">
-        {{{ img name="widget-no-site" breakpoints='{"sm": true}'}}}
+        {{{ img className="widget-box--no-site-img" name="widget-no-site" breakpoints='{"sm": true}'}}}
       </div>
       <div class="widget-box__content">
         {{{ info-box
@@ -183,6 +183,14 @@ footerLink: "https://arsenalpay.ru/dashboard/quickstart?step=1"
           Вам придёт уведомление как&nbsp;только счёт будет оплачен.'
         icon='{"name": "check-medium", "color": "pink"}'
         width="52" height="46"
+        mods="mgb-60, mgb-md-80, icon-space-lg"}}}
+      {{{ info-box
+        title="Apple Pay"
+        text='Apple Pay упростит и ускорит оплату для ваших клиентов. Им не нужно вводить данные карты, адрес доставки и телефон.
+          Для безопасности платёж подтверждается<br class="br br--show-lg"/> отпечатком пальца — Touch ID, или через распознавание лица — Face ID.<br class="br br--show-lg"/> Отдельно настраивать
+          Apple Pay вам не придётся, все заработает сразу.'
+        icon='{"name": "apple-pay", "color": "black"}'
+        width="68" height="45"
         mods="mgb-60, mgb-md-80, icon-space-lg"}}}
       {{{ info-box
         title="Возврат платежа"
@@ -241,7 +249,7 @@ footerLink: "https://arsenalpay.ru/dashboard/quickstart?step=1"
     <div class="rate">
       <div class="rate__item">
         {{{ rate-box count="3" text="Комиссия за успешный платёж <br class='br br--show-xs' /><b>от ArsenalPay</b>" }}}
-        {{{ rate-box count="2" prefix="+" text="Комиссия за успешный платёж <br class='br br--show-xs' /><b>от Visa, Mastercard, Мир</b>" }}}
+        {{{ rate-box count="2" prefix="+" text="Комиссия за успешный платёж <br class='br br--show-xs' /><b>от Visa, Mastercard, Мир, Apple Pay</b>" }}}
       </div>
       <div class="rate__item">
         {{{ note text='["У нас нет дополнительных комиссий и звездочек в договоре."]' mods="no-mgt, w-full" textMods="sm-center, lg" }}}
