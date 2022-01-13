@@ -300,6 +300,14 @@
         order: 2;
       }
     }
+
+    .widget-box--dev & {
+      height: 498px;
+
+      @include media-breakpoint-up(sm) {
+        height: 502px;
+      }
+    }
   }
 
   &__widget img {
@@ -316,11 +324,7 @@
     .widget-box--dev & {
 
       @include media-breakpoint-up(lg) {
-        padding-top: 46px;
-      }
-
-      @include media-breakpoint-up(xl) {
-        padding-top: 56px;
+        padding-top: 82px;
       }
     }
 
@@ -436,4 +440,16 @@ picture.img.widget-box--no-site-img {
   @include media-breakpoint-up(sm) {
     height: 928px;
   }
+}
+
+picture.img.widget-box--instagram-img {
+  height: 1234px;
+
+  @include media-breakpoint-up(sm) {
+    height: 996px;
+  }
+}
+
+picture.img.developers-page {
+  height: 458px;
 }
