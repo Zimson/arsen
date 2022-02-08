@@ -31,17 +31,20 @@ export default  {
 
     return {name , v$ }
   },
+  
   props: {
     id: String,
     type: String,
     text: String
   },
+  
   data() {
     return {
       formIsValid: false,
       formSubmitted: false
     }
   },
+  
   methods: {
     submit(data) {
       if (this.v$.$invalid) {

@@ -23,7 +23,7 @@ module.exports = function(options) {
 
   const alertClass = setMods('alert', mods);
 
-  const alert = `<article class="${alertClass}" ${style ? `style="${style}"` : ``}>
+  const alert = `<article class="${alertClass} success" ${style ? `style="${style}"` : ``}>
                   <svg  class="icon" width="48" height="38">
                     <use xlink:href="${root}assets/img/symbol/sprite.svg#alert-success" />
                   </svg>

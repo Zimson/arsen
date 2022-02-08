@@ -180,6 +180,20 @@
     }
   }
 
+  &--contacts-row {
+    @include media-breakpoint-up(lg) {
+      width: 220px;
+
+      &:not(&:last-of-type) {
+        margin-right: 20px;
+      }
+
+      &:not(&:first-of-type) {
+        margin-left: 20px;
+      }
+    }
+  }
+
   &__title {
     margin: 0 0 8px 0;
     font-size: 18.2px;
@@ -288,6 +302,12 @@
       }
     }
 
+    &--w-md-400 {
+      @include media-breakpoint-up(md) {
+        width: 400px;
+      }
+    }
+
     &--mw-lg-400 {
       @include media-breakpoint-up(lg) {
         max-width: 400px;
@@ -303,6 +323,12 @@
     &--lh-md-26 {
       @include media-breakpoint-up(md) {
         line-height: 26px;
+      }
+    }
+
+    &--lsp-md-m055 {
+      @include media-breakpoint-up(md) {
+        letter-spacing: -0.55px;
       }
     }
   }

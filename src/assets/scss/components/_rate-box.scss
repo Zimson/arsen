@@ -8,6 +8,10 @@
     display: flex;
     justify-content: center;
     align-items: baseline;
+
+    &:first-of-type {
+      margin-left: -28px;
+    }
   }
 
   @-moz-document url-prefix() {

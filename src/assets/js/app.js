@@ -1,12 +1,12 @@
 import 'what-input';
 
-//polyfill
+//polyfills
 import './utils/polyfill';
-
 
 import Modal from './modules/Modal';
 import MobileNav from './modules/MobileNav';
 import './modules/Slider';
+import CookiesAgreementNotifier from "./modules/CookiesAgreementNotifier";
 
 function scrollToAnchor() {
   if (!window.location.hash) return;
@@ -25,10 +25,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const src = iframe.dataset.src;
     iframe.src = src;
   });
-
-  // setTimeout(() => {
-  //   scrollToAnchor();
-  // }, 0)
+  
+  new CookiesAgreementNotifier();
 });
 
 document.addEventListener('click', function(e) {
@@ -48,18 +46,4 @@ document.addEventListener('click', function(e) {
 
 
 import './vue/app';
-
-
-
-
-
-// const deleteAutoPaymentForm = ({
-//   data: () => ({
-//     el: '#deleteAutoPaymentForm',
-//     message: 'Hello Vue!',
-//     placeholder: 'hhhhh'
-//   })
-// })
-
-// Vue.createApp(deleteAutoPaymentForm).mount('#deleteAutoPaymentForm');
 

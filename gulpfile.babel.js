@@ -85,7 +85,7 @@ function sass() {
 
   const postCssPlugins = [
     // Autoprefixer
-    autoprefixer({ browsers: COMPATIBILITY }),
+    autoprefixer({ overrideBrowserslist: COMPATIBILITY }),
     postcssSVG({ dirs: 'src/assets/img/svg/'})
     // UnCSS - Uncomment to remove unused styles in production
     // PRODUCTION && uncss.postcssPlugin(UNCSS_OPTIONS),
@@ -107,6 +107,10 @@ function sass() {
 let webpackConfig = {
   mode: (PRODUCTION ? 'production' : 'development'),
   plugins: [
+    new webpack2.DefinePlugin({
+      __VUE_OPTIONS_API__: 'true',
+      __VUE_PROD_DEVTOOLS__: 'false'
+    }),
     new webpack2.ProvidePlugin({
       $: 'jquery',
       jQuery: 'jquery',

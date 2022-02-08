@@ -1,0 +1,53 @@
+---
+layout: default
+
+title: "Агентам"
+description: "Станьте нашим агентом и получайте 10% от прибыли по каждому клиенту."
+
+image: "https://arsenalpay.ru/priem-platezhej-bez-pokupki-onlajn-kassy-fb.png"
+canonical: "https://arsenalpay.ru/partnership.html"
+
+twitterTitle: "ArsenalPay | Приём платежей без покупки онлайн кассы теперь и для самозанятых"
+twitterDescription: "Приём платежей для самозанятых, ИП и юрлиц. Принимайте платежи где угодно — на своём сайте, в
+Instagram, на лендингах, в соцсетях, в мессенджерах. Вам не нужно покупать или брать в аренду свою онлайн кассу."
+twitterImage: "priem-platezhej-bez-pokupki-onlajn-kassy-tw.png"
+
+vkImage: "https://arsenalpay.ru/priem-platezhej-bez-pokupki-onlajn-kassy-vk.png"
+
+ogImageFb: "https://arsenalpay.ru/priem-platezhej-bez-pokupki-onlajn-kassy-fb.png"
+ogSecureUrl: "https://arsenalpay.ru/priem-platezhej-bez-pokupki-onlajn-kassy-fb.png"
+ogImage: "https://arsenalpay.ru/priem-platezhej-bez-pokupki-onlajn-kassy-square.png"
+ogUrl: "https://arsenalpay.ru/partnership.html"
+ogTitle: "ArsenalPay | Приём платежей без покупки онлайн кассы теперь и для самозанятых"
+ogDescription: "Приём платежей для самозанятых, ИП и юрлиц. Принимайте платежи где угодно — на своём сайте, в Instagram,
+на лендингах, в соцсетях, в мессенджерах. Вам не нужно покупать или брать в аренду свою онлайн кассу."
+
+footerLink: "https://arsenalpay.ru/dashboard/registration-type"
+
+---
+
+<div id="app">
+
+  <section class="page-section page-section--cut page-section--bg-green page-section--no-skew">
+    <div class="page-section__container page-section__container--partnership">
+      <h1 class="page-section__title page-section__title--partnership">Станьте нашим агентом</h1>
+      <div class="page-section__text">
+        <p class="text text--mgb-32 text--mgb-sm-32 text--mgb-md-32 text--ls-26 text--md-size-lg">Приводите клиентов и получайте ежемесячный доход.</p>
+      </div>
+      <button type="button" class="page-section__btn page-section__btn--partnership page-section__btn--mgb-36" @click="showModal(modalIds.partnership)">Стать агентом</button>
+      <div class="content-box content-box--shadow-xs content-box--partnership">
+        {{{ info-box title="10% от нашей прибыли по каждому клиенту"  text='Вы ежемесячно получаете 10% от нашей прибыли
+        по каждому клиенту, которому были подключены онлайн-платежи. Рассказывайте о продуктах и услугах ArsenalPay
+        своим знакомым, и когда они захотят подключиться, передайте их контактные данные нам. После их подключения, вы
+        начнете получать ежемесячный доход.'
+        icon='{"name": "check", "color": "green"}' mods="mgb-40" textMods="lsp-md-m055" }}}
+
+        {{{ info-box title="Удобно и прозрачно"  text='Вы не привязаны к рабочему месту и сами выбираете график работы.<br class="br br--show-lg">
+        Вознаграждения прозрачны. Все данные по привлеченным клиентам и сумме вашего вознаграждения вы сможете контролировать
+        в онлайн-режиме в личном кабинете.'
+        icon='{"name": "check", "color": "green"}' mods="mgb-40" textMods="lsp-md-m055" }}}
+      </div>
+    </div>
+  </section>
+  <app-partnership-modal v-if="modalId === modalIds.partnership" :id="modalId" :on-close="closeModal"></app-partnership-modal>
+</div>

@@ -9,10 +9,14 @@
 
   @include media-breakpoint-up(lg) {
     display: grid;
-    grid-template-columns:  minmax(410px, 1fr) minmax(386px, 1fr);
+    grid-template-columns:  minmax(425px, 1fr) minmax(410px, 1fr);
     align-items: unset;
     grid-column-gap: 12px;
     grid-row-gap: 30px;
+  }
+
+  @media (min-width: 1000px) {
+    grid-template-columns:  minmax(410px, 1fr) minmax(386px, 1fr);
   }
 
   @include media-breakpoint-up(xl) {
@@ -31,7 +35,7 @@
     width: 360px;
 
     @include media-breakpoint-up(sm) {
-      width: 458px;
+      width: auto;
     }
 
     @include media-breakpoint-up(lg) {
