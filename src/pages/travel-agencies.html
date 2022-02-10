@@ -246,9 +246,7 @@ footerLink: "https://arsenalpay.ru/dashboard/quickstart?step=1"
 <section class="page-section page-section--reviews">
   <div class="page-section__container">
     <h2 class="page-section__title">Отзывы наших клиентов</h2>
-    <p class="text text--md-size-lg">Больше отзывов в&nbsp;нашем <a href="https://www.instagram.com/arsenal_pay/" class="link link--in-text" target="_blank">Instagram.</a><br class="br br--show-xs"/>Посмотрите
-      <a href="https://arsenalpay.ru/pay/" class="link link--in-text">страницы оплаты</a> клиентов.</p>
-    {{> reviews-slider }}
+    {{> travel-reviews-slider }}
   </div>
 </section>
 <section class="page-section page-section--no-skew page-section--under-slider page-section--over-footer">
@@ -256,34 +254,23 @@ footerLink: "https://arsenalpay.ru/dashboard/quickstart?step=1"
     <h2 class="page-section__title">Вопросы и ответы</h2>
     <div class="content-box content-box--faq">
       {{{ info-box
-        title="Почему можно не&nbsp;иметь свой интернет магазин?"
-        text='Мы&nbsp;создали страницу оплаты, с&nbsp;которой вам не&nbsp;обязательно иметь интернет магазин.<br class="br br--show-lg">
-          Вам достаточно просто дать ссылку на&nbsp;страницу своим клиентам и&nbsp;они оплатят нужную сумму.<br class="br br--show-lg">
-          Все данные о&nbsp;платеже сохранятся в&nbsp;вашем личном кабинете. Фискальный чек отправляется покупателю на&nbsp;email и&nbsp;в&nbsp;ФНС через ОФД.
-          Страница отвечает всем международным требованиям безопасности.'
+        title="Как быстро деньги переводятся на расчётный счёт и в какой банк?"
+        text='Деньги перечисляются на расчётный счёт вашей компании каждый день в автоматическом режиме, вам не
+        нужно выводить их самостоятельно. Расчётный счёт можно иметь в любом банке РФ, новый счёт открывать не придётся.'
         mods="mgb-24, mgb-md-42, text-left"
         textMods="mw-lg-820, lh-md-26"
       }}}
       {{{ info-box
-        title="Почему можно не&nbsp;покупать и&nbsp;не&nbsp;брать в&nbsp;аренду онлайн кассу?"
-        text='Все платежи проходят через онлайн кассу ArsenalPay. Мы&nbsp;выступаем как агент и&nbsp;отправляем чеки от&nbsp;имени нашего сервиса
-          приема платежей ArsenalPay. В&nbsp;чеке указывается ваш ИНН&nbsp;ИП&nbsp;или юрлица, и&nbsp;все
-          необходимые данные, в&nbsp;соответствии с&nbsp;законом 54-ФЗ.'
+        title="Принимаются ли карты всех стран мира?"
+        text='У нас нет ограничений по странам мира. Клиент сможет оплатить тур любой зарубежной картой Visa, MasterCard, Maestro.'
         mods="mgb-24, mgb-md-42, text-left"
         textMods="mw-lg-820, lh-md-26"
       }}}
       {{{ info-box
-        title="Где и&nbsp;как я&nbsp;смогу принимать платежи?"
-        text='Вы&nbsp;можете продавать на&nbsp;любой площадке&nbsp;&mdash; на&nbsp;своем сайте, в&nbsp;cоцсетях или в&nbsp;WhatsApp, Telegram, Viber.
-          Договаривайтесь с&nbsp;клиентом об&nbsp;оплате и&nbsp;присылайте ему ссылку на&nbsp;вашу страницу оплаты.
-          Клиент легко и&nbsp;быстро оплатит заказ.'
-        mods="mgb-24, mgb-md-42, text-left"
-        textMods="mw-lg-820, lh-md-26"
-      }}}
-      {{{ info-box
-        title='Действительно&nbsp;ли сервис без&nbsp;абонентской платы?'
-        text='Мы&nbsp;предоставляем все функции сервиса бесплатно. Вы&nbsp;оплачиваете только комиссию за&nbsp;платежи, никакой абонентской платы
-          мы&nbsp;не&nbsp;берем. Тариф всегда фиксированный и&nbsp;указан в&nbsp;договоре, никаких скрытых комиссий у&nbsp;нас нет.'
+        title='На сколько выгодней использовать онлайн-кассу ArsenalPay?'
+        text='Касса ArsenalPay встроена в платежный виджет, её не нужно отдельно интегрировать и настраивать под ваши системы.
+        Вся необходимая информация для чеков передаётся при оплате. Чеки автоматически отправляются на email клиента.
+        Вам не придётся вносить изменения в чеки при каждом изменении 54-ФЗ, всё это мы делаем сами.'
         mods="mgb-24, mgb-md-42, text-left"
         textMods="mw-lg-820, lh-md-26"
       }}}
