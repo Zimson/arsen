@@ -18,12 +18,16 @@ module.exports = function(options) {
 
   cssClass+= allMods;
 
+  function renderLink(link) {
+    return `<a ${link.href ? `href="${link.href}"` : ``} class="link link--more link--blue"><span>${link.text}</span></a>`
+  }
+
   const card = `<article class="${cssClass}">
            <img class="card__img" src="${root}assets/img/content/${img.name}.png" srcset="${root}assets/img/content/${img.name}@2x.png 2x, ${root}assets/img/content/${img.name}@3x.png 3x" width="80" height="80" alt="${img.alt}">
            <span class="card__name">${name}</span>
            <b class="card__title">${title}</b>
            <p class="card__text">${text}</p>
-           <a ${link.href ? `href="${link.href}"` : ``} class="link link--more link--blue"><span>${link.text}</span></a>
+           ${link ? renderLink(link) : ''}
     </article>`;
 
   return card;

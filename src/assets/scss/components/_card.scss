@@ -45,5 +45,9 @@
     font-size: 15.2px;
     line-height: 24px;
     letter-spacing: -0.3px;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
   }
 }
