@@ -1,6 +1,7 @@
 .row {
   width: 100%;
   display: grid;
+  align-items: start;
 
   @include media-breakpoint-up(md) {
     grid-template-columns: repeat(2, 1fr);
@@ -26,4 +27,39 @@
     grid-column-gap: 30px;
     align-items: start;
   }
+
+  &--rates {
+    grid-template-columns: 1fr;
+    grid-row-gap: 28px;
+
+    @include media-breakpoint-up(sm) {
+      grid-template-columns: repeat(2, 200px);
+      grid-column-gap: 36px;
+    }
+
+    @include media-breakpoint-up(md) {
+      grid-column-gap: 106px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      grid-column-gap: 79px;
+    }
+  }
+
+  &--col-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  &--col-2-md {
+    @include media-breakpoint-up(md) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+
+  &--col-3-lg {
+    @include media-breakpoint-up(lg) {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+
 }

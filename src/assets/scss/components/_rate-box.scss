@@ -3,6 +3,7 @@
   font-family: $font-family;
   text-align: center;
 
+
   @include media-breakpoint-up(md) {
     margin-bottom: 15px;
     display: flex;
@@ -11,6 +12,27 @@
 
     &:first-of-type {
       margin-left: -28px;
+    }
+  }
+
+  &--no-mgb {
+    margin-bottom: 0;
+  }
+
+  &--sm {
+    @include media-breakpoint-up(md) {
+      &:first-of-type {
+        margin-left: 0;
+      }
+    }
+  }
+
+  &--column {
+    flex-direction: column;
+    text-align: left;
+
+    @include media-breakpoint-up(md) {
+      align-items: start;
     }
   }
 
@@ -44,10 +66,24 @@
       margin-left: 0;
     }
 
+    .rate-box--sm & {
+      font-size: 28.2px;
+      line-height: 26px;
+      letter-spacing: 0;
+
+      @include media-breakpoint-up(md) {
+        margin-left: 0;
+      }
+    }
+
     &[data-prefix]::before {
       content: attr(data-prefix);
       position: absolute;
       left: -40px;
+    }
+
+    .rate-box--inline-prefix &[data-prefix]::before {
+      position: static;
     }
 
     @-moz-document url-prefix() {
@@ -70,6 +106,17 @@
     }
   }
 
+  &--sm sub {
+    left: 0;
+    font-size: 16px;
+    line-height: 26px;
+    letter-spacing: 0;
+
+    @include media-breakpoint-up(md) {
+      left: 0;
+    }
+  }
+
   &__text {
     position: relative;
     top: -3px;
@@ -89,6 +136,22 @@
       line-height: 26px;
       letter-spacing: -0.55px;
       text-align: left;
+    }
+
+    .rate-box--column & {
+      left: 0;
+      margin-left: 0;
+
+      @include media-breakpoint-up(md) {
+        align-self: start;
+      }
+    }
+
+    .rate-box--sm & {
+      margin-top: 16px;
+      font-size: 16px;
+      line-height: 24px;
+      letter-spacing: -0.2px;
     }
 
     b {

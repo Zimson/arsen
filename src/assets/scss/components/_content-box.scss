@@ -152,6 +152,12 @@
     }
   }
 
+  &--rates {
+    padding: 56px 40px 44px;
+    background-color: rgba(0, 0, 0, 0.04);
+    border-radius: 38px;
+  }
+
   &__title {
     margin-top: 0;
     margin-bottom: 8px;
@@ -169,6 +175,27 @@
 
     svg + & {
       margin-top: 12px;
+    }
+
+    &--type-two {
+      margin-top: 42px;
+      margin-bottom: 23px;
+      align-self: start;
+      font-size: 20.2px;
+      line-height: 30px;
+      letter-spacing: -0.69px;
+
+      @include media-breakpoint-up(md) {
+        line-height: 30px;
+      }
+    }
+
+    &--no-mgt {
+      margin-top: 0;
+    }
+
+    &--no-mgb {
+      margin-bottom: 0;
     }
   }
 
@@ -188,6 +215,18 @@
       font-size: 17.2px;
       line-height: 28px;
       letter-spacing: -0.59px;
+    }
+
+    .content-box__title--type-two + & {
+      margin-bottom: 28px;
+      font-size: 16px;
+      line-height: 30px;
+      letter-spacing: -0.2px;
+
+      @include media-breakpoint-up(sm) {
+        align-self: start;
+        text-align: left;
+      }
     }
   }
 

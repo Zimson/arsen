@@ -232,12 +232,29 @@ footerLink: "https://arsenalpay.ru/dashboard/quickstart?step=1"
   <div class="page-section__container">
     <h2 class="page-section__title">Никакой абонентской платы</h2>
     <p class="text text--md-size-lg">Вы платите только за успешные платежи. Без дополнительных комиссий и звёздочек в договоре.</p>
-    <div class="content-box content-box--shadow-xs">
-      <div class="rate">
-        <div class="rate__item">
-          {{{ rate-box count="3" text="Комиссия за успешный платёж <br class='br br--show-xs' /><b>от ArsenalPay</b>" }}}
-          {{{ rate-box count="2" prefix="+" text="Комиссия за успешный платёж <br class='br br--show-xs' /><b>от Visa, Mastercard, Мир, Apple Pay</b>" }}}
-        </div>
+    <div class="content-box content-box--rates">
+      <b class="content-box__title content-box__title--type-two content-box__title--no-mgt content-box__title--no-mgb">Приём платежей картами всех стран мира</b>
+      <p class="content-box__text">Visa, MasterCard, Мир, Apple Pay.</p>
+      <div class="row row--rates">
+        {{{ rate-box count="2.2" text="За успешный платёж" mods="column, inline-prefix, sm, no-mgb" }}}
+        {{{ rate-box count="0.2" prefix="+" text="За успешный платёж" mods="column, inline-prefix, sm, no-mgb" }}}
+      </div>
+      <b class="content-box__title content-box__title--type-two">Сюда включено</b>
+      <div class="row row--col-2-md row--col-3-lg">
+        {{{ list items='[{"icon": "input-cashier", "text": "Онлайн касса ArsenalPay"}, {"icon": "input-invoice", "text": "Выставление счёта"}]' mods="" }}}
+        {{{ list items='[{"icon": "input-apple", "text": "Apple Pay"}, {"icon": "input-saved-card", "text": "Запоминание карты"},
+        {"icon": "input-hold", "text": "Холдирование"}]' mods="order-3-md, order-1-lg" }}}
+        {{{ list items='[{"icon": "input-arrow-back-thin", "text": "Возврат платежа"},
+        {"icon": "input-autopayment", "text": "Оплата в рассрочку"}]' mods="" }}}
+      </div>
+      <b class="content-box__title content-box__title--type-two">Бесплатно</b>
+      <div class="row row--col-2-md row--col-3-lg">
+        {{{ list items='[{"text": "Подключение"}, {"text": "Пользование кассой"}, {"text": "Техподдержка"}]' mods="no-mgt, hide-lg" }}}
+        {{{ list items='[{"text": "Свой менеджер"}, {"text": "Личный кабинет"}]' mods="hide-lg" }}}
+
+        {{{ list items='[{"text": "Подключение"}, {"text": "Пользование кассой"}]' mods="hide-xs, show-lg" }}}
+        {{{ list items='[{"text": "Техподдержка"}, {"text": "Свой менеджер"}]' mods="hide-xs, show-lg" }}}
+        {{{ list items='[{"text": "Личный кабинет"}]' mods="hide-xs, show-lg" }}}
       </div>
     </div>
   </div>

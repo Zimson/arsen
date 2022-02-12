@@ -18,8 +18,10 @@ module.exports = function(options) {
 
   const block = `
        <div class="${cssClass}">
+       <span class="rate-box__head">
         <b class="rate-box__count" ${prefix ? `data-prefix="${prefix}"` : ``}>${count}</b>
         <sub>%</sub>
+       </span>
        <div class="rate-box__text">${text}</div>
     </div>
   `;
