@@ -55,6 +55,23 @@
     }
   }
 
+  &--travel {
+    margin-top: 36px;
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 0;
+      grid-column-gap: 60px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-column-gap: 95px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      grid-column-gap: 110px;
+    }
+  }
+
   &--instagram {
     --shift-left: -76px;
 
@@ -173,6 +190,14 @@
 
       @include media-breakpoint-up(xxl) {
         margin-left: -40px;
+      }
+    }
+
+    .widget-box--travel & {
+      height: 648px;
+
+      @include media-breakpoint-up(sm) {
+        width: 348px;
       }
     }
 
