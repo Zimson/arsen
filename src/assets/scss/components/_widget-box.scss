@@ -450,7 +450,9 @@
     }
 
     .widget-box--travel & {
-      padding-top: 143px;
+      @include media-breakpoint-up(lg) {
+        padding-top: 143px;
+      }
     }
   }
 }
