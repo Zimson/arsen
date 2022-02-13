@@ -71,6 +71,10 @@
     color: var(--pink-dark-color);
   }
 
+  &--purple {
+    color: var(--purple-dark-color);
+  }
+
   &--center-sm {
     @include media-breakpoint-up(sm) {
       text-align: center;

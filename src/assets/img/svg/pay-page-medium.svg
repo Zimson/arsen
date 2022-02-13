@@ -1,0 +1,14 @@
+<svg width="45" height="53" viewBox="0 0 45 53" xmlns="http://www.w3.org/2000/svg">
+    <g fill="none" fill-rule="evenodd">
+        <rect stroke="var(--icon-color, #4FC7ED)" stroke-width="2" fill="none" x="3" y="3" width="39" height="47" rx="4"/>
+        <circle stroke="var(--icon-color, #4FC7ED)" stroke-width="2" fill="none" cx="12.5" cy="13.5" r="4.5"/>
+        <g transform="translate(7 23)">
+            <rect stroke="var(--icon-color, #4FC7ED)" stroke-width="2" fill="none" x="1" y="1" width="29" height="4" rx="2"/>
+            <rect fill="var(--icon-color, #4FC7ED)" y="16" width="31" height="5" rx="2.5"/>
+            <rect stroke="var(--icon-color, #4FC7ED)" stroke-width="2" fill="none" x="1" y="9" width="13" height="4" rx="2"/>
+            <rect stroke="var(--icon-color, #4FC7ED)" stroke-width="2" fill="none" x="17" y="9" width="13" height="4" rx="2"/>
+        </g>
+        <rect fill="var(--icon-color, #4FC7ED)" x="21" y="11" width="16" height="2" rx="1"/>
+        <rect fill="var(--icon-color, #4FC7ED)" x="21" y="15" width="16" height="2" rx="1"/>
+    </g>
+</svg>
