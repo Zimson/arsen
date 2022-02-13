@@ -81,11 +81,11 @@
     }
 
     @include media-breakpoint-up(xl) {
-      grid-column-gap: 100px;
+      grid-column-gap: 70px;
     }
 
     @include media-breakpoint-up(xxl) {
-      grid-column-gap: 140px;
+      grid-column-gap: 110px;
     }
   }
 
@@ -94,7 +94,7 @@
 
     @include media-breakpoint-up(lg) {
       padding-left: 0;
-      grid-column-gap: 72px;
+      grid-column-gap: 29px;
     }
 
     @include media-breakpoint-up(xl) {
@@ -521,6 +521,36 @@
       @include media-breakpoint-up(lg) {
         padding-top: 70px;
       }
+    }
+  }
+
+  &__content svg {
+    margin-right: auto;
+    margin-left: auto;
+    display: block;
+
+    @include media-breakpoint-up(lg) {
+      margin-left: 0;
+    }
+  }
+
+  &__title {
+    margin: 16px 0 9px 0;
+    display: block;
+    font-size: 18.2px;
+    font-weight: 500;
+    line-height: 28px;
+    letter-spacing: -0.62px;
+    text-align: center;
+
+    @include media-breakpoint-up(sm) {
+      margin: 12px 0 8px 0;
+      font-size: 20.2px;
+      line-height: 35px;
+    }
+
+    @include media-breakpoint-up(lg) {
+      text-align: left;
     }
   }
 }

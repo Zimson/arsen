@@ -37,9 +37,17 @@
     justify-content: space-between;
   }
 
-  &:not(:first-child),
+  &:not(:first-of-type),
   &:not([class~="no-mgt"]) {
     margin-top: 18px;
+  }
+
+  &:first-of-type {
+    margin-top: 0;
+  }
+
+  &[class~="no-mgt"] {
+    margin-top: 0;
   }
 
   &--hide-xs {
