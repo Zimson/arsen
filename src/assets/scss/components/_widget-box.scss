@@ -89,6 +89,23 @@
     }
   }
 
+  &--providers-mobile {
+    margin-top: 80px;
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 0;
+      grid-column-gap: 72px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-column-gap: 100px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      grid-column-gap: 140px;
+    }
+  }
+
   &--instagram {
     --shift-left: -76px;
 
@@ -224,6 +241,19 @@
       @include media-breakpoint-up(sm) {
         width: 348px;
         height: 502px;
+      }
+    }
+
+    .widget-box--providers-mobile & {
+      left: -9px;
+      width: 338px;
+      height: 658px;
+
+      @include media-breakpoint-up(lg) {
+        width: 338px;
+        height: 496px;
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
       }
     }
 
@@ -482,6 +512,12 @@
     }
 
     .widget-box--providers & {
+      @include media-breakpoint-up(lg) {
+        padding-top: 70px;
+      }
+    }
+
+    .widget-box--providers-mobile & {
       @include media-breakpoint-up(lg) {
         padding-top: 70px;
       }

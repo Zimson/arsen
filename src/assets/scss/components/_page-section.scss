@@ -602,6 +602,25 @@
     .page-section--no-pdt & {
       padding-top: 0;
     }
+
+    .page-section--mobile-widget & {
+      @include media-breakpoint-up(lg) {
+        padding-bottom: 0;
+        overflow: hidden;
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        bottom: -26px;
+        right: 0;
+        left: 0;
+        z-index: 1;
+        height: 26px;
+        transform: rotate3d(0, 0, 1, 3deg);
+        background-color: var(--white-color);
+      }
+    }
   }
 
   &__title {
