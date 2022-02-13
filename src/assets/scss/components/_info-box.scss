@@ -151,6 +151,12 @@
     }
   }
 
+  &--mgb-lg-86 {
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 86px;
+    }
+  }
+
   &--mgb-xl-60 {
     @include media-breakpoint-up(xl) {
       margin-bottom: 60px;

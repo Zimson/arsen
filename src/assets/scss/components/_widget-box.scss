@@ -72,6 +72,23 @@
     }
   }
 
+  &--providers {
+    margin-top: 80px;
+
+    @include media-breakpoint-up(lg) {
+      padding-left: 0;
+      grid-column-gap: 72px;
+    }
+
+    @include media-breakpoint-up(xl) {
+      grid-column-gap: 100px;
+    }
+
+    @include media-breakpoint-up(xxl) {
+      grid-column-gap: 140px;
+    }
+  }
+
   &--instagram {
     --shift-left: -76px;
 
@@ -198,6 +215,15 @@
 
       @include media-breakpoint-up(sm) {
         width: 348px;
+      }
+    }
+
+    .widget-box--providers & {
+      height: 498px;
+
+      @include media-breakpoint-up(sm) {
+        width: 348px;
+        height: 502px;
       }
     }
 
@@ -452,6 +478,12 @@
     .widget-box--travel & {
       @include media-breakpoint-up(lg) {
         padding-top: 143px;
+      }
+    }
+
+    .widget-box--providers & {
+      @include media-breakpoint-up(lg) {
+        padding-top: 70px;
       }
     }
   }
