@@ -118,4 +118,10 @@
       display: block;
     }
   }
+
+  &--block-lg {
+    @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
 }
