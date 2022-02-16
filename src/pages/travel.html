@@ -58,7 +58,7 @@ footerLink: "https://arsenalpay.ru/dashboard/quickstart?step=1"
       <p class="text text--center-md text--md-size-lg text--inline-sm">Все чеки отправляются через ОФД
         в налоговую автоматически. Чек отправляется на email клиента сразу после оплаты.</p>
     </div>
-    <button type="button" class="page-section__btn page-section__btn--max-w-430-md page-section__btn--mgt-20 page-section__btn--mgt-36-sm" data-modal="kassa">
+    <button type="button" class="page-section__btn page-section__btn--max-w-430-md page-section__btn--mgt-20" data-modal="kassa">
       <svg class="icon icon--blue" width="48" height="38" style="margin-left: 2px;">
         <use xlink:href="assets/img/symbol/sprite.svg#invoice-medium"></use>
       </svg>
@@ -78,14 +78,14 @@ footerLink: "https://arsenalpay.ru/dashboard/quickstart?step=1"
     </p>
   </div>
 </section>
-<section class="page-section page-section--quick-start">
+<section class="page-section page-section--inverse page-section--payment-functions">
   <div class="page-section__container">
     <h2 class="page-section__title">Всё удобные<br class="br br--show-xs">платёжные функции</h2>
     <div class="u--mgb-sm-16 u--no-mgb-md">
       <p class="text text--center-md text--md-size-lg text--inline-sm text--block-md">Холдирование платежей. Быстрое выставление счёта.
         Apple Pay. Отмена полной и частичной суммы. Сообщения об оплате и статусах заказа.</p>
     </div>
-    <div class="content-box content-box--shadow-md content-box--pseudo-bg">
+    <div class="content-box content-box--shadow-md content-box--mgt-45 content-box--pseudo-bg">
       {{{ info-box
         title="Холдирование платежей"
         text='Клиент оплачивает на вашем сайте любой тур, при этом деньги с его карты не списываются, а времено
@@ -133,7 +133,7 @@ footerLink: "https://arsenalpay.ru/dashboard/quickstart?step=1"
         его телефон и за какой тур он заплатил.'
         icon='{"name": "email-medium", "color": "green"}'
         width="52" height="43"
-        mods="mgb-60, mgb-md-80"
+        mods="mgb-180, mgb-md-80, icon-space-lg"
         textMods="mw-sm-520, mw-md-740"
       }}}
       {{{ info-box
@@ -142,7 +142,7 @@ footerLink: "https://arsenalpay.ru/dashboard/quickstart?step=1"
       Количество успешных платежей возрастает. Самый удобный способ оплаты.'
       icon='{"name": "saved-card-medium", "color": ""}'
       width="62" height="46"
-      mods="mgb-60, mgb-md-80"
+      mods="mgb-60, mgb-md-80, icon-space-lg"
       textMods="mw-sm-520, mw-md-740"
       }}}
       {{{ info-box
@@ -152,14 +152,15 @@ footerLink: "https://arsenalpay.ru/dashboard/quickstart?step=1"
       icon='{"name": "autopayment-medium", "color": "pink"}'
       width="48" height="53"
       textMods="mw-sm-520, mw-md-740"
+      mods="icon-space-lg"
       }}}
     </div>
   </div>
 </section>
-<section class="page-section page-section--widget-no-site page-section--bg-purple page-section--cut page-section--inverse">
+<section class="page-section page-section--travel-widget page-section--bg-purple page-section--cut page-section--inverse">
   <div class="page-section__container">
-    {{{ icon name="pay-page-big" width="80" height="100" mods="purple" }}}
-    <h2 class="page-section__title">Красивый платёжный виджет
+    {{{ icon name="widget-big" width="84" height="106" mods="purple" }}}
+    <h2 class="page-section__title">Красивый платёжный виджет<br class="br br--show-xs" />
       с простой интеграцией</h2>
     <div class="page-section__text">
       <p class="text text--center-md text--md-size-lg text--inline-sm text--block-md text--no-mgb-md">Виджет легко <a href="" class="link link--in-text">
@@ -173,7 +174,7 @@ footerLink: "https://arsenalpay.ru/dashboard/quickstart?step=1"
       <div class="widget-box__widget">
         {{{ img className="widget-travel" name="widget-travel" breakpoints='{"sm": true}'}}}
       </div>
-      <div class="widget-box__content">
+      <div class="widget-box__content widget-box__content--icon-left">
         {{{ info-box
           title="Виджет оплаты"
           text='Устанавливается в любое место на сайте.

@@ -33,6 +33,10 @@
   box-sizing: border-box;
   background-color: var(--white-color);
 
+  &--mgt-45 {
+    margin-top: 45px;
+  }
+
   //&--shadow {
   //  @include media-breakpoint-up(md) {
   //    max-width: 100%;
@@ -52,16 +56,20 @@
     max-width: 940px;
   }
 
-  &--pseudo-bg::before {
-    content: "";
-    position: absolute;
-    bottom: -40px;
-    left: -40px;
-    transform: rotate3d(0, 0, 1, 5deg);
-    right: -40px;
-    height: 555px;
-    background-color: var(--pink-light-color);
-    z-index: 1;
+  &--pseudo-bg {
+    overflow: visible;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -98px;
+      left: -60px;
+      transform: rotate3d(0, 0, 1, 5deg);
+      right: -60px;
+      height: 752px;
+      background-color: var(--pink-light-color);
+      z-index: 1;
+    }
   }
 
   &--shadow-xs {

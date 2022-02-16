@@ -305,11 +305,30 @@
 
     .page-section--cash-pay & {
       padding-top: 98px;
-      padding-bottom: 130px;
+      padding-bottom: 150px;
 
       @include media-breakpoint-up(md) {
         padding-top: 130px;
       }
+    }
+
+    .page-section--payment-functions & {
+      padding-top: 144px;
+      padding-bottom: 245px;
+
+      //@include media-breakpoint-up(md) {
+      //  padding-top: 130px;
+      //}
+    }
+
+    .page-section--travel-widget & {
+      padding-top: 144px;
+      padding-bottom: 165px;
+      //padding-bottom: 245px;
+
+      //@include media-breakpoint-up(md) {
+      //  padding-top: 130px;
+      //}
     }
 
     .page-section--quick-start & {
