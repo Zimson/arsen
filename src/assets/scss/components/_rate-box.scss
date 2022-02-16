@@ -51,10 +51,10 @@
   &__count {
     position: relative;
     //margin-left: 29px;
-    margin-left: -5px;
+    //margin-left: -5px;
     display: inline-block;
     font-size: 51.6px;
-    font-weight: 300;
+    font-weight: 400;
     line-height: normal;
     letter-spacing: -1.33px;
 
@@ -84,6 +84,7 @@
 
     .rate-box--inline-prefix &[data-prefix]::before {
       position: static;
+      margin-right: 7px;
     }
 
     @-moz-document url-prefix() {
@@ -148,7 +149,7 @@
     }
 
     .rate-box--sm & {
-      margin-top: 16px;
+      margin-top: 15px;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: -0.2px;

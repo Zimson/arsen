@@ -81,6 +81,10 @@
     }
   }
 
+  &--no-mgb {
+    margin-bottom: 0;
+  }
+
   &--no-mgb-sm {
     @include media-breakpoint-up(sm) {
       margin-bottom: 0;

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="48px" height="38px" viewBox="0 0 48 38" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 63.1 (92452) - https://sketch.com -->
+    <title>icon/refund</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M21.8535534,13.4895924 C22.0488155,13.6848545 22.0488155,14.001437 21.8535534,14.1966991 L16.5502525,19.5 L21.8535534,24.8033009 C22.0488155,24.998563 22.0488155,25.3151455 21.8535534,25.5104076 C21.6582912,25.7056698 21.3417088,25.7056698 21.1464466,25.5104076 L15.136039,19.5 L21.1464466,13.4895924 C21.3417088,13.2943302 21.6582912,13.2943302 21.8535534,13.4895924 Z M32.5,19 C32.7761424,19 33,19.2238576 33,19.5 C33,19.7761424 32.7761424,20 32.5,20 L22.5,20 C22.2238576,20 22,19.7761424 22,19.5 C22,19.2238576 22.2238576,19 22.5,19 L32.5,19 Z" id="path-1"></path>
+    </defs>
+    <g id="icon/refund" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="icon/input/-none" fill="#FFFFFF" fill-opacity="0">
+            <rect id="Rectangle" x="0" y="0" width="48" height="38"></rect>
+        </g>
+        <mask id="mask-2" fill="white">
+            <use xlink:href="#path-1"></use>
+        </mask>
+        <use id="arrow" fill="#327EF9" xlink:href="#path-1"></use>
+    </g>
+</svg>
