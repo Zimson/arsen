@@ -81,6 +81,7 @@
   }
 
   &__item {
+    position: relative;
 
     @for $i from 1 through 100 {
       &:nth-child(#{$i}) {
@@ -93,7 +94,7 @@
     grid-template-columns: 48px auto;
     grid-column-gap: 2px;
     font-family: $font-family;
-    font-size: 15.2px;
+    font-size: 16px;
     font-weight: 300;
     line-height: 32px;
     letter-spacing: -0.2px;
@@ -115,8 +116,8 @@
     //  }
     //}
 
-    &:nth-child(even) {
-      margin-top: -5px;
+    &:not(:first-child) {
+      //margin-top: -5px;
 
       @include media-breakpoint-up(md) {
         margin-top: 0;
@@ -156,9 +157,25 @@
         }
       }
     }
+
+    &--dark-blue {
+      color: var(--blue-dark-color);
+      font-weight: 500;
+    }
   }
 
   &__item svg {
+    position: absolute;
     margin-top: -2px;
+
+    //position: absolute;
+    //top: 50%;
+    //transform: translateY(-50%);
+    //width: 48px;
+    //height: 32px;
+  }
+
+  &__text {
+    grid-column: 2 / 3;
   }
 }

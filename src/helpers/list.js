@@ -19,11 +19,11 @@ module.exports = function(options) {
   const list = `
     <ul class="${cssClass}">
         ${items && items.map((item) => {
-          return `<li class="list__item ${textColor ? 'list__item--' + textColor : ''}">
+          return `<li class="list__item ${item.textColor ? 'list__item--' + item.textColor : ''}">
               <svg class="icon ${iconsColor ? 'icon--' + iconsColor : ''}" width="48px" height="38px">
                  <use xlink:href="${root}assets/img/symbol/sprite.svg#${item.icon || 'check-list'}" />
               </svg>            
-              ${item.text}
+              <span class="list__text">${item.text}</span>
           </li>`  
         }).join(``)}
     </ul>
