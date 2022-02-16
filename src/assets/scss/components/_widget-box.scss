@@ -58,6 +58,10 @@
   &--travel {
     margin-top: 64px;
 
+    @include media-breakpoint-up(sm) {
+      margin-top: 80px;
+    }
+
     @include media-breakpoint-up(lg) {
       padding-left: 0;
       grid-column-gap: 72px;
@@ -525,18 +529,21 @@
   }
 
   &__content svg {
-    margin-right: auto;
-    margin-left: auto;
     display: block;
+
+    @include media-breakpoint-up(sm) {
+      margin-right: auto;
+      margin-left: auto;
+    }
 
     @include media-breakpoint-up(lg) {
       margin-left: 0;
     }
   }
 
-  &__content--icon-left svg {
-    margin-left: 0;
-  }
+  //&__content--icon-left svg {
+  //  margin-left: 0;
+  //}
 
   &__title {
     margin: 16px 0 9px 0;
