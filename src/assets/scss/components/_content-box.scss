@@ -59,6 +59,10 @@
   &--pseudo-bg {
     overflow: visible;
 
+    @include media-breakpoint-up(md) {
+      overflow: hidden;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -74,6 +78,10 @@
         right: -70px;
         left: -70px;
         height: 633px;
+      }
+
+      @include media-breakpoint-up(md) {
+        height: 812px;
       }
     }
   }
@@ -191,10 +199,10 @@
       padding-left: 40px;
     }
 
-    @include media-breakpoint-up(md) {
-      padding-right: 20px;
-      padding-left: 20px;
-    }
+    //@include media-breakpoint-up(md) {
+    //  padding-right: 20px;
+    //  padding-left: 20px;
+    //}
   }
 
   &__title {

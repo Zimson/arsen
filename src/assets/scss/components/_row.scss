@@ -62,4 +62,9 @@
     }
   }
 
+  &--col-gap-4-md {
+    @include media-breakpoint-up(md) {
+      grid-column-gap: 4px;
+    }
+  }
 }

@@ -6,6 +6,12 @@
     @include media-breakpoint-up(md) {
       margin-top: -30px;
     }
+
+    .page-section__title + & {
+      @include media-breakpoint-up(md) {
+        margin-top: -18px;
+      }
+    }
   }
 
   &-container {

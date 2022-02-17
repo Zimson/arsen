@@ -95,6 +95,12 @@
     }
   }
 
+  &--mgb-md-210 {
+    @include media-breakpoint-up(md) {
+      margin-bottom: 210px;
+    }
+  }
+
   &--mgb-sm-48 {
     @include media-breakpoint-up(sm) {
       margin-bottom: 48px;
@@ -237,10 +243,12 @@
       }
     }
 
-    @include media-breakpoint-up(md) {
-      font-size: 20.2px;
-      line-height: 32px;
-      letter-spacing: -0.69px;
+    &:not(&--size-sm-md) {
+      @include media-breakpoint-up(md) {
+        font-size: 20.2px;
+        line-height: 32px;
+        letter-spacing: -0.69px;
+      }
     }
 
     &--lh-35-md {
@@ -265,6 +273,12 @@
       @include media-breakpoint-up(md) {
         margin-top: 0;
       }
+
+      &--size-sm-md {
+        @include media-breakpoint-up(md) {
+          margin-top: 8px;
+        }
+      }
     }
   }
 
@@ -280,6 +294,13 @@
       font-size: 17.2px;
       line-height: 28px;
       letter-spacing: -0.59px;
+    }
+
+    &--size-sm-md {
+      font-size: 15.2px;
+      font-weight: 300;
+      line-height: 24px;
+      letter-spacing: -0.2px;
     }
 
     @include media-breakpoint-up(lg) {
