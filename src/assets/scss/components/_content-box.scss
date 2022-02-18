@@ -250,10 +250,8 @@
       margin-bottom: 0;
     }
 
-    &--mgt-45-lg {
-      @include media-breakpoint-up(lg) {
-        margin-top: 45px;
-      }
+    &--mgt-45 {
+      margin-top: 45px;
     }
   }
 

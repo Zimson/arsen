@@ -30,6 +30,10 @@
     z-index: 1; // fix text blur under slider
   }
 
+  &--overflow-hidden {
+    overflow: hidden;
+  }
+
   &--inverse {
     //--skew-angle: -5deg;
     --skew-angle: -3deg;
@@ -755,16 +759,20 @@
     }
 
     &--size-sm-md {
-      font-size: 29px;
-      font-weight: 400;
-      line-height: 38px;
-      letter-spacing: -0.5px;
+      @include media-breakpoint-up(md) {
+        font-size: 29px;
+        font-weight: 400;
+        line-height: 38px;
+        letter-spacing: -0.5px;
+      }
     }
 
     &--size-lg-lg {
-      font-size: 38px;
-      letter-spacing: -1.16px;
-      line-height: 48px;
+      @include media-breakpoint-up(lg) {
+        font-size: 38px;
+        letter-spacing: -1.16px;
+        line-height: 48px;
+      }
     }
 
     //@include media-breakpoint-up(sm) {
@@ -928,7 +936,9 @@
     }
 
     &--mgt-36-sm {
-      margin-top: 36px;
+      @include media-breakpoint-up(sm) {
+        margin-top: 36px;
+      }
     }
 
     &--no-mgt-sm {

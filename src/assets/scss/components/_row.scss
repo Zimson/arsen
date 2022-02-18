@@ -69,9 +69,11 @@
   }
 
   &--list-lg {
-    grid-template-columns: 271px repeat(2, 234px);
-    column-gap: 9px;
-    justify-content: start;
+    @include media-breakpoint-up(md) {
+      grid-template-columns: 271px repeat(2, 234px);
+      column-gap: 9px;
+      justify-content: start;
+    }
   }
 
   &--no-col-gap-lg {
