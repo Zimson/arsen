@@ -28,7 +28,8 @@ footerLink: "https://arsenalpay.ru/dashboard/quickstart?step=1"
 
 ---
 
-<section class="page-section page-section--without-site page-section--under-header page-section--no-pdt">
+<section class="page-section page-section--travel page-section--bg-green
+page-section--inverse page-section--under-header page-section--no-skew-top page-section--no-pdt">
   <div class="page-section__container">
 <!--    <div class="page-section__alert page-section__alert&#45;&#45;top">-->
 <!--      {{{ alert text="Теперь приём платежей доступен и самозанятым" }}}-->
@@ -42,24 +43,26 @@ footerLink: "https://arsenalpay.ru/dashboard/quickstart?step=1"
       <p class="text text--center-md text--md-size-lg text--inline-sm text--block-md text--no-mgb-md">Принимайте платежи от клиентов со всего мира картами:
         Visa, MasterCard, Мир, Apple Pay.</p>
     </div>
-    <a href="https://arsenalpay.ru/dashboard/quickstart?step=1" class="page-section__btn" style="margin-bottom: 0">Подключить</a>
+    <a href="https://arsenalpay.ru/dashboard/quickstart?step=1" class="page-section__btn page-section__btn--mgt-20
+                page-section__btn--no-mgt-sm" style="margin-bottom: 0">Подключить</a>
   </div>
 </section>
 
-<section class="page-section page-section--inverse page-section--bg-blue-darken page-section--no-pay">
+<section class="page-section page-section--inverse page-section--bg-blue-darken page-section--cashbox-online">
   <div class="page-section__container">
     {{{ icon name="kassa" width="120" height="120" mods="blue" }}}
-    <h2 class="page-section__title">Онлайн касса включена.<br /> Свою кассу покупать не нужно.</h2>
+    <h2 class="page-section__title">Онлайн-касса включена.<br /> Свою кассу покупать не нужно.</h2>
     <p class="text text--center-md text--md-size-lg text--inline-sm text--block-md text--no-mgb-md">Вы сразу получаете готовую к работе <a href="" class="link link--in-text">кассу ArsenalPay</a>.
       Никаких расходов на кассу — вы платите только за чеки успешных покупок.</p>
     <p class="text text--center-md text--md-size-lg text--inline-sm text--block-md">Все чеки отправляются через ОФД
       в налоговую автоматически. Чек отправляется на email клиента сразу после оплаты.</p>
-    <a class="btn btn--blue btn--full-width-sm btn--align-left" data-modal="kassa">
+    <button type="button" class="page-section__btn page-section__btn--max-w-430-md page-section__btn--max-w-480-xl page-section__btn--mgt-20
+        page-section__btn--mgt-36-sm" data-modal="kassa">
       <svg class="icon icon--blue" width="48" height="38" style="margin-left: 2px;">
         <use xlink:href="assets/img/symbol/sprite.svg#invoice-medium"></use>
       </svg>
       <span>Пример фискального чека</span>
-    </a>
+    </button>
   </div>
 </section>
 <section class="page-section page-section--quick-start">
