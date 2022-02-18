@@ -459,9 +459,9 @@
         padding-top: 96px;
       }
 
-      @include media-breakpoint-up(xl) {
-        padding-top: 168px;
-      }
+      //@include media-breakpoint-up(xl) {
+      //  padding-top: 168px;
+      //}
     }
 
     .page-section--over-footer & {
@@ -937,12 +937,6 @@
       }
     }
 
-    &--max-w-430-md {
-      @include media-breakpoint-up(md) {
-        max-width: 430px;
-      }
-    }
-
     @include media-breakpoint-up(md) {
       margin-right: unset;
       margin-left: unset;
@@ -957,6 +951,12 @@
     &--max-w-430-md {
       @include media-breakpoint-up(md) {
         max-width: 430px;
+      }
+    }
+
+    &--max-w-480-xl {
+      @include media-breakpoint-up(xl) {
+        max-width: 480px;
       }
     }
 

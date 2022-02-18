@@ -97,6 +97,12 @@
     }
   }
 
+  &--no-mgb-xl {
+    @include media-breakpoint-up(xl) {
+      margin-bottom: 0;
+    }
+  }
+
   &--md-size-lg {
     @include media-breakpoint-up(md) {
       font-size: 20.2px;
@@ -133,6 +139,12 @@
 
   &--block-lg {
     @include media-breakpoint-up(lg) {
+      display: block;
+    }
+  }
+
+  &--block-xl {
+    @include media-breakpoint-up(xl) {
       display: block;
     }
   }
