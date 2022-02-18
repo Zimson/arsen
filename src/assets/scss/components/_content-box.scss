@@ -83,6 +83,10 @@
       @include media-breakpoint-up(md) {
         height: 812px;
       }
+
+      @include media-breakpoint-up(lg) {
+        height: 756px;
+      }
     }
   }
 
@@ -243,6 +247,12 @@
 
     &--no-mgb {
       margin-bottom: 0;
+    }
+
+    &--mgt-45-lg {
+      @include media-breakpoint-up(lg) {
+        margin-top: 45px;
+      }
     }
   }
 

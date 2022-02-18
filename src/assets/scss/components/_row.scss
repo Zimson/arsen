@@ -67,4 +67,16 @@
       grid-column-gap: 4px;
     }
   }
+
+  &--list-lg {
+    grid-template-columns: 271px repeat(2, 234px);
+    column-gap: 9px;
+    justify-content: start;
+  }
+
+  &--no-col-gap-lg {
+    @include media-breakpoint-up(lg) {
+      grid-column-gap: 0;
+    }
+  }
 }

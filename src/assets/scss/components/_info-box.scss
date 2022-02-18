@@ -243,8 +243,22 @@
       }
     }
 
-    &:not(&--size-sm-md) {
+    @include media-breakpoint-up(md) {
+      font-size: 20.2px;
+      line-height: 32px;
+      letter-spacing: -0.69px;
+    }
+
+    &--size-sm-md {
       @include media-breakpoint-up(md) {
+        font-size: 18.2px;
+        line-height: 28px;
+        letter-spacing: -0.62px;
+      }
+    }
+
+    &--size-lg-lg {
+      @include media-breakpoint-up(lg) {
         font-size: 20.2px;
         line-height: 32px;
         letter-spacing: -0.69px;
@@ -279,6 +293,12 @@
           margin-top: 8px;
         }
       }
+
+      &--size-lg-lg {
+        @include media-breakpoint-up(lg) {
+          margin-top: 0;
+        }
+      }
     }
   }
 
@@ -301,6 +321,12 @@
       font-weight: 300;
       line-height: 24px;
       letter-spacing: -0.2px;
+    }
+
+    &--size-lg-lg {
+      font-size: 17.2px;
+      line-height: 28px;
+      letter-spacing: -0.59px;
     }
 
     @include media-breakpoint-up(lg) {

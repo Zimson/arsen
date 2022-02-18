@@ -105,6 +105,14 @@
     }
   }
 
+  &--lg-size-lg {
+    @include media-breakpoint-up(lg) {
+      font-size: 20.2px;
+      line-height: 32px;
+      letter-spacing: -0.4px;
+    }
+  }
+
   &--lg-inline {
     @include media-breakpoint-up(lg) {
       display: inline;
