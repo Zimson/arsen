@@ -103,22 +103,6 @@
     text-align: left;
     color: var(--gray-color);
 
-    //@include media-breakpoint-up(md) {
-    //  //grid-column-gap: 8px;
-    //  grid-column-gap: 2px;
-    //  font-size: 17.2px;
-    //  line-height: 32px;
-    //  //letter-spacing: -0.59px;
-    //}
-
-    //&:nth-child(2n):not(&:last-child) {
-    //  margin-bottom: 19px;
-    //
-    //  @include media-breakpoint-up(md) {
-    //    margin-bottom: 0;
-    //  }
-    //}
-
     &:not(:first-child) {
       //margin-top: -5px;
 
@@ -129,6 +113,11 @@
 
     .list--no-ls & {
       letter-spacing: 0;
+    }
+
+    .list--text-sm & {
+      font-size: 15.2px;
+      letter-spacing: -0.13px;
     }
 
     .check-list--api & {

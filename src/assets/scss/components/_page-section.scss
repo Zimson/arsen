@@ -373,6 +373,11 @@
       }
     }
 
+    .page-section--widget-providers & {
+      padding-top: 144px;
+      padding-bottom: 170px;
+    }
+
     .page-section--widget-no-site & {
       padding-top: 110px;
       padding-bottom: 80px;
@@ -657,6 +662,19 @@
       }
     }
 
+    .page-section--subs & {
+      padding-top: 124px;
+      padding-bottom: 60px;
+
+      @include media-breakpoint-up(sm) {
+        padding-top: 120px;
+      }
+
+      @include media-breakpoint-up(md) {
+        padding-top: 160px;
+      }
+    }
+
     .page-section--no-pdb & {
       padding-bottom: 0;
     }
@@ -690,6 +708,9 @@
     }
 
     .page-section--mobile-widget & {
+      padding-top: 150px;
+      padding-bottom: 170px;
+
       @include media-breakpoint-up(lg) {
         padding-bottom: 0;
         overflow: hidden;

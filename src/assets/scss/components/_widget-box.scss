@@ -79,7 +79,7 @@
   }
 
   &--providers {
-    margin-top: 80px;
+    margin-top: 64px;
 
     @include media-breakpoint-up(lg) {
       padding-left: 0;
@@ -96,7 +96,7 @@
   }
 
   &--providers-mobile {
-    margin-top: 80px;
+    margin-top: 64px;
 
     @include media-breakpoint-up(lg) {
       padding-left: 0;
@@ -537,6 +537,15 @@
       margin-right: auto;
       margin-left: auto;
     }
+
+    @include media-breakpoint-up(lg) {
+      margin-left: 0;
+    }
+  }
+
+  &__content--icon-center svg {
+    margin-right: auto;
+    margin-left: auto;
 
     @include media-breakpoint-up(lg) {
       margin-left: 0;
