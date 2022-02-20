@@ -81,6 +81,10 @@
   &--providers {
     margin-top: 64px;
 
+    @include media-breakpoint-up(sm) {
+      //margin-top: 80px;
+    }
+
     @include media-breakpoint-up(lg) {
       padding-left: 0;
       grid-column-gap: 72px;
@@ -245,6 +249,7 @@
       height: 498px;
 
       @include media-breakpoint-up(sm) {
+        margin-bottom: 100px;
         width: 348px;
         height: 502px;
       }
@@ -254,6 +259,10 @@
       left: -9px;
       width: 338px;
       height: 658px;
+
+      @include media-breakpoint-up(sm) {
+        left: 0;
+      }
 
       @include media-breakpoint-up(lg) {
         width: 338px;

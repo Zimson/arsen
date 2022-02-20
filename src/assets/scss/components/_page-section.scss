@@ -460,9 +460,9 @@
     .page-section--travel-reviews & {
       padding-top: 65px;
 
-      @include media-breakpoint-up(sm) {
-        padding-top: 95px;
-      }
+      //@include media-breakpoint-up(sm) {
+      //  padding-top: 95px;
+      //}
 
       @include media-breakpoint-up(md) {
         padding-top: 96px;
@@ -689,6 +689,16 @@
 
       @include media-breakpoint-up(xl) {
         padding-bottom: 105px;
+      }
+    }
+
+    .page-section--conversion & {
+
+      //padding-bottom: 96px;
+
+      @include media-breakpoint-up(sm) {
+        padding-top: 86px;
+        padding-bottom: 246px;
       }
     }
 
