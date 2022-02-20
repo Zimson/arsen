@@ -239,6 +239,10 @@
         //padding-top: 148px;
         padding-bottom: 76px;
       }
+
+      @include media-breakpoint-up(lg) {
+        padding-bottom: 59px;
+      }
     }
 
     .page-section:not(.page-section--no-skew) & {
@@ -703,6 +707,10 @@
       @include media-breakpoint-up(sm) {
         padding-top: 86px;
         padding-bottom: 246px;
+      }
+
+      @include media-breakpoint-up(lg) {
+        padding-top: 160px;
       }
     }
 
