@@ -253,6 +253,10 @@
         width: 348px;
         height: 502px;
       }
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: 90px;
+      }
     }
 
     .widget-box--providers-mobile & {

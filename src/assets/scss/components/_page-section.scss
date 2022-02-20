@@ -35,8 +35,8 @@
   }
 
   &--inverse {
-    //--skew-angle: -5deg;
-    --skew-angle: -3deg;
+    --skew-angle: -5deg;
+    //--skew-angle: -3deg;
   }
 
   &--no-skew-top {
@@ -376,6 +376,10 @@
     .page-section--widget-providers & {
       padding-top: 144px;
       padding-bottom: 170px;
+
+      @include media-breakpoint-up(md) {
+        padding-top: 150px;
+      }
     }
 
     .page-section--widget-no-site & {
@@ -460,17 +464,17 @@
     .page-section--travel-reviews & {
       padding-top: 65px;
 
-      //@include media-breakpoint-up(sm) {
-      //  padding-top: 95px;
-      //}
+      @include media-breakpoint-up(md) {
+        padding-top: 96px;
+      }
+    }
+
+    .page-section--provider-reviews & {
+      padding-top: 65px;
 
       @include media-breakpoint-up(md) {
         padding-top: 96px;
       }
-
-      //@include media-breakpoint-up(xl) {
-      //  padding-top: 168px;
-      //}
     }
 
     .page-section--over-footer & {
