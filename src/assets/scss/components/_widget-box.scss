@@ -114,6 +114,7 @@
     }
 
     @include media-breakpoint-up(xxl) {
+      padding-left: 78px;
       grid-column-gap: 140px;
     }
   }
