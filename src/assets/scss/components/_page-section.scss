@@ -318,6 +318,10 @@
       @include media-breakpoint-up(md) {
         padding-top: 130px;
       }
+
+      @include media-breakpoint-up(lg) {
+        padding-top: 150px;
+      }
     }
 
     .page-section--payment-functions & {
@@ -1036,6 +1040,7 @@
     }
 
     svg + span {
+      position: relative;
       margin-left: auto;
       margin-right: auto;
       transform: translateX(-11px);
@@ -1045,6 +1050,10 @@
       line-height: 24px;
       letter-spacing: -0.24px;
       text-transform: none;
+
+      @include media-breakpoint-up(sm) {
+        left: -3px;
+      }
     }
 
     @include hover {
