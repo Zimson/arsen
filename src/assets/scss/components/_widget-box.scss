@@ -91,7 +91,8 @@
     }
 
     @include media-breakpoint-up(xl) {
-      grid-column-gap: 70px;
+      padding-left: 165px;
+      grid-column-gap: 100px;
     }
 
     @include media-breakpoint-up(xxl) {
@@ -108,7 +109,8 @@
     }
 
     @include media-breakpoint-up(xl) {
-      grid-column-gap: 100px;
+      padding-left: 122px;
+      grid-column-gap: 87px;
     }
 
     @include media-breakpoint-up(xxl) {
@@ -533,6 +535,10 @@
     .widget-box--providers & {
       @include media-breakpoint-up(lg) {
         padding-top: 70px;
+      }
+
+      @include media-breakpoint-up(xl) {
+        padding-top: 82px;
       }
     }
 
