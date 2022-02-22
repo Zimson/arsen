@@ -32,6 +32,10 @@
 
   &-wrapper {
     left: -18px;
+
+    @include media-breakpoint-up(md) {
+      left: 0;
+    }
   }
 
   &-slide {
