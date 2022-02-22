@@ -1,7 +1,6 @@
 .content-box {
   position: relative;
 
-
   @include media-breakpoint-up(md) {
     overflow: hidden;
   }
