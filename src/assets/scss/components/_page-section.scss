@@ -739,6 +739,7 @@
       padding-bottom: 170px;
 
       @include media-breakpoint-up(lg) {
+        padding-right: calc(var(--container-padding-x) - var(--container-cut));
         padding-bottom: 0;
         overflow: hidden;
       }
@@ -753,6 +754,12 @@
         height: 26px;
         transform: rotate3d(0, 0, 1, 3deg);
         background-color: var(--white-color);
+
+        @include media-breakpoint-up(lg) {
+          bottom: -41px;
+          height: 42px;
+          transform: rotate3d(0, 0, 1, 5deg);
+        }
       }
     }
 
@@ -765,7 +772,7 @@
       }
 
       @include media-breakpoint-up(lg) {
-        padding-top: 106px;
+        padding-top: 105px;
       }
     }
   }
