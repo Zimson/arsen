@@ -96,7 +96,8 @@
     }
 
     @include media-breakpoint-up(xxl) {
-      grid-column-gap: 110px;
+      padding-left: 126px;
+      grid-column-gap: 141px;
     }
   }
 
@@ -114,8 +115,8 @@
     }
 
     @include media-breakpoint-up(xxl) {
-      padding-left: 78px;
-      grid-column-gap: 140px;
+      padding-left: 84px;
+      grid-column-gap: 128px;
     }
   }
 
