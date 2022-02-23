@@ -52,6 +52,12 @@
     }
   }
 
+  &--mgt-17-xl {
+    @include media-breakpoint-up(xl) {
+      margin-top: 17px;
+    }
+  }
+
   //&--shadow {
   //  @include media-breakpoint-up(md) {
   //    max-width: 100%;

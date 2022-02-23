@@ -1058,6 +1058,10 @@
       @include media-breakpoint-up(md) {
         left: -3px;
       }
+
+      @include media-breakpoint-up(lg) {
+        left: -2px;
+      }
     }
 
     @include hover {
