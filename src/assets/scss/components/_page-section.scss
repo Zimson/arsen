@@ -1035,6 +1035,12 @@
       }
     }
 
+    &--center-xl {
+      @include media-breakpoint-up(xl) {
+        left: 0px;
+      }
+    }
+
     @include media-breakpoint-up(md) {
       margin-right: unset;
       margin-left: unset;
