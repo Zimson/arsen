@@ -31,7 +31,10 @@
   }
 
   &-wrapper {
-    left: -18px;
+
+    @include media-breakpoint-up(sm) {
+      left: -20px;
+    }
 
     @include media-breakpoint-up(md) {
       left: 0;

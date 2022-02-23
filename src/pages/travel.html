@@ -86,7 +86,8 @@ footerLink: "https://arsenalpay.ru/dashboard/quickstart?step=1"
       <p class="text text--center-md text--ls-36 text--md-size-lg text--inline-sm text--block-md">Холдирование платежей. Быстрое выставление счёта.
         Apple Pay. <br class="br br--show-lg">Отмена полной и частичной суммы. Сообщения об оплате и статусах заказа.</p>
     </div>
-    <div class="content-box content-box--shadow-md content-box--mgt-45 content-box--pseudo-bg">
+    <div class="content-box content-box--shadow-md content-box--mgt-45
+     content-box--mgt-17-md content-box--mgt-50-lg content-box--pseudo-bg">
       {{{ info-box
         title="Холдирование платежей"
         text='Клиент оплачивает на вашем сайте любой тур, при этом деньги с его карты не списываются, а времено
@@ -95,7 +96,7 @@ footerLink: "https://arsenalpay.ru/dashboard/quickstart?step=1"
         то вы просто делаете возврат и деньги мгновенно вернутся на карту клиента. Комиссия при таком возврате не взимается.'
         icon='{"name": "hold-medium", "color": "purple"}'
         width="50" height="50"
-        mods="mgb-60, mgb-md-80, icon-space-lg"
+        mods="mgb-60, mgb-md-80, icon-space-lg, mgt-md-24"
         textMods="mw-sm-520, mw-md-740"
       }}}
       {{{ info-box
@@ -301,11 +302,11 @@ footerLink: "https://arsenalpay.ru/dashboard/quickstart?step=1"
     </div>
   </div>
 </section>
-<article id="kassa" class="modal modal--check" data-close>
+<article id="kassa" class="modal modal--new-check" data-close>
   <div class="modal__body">
     <button type="button" class="modal__close" data-close>
       {{{ icon name="cross" width="12" height="12" }}}
     </button>
-    {{{ img name="check" mods="check"}}}
+    {{{ img name="new-check" mods="new-check" breakpoints='{"md": true}'}}}
   </div>
 </article>

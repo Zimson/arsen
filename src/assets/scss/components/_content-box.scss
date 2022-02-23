@@ -40,6 +40,18 @@
     margin-top: 45px;
   }
 
+  &--mgt-17-md {
+    @include media-breakpoint-up(md) {
+      margin-top: 17px;
+    }
+  }
+
+  &--mgt-50-lg {
+    @include media-breakpoint-up(lg) {
+      margin-top: 50px;
+    }
+  }
+
   //&--shadow {
   //  @include media-breakpoint-up(md) {
   //    max-width: 100%;

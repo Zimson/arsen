@@ -114,6 +114,12 @@
     }
   }
 
+  &--mgt-md-24 {
+    @include media-breakpoint-up(md) {
+      margin-top: 24px;
+    }
+  }
+
   &--mgb-md-42 {
     @include media-breakpoint-up(md) {
       margin-bottom: 42px;
@@ -268,6 +274,12 @@
 
     &--lh-35-md {
       @include media-breakpoint-up(md) {
+        line-height: 35px;
+      }
+    }
+
+    &--lh-35-lg {
+      @include media-breakpoint-up(lg) {
         line-height: 35px;
       }
     }
