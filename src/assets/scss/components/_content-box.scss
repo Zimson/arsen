@@ -58,6 +58,12 @@
     }
   }
 
+  &--mgt-35-md {
+    @include media-breakpoint-up(md) {
+      margin-top: 35px;
+    }
+  }
+
   //&--shadow {
   //  @include media-breakpoint-up(md) {
   //    max-width: 100%;

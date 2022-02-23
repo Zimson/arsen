@@ -389,7 +389,12 @@
       padding-top: 150px;
       padding-bottom: 170px;
 
+      @include media-breakpoint-up(sm) {
+        margin-top: -7px;
+      }
+
       @include media-breakpoint-up(md) {
+        margin-top: 0;
         padding-top: 150px;
       }
 
@@ -493,7 +498,7 @@
       padding-top: 65px;
 
       @include media-breakpoint-up(md) {
-        padding-top: 96px;
+        padding-top: 63px;
       }
     }
 
@@ -980,6 +985,7 @@
   }
 
   &__btn {
+    position: relative;
     margin-right: auto;
     margin-left: auto;
     margin-bottom: 80px;
@@ -1011,6 +1017,12 @@
     &--no-mgt-sm {
       @include media-breakpoint-up(sm) {
         margin-top: 0;
+      }
+    }
+
+    &--left-10-md {
+      @include media-breakpoint-up(md) {
+        left: -10px;
       }
     }
 
