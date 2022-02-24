@@ -23,7 +23,7 @@ module.exports = function(options) {
               <svg class="icon ${iconsColor ? 'icon--' + iconsColor : ''}" width="48px" height="38px">
                  <use xlink:href="${root}assets/img/symbol/sprite.svg#${item.icon || 'check-list'}" />
               </svg>            
-              <span class="list__text">${item.text}</span>
+              ${item.href ? `<a href="${item.href}" class="link link--in-text">${item.text}</a>` : `<span class="list__text">${item.text}</span>`}
           </li>`  
         }).join(``)}
     </ul>

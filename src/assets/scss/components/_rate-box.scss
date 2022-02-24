@@ -15,10 +15,6 @@
     }
   }
 
-  &--no-mgb {
-    margin-bottom: 0;
-  }
-
   &--sm {
     @include media-breakpoint-up(md) {
       &:first-of-type {
@@ -45,6 +41,22 @@
 
     @include media-breakpoint-up(lg) {
       margin-bottom: 27px;
+    }
+  }
+
+  &--no-mgb {
+    margin-bottom: 0;
+
+    @-moz-document url-prefix() {
+      margin-bottom: 0;
+
+      @include media-breakpoint-up(md) {
+        margin-bottom: 0;
+      }
+
+      @include media-breakpoint-up(lg) {
+        margin-bottom: 0;
+      }
     }
   }
 
