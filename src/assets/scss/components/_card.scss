@@ -40,6 +40,11 @@
     color: var(--gray-color);
   }
 
+  &__title i {
+    font-size: 19px;
+    font-style: normal;
+  }
+
   &__text {
     margin: 14px 0 23px 0;
     font-family: $font-family;
