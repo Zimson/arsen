@@ -20,9 +20,9 @@
     left: calc(-1 * var(--container-padding-x));
     width: 100%;
 
-    @include media-breakpoint-up(xl) {
-      left: -59px;
+    @media (min-width: 1045px) {
       overflow: unset;
+      left: -59px;
     }
 
     @include media-breakpoint-up(xxl) {
@@ -45,6 +45,10 @@
     width: 320px !important;
 
     &:not(:last-child) {
+      @media (min-width: 1045px) {
+        margin-right: 20px;
+      }
+
       @include media-breakpoint-up(xl) {
         margin-right: 20px;
       }
