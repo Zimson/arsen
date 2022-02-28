@@ -23,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function () {
         //     spaceBetween: 20
         //   }
         // }
-      }, turnOffOnBreakPoint: 1280});
+      }, turnOffOnBreakPoint: 1060});
   }
 });
 
