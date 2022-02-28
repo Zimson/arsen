@@ -7,6 +7,12 @@
     }
   }
 
+  &--show-xxs {
+    @media (min-width: 414px) {
+      display: block;
+    }
+  }
+
   &--show-sm {
     @include media-breakpoint-up(sm) {
       display: block;
