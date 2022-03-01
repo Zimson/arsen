@@ -57,6 +57,7 @@
 
   &--travel {
     margin-top: 64px;
+    width: auto;
 
     @include media-breakpoint-up(sm) {
       margin-top: 80px;
