@@ -61,8 +61,8 @@ page-section--inverse page-section--under-header page-section--no-skew-top page-
       <p class="text text--center-md text--md-size-lg text--inline-sm">Все чеки отправляются через ОФД
         в налоговую автоматически.<br class="br br--show-lg"> Чек отправляется на email клиента сразу после оплаты.</p>
     </div>
-    <button type="button" class="page-section__btn page-section__btn--max-w-430-md page-section__btn--max-w-480-xl page-section__btn--mgt-20
-        page-section__btn--mgt-36-sm" data-modal="kassa">
+    <button type="button" class="page-section__btn page-section__btn--max-w-430 page-section__btn--max-w-430-md
+    page-section__btn--max-w-480-xl page-section__btn--mgt-20 page-section__btn--mgt-36-sm" data-modal="kassa">
       <svg class="icon icon--blue" width="48" height="38" style="margin-left: 2px;">
         <use xlink:href="assets/img/symbol/sprite.svg#invoice-medium"></use>
       </svg>
@@ -155,7 +155,7 @@ page-section--inverse page-section--under-header page-section--no-skew-top page-
     <h2 class="page-section__title">Функциональный виджет<br class="br br--show-sm"> с простой интеграцией</h2>
     <p class="text text--ls-36 text--inline-sm text--md-size-lg">Виджет легко <a href="https://arsenalpay.ru/documentation/index.html#platezhnyj-vidzhet" class="link link--in-text">устанавливается</a>
       не только на сайте, но и в личном кабинете, на странице при нуле или в приложении.
-      Виджет уже интегрирован с биллингами Гидра  и Felix.
+      Виджет уже интегрирован с биллингами Гидра и Felix.
     </p>
     <div class="widget-box widget-box--providers">
       <div class="widget-box__widget">
@@ -207,7 +207,7 @@ page-section--inverse page-section--under-header page-section--no-skew-top page-
             <svg class="icon icon--green" width="48px" height="38px">
               <use xlink:href="assets/img/symbol/sprite.svg#check-list" />
             </svg>
-            <span class="list__text">Вовремя получать уведомления <br class='br br--show-xs br--hide-sm' /> о низком балансе.</span>
+            <span class="list__text">Вовремя получать уведомления о низком балансе.</span>
           </li>
           <li class="list__item">
             <svg class="icon icon--green" width="48px" height="38px">
@@ -219,7 +219,7 @@ page-section--inverse page-section--under-header page-section--no-skew-top page-
             <svg class="icon icon--green" width="48px" height="38px">
               <use xlink:href="assets/img/symbol/sprite.svg#check-list" />
             </svg>
-            <span class="list__text">Сохранять карту и оплачивать <br class="br br--show-xs br--hide-sm">в 1 клик.</span>
+            <span class="list__text">Сохранять карту и оплачивать в 1 клик.</span>
           </li>
           <li class="list__item">
             <svg class="icon icon--green" width="48px" height="38px">
@@ -234,17 +234,17 @@ page-section--inverse page-section--under-header page-section--no-skew-top page-
 </section>
 <section class="page-section page-section--subscription-free page-section--inverse">
   <div class="page-section__container">
-    <h2 class="page-section__title">Никакой абонентской платы</h2>
-    <p class="text text--md-size-lg">Вы платите только за успешные платежи.<br class="br br--show-md"> Без дополнительных комиссий и звёздочек в договоре.</p>
+    <h2 class="page-section__title">Никакой абонентской платы</h2>
+    <p class="text text--md-size-lg">Вы платите только за успешные платежи.<br class="br br--show-md"> Без дополнительных комиссий и звёздочек в договоре.</p>
     <div class="content-box content-box--rates">
-      <b class="content-box__title content-box__title--type-two content-box__title--no-mgt content-box__title--no-mgb">Приём платежей картами всех стран мира</b>
+      <b class="content-box__title content-box__title--type-two content-box__title--no-mgt content-box__title--no-mgb">Приём платежей картами всех стран мира</b>
       <p class="content-box__text">Visa, MasterCard, Мир, Apple Pay.</p>
       <div class="row row--rates">
         {{{ rate-box count="2.2" text="За успешный платёж" mods="column, inline-prefix, sm, no-mgb" }}}
         {{{ rate-box count="0.2" prefix="+" text="За онлайн чек платежа" mods="column, inline-prefix, sm, no-mgb" }}}
       </div>
       <b class="content-box__title content-box__title--type-two">Сюда включено</b>
-      <div class="row row--col-2-md row--col-3-lg row--col-gap-4-md row--list-lg">
+      <div class="row row--list">
         {{{ list items='[{"icon": "input-cashier", "text": "Онлайн касса ArsenalPay", "href": "https://arsenalpay.ru/cashbox.html", "textColor": "dark-blue"},
         {"icon": "input-invoice", "text": "Выставление счёта"}, {"icon": "check-list", "text": "Оплата без 3D Secure"}]' iconsColor="blue" }}}
         {{{ list items='[{"icon": "input-apple", "text": "Apple Pay"}, {"icon": "input-save-card", "text": "Запоминание карты"},
@@ -253,7 +253,7 @@ page-section--inverse page-section--under-header page-section--no-skew-top page-
         {"icon": "input-api", "text": "Интеграция по API"}]' mods="no-mgt-md" iconsColor="blue" }}}
       </div>
       <b class="content-box__title content-box__title--type-two content-box__title--mgt-45">Бесплатно</b>
-      <div class="row row--col-2-md row--col-3-lg row--col-gap-4-md row--list-lg">
+      <div class="row row--list">
         {{{ list items='[{"text": "Подключение"}, {"text": "Пользование кассой"}, {"text": "Техподдержка"}]' iconsColor="pink" mods="no-mgt, hide-lg, no-ls" }}}
         {{{ list items='[{"text": "Свой менеджер"}, {"text": "Личный кабинет"}]' iconsColor="pink" mods="hide-lg, no-ls, no-mgt-md" }}}
 
