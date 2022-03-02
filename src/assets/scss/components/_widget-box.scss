@@ -71,6 +71,7 @@
     @include media-breakpoint-up(xl) {
       padding-left: 155px;
       grid-column-gap: 100px;
+      width: 100%;
     }
 
     @include media-breakpoint-up(xxl) {
@@ -81,20 +82,20 @@
 
   &--providers {
     margin-top: 64px;
-    width: auto;
 
     @include media-breakpoint-up(sm) {
       //margin-top: 80px;
     }
 
     @include media-breakpoint-up(lg) {
-      padding-left: 20px;
       grid-column-gap: 72px;
+      width: 800px;
     }
 
     @include media-breakpoint-up(xl) {
       padding-left: 165px;
       grid-column-gap: 100px;
+      width: 100%;
     }
 
     @include media-breakpoint-up(xxl) {
@@ -105,16 +106,17 @@
 
   &--providers-mobile {
     margin-top: 64px;
-    width: auto;
 
     @include media-breakpoint-up(lg) {
       padding-left: 0;
       grid-column-gap: 47px;
+      width: 835px;
     }
 
     @include media-breakpoint-up(xl) {
       padding-left: 122px;
       grid-column-gap: 87px;
+      width: 100%;
     }
 
     @include media-breakpoint-up(xxl) {
