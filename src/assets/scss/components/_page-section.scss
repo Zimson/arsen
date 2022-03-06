@@ -970,18 +970,17 @@
   }
 
   &__content--payments {
-    margin-top: 20px;
+    margin-top: 43px;
 
     @include media-breakpoint-up(sm) {
-      margin-top: 28px;
+      margin-top: 47px;
     }
 
-    //@include media-breakpoint-up(md) {
-    //  margin-top: 45px;
-    //}
+    @include media-breakpoint-up(md) {
+      margin-top: 35px;
+    }
 
     @include media-breakpoint-up(lg) {
-      margin-top: 35px;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-column-gap: 20px;
@@ -989,7 +988,8 @@
     }
 
     @include media-breakpoint-up(xl) {
-      grid-column-gap: 0;
+      grid-column-gap: 60px;
+      max-width: 900px;
     }
   }
 
