@@ -991,6 +991,18 @@
       grid-column-gap: 60px;
       max-width: 900px;
     }
+
+    .text + & {
+      margin-top: 20px;
+
+      @include media-breakpoint-up(sm) {
+        margin-top: 45px;
+      }
+
+      @include media-breakpoint-up(md) {
+        margin-top: 50px;
+      }
+    }
   }
 
   &__btn {
