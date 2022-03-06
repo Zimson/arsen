@@ -350,8 +350,8 @@
     width: 100%;
 
     @include media-breakpoint-up(md) {
-      margin-top: 122px;
-      padding-top: 88px;
+      margin-top: 162px;
+      padding-top: 48px;
       padding-bottom: 80px;
     }
 
@@ -383,7 +383,6 @@
       left: -65px;
       height: 85px;
       display: none;
-      background: green;
       transform: rotate3d(0, 0, 1, 5deg);
       background-color: var(--pink-light-color);
 
