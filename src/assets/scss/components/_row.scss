@@ -38,11 +38,12 @@
     }
 
     @include media-breakpoint-up(md) {
-      grid-column-gap: 106px;
+      grid-template-columns: 271px 200px;
+      grid-column-gap: 36px;
     }
 
     @include media-breakpoint-up(lg) {
-      grid-column-gap: 79px;
+      grid-column-gap: 8px;
     }
   }
 
