@@ -38,12 +38,14 @@
     }
 
     @include media-breakpoint-up(md) {
-      grid-template-columns: 271px 200px;
-      grid-column-gap: 36px;
+      grid-template-columns: 271px auto;
+      column-gap: 35px;
+      justify-content: start;
     }
 
     @include media-breakpoint-up(lg) {
-      grid-column-gap: 8px;
+      grid-template-columns: 271px repeat(2, 234px);
+      column-gap: 8px;
     }
   }
 
@@ -78,8 +80,7 @@
 
     @include media-breakpoint-up(lg) {
       grid-template-columns: 271px repeat(2, 234px);
-      column-gap: 9px;
-      justify-content: start;
+      column-gap: 8px;
     }
   }
 
