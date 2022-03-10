@@ -69,6 +69,18 @@
       if(~navigator.appVersion.indexOf("Win"))cth('windows');
       if(~navigator.appVersion.indexOf("Mac"))cth('osx');
       if(~navigator.appVersion.indexOf("Linux"))cth('linux');
+
+    var safari = navigator.userAgent.split(" ").filter(function(item) {
+      return item.indexOf('Safari') !== -1;
+    })
+
+    var version = navigator.userAgent.split(" ").filter(function(item) {
+      return item.indexOf('Version') !== -1;
+    })
+
+    if (safari && version.length) {
+      document.documentElement.classList.add('safari-v-' + version[0].split('/')[1]);
+    }
   </script>
 
   <!-- vk, facebook end -->

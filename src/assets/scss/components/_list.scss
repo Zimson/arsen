@@ -2,7 +2,7 @@
   @include list-clear();
 
   position: relative;
-  left: -16px;
+  //left: -16px;
   order: 1;
   margin-top: 18px;
   //margin-top: 26px;
@@ -78,7 +78,6 @@
   }
 
   &__item {
-    position: relative;
 
     @for $i from 1 through 100 {
       &:nth-child(#{$i}) {
@@ -87,6 +86,7 @@
     }
 
     position: relative;
+    left: -16px;
     display: grid;
     grid-template-columns: 48px auto;
     grid-column-gap: 2px;
