@@ -72,13 +72,13 @@
 
 
     html[class~="safari-v-11.1.2"] & {
-      outline: 1px solid green;
+
       @include media-breakpoint-up(md) {
-        grid-template-columns: 261px auto;
+        grid-template-columns: 259px auto;
       }
 
       @include media-breakpoint-up(lg) {
-        grid-template-columns: 261px repeat(2, 234px);
+        grid-template-columns: 259px repeat(2, 234px);
       }
     }
   }
