@@ -12,4 +12,12 @@
       overflow: hidden;
     }
   }
+
+  &-inner {
+    overflow: hidden;
+
+    @include media-breakpoint-up(sm) {
+      overflow: auto;
+    }
+  }
 }
