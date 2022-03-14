@@ -13,11 +13,11 @@
     }
   }
 
-  &-inner {
+  &-inner--instagram {
     overflow: hidden;
 
     @include media-breakpoint-up(sm) {
-      overflow: auto;
+      overflow: unset;
     }
   }
 }
