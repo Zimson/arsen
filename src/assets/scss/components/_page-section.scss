@@ -783,9 +783,9 @@
         background-color: var(--white-color);
 
         @include media-breakpoint-up(lg) {
-          bottom: -41px;
-          height: 42px;
-          transform: rotate3d(0, 0, 1, 5deg);
+          bottom: -55px;
+          height: 55px;
+          transform: rotate3d(0, 0, 1, 7deg);
         }
       }
     }
