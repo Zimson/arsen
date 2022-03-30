@@ -910,12 +910,12 @@
     &::before,
     &::after {
       position: absolute;
-      top: -65px;
+      top: -31px;
       width: 400px;
       height: 560px;
       background-repeat: no-repeat;
 
-      @include media-breakpoint-up(md) {
+      @include media-breakpoint-up(lg) {
         content: "";
       }
 
@@ -929,32 +929,36 @@
       background-image: url("social-left");
 
       @include media-breakpoint-up(lg) {
-        left: -125px;
+        left: -40px;
       }
 
       @include media-breakpoint-up(xl) {
-        left: -147px;
+        top: -50px;
+        left: -155px;
+        background-image: url("social-left--xl");
       }
 
       @include media-breakpoint-up(xxl) {
-        left: -188px;
+        left: -195px;
       }
     }
 
     &::after {
+      top: -37px;
       right: -182px;
       background-image: url("social-right");
 
       @include media-breakpoint-up(lg) {
-        right: -125px;
+        right: -180px;
       }
 
       @include media-breakpoint-up(xl) {
-        right: -147px;
+        right: -202px;
+        background-image: url("social-right--xl");
       }
 
       @include media-breakpoint-up(xxl) {
-        right: -188px;
+        right: -242px;
       }
     }
 

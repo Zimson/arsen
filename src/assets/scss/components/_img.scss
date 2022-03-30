@@ -14,28 +14,20 @@
   }
 
   &--messanger img {
-    margin-top: -65px;
-    margin-bottom: 18px;
+    margin-top: -45px;
+    margin-bottom: 8px;
     margin-right: auto;
     margin-left: auto;
-    width: 440px;
-    height: 190px;
+    width: 313px;
+    height: 191px;
 
 
     @include media-breakpoint-up(sm) {
-      width: 600px;
-      height: 220px;
-      margin-top: -67px;
-      margin-bottom: 0;
       left: 0;
     }
 
-    //@include media-breakpoint-up(lg) {
-    //  width: 286px;
-    //  height: 578px;
-    //}
 
-    @include media-breakpoint-up(md) {
+    @include media-breakpoint-up(lg) {
       display: none;
     }
   }
