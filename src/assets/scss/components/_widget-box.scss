@@ -1,6 +1,6 @@
 .widget-box {
-  --widget-instagram-height--xs: 1234px;
-  --widget-instagram-height--sm: 996px;
+  --widget-instagram-height--xs: 1170px;
+  --widget-instagram-height--sm: 1216px;
   --widget-instagram-width--sm: 583px;
 
   display: flex;
@@ -125,23 +125,24 @@
   }
 
   &--instagram {
-    --shift-left: -76px;
+    --shift-left: -42px;
 
     position: relative;
-    margin-top: 2px;
+    //margin-top: 2px;
 
     @include media-breakpoint-up(sm) {
-      margin-top: -32px;
+      margin-top: -87px;
     }
 
     @include media-breakpoint-up(md) {
-      margin-top: -20px;
+      margin-top: -107px;
     }
 
     @include media-breakpoint-up(lg) {
-      left: -27px;
-      grid-template-columns: 524px minmax(340px, 400px);
-      grid-column-gap: 8px;
+      margin-top: -18px;
+      left: -7px;
+      grid-template-columns: 386px minmax(340px, 400px);
+      grid-column-gap: 28px;
       width: auto;
     }
 
@@ -150,13 +151,13 @@
       left: var(--shift-left);
       width: calc(100% - var(--shift-left));
       grid-template-columns: var(--widget-instagram-width--sm) auto;
-      grid-column-gap: 52px;
+      grid-column-gap: 105px;
     }
 
     @include media-breakpoint-up(xxl) {
-      --shift-left: -104px;
+      --shift-left: -134px;
       width: calc(100% + 60px);
-      grid-column-gap: 92px;
+      grid-column-gap: 136px;
     }
   }
 
@@ -288,7 +289,7 @@
       position: absolute;
       margin-bottom: 60px;
       //max-width: 384px;
-      width: 384px;
+      width: 360px;
       height: var(--widget-instagram-height--xs);
       align-self: center;
       background-color: transparent;
@@ -296,21 +297,19 @@
 
       @include media-breakpoint-up(sm) {
         margin-bottom: 97px;
-        width: var(--widget-instagram-width--sm);
-        height: var(--widget-instagram-height--sm);
+        width: 388px;
       }
 
       @include media-breakpoint-up(lg) {
         position: absolute;
         top: 0;
         left: 0;
-        width: 524px;
         height: 934px;
       }
 
       @include media-breakpoint-up(xl) {
-        width: var(--widget-instagram-width--sm);
-        height: var(--widget-instagram-height--sm);
+        width: 618px;
+        height: 996px;
       }
 
       picture {
@@ -460,7 +459,7 @@
       }
 
       @include media-breakpoint-up(lg) {
-        margin-top: 40px;
+        margin-top: 37px;
         grid-column: 2 / 3;
       }
 
@@ -470,10 +469,10 @@
     }
 
     .widget-box--instagram .widget-box__widget + & {
-      padding-top: var(--widget-instagram-height--xs);
+      padding-top: 1172px;
 
       @include media-breakpoint-up(sm) {
-        padding-top: var(--widget-instagram-height--sm);
+        padding-top: 1219px;
       }
 
       @include media-breakpoint-up(lg) {
@@ -625,7 +624,7 @@
 }
 
 picture.img.widget-box--instagram-img {
-  height: 1234px;
+  height: 1170px;
 
   @include media-breakpoint-up(sm) {
     height: 996px;
@@ -641,7 +640,7 @@ picture.img.widget-box--no-site-img {
 }
 
 picture.img.widget-box--instagram-img {
-  height: 1234px;
+  height: 1170px;
 
   @include media-breakpoint-up(sm) {
     height: 996px;
