@@ -31,7 +31,7 @@
   }
 
   &__social {
-    margin: 39px 0 42px 0;
+    margin: 39px 0 63px 0;
     display: flex;
     justify-content: center;
 
@@ -65,6 +65,31 @@
       @include media-breakpoint-up(xxl) {
         left: -2px;
       }
+    }
+  }
+
+  &__bottom {
+    @include media-breakpoint-up(lg) {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  &__note {
+    position: relative;
+    margin-bottom: 33px;
+    text-align: center;
+
+    @include media-breakpoint-up(lg) {
+      top: 22px;
+      text-align: right;
+    }
+
+    small {
+      display: block;
+      font-family: $font-family;
+      font-size: 12.4px;
+      line-height: 20px;
     }
   }
 }
