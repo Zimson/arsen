@@ -287,9 +287,10 @@
 
     .widget-box--instagram & {
       position: absolute;
+      transform: translateX(-2px);
       margin-bottom: 60px;
       //max-width: 384px;
-      width: 360px;
+      width: 388px;
       height: var(--widget-instagram-height--xs);
       align-self: center;
       background-color: transparent;
@@ -297,7 +298,6 @@
 
       @include media-breakpoint-up(sm) {
         margin-bottom: 97px;
-        width: 388px;
       }
 
       @include media-breakpoint-up(lg) {
@@ -305,6 +305,7 @@
         top: 0;
         left: 0;
         height: 934px;
+        transform: none;
       }
 
       @include media-breakpoint-up(xl) {
