@@ -139,7 +139,7 @@
     }
 
     @include media-breakpoint-up(lg) {
-      margin-top: -18px;
+      margin-top: 11px;
       left: -7px;
       grid-template-columns: 386px minmax(340px, 400px);
       grid-column-gap: 28px;
@@ -316,6 +316,13 @@
         display: block;
         width: inherit;
         height: inherit;
+      }
+
+      //fix img blur
+      img {
+        @include media-breakpoint-up(xl) {
+          width: 617px;
+        }
       }
     }
 

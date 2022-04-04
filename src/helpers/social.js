@@ -22,7 +22,7 @@ module.exports = function(options) {
         <a href="tg://resolve?domain=arsenalpay" class="social__item">
             <img src="${root}assets/img/svg/telegram.svg" width="48" height="38" alt="Telegram">
         </a>
-        <a href="https://www.facebook.com/ArsenalPay.ru" class="social__item" target="_blank">
+        <a href="https://vk.com/arsenal_pay" class="social__item" target="_blank">
             <img src="${root}assets/img/svg/vk.svg" width="48" height="38" alt="Facebook">
         </a>
         <a href="https://vm.tiktok.com/ZSdYwgyuU/" class="social__item" target="_blank">
