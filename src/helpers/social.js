@@ -19,7 +19,7 @@ module.exports = function(options) {
   const block = `
     <div class="${cssClass}">
         <span class="social__label">Мы в соцсетях</span>
-        <a href="https://t.me/arsenalpay" class="social__item">
+        <a href="https://t.me/arsenalpay" class="social__item" target="_blank">
             <img src="${root}assets/img/svg/telegram.svg" width="48" height="38" alt="Telegram">
         </a>
         <a href="https://vk.com/arsenal_pay" class="social__item" target="_blank">
